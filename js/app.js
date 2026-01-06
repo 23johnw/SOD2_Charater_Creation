@@ -287,10 +287,25 @@ function updateSelectedTraitsDisplay() {
     const selectedTraitsList = document.getElementById('selectedTraitsList');
     selectedTraitsList.innerHTML = '';
     
+    // Collect all buffs from selected traits
+    let totalHealthBuff = 0;
+    let totalStaminaBuff = 0;
+    
     characterData.traits.optional.forEach(trait => {
         // Get full trait data to access buffs
         const fullTrait = dataLoader.data.traits.find(t => t.name === trait.name) || trait;
         const buffs = fullTrait.buffs || [];
+        
+        // Calculate stat buffs
+        buffs.forEach(buff => {
+            const stat = buff.stat.toLowerCase();
+            const value = parseInt(buff.value) || 0;
+            if (stat.includes('health')) {
+                totalHealthBuff += value;
+            } else if (stat.includes('stamina')) {
+                totalStaminaBuff += value;
+            }
+        });
         
         const tag = document.createElement('div');
         tag.className = 'trait-tag';
@@ -316,6 +331,9 @@ function updateSelectedTraitsDisplay() {
         selectedTraitsList.appendChild(tag);
     });
     
+    // Update stat displays with buff totals
+    updateStatDisplays(totalHealthBuff, totalStaminaBuff);
+    
     // Update trait counter
     const totalTraits = characterData.traits.required.length + characterData.traits.optional.length;
     const traitLimit = parseInt(document.getElementById('traitLimit').value);
@@ -329,6 +347,49 @@ function updateSelectedTraitsDisplay() {
     }
     if (!document.querySelector('.trait-counter')) {
         document.getElementById('optionalTraits').insertBefore(counter, document.getElementById('selectedTraitsList'));
+    }
+}
+
+function updateStatDisplays(healthBuff, staminaBuff) {
+    const baseHealth = parseInt(document.getElementById('currentHealth').value) || 100;
+    const baseStamina = parseInt(document.getElementById('currentStamina').value) || 100;
+    
+    // Update health display
+    const healthBaseEl = document.querySelector('#healthDisplay .stat-base');
+    const healthBuffEl = document.getElementById('healthBuff');
+    const healthTotalEl = document.getElementById('healthTotal');
+    
+    if (healthBaseEl) healthBaseEl.textContent = baseHealth;
+    
+    if (healthBuff !== 0) {
+        const sign = healthBuff > 0 ? '+' : '';
+        healthBuffEl.textContent = ` ${sign}${healthBuff}`;
+        healthBuffEl.className = `stat-buff ${healthBuff > 0 ? 'positive' : 'negative'}`;
+        healthBuffEl.style.display = 'inline';
+        const total = baseHealth + healthBuff;
+        healthTotalEl.textContent = `= ${total}`;
+    } else {
+        healthBuffEl.style.display = 'none';
+        healthTotalEl.textContent = `= ${baseHealth}`;
+    }
+    
+    // Update stamina display
+    const staminaBaseEl = document.querySelector('#staminaDisplay .stat-base');
+    const staminaBuffEl = document.getElementById('staminaBuff');
+    const staminaTotalEl = document.getElementById('staminaTotal');
+    
+    if (staminaBaseEl) staminaBaseEl.textContent = baseStamina;
+    
+    if (staminaBuff !== 0) {
+        const sign = staminaBuff > 0 ? '+' : '';
+        staminaBuffEl.textContent = ` ${sign}${staminaBuff}`;
+        staminaBuffEl.className = `stat-buff ${staminaBuff > 0 ? 'positive' : 'negative'}`;
+        staminaBuffEl.style.display = 'inline';
+        const total = baseStamina + staminaBuff;
+        staminaTotalEl.textContent = `= ${total}`;
+    } else {
+        staminaBuffEl.style.display = 'none';
+        staminaTotalEl.textContent = `= ${baseStamina}`;
     }
 }
 
@@ -454,6 +515,58 @@ function setupEventListeners() {
             field.addEventListener('change', updateCharacterData);
         }
     });
+    
+    // Add listeners for health/stamina to update stat displays
+    const healthInput = document.getElementById('currentHealth');
+    const staminaInput = document.getElementById('currentStamina');
+    if (healthInput) {
+        healthInput.addEventListener('input', () => {
+            updateCharacterData();
+            // Recalculate stat displays with current trait buffs
+            const selectedTraits = characterData.traits.optional || [];
+            let totalHealthBuff = 0;
+            let totalStaminaBuff = 0;
+            selectedTraits.forEach(trait => {
+                const fullTrait = dataLoader.data.traits.find(t => t.name === trait.name);
+                if (fullTrait && fullTrait.buffs) {
+                    fullTrait.buffs.forEach(buff => {
+                        const stat = buff.stat.toLowerCase();
+                        const value = parseInt(buff.value) || 0;
+                        if (stat.includes('health')) {
+                            totalHealthBuff += value;
+                        } else if (stat.includes('stamina')) {
+                            totalStaminaBuff += value;
+                        }
+                    });
+                }
+            });
+            updateStatDisplays(totalHealthBuff, totalStaminaBuff);
+        });
+    }
+    if (staminaInput) {
+        staminaInput.addEventListener('input', () => {
+            updateCharacterData();
+            // Recalculate stat displays with current trait buffs
+            const selectedTraits = characterData.traits.optional || [];
+            let totalHealthBuff = 0;
+            let totalStaminaBuff = 0;
+            selectedTraits.forEach(trait => {
+                const fullTrait = dataLoader.data.traits.find(t => t.name === trait.name);
+                if (fullTrait && fullTrait.buffs) {
+                    fullTrait.buffs.forEach(buff => {
+                        const stat = buff.stat.toLowerCase();
+                        const value = parseInt(buff.value) || 0;
+                        if (stat.includes('health')) {
+                            totalHealthBuff += value;
+                        } else if (stat.includes('stamina')) {
+                            totalStaminaBuff += value;
+                        }
+                    });
+                }
+            });
+            updateStatDisplays(totalHealthBuff, totalStaminaBuff);
+        });
+    }
     
     // Export buttons
     document.getElementById('exportBtn').addEventListener('click', exportCharacter);

@@ -195,12 +195,24 @@
                 <h2>Stats (Optional)</h2>
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="currentHealth">Current Health</label>
+                        <label for="currentHealth">Base Health (XML Value)</label>
                         <input type="number" id="currentHealth" name="currentHealth" value="100" min="0" max="150">
+                        <div id="healthDisplay" class="stat-display">
+                            <span class="stat-base">100</span>
+                            <span class="stat-buff" id="healthBuff" style="display: none;"></span>
+                            <span class="stat-total" id="healthTotal">= 100</span>
+                        </div>
+                        <small>Game will add trait buffs automatically</small>
                     </div>
                     <div class="form-group">
-                        <label for="currentStamina">Current Stamina</label>
+                        <label for="currentStamina">Base Stamina (XML Value)</label>
                         <input type="number" id="currentStamina" name="currentStamina" value="100" min="0" max="150">
+                        <div id="staminaDisplay" class="stat-display">
+                            <span class="stat-base">100</span>
+                            <span class="stat-buff" id="staminaBuff" style="display: none;"></span>
+                            <span class="stat-total" id="staminaTotal">= 100</span>
+                        </div>
+                        <small>Game will add trait buffs automatically</small>
                     </div>
                 </div>
             </section>
