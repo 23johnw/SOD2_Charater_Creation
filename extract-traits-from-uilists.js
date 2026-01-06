@@ -71,7 +71,7 @@ traitObjects.forEach(trait => {
     }
 });
 
-// Manually add the three traits that weren't extracted (they exist in UILists.cs)
+// Manually add traits that weren't extracted (they exist in UILists.cs)
 if (!mappings['Cautious']) {
     mappings['Cautious'] = 'Philosophy_Prudent_Cautious';
 }
@@ -80,6 +80,9 @@ if (!mappings['Loved to Hunt']) {
 }
 if (!mappings['Messy']) {
     mappings['Messy'] = 'Morale_Attribute_Messy';
+}
+if (!mappings['Preschool Teacher']) {
+    mappings['Preschool Teacher'] = 'Hygiene_Career_PreschoolTeacher';
 }
 
 console.log(`Extracted ${Object.keys(mappings).length} trait mappings from UILists.cs`);
