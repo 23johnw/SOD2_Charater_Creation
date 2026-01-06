@@ -198,7 +198,17 @@ function initializeTraitsUI() {
     
     // Setup trait search and selection
     const traitSearch = document.getElementById('traitSearch');
-    traitSearch.addEventListener('input', filterTraits);
+    if (traitSearch) {
+        // Ensure input is enabled and accessible
+        traitSearch.disabled = false;
+        traitSearch.readOnly = false;
+        traitSearch.style.pointerEvents = 'auto';
+        traitSearch.addEventListener('input', filterTraits);
+        traitSearch.addEventListener('keydown', (e) => {
+            // Allow all key inputs
+            e.stopPropagation();
+        });
+    }
     
     const traitMode = document.getElementById('traitMode');
     traitMode.addEventListener('change', () => {

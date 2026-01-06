@@ -169,6 +169,9 @@ header p {
     border-radius: 6px;
     font-size: 1em;
     transition: border-color 0.3s;
+    position: relative;
+    z-index: 1;
+    background: white;
 }
 
 .form-group input:focus,
@@ -467,6 +470,14 @@ header p {
 .trait-item-effects {
     font-size: 0.85em;
     color: #666;
+}
+
+/* Ensure trait search input is accessible */
+#traitSearch {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto !important;
+    background: white !important;
 }
 
 .equipment-section {
