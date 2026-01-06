@@ -530,21 +530,9 @@ function generateTraitsSubsection(traits) {
         </TheStats>
         <TheSubs>`;
     
-    allTraits.forEach((trait, idx) => {
+    validTraits.forEach((trait, idx) => {
         // Use traitResourceID if available, otherwise use name
-        // Make sure we have a valid trait ID
         let traitID = trait.traitResourceID || trait.name || 'Default';
-        
-        // Skip invalid trait IDs - these are descriptions, not actual trait IDs
-        if (!traitID || 
-            traitID.includes('▶') || 
-            traitID.includes('much worse') ||
-            traitID.trim().length < 2 ||
-            traitID === 'Descriptor_Philosophy_' || // Incomplete descriptor
-            (traitID.startsWith('Descriptor_') && traitID.split('_').length < 3)) { // Incomplete descriptor
-            console.warn('Skipping invalid trait ID:', traitID);
-            return; // Skip this trait entirely
-        }
         
         xml += `
           <StructObject xsi:type="StructProperty">
