@@ -63,12 +63,17 @@ class Randomizer {
         const voices = gender === 'Male' ? dataLoader.data.voices.male : dataLoader.data.voices.female;
         if (!voices || voices.length === 0) return 'Kee_Low';
         const voice = voices[Math.floor(Math.random() * voices.length)];
-        // Return the Voice ID which is what the form uses
-        let voiceID = voice['Voice ID'] || voice.Name || voice.name || voice || 'Kee';
+        // Return the Editor ID which is what the form dropdown uses
+        // The form uses 'Editor ID' as the option value (see updateVoiceOptions)
+        let voiceID = voice['Editor ID'] || voice['Voice ID'] || voice.Name || voice.name || voice || 'Kee';
         // Ensure it's a string
         voiceID = String(voiceID);
-        // Ensure it has _Low suffix if it doesn't already
-        return voiceID.includes('_') ? voiceID : `${voiceID}_Low`;
+        // The Editor ID should already be in the correct format (e.g., "Kee_Low")
+        // But if it doesn't have a suffix, add _Low
+        if (!voiceID.includes('_')) {
+            voiceID = `${voiceID}_Low`;
+        }
+        return voiceID;
     }
 
     // Random human definition (character model)

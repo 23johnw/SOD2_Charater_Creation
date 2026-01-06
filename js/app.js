@@ -789,21 +789,37 @@ function populateFormFromCharacter(char, options = {}) {
             setTimeout(() => {
                 const voiceSelect = document.getElementById('voiceID');
                 if (voiceSelect && char.voiceID) {
-                    // Try to find matching option
-                    const options = Array.from(voiceSelect.options);
-                    const matchingOption = options.find(opt => 
-                        opt.value === char.voiceID || 
-                        opt.value.includes(char.voiceID.split('_')[0]) ||
-                        opt.textContent.includes(char.voiceID.split('_')[0])
-                    );
-                    if (matchingOption) {
-                        voiceSelect.value = matchingOption.value;
-                    } else if (char.voiceID) {
-                        voiceSelect.value = char.voiceID;
-                    }
-                    voiceSelect.dispatchEvent(new Event('change'));
+                    // Wait a bit more to ensure options are populated
+                    setTimeout(() => {
+                        // Try to find matching option - check both value and text content
+                        const options = Array.from(voiceSelect.options);
+                        const voiceIDBase = char.voiceID.split('_')[0]; // Get base name (e.g., "Kee" from "Kee_Low")
+                        const matchingOption = options.find(opt => {
+                            const optValue = opt.value || '';
+                            const optText = opt.textContent || '';
+                            return optValue === char.voiceID || 
+                                   optValue.includes(voiceIDBase) ||
+                                   optText.includes(voiceIDBase) ||
+                                   optValue === voiceIDBase ||
+                                   optText.includes(char.voiceID);
+                        });
+                        if (matchingOption) {
+                            voiceSelect.value = matchingOption.value;
+                            voiceSelect.dispatchEvent(new Event('change'));
+                        } else {
+                            // If no match found, try to set it directly
+                            console.warn('Voice ID not found in options:', char.voiceID);
+                            // Try to create option if it doesn't exist
+                            const newOption = document.createElement('option');
+                            newOption.value = char.voiceID;
+                            newOption.textContent = char.voiceID;
+                            voiceSelect.appendChild(newOption);
+                            voiceSelect.value = char.voiceID;
+                            voiceSelect.dispatchEvent(new Event('change'));
+                        }
+                    }, 300);
                 }
-            }, 200);
+            }, 300);
         }
         if (options.humanDefinition !== false) {
             setTimeout(() => {
