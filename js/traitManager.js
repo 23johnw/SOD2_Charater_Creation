@@ -12,7 +12,7 @@ class TraitManager {
             ageDescriptorName = 'MiddleAge';
         }
         
-        return [
+        const requiredTraits = [
             { name: 'Default', traitResourceID: 'Default' },
             { 
                 name: `Descriptor_Age_${ageDescriptorName}`, 
@@ -25,12 +25,18 @@ class TraitManager {
             { 
                 name: `Descriptor_Philosophy_${characterData.philosophy1}`, 
                 traitResourceID: `Descriptor_Philosophy_${characterData.philosophy1}` 
-            },
-            { 
-                name: `Descriptor_Philosophy_${characterData.philosophy2}`, 
-                traitResourceID: `Descriptor_Philosophy_${characterData.philosophy2}` 
             }
         ];
+        
+        // Only add philosophy2 if it's different from philosophy1 (avoid duplicates)
+        if (characterData.philosophy1 !== characterData.philosophy2) {
+            requiredTraits.push({
+                name: `Descriptor_Philosophy_${characterData.philosophy2}`, 
+                traitResourceID: `Descriptor_Philosophy_${characterData.philosophy2}` 
+            });
+        }
+        
+        return requiredTraits;
     }
 
     getAvailableTraits(mode) {

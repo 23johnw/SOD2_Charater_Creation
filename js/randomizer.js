@@ -59,12 +59,14 @@ class Randomizer {
 
     // Random voice
     randomVoice(gender) {
-        if (!dataLoader || !dataLoader.data) return 'Kee';
-        const voices = gender === 'Male' ? dataLoader.data.maleVoices : dataLoader.data.femaleVoices;
-        if (!voices || voices.length === 0) return 'Kee';
+        if (!dataLoader || !dataLoader.data) return 'Kee_Low';
+        const voices = gender === 'Male' ? dataLoader.data.voices.male : dataLoader.data.voices.female;
+        if (!voices || voices.length === 0) return 'Kee_Low';
         const voice = voices[Math.floor(Math.random() * voices.length)];
         // Return the Voice ID which is what the form uses
-        return voice['Voice ID'] || voice.Name || voice.name || voice || 'Kee';
+        const voiceID = voice['Voice ID'] || voice.Name || voice.name || voice || 'Kee';
+        // Ensure it has _Low suffix if it doesn't already
+        return voiceID.includes('_') ? voiceID : `${voiceID}_Low`;
     }
 
     // Random human definition (character model)
@@ -86,12 +88,20 @@ class Randomizer {
         if (!dataLoader.data.enums || !dataLoader.data.enums.philosophies) {
             return ['Prudent', 'Pragmatic'];
         }
-        const philosophies = [...dataLoader.data.enums.philosophies];
-        const philo1 = philosophies[Math.floor(Math.random() * philosophies.length)];
-        let philo2 = philosophies[Math.floor(Math.random() * philosophies.length)];
+        const philosophies = dataLoader.data.enums.philosophies;
+        // Get the value property, not the whole object
+        const philoValues = philosophies.map(p => p.value || p);
+        const philo1 = philoValues[Math.floor(Math.random() * philoValues.length)];
+        let philo2 = philoValues[Math.floor(Math.random() * philoValues.length)];
         // Ensure they're different
-        while (philo2 === philo1 && philosophies.length > 1) {
-            philo2 = philosophies[Math.floor(Math.random() * philosophies.length)];
+        let attempts = 0;
+        while (philo2 === philo1 && philoValues.length > 1 && attempts < 10) {
+            philo2 = philoValues[Math.floor(Math.random() * philoValues.length)];
+            attempts++;
+        }
+        // If still same and only one option, use different default
+        if (philo2 === philo1 && philoValues.length === 1) {
+            philo2 = philo1 === 'Prudent' ? 'Pragmatic' : 'Prudent';
         }
         return [philo1, philo2];
     }

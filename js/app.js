@@ -593,12 +593,17 @@ function updateDescriptorTraits() {
     const ageDescriptor = `Descriptor_Age_${ageDescriptorName}`;
     const pronounDescriptor = `Descriptor_Pronoun_${characterData.pronoun}`;
     const philosophy1Descriptor = `Descriptor_Philosophy_${characterData.philosophy1}`;
-    const philosophy2Descriptor = `Descriptor_Philosophy_${characterData.philosophy2}`;
+    const philosophy2Descriptor = characterData.philosophy1 !== characterData.philosophy2 
+        ? `Descriptor_Philosophy_${characterData.philosophy2}` 
+        : null;
     
     document.getElementById('ageDescriptorValue').textContent = characterData.ageRange;
     document.getElementById('pronounDescriptorValue').textContent = characterData.pronoun;
     document.getElementById('philosophy1DescriptorValue').textContent = characterData.philosophy1;
-    document.getElementById('philosophy2DescriptorValue').textContent = characterData.philosophy2;
+    const philo2El = document.getElementById('philosophy2DescriptorValue');
+    if (philo2El) {
+        philo2El.textContent = philosophy2Descriptor ? characterData.philosophy2 : '(same as Philosophy 1)';
+    }
     
     // Update character data required traits
     characterData.traits.required = [
@@ -759,18 +764,55 @@ function populateFormFromCharacter(char, options = {}) {
             }, 100);
         }
     
-        // Attributes
+        // Attributes - need to wait for gender change to populate options
         if (options.culturalBackground !== false) {
-            const bgSelect = document.getElementById('culturalBackground');
-            if (bgSelect) bgSelect.value = char.culturalBackground || '';
+            setTimeout(() => {
+                const bgSelect = document.getElementById('culturalBackground');
+                if (bgSelect && char.culturalBackground) {
+                    bgSelect.value = char.culturalBackground;
+                    bgSelect.dispatchEvent(new Event('change'));
+                }
+            }, 200);
         }
         if (options.voice !== false) {
-            const voiceSelect = document.getElementById('voiceID');
-            if (voiceSelect) voiceSelect.value = char.voiceID || '';
+            setTimeout(() => {
+                const voiceSelect = document.getElementById('voiceID');
+                if (voiceSelect && char.voiceID) {
+                    // Try to find matching option
+                    const options = Array.from(voiceSelect.options);
+                    const matchingOption = options.find(opt => 
+                        opt.value === char.voiceID || 
+                        opt.value.includes(char.voiceID.split('_')[0]) ||
+                        opt.textContent.includes(char.voiceID.split('_')[0])
+                    );
+                    if (matchingOption) {
+                        voiceSelect.value = matchingOption.value;
+                    } else if (char.voiceID) {
+                        voiceSelect.value = char.voiceID;
+                    }
+                    voiceSelect.dispatchEvent(new Event('change'));
+                }
+            }, 200);
         }
         if (options.humanDefinition !== false) {
-            const modelSelect = document.getElementById('humanDefinition');
-            if (modelSelect) modelSelect.value = char.humanDefinition || '';
+            setTimeout(() => {
+                const modelSelect = document.getElementById('humanDefinition');
+                if (modelSelect && char.humanDefinition) {
+                    // Try to find matching option
+                    const options = Array.from(modelSelect.options);
+                    const matchingOption = options.find(opt => 
+                        opt.value === char.humanDefinition ||
+                        opt.value.includes(char.humanDefinition.split('_')[0]) ||
+                        opt.textContent.includes(char.humanDefinition.split('_')[0])
+                    );
+                    if (matchingOption) {
+                        modelSelect.value = matchingOption.value;
+                    } else if (char.humanDefinition) {
+                        modelSelect.value = char.humanDefinition;
+                    }
+                    modelSelect.dispatchEvent(new Event('change'));
+                }
+            }, 200);
         }
         
         // Philosophies
@@ -823,8 +865,27 @@ function populateFormFromCharacter(char, options = {}) {
                     if (fifthSkillType !== 'none' && char.skills.fifthSkill.skill) {
                         setTimeout(() => {
                             const fifthSkillSelect = document.getElementById('fifthSkill');
-                            if (fifthSkillSelect) fifthSkillSelect.value = char.skills.fifthSkill.skill;
-                        }, 100);
+                            if (fifthSkillSelect) {
+                                // Try to find matching option
+                                const options = Array.from(fifthSkillSelect.options);
+                                const matchingOption = options.find(opt => 
+                                    opt.value === char.skills.fifthSkill.skill ||
+                                    opt.textContent === char.skills.fifthSkill.skill ||
+                                    opt.value.toLowerCase().includes(char.skills.fifthSkill.skill.toLowerCase())
+                                );
+                                if (matchingOption) {
+                                    fifthSkillSelect.value = matchingOption.value;
+                                } else {
+                                    // If no match, try to set it directly
+                                    fifthSkillSelect.value = char.skills.fifthSkill.skill;
+                                }
+                                fifthSkillSelect.dispatchEvent(new Event('change'));
+                            }
+                        }, 300);
+                    } else if (fifthSkillType === 'none') {
+                        // Make sure none is selected
+                        const noneRadio = document.querySelector('input[name="fifthSkillType"][value="none"]');
+                        if (noneRadio) noneRadio.checked = true;
                     }
                 }
             }
