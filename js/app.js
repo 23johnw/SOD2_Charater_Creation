@@ -427,6 +427,15 @@ function setupEventListeners() {
     document.getElementById('exportBtn').addEventListener('click', exportCharacter);
     document.getElementById('previewBtn').addEventListener('click', previewXML);
     document.getElementById('resetBtn').addEventListener('click', resetForm);
+    
+    // Randomizer buttons
+    document.getElementById('randomizeBtn').addEventListener('click', randomizeFullCharacter);
+    document.getElementById('randomizePartialBtn').addEventListener('click', randomizeSelected);
+    
+    // Show/hide trait mode selection when traits checkbox is checked
+    document.getElementById('randTraits').addEventListener('change', (e) => {
+        document.getElementById('traitModeSelection').style.display = e.target.checked ? 'block' : 'none';
+    });
 }
 
 function updateDescriptorTraits() {
@@ -521,6 +530,165 @@ function exportCharacter() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+}
+
+// Randomizer functions
+function randomizeFullCharacter() {
+    const options = {
+        gender: Math.random() > 0.5 ? 'Male' : 'Female',
+        traitMode: document.querySelector('input[name="traitMode"]:checked')?.value || 'mixed',
+        traitLimit: parseInt(document.getElementById('traitLimit')?.value || 12)
+    };
+    
+    const randomChar = randomizer.randomizeCharacter(options);
+    populateFormFromCharacter(randomChar);
+    
+    // Show notification
+    showNotification('Character randomized!', 'success');
+}
+
+function randomizeSelected() {
+    const options = {
+        gender: characterData.gender,
+        name: document.getElementById('randName').checked,
+        culturalBackground: document.getElementById('randAttributes').checked,
+        voice: document.getElementById('randAttributes').checked,
+        humanDefinition: document.getElementById('randAttributes').checked,
+        skills: document.getElementById('randSkills').checked,
+        traits: document.getElementById('randTraits').checked,
+        stats: document.getElementById('randStats').checked,
+        standingLevel: document.getElementById('randStanding').checked,
+        leaderType: document.getElementById('randStanding').checked,
+        traitMode: document.querySelector('input[name="traitMode"]:checked')?.value || 'mixed',
+        traitLimit: parseInt(document.getElementById('traitLimit')?.value || 12)
+    };
+    
+    // If name is checked, randomize gender too
+    if (options.name) {
+        options.gender = Math.random() > 0.5 ? 'Male' : 'Female';
+    }
+    
+    const randomChar = randomizer.randomizeCharacter(options);
+    populateFormFromCharacter(randomChar, options);
+    
+    // Show notification
+    showNotification('Selected options randomized!', 'success');
+}
+
+function populateFormFromCharacter(char, options = {}) {
+    // Name and age
+    if (options.name !== false) {
+        document.getElementById('firstName').value = char.firstName;
+        document.getElementById('lastName').value = char.lastName;
+        document.getElementById('nickname').value = char.nickname;
+        document.getElementById('ageRange').value = char.ageRange;
+        document.getElementById('gender').value = char.gender;
+        document.getElementById('pronoun').value = char.pronoun;
+        updateVoiceOptions();
+        updateHumanDefinitionOptions();
+    }
+    
+    // Attributes
+    if (options.culturalBackground !== false) {
+        document.getElementById('culturalBackground').value = char.culturalBackground;
+    }
+    if (options.voice !== false) {
+        document.getElementById('voiceID').value = char.voiceID;
+    }
+    if (options.humanDefinition !== false) {
+        document.getElementById('humanDefinition').value = char.humanDefinition;
+    }
+    
+    // Philosophies
+    document.getElementById('philosophy1').value = char.philosophy1;
+    document.getElementById('philosophy2').value = char.philosophy2;
+    
+    // Standing and leader
+    if (options.standingLevel !== false) {
+        document.getElementById('standingLevel').value = char.standingLevel;
+    }
+    if (options.leaderType !== false) {
+        document.getElementById('leaderType').value = char.leaderType;
+    }
+    
+    // Skills
+    if (options.skills !== false) {
+        ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
+            const level = char.skills[skill].level;
+            document.getElementById(`${skill}Level`).value = level;
+            document.getElementById(`${skill}LevelDisplay`).textContent = level;
+            
+            // Show/hide specialty based on level
+            const specialtyDiv = document.getElementById(`${skill}Specialty`);
+            if (level >= 5) {
+                specialtyDiv.style.display = 'block';
+                if (char.skills[skill].specialty) {
+                    document.getElementById(`${skill}SpecialtySelect`).value = char.skills[skill].specialty;
+                }
+            } else {
+                specialtyDiv.style.display = 'none';
+                document.getElementById(`${skill}SpecialtySelect`).value = '';
+            }
+        });
+        
+        // 5th skill
+        const fifthSkillType = char.skills.fifthSkill.type;
+        const fifthSkillRadio = document.querySelector(`input[name="fifthSkillType"][value="${fifthSkillType}"]`);
+        if (fifthSkillRadio) {
+            fifthSkillRadio.checked = true;
+            // Trigger change to populate options
+            fifthSkillRadio.dispatchEvent(new Event('change'));
+            if (fifthSkillType !== 'none' && char.skills.fifthSkill.skill) {
+                setTimeout(() => {
+                    document.getElementById('fifthSkill').value = char.skills.fifthSkill.skill;
+                }, 100);
+            }
+        }
+    }
+    
+    // Traits
+    if (options.traits !== false) {
+        characterData.traits.optional = char.traits.optional || [];
+        updateSelectedTraitsDisplay();
+    }
+    
+    // Stats
+    if (options.stats !== false) {
+        document.getElementById('currentHealth').value = char.stats.health;
+        document.getElementById('currentStamina').value = char.stats.stamina;
+    }
+    
+    // Update all character data
+    updateCharacterData();
+}
+
+function showNotification(message, type = 'info') {
+    // Remove existing notification
+    const existing = document.querySelector('.notification');
+    if (existing) existing.remove();
+    
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${type === 'success' ? '#4caf50' : '#2196f3'};
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        z-index: 10000;
+        animation: slideIn 0.3s ease;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
 }
 
 // Make functions available globally

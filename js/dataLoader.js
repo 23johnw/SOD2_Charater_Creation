@@ -20,14 +20,18 @@ class DataLoader {
     async loadAll() {
         try {
             // Load voices
-            this.data.voices.male = await this.loadJSON('data/maleVoices.json');
-            this.data.voices.female = await this.loadJSON('data/femaleVoices.json');
+            this.data.maleVoices = await this.loadJSON('data/maleVoices.json');
+            this.data.femaleVoices = await this.loadJSON('data/femaleVoices.json');
+            this.data.voices.male = this.data.maleVoices;
+            this.data.voices.female = this.data.femaleVoices;
             
             // Load character data
             this.data.culturalBackgrounds = await this.loadJSON('data/culturalBackgrounds.json');
             const humanDefs = await this.loadJSON('data/humanDefinitions.json');
             this.data.humanDefinitions.male = humanDefs.filter(h => h.Gender === 'Male' && h['Internal ID (For Editor)']);
             this.data.humanDefinitions.female = humanDefs.filter(h => h.Gender === 'Female' && h['Internal ID (For Editor)']);
+            // Also store full list for randomizer
+            this.data.humanDefinitions = humanDefs;
             
             // Load skills
             this.data.coreSkills = await this.loadJSON('data/coreSkills.json');
@@ -38,6 +42,13 @@ class DataLoader {
             // Load traits
             const traitsRaw = await this.loadJSON('data/traits.json');
             this.data.traits = this.processTraits(traitsRaw);
+            // Also try to load processed traits if available
+            try {
+                this.data.processedTraits = await this.loadJSON('data/traits-processed.json');
+            } catch (e) {
+                // If processed traits don't exist, use the processed raw traits
+                this.data.processedTraits = this.data.traits;
+            }
             
             // Load enums
             this.data.enums = await this.loadJSON('data/enums.json');
