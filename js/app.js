@@ -283,17 +283,17 @@ function removeTrait(traitName) {
     updateCharacterData();
 }
 
-function updateSelectedTraitsDisplay() {
-    const selectedTraitsList = document.getElementById('selectedTraitsList');
-    selectedTraitsList.innerHTML = '';
-    
-    // Collect all buffs from selected traits
+// Calculate buffs from all traits (required + optional)
+function calculateTraitBuffs() {
     let totalHealthBuff = 0;
     let totalStaminaBuff = 0;
     
-    characterData.traits.optional.forEach(trait => {
+    // Check all traits (required + optional)
+    const allTraits = [...(characterData.traits.required || []), ...(characterData.traits.optional || [])];
+    
+    allTraits.forEach(trait => {
         // Get full trait data to access buffs
-        const fullTrait = dataLoader.data.traits.find(t => t.name === trait.name) || trait;
+        const fullTrait = dataLoader.data.traits.find(t => t.name === trait.name || t.traitResourceID === trait.traitResourceID) || trait;
         const buffs = fullTrait.buffs || [];
         
         // Calculate stat buffs
@@ -306,6 +306,22 @@ function updateSelectedTraitsDisplay() {
                 totalStaminaBuff += value;
             }
         });
+    });
+    
+    return { totalHealthBuff, totalStaminaBuff };
+}
+
+function updateSelectedTraitsDisplay() {
+    const selectedTraitsList = document.getElementById('selectedTraitsList');
+    selectedTraitsList.innerHTML = '';
+    
+    // Calculate buffs from all traits
+    const { totalHealthBuff, totalStaminaBuff } = calculateTraitBuffs();
+    
+    characterData.traits.optional.forEach(trait => {
+        // Get full trait data to access buffs
+        const fullTrait = dataLoader.data.traits.find(t => t.name === trait.name) || trait;
+        const buffs = fullTrait.buffs || [];
         
         const tag = document.createElement('div');
         tag.className = 'trait-tag';
@@ -657,6 +673,10 @@ function updateCharacterData() {
     characterData.skills.fifthSkill.skill = document.getElementById('fifthSkill').value || '';
     
     updateDescriptorTraits();
+    
+    // Recalculate and update stat displays when base stats change
+    const { totalHealthBuff, totalStaminaBuff } = calculateTraitBuffs();
+    updateStatDisplays(totalHealthBuff, totalStaminaBuff);
 }
 
 // Make updateCharacterData globally available
