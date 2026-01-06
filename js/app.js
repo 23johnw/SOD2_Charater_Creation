@@ -237,12 +237,29 @@ function loadAvailableTraits() {
         const traitDiv = document.createElement('div');
         traitDiv.className = `trait-item ${trait.traitType}`;
         
+        // Store trait data on the element for search functionality
+        traitDiv.dataset.traitName = trait.name.toLowerCase();
+        traitDiv.dataset.traitDescription = (trait.description || '').toLowerCase();
+        
+        // Store buff search text
+        let buffSearchText = '';
+        if (trait.buffs && trait.buffs.length > 0) {
+            buffSearchText = trait.buffs.map(buff => {
+                return `${buff.value} ${buff.stat}`.toLowerCase();
+            }).join(' ');
+            traitDiv.dataset.traitBuffs = buffSearchText;
+        }
+        
         // Format buffs for display
         let buffsDisplay = '';
         if (trait.buffs && trait.buffs.length > 0) {
             const buffElements = trait.buffs.map(buff => {
-                const sign = buff.type === 'positive' ? '+' : '';
-                return `<span class="trait-item-buff ${buff.type}">${sign}${buff.value} ${buff.stat}</span>`;
+                // Check if value already has a sign, if not add one based on type
+                let displayValue = buff.value;
+                if (!displayValue.startsWith('+') && !displayValue.startsWith('-')) {
+                    displayValue = (buff.type === 'positive' ? '+' : '-') + displayValue;
+                }
+                return `<span class="trait-item-buff ${buff.type}">${displayValue} ${buff.stat}</span>`;
             });
             buffsDisplay = `<div class="trait-item-buffs">${buffElements.join('')}</div>`;
         }
@@ -269,12 +286,26 @@ function loadAvailableTraits() {
 }
 
 function filterTraits() {
-    const searchTerm = document.getElementById('traitSearch').value.toLowerCase();
+    const searchTerm = document.getElementById('traitSearch').value.toLowerCase().trim();
     const traitItems = document.querySelectorAll('.trait-item');
     
+    if (!searchTerm) {
+        // Show all if search is empty
+        traitItems.forEach(item => {
+            item.style.display = 'block';
+        });
+        return;
+    }
+    
     traitItems.forEach(item => {
-        const name = item.querySelector('.trait-item-name').textContent.toLowerCase();
-        if (name.includes(searchTerm)) {
+        const name = item.dataset.traitName || '';
+        const description = item.dataset.traitDescription || '';
+        const buffs = item.dataset.traitBuffs || '';
+        
+        // Search in name, description, and buffs
+        if (name.includes(searchTerm) || 
+            description.includes(searchTerm) || 
+            buffs.includes(searchTerm)) {
             item.style.display = 'block';
         } else {
             item.style.display = 'none';
