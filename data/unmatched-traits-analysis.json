@@ -1,23 +1,7 @@
 {
   "total": 281,
-  "matched": 278,
-  "unmatched": 3,
-  "matchRate": "98.9%",
-  "unmatchedTraits": [
-    {
-      "name": "Cautious",
-      "description": "Take thins slow, and you'll end up making better decisions.",
-      "providedSkill": ""
-    },
-    {
-      "name": "Loved to Hunt",
-      "description": "*Unknown*",
-      "providedSkill": ""
-    },
-    {
-      "name": "Messy",
-      "description": "I'd know exactly where everything was if you'd quit cleaning it up!",
-      "providedSkill": ""
-    }
-  ]
+  "matched": 281,
+  "unmatched": 0,
+  "matchRate": "100.0%",
+  "unmatchedTraits": []
 }

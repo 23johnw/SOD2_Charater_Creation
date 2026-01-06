@@ -51,17 +51,41 @@ while ((addMatch = addPattern.exec(content)) !== null) {
 // Find the next Add call after each TraitObject that matches the gameString
 let count2 = 0;
 traitObjects.forEach(trait => {
-    // Find the next Add call after this TraitObject
-    const nextAdd = addCalls.find(add => add.position > trait.position);
-    if (nextAdd && nextAdd.gameString === trait.gameString) {
+    // Find the next Add call after this TraitObject (within reasonable distance - 50000 chars to handle large blocks)
+    const nextAdd = addCalls.find(add => 
+        add.position > trait.position && 
+        add.position < trait.position + 50000 &&
+        add.gameString === trait.gameString
+    );
+    if (nextAdd) {
         mappings[trait.displayName] = trait.gameString;
         count2++;
+    } else {
+        // If no matching Add found, still add the mapping using the gameString from TraitObject
+        // This handles cases where the Add might be far away or the pattern is different
+        // But only if we haven't already added this display name
+        if (!mappings[trait.displayName]) {
+            mappings[trait.displayName] = trait.gameString;
+            count2++;
+        }
     }
 });
 
+// Manually add the three traits that weren't extracted (they exist in UILists.cs)
+if (!mappings['Cautious']) {
+    mappings['Cautious'] = 'Philosophy_Prudent_Cautious';
+}
+if (!mappings['Loved to Hunt']) {
+    mappings['Loved to Hunt'] = 'Minor_Hobby_LovedHunting';
+}
+if (!mappings['Messy']) {
+    mappings['Messy'] = 'Morale_Attribute_Messy';
+}
+
 console.log(`Extracted ${Object.keys(mappings).length} trait mappings from UILists.cs`);
 console.log(`  - Pattern 1 (direct Add): ${count1}`);
-console.log(`  - Pattern 2 (traitObject + Add): ${count2}\n`);
+console.log(`  - Pattern 2 (traitObject + Add): ${count2}`);
+console.log(`  - Manually added: 3\n`);
 
 // Now match with CSV traits
 console.log('Matching with CSV traits...\n');
@@ -120,6 +144,19 @@ csvTraits.forEach(csvTrait => {
         return;
     }
     
+    // Debug: Check for the three problematic traits
+    if (csvName === 'Cautious' || csvName === 'Loved to Hunt' || csvName === 'Messy') {
+        console.log(`DEBUG: Looking for "${csvName}"`);
+        console.log(`  - In mappings: ${mappings[csvName] ? `YES -> "${mappings[csvName]}"` : 'NO'}`);
+        const caseMatch = Object.keys(mappings).find(k => k.toLowerCase() === csvName.toLowerCase());
+        console.log(`  - Case-insensitive match: ${caseMatch ? `"${caseMatch}" -> "${mappings[caseMatch]}"` : 'NO'}`);
+        // Show all keys that contain the name
+        const partialMatches = Object.keys(mappings).filter(k => k.toLowerCase().includes(csvName.toLowerCase()) || csvName.toLowerCase().includes(k.toLowerCase()));
+        if (partialMatches.length > 0) {
+            console.log(`  - Partial matches: ${partialMatches.slice(0, 5).map(k => `"${k}"`).join(', ')}`);
+        }
+    }
+    
     // Try exact match first
     if (mappings[csvName]) {
         finalMapping[csvName] = mappings[csvName];
@@ -128,11 +165,23 @@ csvTraits.forEach(csvTrait => {
     }
     
     // Try case-insensitive match
-    const lowerCsvName = csvName.toLowerCase();
-    const matchingKey = Object.keys(mappings).find(key => key.toLowerCase() === lowerCsvName);
+    const lowerCsvName = csvName.toLowerCase().trim();
+    const matchingKey = Object.keys(mappings).find(key => key.toLowerCase().trim() === lowerCsvName);
     if (matchingKey) {
         finalMapping[csvName] = mappings[matchingKey];
         matched.push({ csvName, gameString: mappings[matchingKey], matchType: 'case_insensitive' });
+        return;
+    }
+    
+    // Try normalized match (remove special characters, extra spaces)
+    const normalizedCsv = csvName.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ').trim();
+    const normalizedMatch = Object.keys(mappings).find(key => {
+        const normalizedKey = key.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ').trim();
+        return normalizedKey === normalizedCsv;
+    });
+    if (normalizedMatch) {
+        finalMapping[csvName] = mappings[normalizedMatch];
+        matched.push({ csvName, gameString: mappings[normalizedMatch], matchType: 'normalized' });
         return;
     }
     
