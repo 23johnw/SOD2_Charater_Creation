@@ -479,7 +479,33 @@ function generateTraitsArray(index, traits) {
 }
 
 function generateTraitsSubsection(traits) {
-    const allTraits = [...(traits.required || []), ...(traits.optional || [])];
+    // Make sure characterData is up to date before generating traits
+    if (typeof updateCharacterData === 'function') {
+        updateCharacterData();
+    }
+    
+    // Rebuild required traits to ensure they're correct
+    const ageDescriptorName = characterData.ageRange === 'MiddleAged' ? 'MiddleAge' : characterData.ageRange;
+    const requiredTraits = [
+        { name: 'Default', traitResourceID: 'Default' },
+        { name: `Descriptor_Age_${ageDescriptorName}`, traitResourceID: `Descriptor_Age_${ageDescriptorName}` },
+        { name: `Descriptor_Pronoun_${characterData.pronoun || 'She'}`, traitResourceID: `Descriptor_Pronoun_${characterData.pronoun || 'She'}` },
+        { name: `Descriptor_Philosophy_${characterData.philosophy1 || 'Prudent'}`, traitResourceID: `Descriptor_Philosophy_${characterData.philosophy1 || 'Prudent'}` },
+        { name: `Descriptor_Philosophy_${characterData.philosophy2 || 'Pragmatic'}`, traitResourceID: `Descriptor_Philosophy_${characterData.philosophy2 || 'Pragmatic'}` }
+    ];
+    
+    const allTraits = [...requiredTraits, ...(traits.optional || [])];
+    
+    // Filter out invalid traits before generating XML
+    const validTraits = allTraits.filter(trait => {
+        const traitID = trait.traitResourceID || trait.name || '';
+        return traitID && 
+               !traitID.includes('▶') && 
+               !traitID.includes('much worse') &&
+               traitID.trim().length >= 2 &&
+               traitID !== 'Descriptor_Philosophy_' &&
+               !(traitID.startsWith('Descriptor_') && traitID.split('_').length < 3);
+    });
     
     let xml = `
       <StructObject xsi:type="ArrayProperty">
@@ -489,7 +515,7 @@ function generateTraitsSubsection(traits) {
         <SubStruct>StructProperty</SubStruct>
         <TheStats>`;
     
-    allTraits.forEach((trait, idx) => {
+    validTraits.forEach((trait, idx) => {
         xml += `
           <SaveObject>
             <Index>${idx}</Index>
@@ -509,12 +535,15 @@ function generateTraitsSubsection(traits) {
         // Make sure we have a valid trait ID
         let traitID = trait.traitResourceID || trait.name || 'Default';
         
-        // Clean up trait ID - remove any special characters that shouldn't be there
-        // But keep spaces as some traits use them (like "A Little Forgetful")
-        if (traitID.includes('▶') || traitID.includes('much worse')) {
-            // This is likely a description, not a trait ID - skip or use a fallback
-            console.warn('Invalid trait ID detected:', traitID);
-            traitID = 'Default';
+        // Skip invalid trait IDs - these are descriptions, not actual trait IDs
+        if (!traitID || 
+            traitID.includes('▶') || 
+            traitID.includes('much worse') ||
+            traitID.trim().length < 2 ||
+            traitID === 'Descriptor_Philosophy_' || // Incomplete descriptor
+            (traitID.startsWith('Descriptor_') && traitID.split('_').length < 3)) { // Incomplete descriptor
+            console.warn('Skipping invalid trait ID:', traitID);
+            return; // Skip this trait entirely
         }
         
         xml += `
