@@ -200,6 +200,17 @@ function generateStructProperty(index, name, type, value) {
       </SaveObject>`;
 }
 
+function generateByteProperty(index, name, value, enumType) {
+    return `
+      <SaveObject xsi:type="ByteProperty">
+        <Index>${index}</Index>
+        <PropertyName>${name}</PropertyName>
+        <PropertyType>ByteProperty</PropertyType>
+        <Value>${escapeXML(value)}</Value>
+        <TheType>${escapeXML(enumType)}</TheType>
+      </SaveObject>`;
+}
+
 function generateSkillsArray(index, skills) {
     return generateArrayProperty(index, 'Skills', 'StructProperty', '');
 }
