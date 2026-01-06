@@ -39,9 +39,6 @@ class DataLoader {
             this.data.quirkSkills = await this.loadJSON('data/quirkSkills.json');
             this.data.redTalonSkills = await this.loadJSON('data/redTalonSkills.json');
             
-            // Load traits
-            const traitsRaw = await this.loadJSON('data/traits.json');
-            
             // Load trait ID mapping if available
             try {
                 this.data.traitIdMapping = await this.loadJSON('data/trait-id-mapping.json');
@@ -66,13 +63,24 @@ class DataLoader {
                 this.data.backpackIdMapping = {};
             }
             
-            this.data.traits = this.processTraits(traitsRaw);
-            // Also try to load processed traits if available
+            // Try to load curated traits table first (clean, pre-formatted data)
             try {
-                this.data.processedTraits = await this.loadJSON('data/traits-processed.json');
-            } catch (e) {
-                // If processed traits don't exist, use the processed raw traits
+                this.data.traits = await this.loadJSON('data/traits-curated.json');
+                console.log('✓ Loaded curated traits table');
+                // Curated traits are already processed, so use them directly
                 this.data.processedTraits = this.data.traits;
+            } catch (e) {
+                // Fallback to CSV parsing if curated table doesn't exist
+                console.log('Curated traits table not found, falling back to CSV parsing');
+                const traitsRaw = await this.loadJSON('data/traits.json');
+                this.data.traits = this.processTraits(traitsRaw);
+                // Also try to load processed traits if available
+                try {
+                    this.data.processedTraits = await this.loadJSON('data/traits-processed.json');
+                } catch (e2) {
+                    // If processed traits don't exist, use the processed raw traits
+                    this.data.processedTraits = this.data.traits;
+                }
             }
             
             // Load enums
