@@ -174,8 +174,8 @@ class Randomizer {
     // Random traits
     randomTraits(options = {}) {
         const traitMode = options.traitMode || 'mixed'; // 'good', 'bad', 'mixed'
-        // Use a reasonable default for randomization (7-10 optional traits), but no hard limit
-        const defaultOptionalCount = options.traitLimit ? Math.max(1, options.traitLimit - 5) : Math.floor(Math.random() * 4) + 7;
+        // Random number of optional traits between 1 and 7 (not including required traits)
+        const defaultOptionalCount = options.traitLimit ? Math.max(1, Math.min(7, options.traitLimit - 5)) : Math.floor(Math.random() * 7) + 1;
         
         // Use processed traits if available, otherwise use raw traits
         let traitsData = dataLoader.data.processedTraits || dataLoader.data.traits || [];
@@ -201,10 +201,12 @@ class Randomizer {
             const badTraits = traitsData.filter(t => t.traitType === 'bad');
             const neutralTraits = traitsData.filter(t => t.traitType === 'neutral' || !t.traitType);
             
-            // 40% good, 30% bad, 30% neutral
-            const goodCount = Math.ceil(defaultOptionalCount * 0.4);
-            const badCount = Math.ceil(defaultOptionalCount * 0.3);
-            const neutralCount = Math.ceil(defaultOptionalCount * 0.3);
+            // For mixed mode with 1-7 traits, use proportional distribution
+            // But ensure we don't exceed the total count
+            const goodCount = Math.max(0, Math.min(goodTraits.length, Math.ceil(defaultOptionalCount * 0.4)));
+            const badCount = Math.max(0, Math.min(badTraits.length, Math.ceil(defaultOptionalCount * 0.3)));
+            const remaining = defaultOptionalCount - goodCount - badCount;
+            const neutralCount = Math.max(0, Math.min(neutralTraits.length, remaining));
             
             availableTraits = [
                 ...this.randomSelect(goodTraits, goodCount),
@@ -215,13 +217,19 @@ class Randomizer {
             availableTraits = traitsData;
         }
 
-        // Filter out descriptor traits and Default
+        // Filter out descriptor traits, Default, and required traits
         availableTraits = availableTraits.filter(t => {
             const name = t.name || t.Name || t;
-            return !name.includes('Descriptor_') && name !== 'Default';
+            const category = t.category || '';
+            return !name.includes('Descriptor_') && 
+                   name !== 'Default' && 
+                   category !== 'required' &&
+                   category !== 'descriptor_age' &&
+                   category !== 'descriptor_pronoun' &&
+                   category !== 'descriptor_philosophy';
         });
 
-        // Select random traits (use default count, but don't enforce hard limit)
+        // Select random traits - use the exact count (1-7) or available count if less
         const optionalCount = Math.min(defaultOptionalCount, availableTraits.length);
         const selectedTraits = this.randomSelect(availableTraits, optionalCount);
 
