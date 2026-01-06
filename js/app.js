@@ -260,14 +260,7 @@ function filterTraits() {
 }
 
 function addTrait(trait) {
-    const traitLimit = parseInt(document.getElementById('traitLimit').value);
-    const currentCount = characterData.traits.required.length + characterData.traits.optional.length;
-    
-    if (currentCount >= traitLimit) {
-        alert(`Maximum trait limit (${traitLimit}) reached. Remove a trait first.`);
-        return;
-    }
-    
+    // Check if trait is already added
     if (characterData.traits.optional.find(t => t.name === trait.name)) {
         return; // Already added
     }
@@ -350,17 +343,12 @@ function updateSelectedTraitsDisplay() {
     // Update stat displays with buff totals
     updateStatDisplays(totalHealthBuff, totalStaminaBuff);
     
-    // Update trait counter
+    // Update trait counter (no limit)
     const totalTraits = characterData.traits.required.length + characterData.traits.optional.length;
-    const traitLimit = parseInt(document.getElementById('traitLimit').value);
     const counter = document.querySelector('.trait-counter') || document.createElement('div');
     counter.className = 'trait-counter';
-    counter.textContent = `Traits: ${totalTraits} / ${traitLimit}`;
-    if (totalTraits >= traitLimit) {
-        counter.classList.add('error');
-    } else if (totalTraits >= traitLimit - 2) {
-        counter.classList.add('warning');
-    }
+    counter.textContent = `Traits: ${totalTraits}`;
+    counter.classList.remove('error', 'warning'); // Remove limit warnings
     if (!document.querySelector('.trait-counter')) {
         document.getElementById('optionalTraits').insertBefore(counter, document.getElementById('selectedTraitsList'));
     }
@@ -732,7 +720,7 @@ function randomizeFullCharacter() {
         const options = {
             gender: Math.random() > 0.5 ? 'Male' : 'Female',
             traitMode: document.querySelector('input[name="traitMode"]:checked')?.value || 'mixed',
-            traitLimit: parseInt(document.getElementById('traitLimit')?.value || 12)
+            traitLimit: 999 // No practical limit
         };
         
         console.log('Randomizer options:', options);
@@ -762,7 +750,7 @@ function randomizeSelected() {
         standingLevel: document.getElementById('randStanding').checked,
         leaderType: document.getElementById('randStanding').checked,
         traitMode: document.querySelector('input[name="traitMode"]:checked')?.value || 'mixed',
-        traitLimit: parseInt(document.getElementById('traitLimit')?.value || 12)
+        traitLimit: 999 // No practical limit
     };
     
     // If name is checked, randomize gender too

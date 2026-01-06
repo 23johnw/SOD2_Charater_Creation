@@ -63,11 +63,11 @@ class ConstraintValidator {
         errors.push(...skillsValidation.errors);
         warnings.push(...skillsValidation.warnings);
         
-        // Traits validation
+        // Traits validation (no limit check)
         const traitsValidation = this.validateTraits(
             characterData.traits.required,
             characterData.traits.optional,
-            parseInt(document.getElementById('traitLimit')?.value || 12)
+            999 // No practical limit
         );
         errors.push(...traitsValidation.errors);
         warnings.push(...traitsValidation.warnings);

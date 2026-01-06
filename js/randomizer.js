@@ -174,7 +174,8 @@ class Randomizer {
     // Random traits
     randomTraits(options = {}) {
         const traitMode = options.traitMode || 'mixed'; // 'good', 'bad', 'mixed'
-        const traitLimit = options.traitLimit || 12;
+        // Use a reasonable default for randomization (7-10 optional traits), but no hard limit
+        const defaultOptionalCount = options.traitLimit ? Math.max(1, options.traitLimit - 5) : Math.floor(Math.random() * 4) + 7;
         
         // Use processed traits if available, otherwise use raw traits
         let traitsData = dataLoader.data.processedTraits || dataLoader.data.traits || [];
@@ -201,9 +202,9 @@ class Randomizer {
             const neutralTraits = traitsData.filter(t => t.traitType === 'neutral' || !t.traitType);
             
             // 40% good, 30% bad, 30% neutral
-            const goodCount = Math.ceil((traitLimit - 5) * 0.4);
-            const badCount = Math.ceil((traitLimit - 5) * 0.3);
-            const neutralCount = Math.ceil((traitLimit - 5) * 0.3);
+            const goodCount = Math.ceil(defaultOptionalCount * 0.4);
+            const badCount = Math.ceil(defaultOptionalCount * 0.3);
+            const neutralCount = Math.ceil(defaultOptionalCount * 0.3);
             
             availableTraits = [
                 ...this.randomSelect(goodTraits, goodCount),
@@ -220,8 +221,8 @@ class Randomizer {
             return !name.includes('Descriptor_') && name !== 'Default';
         });
 
-        // Select random traits up to limit (minus 5 required traits)
-        const optionalCount = Math.min(traitLimit - 5, availableTraits.length);
+        // Select random traits (use default count, but don't enforce hard limit)
+        const optionalCount = Math.min(defaultOptionalCount, availableTraits.length);
         const selectedTraits = this.randomSelect(availableTraits, optionalCount);
 
         return selectedTraits.map(trait => ({
