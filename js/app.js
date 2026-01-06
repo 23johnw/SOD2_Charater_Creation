@@ -254,11 +254,9 @@ function loadAvailableTraits() {
         let buffsDisplay = '';
         if (trait.buffs && trait.buffs.length > 0) {
             const buffElements = trait.buffs.map(buff => {
-                // Check if value already has a sign, if not add one based on type
-                let displayValue = buff.value;
-                if (!displayValue.startsWith('+') && !displayValue.startsWith('-')) {
-                    displayValue = (buff.type === 'positive' ? '+' : '-') + displayValue;
-                }
+                // Strip any existing sign and add the correct one based on type
+                let displayValue = String(buff.value).replace(/^[+-]/, ''); // Remove existing + or -
+                displayValue = (buff.type === 'positive' ? '+' : '-') + displayValue;
                 return `<span class="trait-item-buff ${buff.type}">${displayValue} ${buff.stat}</span>`;
             });
             buffsDisplay = `<div class="trait-item-buffs">${buffElements.join('')}</div>`;
