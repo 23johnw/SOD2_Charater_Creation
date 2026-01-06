@@ -567,8 +567,218 @@ function initializeLoadoutUI() {
         </div>
     `;
     
-    // Populate equipment dropdowns (simplified for now)
-    // Equipment will be handled by loadouts.js
+    // Populate equipment dropdowns after data is loaded
+    populateEquipmentDropdowns();
+}
+
+function populateEquipmentDropdowns() {
+    if (!dataLoader || !dataLoader.data) {
+        console.warn('Data loader not ready, retrying in 500ms...');
+        setTimeout(populateEquipmentDropdowns, 500);
+        return;
+    }
+    
+    // Helper function to get ClassString from weapon ID mapping
+    const getWeaponClassString = (displayName) => {
+        if (dataLoader.data.weaponIdMapping && dataLoader.data.weaponIdMapping[displayName]) {
+            return dataLoader.data.weaponIdMapping[displayName].classString;
+        }
+        return '';
+    };
+    
+    // Populate Backpack dropdown
+    const backpackSelect = document.getElementById('equipmentBackpack');
+    if (backpackSelect && dataLoader.data.backpacks) {
+        // Clear existing options except "None"
+        backpackSelect.innerHTML = '<option value="">None</option>';
+        
+        dataLoader.data.backpacks.forEach(backpack => {
+            const displayName = backpack.DisplayName || backpack['All columns are the back pack name'] || 'Unknown';
+            const classString = backpack.ClassString || '';
+            if (displayName && displayName !== 'Unknown' && classString) {
+                const option = document.createElement('option');
+                option.value = displayName;
+                option.textContent = displayName;
+                option.dataset.classString = classString;
+                backpackSelect.appendChild(option);
+            }
+        });
+        console.log(`✓ Populated ${backpackSelect.options.length - 1} backpack options`);
+    }
+    
+    // Populate Melee Weapon dropdown (from close combat weapons)
+    // Note: close combat weapons have a weird structure, need to extract names
+    const meleeSelect = document.getElementById('equipmentMelee');
+    if (meleeSelect && dataLoader.data.weapons && dataLoader.data.weapons.closeCombat) {
+        meleeSelect.innerHTML = '<option value="">None</option>';
+        
+        const meleeWeapons = new Set(); // Use Set to avoid duplicates
+        
+        dataLoader.data.weapons.closeCombat.forEach(weapon => {
+            // Close combat weapons have structure like {"Antler Knife": "Weapon Name"}
+            Object.keys(weapon).forEach(key => {
+                if (key && key !== '') {
+                    const weaponName = weapon[key];
+                    if (weaponName && weaponName !== 'Unknown') {
+                        meleeWeapons.add(weaponName);
+                    }
+                }
+            });
+        });
+        
+        // Also check weapon-id-mapping for melee weapons
+        if (dataLoader.data.weaponIdMapping) {
+            Object.keys(dataLoader.data.weaponIdMapping).forEach(weaponName => {
+                const weaponData = dataLoader.data.weaponIdMapping[weaponName];
+                if (weaponData.category === 'melee' || weaponData.category === 'closeCombat') {
+                    meleeWeapons.add(weaponName);
+                }
+            });
+        }
+        
+        Array.from(meleeWeapons).sort().forEach(weaponName => {
+            const option = document.createElement('option');
+            option.value = weaponName;
+            option.textContent = weaponName;
+            const classString = getWeaponClassString(weaponName);
+            if (classString) {
+                option.dataset.classString = classString;
+            }
+            meleeSelect.appendChild(option);
+        });
+        console.log(`✓ Populated ${meleeSelect.options.length - 1} melee weapon options`);
+    }
+    
+    // Populate Close Combat Weapon dropdown (same as melee)
+    const closeCombatSelect = document.getElementById('equipmentCloseCombat');
+    if (closeCombatSelect && dataLoader.data.weapons && dataLoader.data.weapons.closeCombat) {
+        closeCombatSelect.innerHTML = '<option value="">None</option>';
+        
+        const closeCombatWeapons = new Set();
+        
+        dataLoader.data.weapons.closeCombat.forEach(weapon => {
+            Object.keys(weapon).forEach(key => {
+                if (key && key !== '') {
+                    const weaponName = weapon[key];
+                    if (weaponName && weaponName !== 'Unknown') {
+                        closeCombatWeapons.add(weaponName);
+                    }
+                }
+            });
+        });
+        
+        // Also check weapon-id-mapping
+        if (dataLoader.data.weaponIdMapping) {
+            Object.keys(dataLoader.data.weaponIdMapping).forEach(weaponName => {
+                const weaponData = dataLoader.data.weaponIdMapping[weaponName];
+                if (weaponData.category === 'melee' || weaponData.category === 'closeCombat') {
+                    closeCombatWeapons.add(weaponName);
+                }
+            });
+        }
+        
+        Array.from(closeCombatWeapons).sort().forEach(weaponName => {
+            const option = document.createElement('option');
+            option.value = weaponName;
+            option.textContent = weaponName;
+            const classString = getWeaponClassString(weaponName);
+            if (classString) {
+                option.dataset.classString = classString;
+            }
+            closeCombatSelect.appendChild(option);
+        });
+        console.log(`✓ Populated ${closeCombatSelect.options.length - 1} close combat weapon options`);
+    }
+    
+    // Populate Ranged Weapon dropdown (from rifles, shotguns, assault weapons, crossbows)
+    const rangedSelect = document.getElementById('equipmentRanged');
+    if (rangedSelect && dataLoader.data.weapons) {
+        rangedSelect.innerHTML = '<option value="">None</option>';
+        
+        const rangedWeapons = new Set();
+        const rangedWeaponTypes = ['rifles', 'shotguns', 'assault', 'crossbows'];
+        
+        rangedWeaponTypes.forEach(weaponType => {
+            const weapons = dataLoader.data.weapons[weaponType];
+            if (weapons && Array.isArray(weapons)) {
+                weapons.forEach(weapon => {
+                    const displayName = weapon.DisplayName || weapon.Name || 'Unknown';
+                    const classString = weapon.ClassString || '';
+                    if (displayName && displayName !== 'Unknown') {
+                        rangedWeapons.add(displayName);
+                    }
+                });
+            }
+        });
+        
+        // Also add from weapon-id-mapping for ranged weapons
+        if (dataLoader.data.weaponIdMapping) {
+            Object.keys(dataLoader.data.weaponIdMapping).forEach(weaponName => {
+                const weaponData = dataLoader.data.weaponIdMapping[weaponName];
+                if (weaponData.category === 'rifles' || weaponData.category === 'shotguns' || 
+                    weaponData.category === 'assault' || weaponData.category === 'crossbows' ||
+                    weaponData.category === 'ranged') {
+                    rangedWeapons.add(weaponName);
+                }
+            });
+        }
+        
+        Array.from(rangedWeapons).sort().forEach(weaponName => {
+            const option = document.createElement('option');
+            option.value = weaponName;
+            option.textContent = weaponName;
+            const classString = weaponName.includes('ClassString') ? '' : (getWeaponClassString(weaponName) || '');
+            if (classString) {
+                option.dataset.classString = classString;
+            }
+            rangedSelect.appendChild(option);
+        });
+        console.log(`✓ Populated ${rangedSelect.options.length - 1} ranged weapon options`);
+    }
+    
+    // Populate Sidearm dropdown (from pistols, revolvers, assault pistols, sidearm shotguns)
+    const sidearmSelect = document.getElementById('equipmentSidearm');
+    if (sidearmSelect && dataLoader.data.weapons) {
+        sidearmSelect.innerHTML = '<option value="">None</option>';
+        
+        const sidearmWeapons = new Set();
+        const sidearmWeaponTypes = ['pistols', 'revolvers', 'assaultPistols', 'sidearmShotguns', 'sidearmAssaultShotguns'];
+        
+        sidearmWeaponTypes.forEach(weaponType => {
+            const weapons = dataLoader.data.weapons[weaponType];
+            if (weapons && Array.isArray(weapons)) {
+                weapons.forEach(weapon => {
+                    const displayName = weapon.DisplayName || weapon.Name || 'Unknown';
+                    if (displayName && displayName !== 'Unknown') {
+                        sidearmWeapons.add(displayName);
+                    }
+                });
+            }
+        });
+        
+        // Also add from weapon-id-mapping for sidearm weapons
+        if (dataLoader.data.weaponIdMapping) {
+            Object.keys(dataLoader.data.weaponIdMapping).forEach(weaponName => {
+                const weaponData = dataLoader.data.weaponIdMapping[weaponName];
+                if (weaponData.category === 'pistols' || weaponData.category === 'revolvers' ||
+                    weaponData.category === 'assaultPistols' || weaponData.category === 'sidearm') {
+                    sidearmWeapons.add(weaponName);
+                }
+            });
+        }
+        
+        Array.from(sidearmWeapons).sort().forEach(weaponName => {
+            const option = document.createElement('option');
+            option.value = weaponName;
+            option.textContent = weaponName;
+            const classString = getWeaponClassString(weaponName);
+            if (classString) {
+                option.dataset.classString = classString;
+            }
+            sidearmSelect.appendChild(option);
+        });
+        console.log(`✓ Populated ${sidearmSelect.options.length - 1} sidearm options`);
+    }
 }
 
 function updateVoiceOptions() {

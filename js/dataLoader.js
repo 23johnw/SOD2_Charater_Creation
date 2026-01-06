@@ -95,6 +95,26 @@ class DataLoader {
             this.data.weapons.revolvers = await this.loadJSON('data/revolvers.json');
             this.data.weapons.closeCombat = await this.loadJSON('data/closeCombatWeapons.json');
             
+            // Load sidearm weapons if available
+            try {
+                this.data.weapons.assaultPistols = await this.loadJSON('data/assaultPistols.json');
+            } catch (e) {
+                console.warn('Assault pistols not found');
+                this.data.weapons.assaultPistols = [];
+            }
+            try {
+                this.data.weapons.sidearmShotguns = await this.loadJSON('data/sidearmShotguns.json');
+            } catch (e) {
+                console.warn('Sidearm shotguns not found');
+                this.data.weapons.sidearmShotguns = [];
+            }
+            try {
+                this.data.weapons.sidearmAssaultShotguns = await this.loadJSON('data/sidearmAssaultShotguns.json');
+            } catch (e) {
+                console.warn('Sidearm assault shotguns not found');
+                this.data.weapons.sidearmAssaultShotguns = [];
+            }
+            
             // Load backpacks
             this.data.backpacks = await this.loadJSON('data/backpacks.json');
             
