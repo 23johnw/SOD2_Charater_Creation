@@ -358,9 +358,41 @@ header p {
     border-left-color: #ff9800;
 }
 
+.trait-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 10px;
+}
+
 .trait-item-name {
     font-weight: 600;
-    margin-bottom: 5px;
+    flex: 1;
+}
+
+.trait-item-buffs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 0.8em;
+}
+
+.trait-item-buff {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.trait-item-buff.positive {
+    background: #ffeb3b;
+    color: #333;
+}
+
+.trait-item-buff.negative {
+    background: #f44336;
+    color: white;
 }
 
 .trait-item-effects {

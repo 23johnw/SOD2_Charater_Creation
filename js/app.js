@@ -236,8 +236,22 @@ function loadAvailableTraits() {
     traits.forEach(trait => {
         const traitDiv = document.createElement('div');
         traitDiv.className = `trait-item ${trait.traitType}`;
+        
+        // Format buffs for display
+        let buffsDisplay = '';
+        if (trait.buffs && trait.buffs.length > 0) {
+            const buffElements = trait.buffs.map(buff => {
+                const sign = buff.type === 'positive' ? '+' : '';
+                return `<span class="trait-item-buff ${buff.type}">${sign}${buff.value} ${buff.stat}</span>`;
+            });
+            buffsDisplay = `<div class="trait-item-buffs">${buffElements.join('')}</div>`;
+        }
+        
         traitDiv.innerHTML = `
-            <div class="trait-item-name">${trait.name}</div>
+            <div class="trait-item-header">
+                <div class="trait-item-name">${trait.name}</div>
+                ${buffsDisplay}
+            </div>
             <div class="trait-item-effects">${trait.description || 'No description'}</div>
         `;
         traitDiv.addEventListener('click', () => addTrait(trait));
