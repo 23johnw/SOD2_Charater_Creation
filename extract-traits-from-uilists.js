@@ -144,19 +144,6 @@ csvTraits.forEach(csvTrait => {
         return;
     }
     
-    // Debug: Check for the three problematic traits
-    if (csvName === 'Cautious' || csvName === 'Loved to Hunt' || csvName === 'Messy') {
-        console.log(`DEBUG: Looking for "${csvName}"`);
-        console.log(`  - In mappings: ${mappings[csvName] ? `YES -> "${mappings[csvName]}"` : 'NO'}`);
-        const caseMatch = Object.keys(mappings).find(k => k.toLowerCase() === csvName.toLowerCase());
-        console.log(`  - Case-insensitive match: ${caseMatch ? `"${caseMatch}" -> "${mappings[caseMatch]}"` : 'NO'}`);
-        // Show all keys that contain the name
-        const partialMatches = Object.keys(mappings).filter(k => k.toLowerCase().includes(csvName.toLowerCase()) || csvName.toLowerCase().includes(k.toLowerCase()));
-        if (partialMatches.length > 0) {
-            console.log(`  - Partial matches: ${partialMatches.slice(0, 5).map(k => `"${k}"`).join(', ')}`);
-        }
-    }
-    
     // Try exact match first
     if (mappings[csvName]) {
         finalMapping[csvName] = mappings[csvName];
