@@ -823,16 +823,19 @@ function generateTimedBuffSavesSubsection(index) {
 function generateEquipmentSection(loadout) {
     // Equipment section is separate from SurvivorData
     // Order: Backpack, Melee, CloseCombat, Ranged, Sidearm, Rucksack
+    // Non-Null items need xsi:type and StackData structure
     const getClassString = (itemName, category) => {
         if (!itemName || itemName === '' || itemName === 'None') {
-            return 'Null';
+            return { classString: 'Null', hasItem: false };
         }
+        
+        let classString = 'Null';
         
         // Try to find in weapon mapping
         if (category === 'weapon' && dataLoader && dataLoader.data && dataLoader.data.weaponIdMapping) {
             const mapping = dataLoader.data.weaponIdMapping[itemName];
             if (mapping && mapping.classString) {
-                return mapping.classString;
+                classString = mapping.classString;
             }
         }
         
@@ -840,12 +843,12 @@ function generateEquipmentSection(loadout) {
         if (category === 'backpack' && dataLoader && dataLoader.data && dataLoader.data.backpackIdMapping) {
             const mapping = dataLoader.data.backpackIdMapping[itemName];
             if (mapping && mapping.classString) {
-                return mapping.classString;
+                classString = mapping.classString;
             }
         }
         
         // Try to find in weapon data files
-        if (category === 'weapon' && dataLoader && dataLoader.data) {
+        if (category === 'weapon' && classString === 'Null' && dataLoader && dataLoader.data) {
             const allWeapons = [
                 ...(dataLoader.data.weapons?.assault || []),
                 ...(dataLoader.data.weapons?.rifles || []),
@@ -854,24 +857,188 @@ function generateEquipmentSection(loadout) {
                 ...(dataLoader.data.weapons?.revolvers || []),
                 ...(dataLoader.data.weapons?.crossbows || [])
             ];
-            const weapon = allWeapons.find(w => (w.Name === itemName || w['Weapon Name'] === itemName));
+            const weapon = allWeapons.find(w => (w.Name === itemName || w.DisplayName === itemName || w['Weapon Name'] === itemName));
             if (weapon && weapon.ClassString) {
-                return weapon.ClassString;
+                classString = weapon.ClassString;
             }
         }
         
         // Try to find in backpack data
-        if (category === 'backpack' && dataLoader && dataLoader.data && dataLoader.data.backpacks) {
+        if (category === 'backpack' && classString === 'Null' && dataLoader && dataLoader.data && dataLoader.data.backpacks) {
             const backpack = dataLoader.data.backpacks.find(b => {
-                const name = b['All columns are the back pack name'] || b.Name || '';
+                const name = b.DisplayName || b['All columns are the back pack name'] || b.Name || '';
                 return name === itemName;
             });
             if (backpack && backpack.ClassString) {
-                return backpack.ClassString;
+                classString = backpack.ClassString;
             }
         }
         
-        return 'Null';
+        return { classString, hasItem: classString !== 'Null' };
+    };
+    
+    const generateEquipmentItem = (itemName, category, itemType) => {
+        const { classString, hasItem } = getClassString(itemName, category);
+        
+        if (!hasItem) {
+            // Null items - simple structure
+            return `    <ItemExport>
+      <ClassString>Null</ClassString>
+    </ItemExport>`;
+        }
+        
+        // Non-null items need xsi:type and StackData
+        let xsiType = 'ItemExport';
+        let stackDataProperty = 'ItemInstances';
+        let instanceSaveType = 'ItemInstanceSave';
+        
+        if (category === 'backpack') {
+            xsiType = 'BackpackExport';
+            stackDataProperty = 'BackpackItemInstances';
+            instanceSaveType = 'BackpackItemInstanceSave';
+        } else if (itemType === 'melee') {
+            xsiType = 'MeleeWeaponExport';
+            stackDataProperty = 'MeleeWeaponItemInstances';
+            instanceSaveType = 'MeleeWeaponItemInstanceSave';
+        } else if (itemType === 'closeCombat') {
+            xsiType = 'CloseCombatExport';
+            stackDataProperty = 'CloseCombatItemInstances';
+            instanceSaveType = 'CloseCombatItemInstanceSave';
+        } else if (itemType === 'ranged' || itemType === 'sidearm') {
+            xsiType = 'RangedWeaponExport';
+            stackDataProperty = 'RangedWeaponItemInstances';
+            instanceSaveType = 'RangedWeaponItemInstanceSave';
+        }
+        
+        // Generate StackData based on item type
+        let stackDataContent = '';
+        if (category === 'backpack') {
+            stackDataContent = `      <StackData xsi:type="StructProperty">
+        <Index>0</Index>
+        <PropertyName>${stackDataProperty}</PropertyName>
+        <PropertyType>${instanceSaveType}</PropertyType>
+        <SubStruct>${instanceSaveType}</SubStruct>
+        <TheStats>
+          <SaveObject xsi:type="IntProperty">
+            <Index>0</Index>
+            <PropertyName>ClassIndex</PropertyName>
+            <PropertyType>IntProperty</PropertyType>
+            <Value>0</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+          <SaveObject xsi:type="DoubleProperty">
+            <Index>1</Index>
+            <PropertyName>TimeAddedToInventory</PropertyName>
+            <PropertyType>DoubleProperty</PropertyType>
+            <Value>-1</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+        </TheStats>
+        <TheSubs />
+        <Terminated>true</Terminated>
+      </StackData>`;
+        } else if (itemType === 'melee' || itemType === 'ranged' || itemType === 'sidearm') {
+            stackDataContent = `      <StackData xsi:type="StructProperty">
+        <Index>0</Index>
+        <PropertyName>${stackDataProperty}</PropertyName>
+        <PropertyType>${instanceSaveType}</PropertyType>
+        <SubStruct>${instanceSaveType}</SubStruct>
+        <TheStats>
+          <SaveObject xsi:type="IntProperty">
+            <Index>0</Index>
+            <PropertyName>Durability</PropertyName>
+            <PropertyType>IntProperty</PropertyType>
+            <Value>240</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+          <SaveObject xsi:type="IntProperty">
+            <Index>1</Index>
+            <PropertyName>PreviousMaxDurability</PropertyName>
+            <PropertyType>IntProperty</PropertyType>
+            <Value>240</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+          <SaveObject xsi:type="IntProperty">
+            <Index>2</Index>
+            <PropertyName>BlowsSincePreviousStateChange</PropertyName>
+            <PropertyType>IntProperty</PropertyType>
+            <Value>0</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+          <SaveObject xsi:type="IntProperty">
+            <Index>3</Index>
+            <PropertyName>ClassIndex</PropertyName>
+            <PropertyType>IntProperty</PropertyType>
+            <Value>0</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+          <SaveObject xsi:type="DoubleProperty">
+            <Index>4</Index>
+            <PropertyName>TimeAddedToInventory</PropertyName>
+            <PropertyType>DoubleProperty</PropertyType>
+            <Value>-1</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+        </TheStats>
+        <TheSubs />
+        <Terminated>true</Terminated>
+      </StackData>`;
+        } else if (itemType === 'closeCombat') {
+            stackDataContent = `      <StackData xsi:type="StructProperty">
+        <Index>0</Index>
+        <PropertyName>${stackDataProperty}</PropertyName>
+        <PropertyType>${instanceSaveType}</PropertyType>
+        <SubStruct>${instanceSaveType}</SubStruct>
+        <TheStats>
+          <SaveObject>
+            <Index>0</Index>
+            <PropertyName>StackInfo</PropertyName>
+            <PropertyType>StructProperty</PropertyType>
+            <Value />
+            <TheType>ItemInstanceStackInfoSave</TheType>
+          </SaveObject>
+          <SaveObject xsi:type="IntProperty">
+            <Index>1</Index>
+            <PropertyName>ClassIndex</PropertyName>
+            <PropertyType>IntProperty</PropertyType>
+            <Value>0</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+          <SaveObject xsi:type="DoubleProperty">
+            <Index>2</Index>
+            <PropertyName>TimeAddedToInventory</PropertyName>
+            <PropertyType>DoubleProperty</PropertyType>
+            <Value>-1</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+        </TheStats>
+        <TheSubs>
+          <StructObject xsi:type="StructProperty">
+            <Index>0</Index>
+            <PropertyName>StackInfo</PropertyName>
+            <PropertyType>ItemInstanceStackInfoSave</PropertyType>
+            <SubStruct>ItemInstanceStackInfoSave</SubStruct>
+            <TheStats>
+              <SaveObject xsi:type="IntProperty">
+                <Index>0</Index>
+                <PropertyName>StackCount</PropertyName>
+                <PropertyType>IntProperty</PropertyType>
+                <Value>1</Value>
+                <TheType>0</TheType>
+              </SaveObject>
+            </TheStats>
+            <TheSubs />
+            <Terminated>true</Terminated>
+          </StructObject>
+        </TheSubs>
+        <Terminated>true</Terminated>
+      </StackData>`;
+        }
+        
+        return `    <ItemExport xsi:type="${xsiType}">
+      <ClassString>${classString}</ClassString>
+${stackDataContent}
+    </ItemExport>`;
     };
     
     // Get equipment values from form or loadout
@@ -891,24 +1058,12 @@ function generateEquipmentSection(loadout) {
     
     return `
   <Equipment>
-    <ItemExport>
-      <ClassString>${getClassString(backpack, 'backpack')}</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>${getClassString(melee, 'weapon')}</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>${getClassString(closeCombat, 'weapon')}</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>${getClassString(ranged, 'weapon')}</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>${getClassString(sidearm, 'weapon')}</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>${getClassString(rucksack, 'backpack')}</ClassString>
-    </ItemExport>
+${generateEquipmentItem(backpack, 'backpack', 'backpack')}
+${generateEquipmentItem(melee, 'weapon', 'melee')}
+${generateEquipmentItem(closeCombat, 'weapon', 'closeCombat')}
+${generateEquipmentItem(ranged, 'weapon', 'ranged')}
+${generateEquipmentItem(sidearm, 'weapon', 'sidearm')}
+${generateEquipmentItem(rucksack, 'backpack', 'backpack')}
   </Equipment>`;
 }
 
