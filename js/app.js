@@ -610,9 +610,16 @@ function updateDescriptorTraits() {
         { name: 'Default', traitResourceID: 'Default' },
         { name: ageDescriptor, traitResourceID: ageDescriptor },
         { name: pronounDescriptor, traitResourceID: pronounDescriptor },
-        { name: philosophy1Descriptor, traitResourceID: philosophy1Descriptor },
-        { name: philosophy2Descriptor, traitResourceID: philosophy2Descriptor }
+        { name: philosophy1Descriptor, traitResourceID: philosophy1Descriptor }
     ];
+    
+    // Only add philosophy2 if it's different from philosophy1 (avoid duplicates)
+    if (characterData.philosophy1 !== characterData.philosophy2) {
+        characterData.traits.required.push({
+            name: philosophy2Descriptor, 
+            traitResourceID: philosophy2Descriptor
+        });
+    }
 }
 
 function updateCharacterData() {
