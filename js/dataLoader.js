@@ -50,6 +50,22 @@ class DataLoader {
                 this.data.traitIdMapping = {};
             }
             
+            // Load weapon ID mapping if available
+            try {
+                this.data.weaponIdMapping = await this.loadJSON('data/weapon-id-mapping.json');
+            } catch (e) {
+                console.warn('Weapon ID mapping not found');
+                this.data.weaponIdMapping = {};
+            }
+            
+            // Load backpack ID mapping if available
+            try {
+                this.data.backpackIdMapping = await this.loadJSON('data/backpack-id-mapping.json');
+            } catch (e) {
+                console.warn('Backpack ID mapping not found');
+                this.data.backpackIdMapping = {};
+            }
+            
             this.data.traits = this.processTraits(traitsRaw);
             // Also try to load processed traits if available
             try {

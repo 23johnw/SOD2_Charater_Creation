@@ -822,25 +822,92 @@ function generateTimedBuffSavesSubsection(index) {
 
 function generateEquipmentSection(loadout) {
     // Equipment section is separate from SurvivorData
+    // Order: Backpack, Melee, CloseCombat, Ranged, Sidearm, Rucksack
+    const getClassString = (itemName, category) => {
+        if (!itemName || itemName === '' || itemName === 'None') {
+            return 'Null';
+        }
+        
+        // Try to find in weapon mapping
+        if (category === 'weapon' && dataLoader && dataLoader.data && dataLoader.data.weaponIdMapping) {
+            const mapping = dataLoader.data.weaponIdMapping[itemName];
+            if (mapping && mapping.classString) {
+                return mapping.classString;
+            }
+        }
+        
+        // Try to find in backpack mapping
+        if (category === 'backpack' && dataLoader && dataLoader.data && dataLoader.data.backpackIdMapping) {
+            const mapping = dataLoader.data.backpackIdMapping[itemName];
+            if (mapping && mapping.classString) {
+                return mapping.classString;
+            }
+        }
+        
+        // Try to find in weapon data files
+        if (category === 'weapon' && dataLoader && dataLoader.data) {
+            const allWeapons = [
+                ...(dataLoader.data.weapons?.assault || []),
+                ...(dataLoader.data.weapons?.rifles || []),
+                ...(dataLoader.data.weapons?.shotguns || []),
+                ...(dataLoader.data.weapons?.pistols || []),
+                ...(dataLoader.data.weapons?.revolvers || []),
+                ...(dataLoader.data.weapons?.crossbows || [])
+            ];
+            const weapon = allWeapons.find(w => (w.Name === itemName || w['Weapon Name'] === itemName));
+            if (weapon && weapon.ClassString) {
+                return weapon.ClassString;
+            }
+        }
+        
+        // Try to find in backpack data
+        if (category === 'backpack' && dataLoader && dataLoader.data && dataLoader.data.backpacks) {
+            const backpack = dataLoader.data.backpacks.find(b => {
+                const name = b['All columns are the back pack name'] || b.Name || '';
+                return name === itemName;
+            });
+            if (backpack && backpack.ClassString) {
+                return backpack.ClassString;
+            }
+        }
+        
+        return 'Null';
+    };
+    
+    // Get equipment values from form or loadout
+    const backpackEl = document.getElementById('equipmentBackpack');
+    const meleeEl = document.getElementById('equipmentMelee');
+    const closeCombatEl = document.getElementById('equipmentCloseCombat');
+    const rangedEl = document.getElementById('equipmentRanged');
+    const sidearmEl = document.getElementById('equipmentSidearm');
+    const rucksackEl = document.getElementById('equipmentRucksack');
+    
+    const backpack = backpackEl ? backpackEl.value : (loadout?.backpack || '');
+    const melee = meleeEl ? meleeEl.value : (loadout?.melee || '');
+    const closeCombat = closeCombatEl ? closeCombatEl.value : (loadout?.closeCombat || '');
+    const ranged = rangedEl ? rangedEl.value : (loadout?.ranged || '');
+    const sidearm = sidearmEl ? sidearmEl.value : (loadout?.sidearm || '');
+    const rucksack = rucksackEl ? rucksackEl.value : (loadout?.rucksack || '');
+    
     return `
   <Equipment>
     <ItemExport>
-      <ClassString>Null</ClassString>
+      <ClassString>${getClassString(backpack, 'backpack')}</ClassString>
     </ItemExport>
     <ItemExport>
-      <ClassString>Null</ClassString>
+      <ClassString>${getClassString(melee, 'weapon')}</ClassString>
     </ItemExport>
     <ItemExport>
-      <ClassString>Null</ClassString>
+      <ClassString>${getClassString(closeCombat, 'weapon')}</ClassString>
     </ItemExport>
     <ItemExport>
-      <ClassString>Null</ClassString>
+      <ClassString>${getClassString(ranged, 'weapon')}</ClassString>
     </ItemExport>
     <ItemExport>
-      <ClassString>Null</ClassString>
+      <ClassString>${getClassString(sidearm, 'weapon')}</ClassString>
     </ItemExport>
     <ItemExport>
-      <ClassString>Null</ClassString>
+      <ClassString>${getClassString(rucksack, 'backpack')}</ClassString>
     </ItemExport>
   </Equipment>`;
 }

@@ -2,111 +2,155 @@
   {
     "Name": "930 SPX",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/930SPX.930SPX_C",
+    "DisplayName": "930 SPX"
   },
   {
     "Name": "C1-A Ursus",
     "Ammo": "12g shells",
-    "": "p"
+    "": "p",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_Breacher.Shotgun_Breacher_C",
+    "DisplayName": "C1-A Ursus"
   },
   {
     "Name": "CLEO Shotgun",
     "Ammo": "CLEO Ammo Packs",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/AssaultShotgun_DLC2_CLEOShotgun_01.AssaultShotgun_DLC2_CLEOShotgun_01_C",
+    "DisplayName": "CLEO Shotgun"
   },
   {
     "Name": "CM1-A Breacher",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_Breacher_Military.Shotgun_Breacher_Military_C",
+    "DisplayName": "CM1-A Breacher"
   },
   {
     "Name": "Cold Turkey",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_Pack12_TurkeyHunter.Shotgun_Pack12_TurkeyHunter_C",
+    "DisplayName": "Cold Turkey"
   },
   {
     "Name": "Echo-S3 Shotgun *(Heartland)*",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_DLC4_Integral_Suppressed.Shotgun_DLC4_Integral_Suppressed_C",
+    "DisplayName": "Echo-S3 Shotgun"
   },
   {
     "Name": "Faithful KSG",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_KSG_MissionWeapon_Trusty_01.Shotgun_KSG_MissionWeapon_Trusty_01_C",
+    "DisplayName": "Faithful KSG"
   },
   {
     "Name": "Kodiak",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_Kodiak.Shotgun_Kodiak_C",
+    "DisplayName": "Kodiak"
   },
   {
     "Name": "Kodiak XL",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_Kodiak_DrumMagRedDot.Shotgun_Kodiak_DrumMagRedDot_C",
+    "DisplayName": "Kodiak XL"
   },
   {
     "Name": "KSG",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/KSG.KSG_C",
+    "DisplayName": "KSG"
   },
   {
     "Name": "M590 Sea and Sky Shotgun",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_590_Custom.Shotgun_590_Custom_C",
+    "DisplayName": "M590 Sea and Sky Shotgun"
   },
   {
     "Name": "M97 Trench Gun",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_M97_Trench_Gun_WW2.Shotgun_M97_Trench_Gun_WW2_C",
+    "DisplayName": "M97 Trench Gun"
   },
   {
     "Name": "Model 1887 Shotgun",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_Pack10_Lever_Model87.Shotgun_Pack10_Lever_Model87_C",
+    "DisplayName": "Model 1887 Shotgun"
   },
   {
     "Name": "Model 870",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/R870.R870_C",
+    "DisplayName": "Model 870"
   },
   {
     "Name": "Police M590A1",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_590_LE.Shotgun_590_LE_C",
+    "DisplayName": "Police M590A1"
   },
   {
     "Name": "R12",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/S12_SemiAuto.S12_SemiAuto_C",
+    "DisplayName": "R12"
   },
   {
     "Name": "Restored Echo-S3 Shotgun",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_CU12_Integral_Suppressed_Bounty.Shotgun_CU12_Integral_Suppressed_Bounty_C",
+    "DisplayName": "Restored Echo-S3 Shotgun"
   },
   {
     "Name": "RTX Wolverine",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_DLC2_Kodiak_Daybreak.Shotgun_DLC2_Kodiak_Daybreak_C",
+    "DisplayName": "RTX Wolverine"
   },
   {
     "Name": "Sea Dog Blunderbuss",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_Pirate.Shotgun_Pirate_C",
+    "DisplayName": "Sea Dog Blunderbuss"
   },
   {
     "Name": "SPAS-12",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/SPAS12.SPAS12_C",
+    "DisplayName": "SPAS-12"
   },
   {
     "Name": "Trusty R12",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_S12_SemiAuto_MissionWeapon_Trusty_01.Shotgun_S12_SemiAuto_MissionWeapon_Trusty_01_C",
+    "DisplayName": "Trusty R12"
   },
   {
     "Name": "Vintage Model 870",
     "Ammo": "12g shells",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Shotgun_R870_Heirloom01.Shotgun_R870_Heirloom01_C",
+    "DisplayName": "Vintage Model 870"
   }
 ]

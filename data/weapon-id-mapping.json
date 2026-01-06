@@ -1,0 +1,1027 @@
+{
+  "1911": {
+    "displayName": "1911",
+    "classString": "/Game/Items/RangedWeapons/M1911.M1911_C",
+    "category": "pistols"
+  },
+  "AK-47": {
+    "displayName": "AK-47",
+    "classString": "/Game/Items/RangedWeapons/AK47.AK47_C",
+    "category": "assault"
+  },
+  "AKS-74U": {
+    "displayName": "AKS-74U",
+    "classString": "/Game/Items/RangedWeapons/AKs74u_Classic.AKs74u_Classic_C",
+    "category": "assault"
+  },
+  "AKS-74U Valentine": {
+    "displayName": "AKS-74U Valentine",
+    "classString": "/Game/Items/RangedWeapons/AKs74uValentine.AKs74uValentine_C",
+    "category": "assault"
+  },
+  "APC9 RT": {
+    "displayName": "APC9 RT",
+    "classString": "/Game/Items/RangedWeapons/SMG_APC9_Pro.SMG_APC9_Pro_C",
+    "category": "assault"
+  },
+  "Barrow Style BAR": {
+    "displayName": "Barrow Style BAR",
+    "classString": "/Game/Items/RangedWeapons/Assault_BAR_WW2_CutDown.Assault_BAR_WW2_CutDown_C",
+    "category": "assault"
+  },
+  "Ceremonial M1A1 Thompson": {
+    "displayName": "Ceremonial M1A1 Thompson",
+    "classString": "/Game/Items/RangedWeapons/Assault_M1A1Thompson_Ceremonial.Assault_M1A1Thompson_Ceremonial_C",
+    "category": "assault"
+  },
+  "Classic AK-47": {
+    "displayName": "Classic AK-47",
+    "classString": "/Game/Items/RangedWeapons/Assault_AK47_Classic.Assault_AK47_Classic_C",
+    "category": "assault"
+  },
+  "CLEO SMG": {
+    "displayName": "CLEO SMG",
+    "classString": "/Game/Items/RangedWeapons/Assault_DLC2_CLEOAssault_01.Assault_DLC2_CLEOAssault_01_C",
+    "category": "assault"
+  },
+  "Custom AK-47": {
+    "displayName": "Custom AK-47",
+    "classString": "/Game/Items/RangedWeapons/Assault_AK47HoloDoubleStack.Assault_AK47HoloDoubleStack_C",
+    "category": "assault"
+  },
+  "Danger Dog PPSh-41": {
+    "displayName": "Danger Dog PPSh-41",
+    "classString": "/Game/Items/RangedWeapons/Assault_PPSh41_Prepper.Assault_PPSh41_Prepper_C",
+    "category": "assault"
+  },
+  "Echo-S4 SMG*(Heartland)*": {
+    "displayName": "Echo-S4 SMG",
+    "classString": "/Game/Items/RangedWeapons/Assault_DLC4_MP5_Integral_Suppressed.Assault_DLC4_MP5_Integral_Suppressed_C",
+    "category": "assault"
+  },
+  "Echo-S7 Assault Rifle*(Heartland)*": {
+    "displayName": "Echo-S7 Assault Rifle",
+    "classString": "/Game/Items/RangedWeapons/Assault_DLC4_M4A1_Integral_Suppressed.Assault_DLC4_M4A1_Integral_Suppressed_C",
+    "category": "assault"
+  },
+  "Eternal Guard's Infinite Rage": {
+    "displayName": "Eternal Guard's Infinite Rage",
+    "classString": "/Game/Items/RangedWeapons/Assault_AK47NKSpecial.Assault_AK47NKSpecial_C",
+    "category": "assault"
+  },
+  "EVO 3*(Doomsday Pack)*": {
+    "displayName": "EVO 3",
+    "classString": "/Game/Items/RangedWeapons/Assault_EVO3.Assault_EVO3_C",
+    "category": "assault"
+  },
+  "FAL": {
+    "displayName": "FAL",
+    "classString": "/Game/Items/RangedWeapons/Assault_FAL.Assault_FAL_C",
+    "category": "assault"
+  },
+  "FBI Fighting Rifle": {
+    "displayName": "FBI Fighting Rifle",
+    "classString": "/Game/Items/RangedWeapons/Assault_BAR_WW2_Rosie.Assault_BAR_WW2_Rosie_C",
+    "category": "assault"
+  },
+  "Gangland Strad": {
+    "displayName": "Gangland Strad",
+    "classString": "/Game/Items/RangedWeapons/Assault_M1A1Thompson_WW2_DrumSuppressor.Assault_M1A1Thompson_WW2_DrumSuppressor_C",
+    "category": "assault"
+  },
+  "Golden Honcho": {
+    "displayName": "Golden Honcho",
+    "classString": "/Game/Items/RangedWeapons/AK47_Gold.AK47_Gold_C",
+    "category": "assault"
+  },
+  "Graveyard Shift": {
+    "displayName": "Graveyard Shift",
+    "classString": "/Game/Items/RangedWeapons/Assault_SMG_M3_WW2_Integral_Suppressed.Assault_SMG_M3_WW2_Integral_Suppressed_C",
+    "category": "assault"
+  },
+  "HB PDW": {
+    "displayName": "HB PDW",
+    "classString": "/Game/Items/RangedWeapons/Assault_Pack12_PDW_Short.Assault_Pack12_PDW_Short_C",
+    "category": "assault"
+  },
+  "HB SD Blackout": {
+    "displayName": "HB SD Blackout ",
+    "classString": "/Game/Items/RangedWeapons/Assault_Pack12_PDW_SD.Assault_Pack12_PDW_SD_C",
+    "category": "assault"
+  },
+  "HB Snow Fox": {
+    "displayName": "HB Snow Fox",
+    "classString": "/Game/Items/RangedWeapons/Assault_Pack12_PDW_Special_01.Assault_Pack12_PDW_Special_01_C",
+    "category": "assault"
+  },
+  "M1918 BAR": {
+    "displayName": "M1918 BAR",
+    "classString": "/Game/Items/RangedWeapons/Assault_BAR_WW2.Assault_BAR_WW2_C",
+    "category": "assault"
+  },
+  "M1A1 Thompson": {
+    "displayName": "M1A1 Thompson",
+    "classString": "/Game/Items/RangedWeapons/Assault_M1A1Thompson_WW2.Assault_M1A1Thompson_WW2_C",
+    "category": "assault"
+  },
+  "M3 Grease Gun": {
+    "displayName": "M3 Grease Gun",
+    "classString": "/Game/Items/RangedWeapons/Assault_SMG_M3_WW2.Assault_SMG_M3_WW2_C",
+    "category": "assault"
+  },
+  "M4 CQBR Mob Stopper": {
+    "displayName": "M4 CQBR Mob Stopper",
+    "classString": "/Game/Items/RangedWeapons/M4_CQBR_Custom.M4_CQBR_Custom_C",
+    "category": "assault"
+  },
+  "M4A1": {
+    "displayName": "M4A1",
+    "classString": "/Game/Items/RangedWeapons/M4A1.M4A1_C",
+    "category": "assault"
+  },
+  "M4X1 DMR Heavy": {
+    "displayName": "M4X1 DMR Heavy",
+    "classString": "/Game/Items/RangedWeapons/M4A1AcogDrumSuppressor.M4A1AcogDrumSuppressor_C",
+    "category": "assault"
+  },
+  "M4X2 Lite SSW": {
+    "displayName": "M4X2 Lite SSW",
+    "classString": "/Game/Items/RangedWeapons/M4A1SightedBetaMagBrake.M4A1SightedBetaMagBrake_C",
+    "category": "assault"
+  },
+  "MAC-V": {
+    "displayName": "MAC-V",
+    "classString": "/Game/Items/RangedWeapons/MAC10Assault.MAC10Assault_C",
+    "category": "assault"
+  },
+  "Masterwork Assault Rifle": {
+    "displayName": "Masterwork Assault Rifle ",
+    "classString": "/Game/Items/RangedWeapons/Assault_DLC_Heartland_Crafted_02.Assault_DLC_Heartland_Crafted_02_C",
+    "category": "assault"
+  },
+  "MCX Osprey RT": {
+    "displayName": "MCX Osprey RT",
+    "classString": "/Game/Items/RangedWeapons/Assault_MCX_RT.Assault_MCX_RT_C",
+    "category": "assault"
+  },
+  "MP40 Submachine Gun": {
+    "displayName": "MP40 Submachine Gun",
+    "classString": "/Game/Items/RangedWeapons/Assault_SMG_MP40_WW2.Assault_SMG_MP40_WW2_C",
+    "category": "assault"
+  },
+  "MP5A2": {
+    "displayName": "MP5A2",
+    "classString": "/Game/Items/RangedWeapons/MP5.MP5_C",
+    "category": "assault"
+  },
+  "MP5A2 Spec Ops": {
+    "displayName": "MP5A2 Spec Ops",
+    "classString": "/Game/Items/RangedWeapons/Assault_MP5_SpecOps.Assault_MP5_SpecOps_C",
+    "category": "assault"
+  },
+  "MP5SD": {
+    "displayName": "MP5SD",
+    "classString": "/Game/Items/RangedWeapons/Assault_MP5SD.Assault_MP5SD_C",
+    "category": "assault"
+  },
+  "MPX Competition": {
+    "displayName": "MPX Competition",
+    "classString": "/Game/Items/RangedWeapons/SMG_MPX_Competition.SMG_MPX_Competition_C",
+    "category": "assault"
+  },
+  "MPX Submachine Gun": {
+    "displayName": "MPX Submachine Gun",
+    "classString": "/Game/Items/RangedWeapons/Assault_MPX.Assault_MPX_C",
+    "category": "assault"
+  },
+  "Network DIY Assault Rifle": {
+    "displayName": "Network DIY Assault Rifle",
+    "classString": "/Game/Items/RangedWeapons/Assault_DLC_Heartland_Crafted_01.Assault_DLC_Heartland_Crafted_01_C",
+    "category": "assault"
+  },
+  "Non-Compliant SKS": {
+    "displayName": "Non-Compliant SKS",
+    "classString": "/Game/Items/RangedWeapons/Assault_SKS.Assault_SKS_C",
+    "category": "assault"
+  },
+  "Τ4/Μ2 Carbine": {
+    "displayName": "T4/M2 Carbine",
+    "classString": "/Game/Items/RangedWeapons/Assault_M2_Carbine_WW2.Assault_M2_Carbine_WW2_C",
+    "category": "assault"
+  },
+  "Operator's M4A1": {
+    "displayName": "Operator's M4A1",
+    "classString": "/Game/Items/RangedWeapons/M4A1HoloDrumAdvSuppressor.M4A1HoloDrumAdvSuppressor_C",
+    "category": "assault"
+  },
+  "Prepper's AK-47": {
+    "displayName": "Prepper's AK-47",
+    "classString": "/Game/Items/RangedWeapons/Assault_AK47Prepper.Assault_AK47Prepper_C",
+    "category": "assault"
+  },
+  "Raider's AK-47": {
+    "displayName": "Raider's AK-47",
+    "classString": "/Game/Items/RangedWeapons/Assault_AK47_Raider.Assault_AK47_Raider_C",
+    "category": "assault"
+  },
+  "Raider's AR-15": {
+    "displayName": "Raider's AR-15",
+    "classString": "/Game/Items/RangedWeapons/Assault_AR15_Raider.Assault_AR15_Raider_C",
+    "category": "assault"
+  },
+  "Restored Echo-S4 SMG": {
+    "displayName": "Restored Echo-S4 SMG",
+    "classString": "/Game/Items/RangedWeapons/Assault_CU12_MP5_Integral_Suppressed_Bounty.Assault_CU12_MP5_Integral_Suppressed_Bounty_C",
+    "category": "assault"
+  },
+  "Restored Echo-S7 Assault Rifle": {
+    "displayName": "Restored Echo-S7 Assault Rifle",
+    "classString": "/Game/Items/RangedWeapons/Assault_CU12_M4A1_Integral_Suppressed_Bounty.Assault_CU12_M4A1_Integral_Suppressed_Bounty_C",
+    "category": "assault"
+  },
+  "RTX Hordebreaker": {
+    "displayName": "RTX Hordebreaker",
+    "classString": "/Game/Items/RangedWeapons/Rifle_M14_SOCOM2_Drum_Auto_RedTalon.Rifle_M14_SOCOM2_Drum_Auto_RedTalon_C",
+    "category": "assault"
+  },
+  "RTX Stormbringer": {
+    "displayName": "RTX Stormbringer",
+    "classString": "/Game/Items/RangedWeapons/Assault_SCARH_SightDrum_RedTalon.Assault_SCARH_SightDrum_RedTalon_C",
+    "category": "assault"
+  },
+  "Samurai SMG": {
+    "displayName": "Samurai SMG",
+    "classString": "/Game/Items/RangedWeapons/SMG_Samurai.SMG_Samurai_C",
+    "category": "assault"
+  },
+  "SCAR-H": {
+    "displayName": "SCAR-H",
+    "classString": "/Game/Items/RangedWeapons/Assault_SCARH.Assault_SCARH_C",
+    "category": "assault"
+  },
+  "Sighted AK-47": {
+    "displayName": "Sighted AK-47",
+    "classString": "/Game/Items/RangedWeapons/AK47Sighted.AK47Sighted_C",
+    "category": "assault"
+  },
+  "Sighted M4A1": {
+    "displayName": "Sighted M4A1",
+    "classString": "/Game/Items/RangedWeapons/M4A1Sighted.M4A1Sighted_C",
+    "category": "assault"
+  },
+  "Sighted SCAR-H": {
+    "displayName": "Sighted SCAR-H",
+    "classString": "/Game/Items/RangedWeapons/Assault_SCARH_Sighted.Assault_SCARH_Sighted_C",
+    "category": "assault"
+  },
+  "Soviet PPSh-41": {
+    "displayName": "Soviet PPSh-41",
+    "classString": "/Game/Items/RangedWeapons/Assault_PPSh41.Assault_PPSh41_C",
+    "category": "assault"
+  },
+  "Spec Ops Vector SMG": {
+    "displayName": "Spec Ops Vector SMG",
+    "classString": "/Game/Items/RangedWeapons/Assault_VectorSMG_SpecOps.Assault_VectorSMG_SpecOps_C",
+    "category": "assault"
+  },
+  "SWAT 416": {
+    "displayName": "SWAT 416",
+    "classString": "/Game/Items/RangedWeapons/Assault_M416.Assault_M416_C",
+    "category": "assault"
+  },
+  "UMP SMG": {
+    "displayName": "UMP SMG",
+    "classString": "/Game/Items/RangedWeapons/Assault_UMP.Assault_UMP_C",
+    "category": "assault"
+  },
+  "Uzi 9mm": {
+    "displayName": "Uzi 9mm",
+    "classString": "/Game/Items/RangedWeapons/UZI.UZI_C",
+    "category": "assault"
+  },
+  "Vector SMG": {
+    "displayName": "Vector SMG",
+    "classString": "/Game/Items/RangedWeapons/Assault_VectorSMG.Assault_VectorSMG_C",
+    "category": "assault"
+  },
+  "X-36C*(Doomsday Pack)*": {
+    "displayName": "X-36C",
+    "classString": "/Game/Items/RangedWeapons/Assault_X36C.Assault_X36C_C",
+    "category": "assault"
+  },
+  "10/22 Carbine": {
+    "displayName": "10/22 Carbine",
+    "classString": "/Game/Items/RangedWeapons/Rifle_10_22.Rifle_10_22_C",
+    "category": "rifles"
+  },
+  "AR-15": {
+    "displayName": "AR-15",
+    "classString": "/Game/Items/RangedWeapons/Assault_AR15.Assault_AR15_C",
+    "category": "rifles"
+  },
+  "Arctic Warrior": {
+    "displayName": "Arctic Warrior",
+    "classString": "/Game/Items/RangedWeapons/ArcticWarfare.ArcticWarfare_C",
+    "category": "rifles"
+  },
+  "Big Hank Rifle": {
+    "displayName": "Big Hank Rifle",
+    "classString": "/Game/Items/RangedWeapons/Rifle_Pack10_Lever_Bighank.Rifle_Pack10_Lever_Bighank_C",
+    "category": "rifles"
+  },
+  "Bolt Scout": {
+    "displayName": "Bolt Scout",
+    "classString": "/Game/Items/RangedWeapons/ScoutBoltRifle.ScoutBoltRifle_C",
+    "category": "rifles"
+  },
+  "Civilian Uzi 22 Carbine": {
+    "displayName": "Civilian Uzi 22 Carbine",
+    "classString": "/Game/Items/RangedWeapons/Uzi22Carbine.Uzi22Carbine_C",
+    "category": "rifles"
+  },
+  "Civilian Vector Carbine": {
+    "displayName": "Civilian Vector Carbine",
+    "classString": "/Game/Items/RangedWeapons/Assault_VectorCarbine.Assault_VectorCarbine_C",
+    "category": "rifles"
+  },
+  "Classic SKS Rifle": {
+    "displayName": "Classic SKS Rifle",
+    "classString": "/Game/Items/RangedWeapons/Rifle_SKS.Rifle_SKS_C",
+    "category": "rifles"
+  },
+  "CLEO Battle Rifle": {
+    "displayName": "CLEO Battle Rifle",
+    "classString": "/Game/Items/RangedWeapons/Assault_DLC2_CLEOAssault_02.Assault_DLC2_CLEOAssault_02_C",
+    "category": "rifles"
+  },
+  "CLEO Blast Rifle": {
+    "displayName": "CLEO Blast Rifle",
+    "classString": "/Game/Items/RangedWeapons/Rifle_DLC2_CLEOSniper_01.Rifle_DLC2_CLEOSniper_01_C",
+    "category": "rifles"
+  },
+  "CLEO Sharpshooter Rifle": {
+    "displayName": "CLEO Sharpshooter Rifle",
+    "classString": "/Game/Items/RangedWeapons/Assault_DLC2_CLEOAssault_03.Assault_DLC2_CLEOAssault_03_C",
+    "category": "rifles"
+  },
+  "D-BAR": {
+    "displayName": "D-BAR",
+    "classString": "/Game/Items/RangedWeapons/Rifle_Pack12_DBAR_Long.Rifle_Pack12_DBAR_Long_C",
+    "category": "rifles"
+  },
+  "D-Bartini": {
+    "displayName": "D-Bartini",
+    "classString": "/Game/Items/RangedWeapons/Rifle_Pack12_DBAR_Short.Rifle_Pack12_DBAR_Short_C",
+    "category": "rifles"
+  },
+  "Doomsday Carbine": {
+    "displayName": "Doomsday Carbine",
+    "classString": "/Game/Items/RangedWeapons/Rifle_USC_SHTF.Rifle_USC_SHTF_C",
+    "category": "rifles"
+  },
+  "Duvall Outrider": {
+    "displayName": "Duvall Outrider",
+    "classString": "/Game/Items/RangedWeapons/Rifle_Pack10_Lever_MagFed_Catmar.Rifle_Pack10_Lever_MagFed_Catmar_C",
+    "category": "rifles"
+  },
+  "Echo-S2 Rifle *(Heartland)*": {
+    "displayName": "Echo-S2 Rifle",
+    "classString": "/Game/Items/RangedWeapons/BoltAction_DLC4_Integral_Suppressed.BoltAction_DLC4_Integral_Suppressed_C",
+    "category": "rifles"
+  },
+  "Exterminator's 10/22": {
+    "displayName": "Exterminator's 10/22",
+    "classString": "/Game/Items/RangedWeapons/Rifle_10_22_Scope_ExMag.Rifle_10_22_Scope_ExMag_C",
+    "category": "rifles"
+  },
+  "Fake-A 47": {
+    "displayName": "Fake-A 47",
+    "classString": "/Game/Items/RangedWeapons/Rifle_10_22_Custom1.Rifle_10_22_Custom1_C",
+    "category": "rifles"
+  },
+  "GSG-W": {
+    "displayName": "GSG-W",
+    "classString": "/Game/Items/RangedWeapons/Assault_GSGW.Assault_GSGW_C",
+    "category": "rifles"
+  },
+  "Heirloom Model 70": {
+    "displayName": "Heirloom Model 70",
+    "classString": "/Game/Items/RangedWeapons/Rifle_Model70_Heirloom01.Rifle_Model70_Heirloom01_C",
+    "category": "rifles"
+  },
+  "Hunter SKS": {
+    "displayName": "Hunter SKS",
+    "classString": "/Game/Items/RangedWeapons/Rifle_SKS_Hunter.Rifle_SKS_Hunter_C",
+    "category": "rifles"
+  },
+  "Hunter's Bolt Scout": {
+    "displayName": "Hunter's Bolt Scout",
+    "classString": "/Game/Items/RangedWeapons/ScoutBoltRifleScoped.ScoutBoltRifleScoped_C",
+    "category": "rifles"
+  },
+  "Hunter's Model 70": {
+    "displayName": "Hunter's Model 70",
+    "classString": "/Game/Items/RangedWeapons/Model70Scoped.Model70Scoped_C",
+    "category": "rifles"
+  },
+  "JL94 Civilian": {
+    "displayName": "JL94 Civilian",
+    "classString": "/Game/Items/RangedWeapons/Assault_MP5_Civilian.Assault_MP5_Civilian_C",
+    "category": "rifles"
+  },
+  "JL94 Custom": {
+    "displayName": "JL94 Custom",
+    "classString": "/Game/Items/RangedWeapons/Assault_MP5_Civilian_Custom.Assault_MP5_Civilian_Custom_C",
+    "category": "rifles"
+  },
+  "M1 Carbine": {
+    "displayName": "M1 Carbine",
+    "classString": "/Game/Items/RangedWeapons/Rifle_M1_Carbine_WW2.Rifle_M1_Carbine_WW2_C",
+    "category": "rifles"
+  },
+  "M1 Para Carbine": {
+    "displayName": "M1 Para Carbine",
+    "classString": "/Game/Items/RangedWeapons/Rifle_M1_Para_Carbine_WW2.Rifle_M1_Para_Carbine_WW2_C",
+    "category": "rifles"
+  },
+  "M1-A": {
+    "displayName": "M1-A",
+    "classString": "/Game/Items/RangedWeapons/Rifle_M1A.Rifle_M1A_C",
+    "category": "rifles"
+  },
+  "M1-A Short": {
+    "displayName": "M1-A Short",
+    "classString": "/Game/Items/RangedWeapons/Rifle_M1A_ShortBarrel.Rifle_M1A_ShortBarrel_C",
+    "category": "rifles"
+  },
+  "M14 DMR": {
+    "displayName": "M14 DMR",
+    "classString": "/Game/Items/RangedWeapons/Rifle_M14DMR.Rifle_M14DMR_C",
+    "category": "rifles"
+  },
+  "M1903A4 Sniper Rifle": {
+    "displayName": "M1903A4 Sniper Rifle",
+    "classString": "/Game/Items/RangedWeapons/Rifle_M1903_WW2.Rifle_M1903_WW2_C",
+    "category": "rifles"
+  },
+  "Model 70 Classic": {
+    "displayName": "Model 70 Classic",
+    "classString": "/Game/Items/RangedWeapons/Model70Basic.Model70Basic_C",
+    "category": "rifles"
+  },
+  "Model 92 Rifle": {
+    "displayName": "Model 92 Rifle",
+    "classString": "/Game/Items/RangedWeapons/Rifle_Pack10_Lever_Model92.Rifle_Pack10_Lever_Model92_C",
+    "category": "rifles"
+  },
+  "Police Sniper Rifle": {
+    "displayName": "Police Sniper Rifle",
+    "classString": "/Game/Items/RangedWeapons/Rifle_Police_Sniper.Rifle_Police_Sniper_C",
+    "category": "rifles"
+  },
+  "Prepper's 10/22": {
+    "displayName": "Prepper's 10/22",
+    "classString": "/Game/Items/RangedWeapons/Rifle_10_22_Custom2.Rifle_10_22_Custom2_C",
+    "category": "rifles"
+  },
+  "RC-9 Police Carbine": {
+    "displayName": "RC-9 Police Carbine",
+    "classString": "/Game/Items/RangedWeapons/Rifle_RC9.Rifle_RC9_C",
+    "category": "rifles"
+  },
+  "Restored Echo-S2 Rifle": {
+    "displayName": "Restored Echo-S2 Rifle",
+    "classString": "/Game/Items/RangedWeapons/BoltAction_CU12_Integral_Suppressed_Bounty.BoltAction_CU12_Integral_Suppressed_Bounty_C",
+    "category": "rifles"
+  },
+  "Scoped Big Hank Rifle": {
+    "displayName": "Scoped Big Hank Rifle",
+    "classString": "/Game/Items/RangedWeapons/Rifle_Pack10_Lever_Bighank_Scoped.Rifle_Pack10_Lever_Bighank_Scoped_C",
+    "category": "rifles"
+  },
+  "Scoped Model 92 Rifle": {
+    "displayName": "Scoped Model 92 Rifle",
+    "classString": "/Game/Items/RangedWeapons/Rifle_Pack10_Lever_Model92_Scoped.Rifle_Pack10_Lever_Model92_Scoped_C",
+    "category": "rifles"
+  },
+  "Seabass Model 94": {
+    "displayName": "Seabass Model 94",
+    "classString": "/Game/Items/RangedWeapons/Rifle_Lever_Seabass94.Rifle_Lever_Seabass94_C",
+    "category": "rifles"
+  },
+  "Simple S2K": {
+    "displayName": "Simple S2K",
+    "classString": "/Game/Items/RangedWeapons/Rifle_S2K.Rifle_S2K_C",
+    "category": "rifles"
+  },
+  "SOCOM II": {
+    "displayName": "SOCOM II",
+    "classString": "/Game/Items/RangedWeapons/Rifle_M14_SOCOM2.Rifle_M14_SOCOM2_C",
+    "category": "rifles"
+  },
+  "Spec Ops AW": {
+    "displayName": "Spec Ops AW",
+    "classString": "/Game/Items/RangedWeapons/ArcticWarfareScopeSuppressor.ArcticWarfareScopeSuppressor_C",
+    "category": "rifles"
+  },
+  "SVD": {
+    "displayName": "SVD",
+    "classString": "/Game/Items/RangedWeapons/Assault_Dragunov_SVD.Assault_Dragunov_SVD_C",
+    "category": "rifles"
+  },
+  "Trail Blazer S2K": {
+    "displayName": "Trail Blazer S2K",
+    "classString": "/Game/Items/RangedWeapons/Rifle_S2K_Blaise.Rifle_S2K_Blaise_C",
+    "category": "rifles"
+  },
+  "Trumbull Gatekeeper": {
+    "displayName": "Trumbull Gatekeeper",
+    "classString": "/Game/Items/RangedWeapons/Rifle_CU2_Model70Network.Rifle_CU2_Model70Network_C",
+    "category": "rifles"
+  },
+  "USC Carbine": {
+    "displayName": "USC Carbine",
+    "classString": "/Game/Items/RangedWeapons/Rifle_USC.Rifle_USC_C",
+    "category": "rifles"
+  },
+  "930 SPX": {
+    "displayName": "930 SPX",
+    "classString": "/Game/Items/RangedWeapons/930SPX.930SPX_C",
+    "category": "shotguns"
+  },
+  "C1-A Ursus": {
+    "displayName": "C1-A Ursus",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_Breacher.Shotgun_Breacher_C",
+    "category": "shotguns"
+  },
+  "CLEO Shotgun": {
+    "displayName": "CLEO Shotgun",
+    "classString": "/Game/Items/RangedWeapons/AssaultShotgun_DLC2_CLEOShotgun_01.AssaultShotgun_DLC2_CLEOShotgun_01_C",
+    "category": "shotguns"
+  },
+  "CM1-A Breacher": {
+    "displayName": "CM1-A Breacher",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_Breacher_Military.Shotgun_Breacher_Military_C",
+    "category": "shotguns"
+  },
+  "Cold Turkey": {
+    "displayName": "Cold Turkey",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_Pack12_TurkeyHunter.Shotgun_Pack12_TurkeyHunter_C",
+    "category": "shotguns"
+  },
+  "Echo-S3 Shotgun *(Heartland)*": {
+    "displayName": "Echo-S3 Shotgun",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_DLC4_Integral_Suppressed.Shotgun_DLC4_Integral_Suppressed_C",
+    "category": "shotguns"
+  },
+  "Faithful KSG": {
+    "displayName": "Faithful KSG",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_KSG_MissionWeapon_Trusty_01.Shotgun_KSG_MissionWeapon_Trusty_01_C",
+    "category": "shotguns"
+  },
+  "Kodiak": {
+    "displayName": "Kodiak",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_Kodiak.Shotgun_Kodiak_C",
+    "category": "shotguns"
+  },
+  "Kodiak XL": {
+    "displayName": "Kodiak XL",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_Kodiak_DrumMagRedDot.Shotgun_Kodiak_DrumMagRedDot_C",
+    "category": "shotguns"
+  },
+  "KSG": {
+    "displayName": "KSG",
+    "classString": "/Game/Items/RangedWeapons/KSG.KSG_C",
+    "category": "shotguns"
+  },
+  "M590 Sea and Sky Shotgun": {
+    "displayName": "M590 Sea and Sky Shotgun",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_590_Custom.Shotgun_590_Custom_C",
+    "category": "shotguns"
+  },
+  "M97 Trench Gun": {
+    "displayName": "M97 Trench Gun",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_M97_Trench_Gun_WW2.Shotgun_M97_Trench_Gun_WW2_C",
+    "category": "shotguns"
+  },
+  "Model 1887 Shotgun": {
+    "displayName": "Model 1887 Shotgun",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_Pack10_Lever_Model87.Shotgun_Pack10_Lever_Model87_C",
+    "category": "shotguns"
+  },
+  "Model 870": {
+    "displayName": "Model 870",
+    "classString": "/Game/Items/RangedWeapons/R870.R870_C",
+    "category": "shotguns"
+  },
+  "Police M590A1": {
+    "displayName": "Police M590A1",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_590_LE.Shotgun_590_LE_C",
+    "category": "shotguns"
+  },
+  "R12": {
+    "displayName": "R12",
+    "classString": "/Game/Items/RangedWeapons/S12_SemiAuto.S12_SemiAuto_C",
+    "category": "shotguns"
+  },
+  "Restored Echo-S3 Shotgun": {
+    "displayName": "Restored Echo-S3 Shotgun",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_CU12_Integral_Suppressed_Bounty.Shotgun_CU12_Integral_Suppressed_Bounty_C",
+    "category": "shotguns"
+  },
+  "RTX Wolverine": {
+    "displayName": "RTX Wolverine",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_DLC2_Kodiak_Daybreak.Shotgun_DLC2_Kodiak_Daybreak_C",
+    "category": "shotguns"
+  },
+  "Sea Dog Blunderbuss": {
+    "displayName": "Sea Dog Blunderbuss",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_Pirate.Shotgun_Pirate_C",
+    "category": "shotguns"
+  },
+  "SPAS-12": {
+    "displayName": "SPAS-12",
+    "classString": "/Game/Items/RangedWeapons/SPAS12.SPAS12_C",
+    "category": "shotguns"
+  },
+  "Trusty R12": {
+    "displayName": "Trusty R12",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_S12_SemiAuto_MissionWeapon_Trusty_01.Shotgun_S12_SemiAuto_MissionWeapon_Trusty_01_C",
+    "category": "shotguns"
+  },
+  "Vintage Model 870": {
+    "displayName": "Vintage Model 870",
+    "classString": "/Game/Items/RangedWeapons/Shotgun_R870_Heirloom01.Shotgun_R870_Heirloom01_C",
+    "category": "shotguns"
+  },
+  "1911 Long Slide": {
+    "displayName": "1911 Long Slide",
+    "classString": "/Game/Items/RangedWeapons/Pistol_M1911_Longslide.Pistol_M1911_Longslide_C",
+    "category": "pistols"
+  },
+  "1911 The Producer": {
+    "displayName": "1911 The Producer",
+    "classString": "/Game/Items/RangedWeapons/Pistol_1911_Producer.Pistol_1911_Producer_C",
+    "category": "pistols"
+  },
+  "Brock's Golden Vulture .44*(Heartland)*": {
+    "displayName": "Vulture .44",
+    "classString": "/Game/Items/RangedWeapons/Pistol_Deagle.Pistol_Deagle_C",
+    "category": "pistols"
+  },
+  "Civilian Uzi 22 Pistol": {
+    "displayName": "Civilian Uzi 22 Pistol",
+    "classString": "/Game/Items/RangedWeapons/Uzi22Pistol.Uzi22Pistol_C",
+    "category": "pistols"
+  },
+  "Civilian Vector Ultracompact": {
+    "displayName": "Civilian Vector Ultracompact",
+    "classString": "/Game/Items/RangedWeapons/Pistol_VectorPistol.Pistol_VectorPistol_C",
+    "category": "pistols"
+  },
+  "CLEO Pistol": {
+    "displayName": "CLEO Pistol",
+    "classString": "/Game/Items/RangedWeapons/Pistol_DLC2_CLEOPistol_01.Pistol_DLC2_CLEOPistol_01_C",
+    "category": "pistols"
+  },
+  "Competition Mk3": {
+    "displayName": "Competition Mk3",
+    "classString": "/Game/Items/RangedWeapons/Pistol_22_45_Racer.Pistol_22_45_Racer_C",
+    "category": "pistols"
+  },
+  "Czech M8": {
+    "displayName": "Czech M8",
+    "classString": "/Game/Items/RangedWeapons/Pistol_Czech_M8.Pistol_Czech_M8_C",
+    "category": "pistols"
+  },
+  "Echo-S6 Pistol*(Heartland)*": {
+    "displayName": "Echo-S6 Pistol",
+    "classString": "/Game/Items/RangedWeapons/Pistol_DLC4_01.Pistol_DLC4_01_C",
+    "category": "pistols"
+  },
+  "Extended Mk3": {
+    "displayName": "Extended Mk3",
+    "classString": "/Game/Items/RangedWeapons/Pistol_22_45_ExMag.Pistol_22_45_ExMag_C",
+    "category": "pistols"
+  },
+  "F45 Tactical": {
+    "displayName": "F45 Tactical",
+    "classString": "/Game/Items/RangedWeapons/Pistol_F45_Tactical.Pistol_F45_Tactical_C",
+    "category": "pistols"
+  },
+  "G17": {
+    "displayName": "G17",
+    "classString": "/Game/Items/RangedWeapons/G17.G17_C",
+    "category": "pistols"
+  },
+  "G26": {
+    "displayName": "G26",
+    "classString": "/Game/Items/RangedWeapons/Pistol_G26.Pistol_G26_C",
+    "category": "pistols"
+  },
+  "G26 FDE": {
+    "displayName": "G26 FDE",
+    "classString": "/Game/Items/RangedWeapons/Pistol_G26_FDE.Pistol_G26_FDE_C",
+    "category": "pistols"
+  },
+  "G34": {
+    "displayName": "G34",
+    "classString": "/Game/Items/RangedWeapons/Pistol_G34.Pistol_G34_C",
+    "category": "pistols"
+  },
+  "G34 FDE": {
+    "displayName": "G34 FDE",
+    "classString": "/Game/Items/RangedWeapons/Pistol_G34_FDE.Pistol_G34_FDE_C",
+    "category": "pistols"
+  },
+  "G45": {
+    "displayName": "G45",
+    "classString": "/Game/Items/RangedWeapons/Pistol_G45.Pistol_G45_C",
+    "category": "pistols"
+  },
+  "Hobbyist's 1911": {
+    "displayName": "Hobbyist's 1911",
+    "classString": "/Game/Items/RangedWeapons/Pistol_M1911_Custom.Pistol_M1911_Custom_C",
+    "category": "pistols"
+  },
+  "King Vulture .44": {
+    "displayName": "King Vulture .44",
+    "classString": "/Game/Items/RangedWeapons/Pistol_Deagle_Custom.Pistol_Deagle_Custom_C",
+    "category": "pistols"
+  },
+  "M17": {
+    "displayName": "M17",
+    "classString": "/Game/Items/RangedWeapons/Pistol_P220_9_Military_ExMag.Pistol_P220_9_Military_ExMag_C",
+    "category": "pistols"
+  },
+  "M9": {
+    "displayName": "M9",
+    "classString": "/Game/Items/RangedWeapons/Pistol_M9.Pistol_M9_C",
+    "category": "pistols"
+  },
+  "Mare's Leg": {
+    "displayName": "Mare's Leg",
+    "classString": "/Game/Items/RangedWeapons/Pistol_Pack10_Lever_Model92Short.Pistol_Pack10_Lever_Model92Short_C",
+    "category": "pistols"
+  },
+  "Micro Dot PPK": {
+    "displayName": "Micro Dot PPK",
+    "classString": "/Game/Items/RangedWeapons/Pistol_PPK22_Sighted.Pistol_PPK22_Sighted_C",
+    "category": "pistols"
+  },
+  "P-07": {
+    "displayName": "P-07",
+    "classString": "/Game/Items/RangedWeapons/P07.P07_C",
+    "category": "pistols"
+  },
+  "P-07 Pro": {
+    "displayName": "P-07 Pro",
+    "classString": "/Game/Items/RangedWeapons/Pistol_P07_ExMagHairTrigger.Pistol_P07_ExMagHairTrigger_C",
+    "category": "pistols"
+  },
+  "P220-45": {
+    "displayName": "P220-45",
+    "classString": "/Game/Items/RangedWeapons/Pistol_P220_45.Pistol_P220_45_C",
+    "category": "pistols"
+  },
+  "P220-45 Elite": {
+    "displayName": "P220-45 Elite",
+    "classString": "/Game/Items/RangedWeapons/Pistol_P220_45_DotSightExMagBrake.Pistol_P220_45_DotSightExMagBrake_C",
+    "category": "pistols"
+  },
+  "P220-9": {
+    "displayName": "P220-9",
+    "classString": "/Game/Items/RangedWeapons/Pistol_P220_9.Pistol_P220_9_C",
+    "category": "pistols"
+  },
+  "P220-9 Elite": {
+    "displayName": "P220-9 Elite",
+    "classString": "/Game/Items/RangedWeapons/Pistol_P220_9_DotSightExMagBrake.Pistol_P220_9_DotSightExMagBrake_C",
+    "category": "pistols"
+  },
+  "P226": {
+    "displayName": "P226",
+    "classString": "/Game/Items/RangedWeapons/Pistol_P226.Pistol_P226_C",
+    "category": "pistols"
+  },
+  "P226 Elite": {
+    "displayName": "P226 Elite",
+    "classString": "/Game/Items/RangedWeapons/Pistol_P226_DotSightExMagBrake.Pistol_P226_DotSightExMagBrake_C",
+    "category": "pistols"
+  },
+  "Police Auction Golden Vulture": {
+    "displayName": "Police Auction Golden Vulture",
+    "classString": "/Game/Items/RangedWeapons/Police_Auction_Golden_Eagle.Police_Auction_Golden_Eagle_C",
+    "category": "pistols"
+  },
+  "PPK": {
+    "displayName": "PPK",
+    "classString": "/Game/Items/RangedWeapons/Pistol_PPK22.Pistol_PPK22_C",
+    "category": "pistols"
+  },
+  "PPQ 45": {
+    "displayName": "PPQ 45",
+    "classString": "/Game/Items/RangedWeapons/Pistol_PPQ_45.Pistol_PPQ_45_C",
+    "category": "pistols"
+  },
+  "PPQ M2": {
+    "displayName": "PPQ M2",
+    "classString": "/Game/Items/RangedWeapons/Pistol_PPQ_9.Pistol_PPQ_9_C",
+    "category": "pistols"
+  },
+  "Precision G17": {
+    "displayName": "Precision G17",
+    "classString": "/Game/Items/RangedWeapons/G17Sighted.G17Sighted_C",
+    "category": "pistols"
+  },
+  "Restored Echo-S6 Pistol": {
+    "displayName": "Restored Echo-S6 Pistol",
+    "classString": "/Game/Items/RangedWeapons/Pistol_CU12_01_Bounty.Pistol_CU12_01_Bounty_C",
+    "category": "pistols"
+  },
+  "Sighted Mk3": {
+    "displayName": "Sighted Mk3",
+    "classString": "/Game/Items/RangedWeapons/Pistol_22_45_Sighted.Pistol_22_45_Sighted_C",
+    "category": "pistols"
+  },
+  "Sighted P-07": {
+    "displayName": "Sighted P-07",
+    "classString": "/Game/Items/RangedWeapons/Pistol_P07_Sighted.Pistol_P07_Sighted_C",
+    "category": "pistols"
+  },
+  "SP5K Civilian": {
+    "displayName": "SP5K Civilian",
+    "classString": "/Game/Items/RangedWeapons/Pistol_MP5K_Semi.Pistol_MP5K_Semi_C",
+    "category": "pistols"
+  },
+  "SP5K Custom": {
+    "displayName": "SP5K Custom",
+    "classString": "/Game/Items/RangedWeapons/Pistol_MP5K_Semi_Custom.Pistol_MP5K_Semi_Custom_C",
+    "category": "pistols"
+  },
+  "Surplus 1911": {
+    "displayName": "1911",
+    "classString": "/Game/Items/RangedWeapons/M1911.M1911_C",
+    "category": "pistols"
+  },
+  "Target Mk3": {
+    "displayName": "Target Mk3",
+    "classString": "/Game/Items/RangedWeapons/Pistol_22_45.Pistol_22_45_C",
+    "category": "pistols"
+  },
+  "Vulture .44": {
+    "displayName": "Vulture .44",
+    "classString": "/Game/Items/RangedWeapons/Pistol_Deagle.Pistol_Deagle_C",
+    "category": "pistols"
+  },
+  "Vulture .44-Ex": {
+    "displayName": "Vulture .44-Ex",
+    "classString": "/Game/Items/RangedWeapons/Pistol_Deagle_ExMag.Pistol_Deagle_ExMag_C",
+    "category": "pistols"
+  },
+  "WWII Commander's 1911": {
+    "displayName": "WWII Commander's 1911",
+    "classString": "/Game/Items/RangedWeapons/Pistol_M1911_Heirloom01.Pistol_M1911_Heirloom01_C",
+    "category": "pistols"
+  },
+  "9mm Pro 986 Revolver": {
+    "displayName": "9mm Pro 986 Revolver",
+    "classString": "/Game/Items/RangedWeapons/Revolver_986_Long.Revolver_986_Long_C",
+    "category": "revolvers"
+  },
+  "Backup Bossy": {
+    "displayName": "Backup Bossy",
+    "classString": "/Game/Items/RangedWeapons/Revolver_986_Snub.Revolver_986_Snub_C",
+    "category": "revolvers"
+  },
+  "Blackhawk .45 Revolver": {
+    "displayName": "Blackhawk .45 Revolver",
+    "classString": "/Game/Items/RangedWeapons/Revolver_Blackhawk.Revolver_Blackhawk_C",
+    "category": "revolvers"
+  },
+  "Echo-S1 Revolver*(Heartland)*": {
+    "displayName": "Echo-S1 Revolver",
+    "classString": "/Game/Items/RangedWeapons/Revolver_DLC4_Integral_Suppressed.Revolver_DLC4_Integral_Suppressed_C",
+    "category": "revolvers"
+  },
+  "Gold Fever Revolver": {
+    "displayName": "Gold Fever Revolver",
+    "classString": "/Game/Items/RangedWeapons/Revo_PreciousMetal.Revo_PreciousMetal_C",
+    "category": "revolvers"
+  },
+  "Hunter's Model 29": {
+    "displayName": "Hunter's Model 29",
+    "classString": "/Game/Items/RangedWeapons/Model29Scoped.Model29Scoped_C",
+    "category": "revolvers"
+  },
+  "Hunter's Viper": {
+    "displayName": "Hunter's Viper",
+    "classString": "/Game/Items/RangedWeapons/Python357Scoped.Python357Scoped_C",
+    "category": "revolvers"
+  },
+  "M1917 Revolver": {
+    "displayName": "M1917 Revolver",
+    "classString": "/Game/Items/RangedWeapons/Revolver_M1917_WW2.Revolver_M1917_WW2_C",
+    "category": "revolvers"
+  },
+  "Model 1875 Fuorilegge": {
+    "displayName": "Model 1875 Fuorilegge",
+    "classString": "/Game/Items/RangedWeapons/Revolver_Model_1875_Outlaw.Revolver_Model_1875_Outlaw_C",
+    "category": "revolvers"
+  },
+  "Model 1875 Sceriffo": {
+    "displayName": "Model 1875 Sceriffo",
+    "classString": "/Game/Items/RangedWeapons/Revolver_Model_1875.Revolver_Model_1875_C",
+    "category": "revolvers"
+  },
+  "Model 29": {
+    "displayName": "Model 29",
+    "classString": "/Game/Items/RangedWeapons/Model29.Model29_C",
+    "category": "revolvers"
+  },
+  "Old Lawman's Viper": {
+    "displayName": "Old Lawman's Viper",
+    "classString": "/Game/Items/RangedWeapons/Revolver_Python357_Heirloom01.Revolver_Python357_Heirloom01_C",
+    "category": "revolvers"
+  },
+  "OSS Silent Night": {
+    "displayName": "OSS Silent Night",
+    "classString": "/Game/Items/RangedWeapons/Revolver_OSS_1917.Revolver_OSS_1917_C",
+    "category": "revolvers"
+  },
+  "Restored Echo-S1 Revolver": {
+    "displayName": "Restored Echo-S1 Revolver",
+    "classString": "/Game/Items/RangedWeapons/Revolver_CU12_Integral_Suppressed_Bounty.Revolver_CU12_Integral_Suppressed_Bounty_C",
+    "category": "revolvers"
+  },
+  "Rinnegato .45 Revolver": {
+    "displayName": "Rinnegato .45 Revolver",
+    "classString": "/Game/Items/RangedWeapons/Revolver_Blackhawk_Ugly.Revolver_Blackhawk_Ugly_C",
+    "category": "revolvers"
+  },
+  "Safari Razorback .44": {
+    "displayName": "Safari Razorback .44",
+    "classString": "/Game/Items/RangedWeapons/Revo_Safari_44_Scoped_Brake.Revo_Safari_44_Scoped_Brake_C",
+    "category": "revolvers"
+  },
+  "SP101 Devilette .22": {
+    "displayName": "SP101 Devilette .22",
+    "classString": "/Game/Items/RangedWeapons/Revolver_SP101_22.Revolver_SP101_22_C",
+    "category": "revolvers"
+  },
+  "SP101 Tassie Devil": {
+    "displayName": "SP101 Tassie Devil",
+    "classString": "/Game/Items/RangedWeapons/Revolver_SP101DA.Revolver_SP101DA_C",
+    "category": "revolvers"
+  },
+  "Viper": {
+    "displayName": "Viper",
+    "classString": "/Game/Items/RangedWeapons/Python357.Python357_C",
+    "category": "revolvers"
+  },
+  "Classic Crossbow": {
+    "displayName": "Classic Crossbow",
+    "classString": "/Game/Items/RangedWeapons/MediumCrossbow_DLC4_01.MediumCrossbow_DLC4_01_C",
+    "category": "crossbows"
+  },
+  "Echo-X1 Combat Crossbow": {
+    "displayName": "Echo-X1 Combat Crossbow",
+    "classString": "/Game/Items/RangedWeapons/MediumCrossbow_DLC4_02.MediumCrossbow_DLC4_02_C",
+    "category": "crossbows"
+  },
+  "Echo-X2 Sniper Crossbow": {
+    "displayName": "Echo-X2 Sniper Crossbow",
+    "classString": "/Game/Items/RangedWeapons/SniperCrossbow_DLC4_01.SniperCrossbow_DLC4_01_C",
+    "category": "crossbows"
+  },
+  "Echo-X3 Repeating Crossbow": {
+    "displayName": "Echo-X3 Repeating Crossbow",
+    "classString": "/Game/Items/RangedWeapons/LightCrossbow_Repeating_DLC4_01.LightCrossbow_Repeating_DLC4_01_C",
+    "category": "crossbows"
+  },
+  "Homemade Crossbow": {
+    "displayName": "Homemade Crossbow",
+    "classString": "/Game/Items/RangedWeapons/MediumCrossbow_DLC4_Homemade.MediumCrossbow_DLC4_Homemade_C",
+    "category": "crossbows"
+  },
+  "Homemade Scoped Crossbow": {
+    "displayName": "Homemade Scoped Crossbow",
+    "classString": "/Game/Items/RangedWeapons/MediumCrossbow_DLC4_Homemade_Scoped.MediumCrossbow_DLC4_Homemade_Scoped_C",
+    "category": "crossbows"
+  },
+  "Hunting Crossbow": {
+    "displayName": "Hunting Crossbow",
+    "classString": "/Game/Items/RangedWeapons/SniperCrossbow_DLC4_02.SniperCrossbow_DLC4_02_C",
+    "category": "crossbows"
+  },
+  "Light Crossbow": {
+    "displayName": "Light Crossbow",
+    "classString": "/Game/Items/RangedWeapons/LightCrossbow_DLC4_01.LightCrossbow_DLC4_01_C",
+    "category": "crossbows"
+  },
+  "Midnight Solstice": {
+    "displayName": "Midnight Solstice",
+    "classString": "/Game/Items/RangedWeapons/LightCrossbow_Pack12_ScopedUltralightCrossbow.LightCrossbow_Pack12_ScopedUltralightCrossbow_C",
+    "category": "crossbows"
+  }
+}

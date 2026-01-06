@@ -2,96 +2,134 @@
   {
     "Name": "9mm Pro 986 Revolver",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_986_Long.Revolver_986_Long_C",
+    "DisplayName": "9mm Pro 986 Revolver"
   },
   {
     "Name": "Backup Bossy",
     "Ammo": "9mm rounds",
-    "": "p"
+    "": "p",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_986_Snub.Revolver_986_Snub_C",
+    "DisplayName": "Backup Bossy"
   },
   {
     "Name": "Blackhawk .45 Revolver",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_Blackhawk.Revolver_Blackhawk_C",
+    "DisplayName": "Blackhawk .45 Revolver"
   },
   {
     "Name": "Echo-S1 Revolver*(Heartland)*",
     "Ammo": ".22 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_DLC4_Integral_Suppressed.Revolver_DLC4_Integral_Suppressed_C",
+    "DisplayName": "Echo-S1 Revolver"
   },
   {
     "Name": "Gold Fever Revolver",
     "Ammo": ".44 Magnum HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revo_PreciousMetal.Revo_PreciousMetal_C",
+    "DisplayName": "Gold Fever Revolver"
   },
   {
     "Name": "Hunter's Model 29",
     "Ammo": ".44 Magnum HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Model29Scoped.Model29Scoped_C",
+    "DisplayName": "Hunter's Model 29"
   },
   {
     "Name": "Hunter's Viper",
     "Ammo": ".357 HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Python357Scoped.Python357Scoped_C",
+    "DisplayName": "Hunter's Viper"
   },
   {
     "Name": "M1917 Revolver",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_M1917_WW2.Revolver_M1917_WW2_C",
+    "DisplayName": "M1917 Revolver"
   },
   {
     "Name": "Model 1875 Fuorilegge",
     "Ammo": ".44 Magnum HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_Model_1875_Outlaw.Revolver_Model_1875_Outlaw_C",
+    "DisplayName": "Model 1875 Fuorilegge"
   },
   {
     "Name": "Model 1875 Sceriffo",
     "Ammo": ".44 Magnum HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_Model_1875.Revolver_Model_1875_C",
+    "DisplayName": "Model 1875 Sceriffo"
   },
   {
     "Name": "Model 29",
     "Ammo": ".44 Magnum HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Model29.Model29_C",
+    "DisplayName": "Model 29"
   },
   {
     "Name": "Old Lawman's Viper",
     "Ammo": ".357 HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_Python357_Heirloom01.Revolver_Python357_Heirloom01_C",
+    "DisplayName": "Old Lawman's Viper"
   },
   {
     "Name": "OSS Silent Night",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_OSS_1917.Revolver_OSS_1917_C",
+    "DisplayName": "OSS Silent Night"
   },
   {
     "Name": "Restored Echo-S1 Revolver",
     "Ammo": ".22 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_CU12_Integral_Suppressed_Bounty.Revolver_CU12_Integral_Suppressed_Bounty_C",
+    "DisplayName": "Restored Echo-S1 Revolver"
   },
   {
     "Name": "Rinnegato .45 Revolver",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_Blackhawk_Ugly.Revolver_Blackhawk_Ugly_C",
+    "DisplayName": "Rinnegato .45 Revolver"
   },
   {
     "Name": "Safari Razorback .44",
     "Ammo": ".44 Magnum HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revo_Safari_44_Scoped_Brake.Revo_Safari_44_Scoped_Brake_C",
+    "DisplayName": "Safari Razorback .44"
   },
   {
     "Name": "SP101 Devilette .22",
     "Ammo": ".22 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_SP101_22.Revolver_SP101_22_C",
+    "DisplayName": "SP101 Devilette .22"
   },
   {
     "Name": "SP101 Tassie Devil",
     "Ammo": ".357 HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Revolver_SP101DA.Revolver_SP101DA_C",
+    "DisplayName": "SP101 Tassie Devil"
   },
   {
     "Name": "Viper",
     "Ammo": ".357 HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Python357.Python357_C",
+    "DisplayName": "Viper"
   }
 ]

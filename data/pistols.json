@@ -1,190 +1,284 @@
 [
   {
     "Name": "1911",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/M1911.M1911_C",
+    "DisplayName": "1911"
   },
   {
     "Name": "1911 Long Slide",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_M1911_Longslide.Pistol_M1911_Longslide_C",
+    "DisplayName": "1911 Long Slide"
   },
   {
     "Name": "1911 The Producer",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_1911_Producer.Pistol_1911_Producer_C",
+    "DisplayName": "1911 The Producer"
   },
   {
     "Name": "Brock's Golden Vulture .44*(Heartland)*",
-    "Ammo": ".44 Magnum HP rounds"
+    "Ammo": ".44 Magnum HP rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_Deagle.Pistol_Deagle_C",
+    "DisplayName": "Vulture .44"
   },
   {
     "Name": "Civilian Uzi 22 Pistol",
-    "Ammo": ".22 cal rounds"
+    "Ammo": ".22 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Uzi22Pistol.Uzi22Pistol_C",
+    "DisplayName": "Civilian Uzi 22 Pistol"
   },
   {
     "Name": "Civilian Vector Ultracompact",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_VectorPistol.Pistol_VectorPistol_C",
+    "DisplayName": "Civilian Vector Ultracompact"
   },
   {
     "Name": "CLEO Pistol",
-    "Ammo": "CLEO Ammo Packs"
+    "Ammo": "CLEO Ammo Packs",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_DLC2_CLEOPistol_01.Pistol_DLC2_CLEOPistol_01_C",
+    "DisplayName": "CLEO Pistol"
   },
   {
     "Name": "Competition Mk3",
-    "Ammo": ".22 cal rounds"
+    "Ammo": ".22 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_22_45_Racer.Pistol_22_45_Racer_C",
+    "DisplayName": "Competition Mk3"
   },
   {
     "Name": "Czech M8",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_Czech_M8.Pistol_Czech_M8_C",
+    "DisplayName": "Czech M8"
   },
   {
     "Name": "Echo-S6 Pistol*(Heartland)*",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_DLC4_01.Pistol_DLC4_01_C",
+    "DisplayName": "Echo-S6 Pistol"
   },
   {
     "Name": "Extended Mk3",
-    "Ammo": ".22 cal rounds"
+    "Ammo": ".22 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_22_45_ExMag.Pistol_22_45_ExMag_C",
+    "DisplayName": "Extended Mk3"
   },
   {
     "Name": "F45 Tactical",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_F45_Tactical.Pistol_F45_Tactical_C",
+    "DisplayName": "F45 Tactical"
   },
   {
     "Name": "G17",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/G17.G17_C",
+    "DisplayName": "G17"
   },
   {
     "Name": "G26",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_G26.Pistol_G26_C",
+    "DisplayName": "G26"
   },
   {
     "Name": "G26 FDE",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_G26_FDE.Pistol_G26_FDE_C",
+    "DisplayName": "G26 FDE"
   },
   {
     "Name": "G34",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_G34.Pistol_G34_C",
+    "DisplayName": "G34"
   },
   {
     "Name": "G34 FDE",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_G34_FDE.Pistol_G34_FDE_C",
+    "DisplayName": "G34 FDE"
   },
   {
     "Name": "G45",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_G45.Pistol_G45_C",
+    "DisplayName": "G45"
   },
   {
     "Name": "Hobbyist's 1911",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_M1911_Custom.Pistol_M1911_Custom_C",
+    "DisplayName": "Hobbyist's 1911"
   },
   {
     "Name": "King Vulture .44",
-    "Ammo": ".44 Magnum HP rounds"
+    "Ammo": ".44 Magnum HP rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_Deagle_Custom.Pistol_Deagle_Custom_C",
+    "DisplayName": "King Vulture .44"
   },
   {
     "Name": "M17",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_P220_9_Military_ExMag.Pistol_P220_9_Military_ExMag_C",
+    "DisplayName": "M17"
   },
   {
     "Name": "M9",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_M9.Pistol_M9_C",
+    "DisplayName": "M9"
   },
   {
     "Name": "Mare's Leg",
-    "Ammo": ".44 Magnum HP rounds"
+    "Ammo": ".44 Magnum HP rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_Pack10_Lever_Model92Short.Pistol_Pack10_Lever_Model92Short_C",
+    "DisplayName": "Mare's Leg"
   },
   {
     "Name": "Micro Dot PPK",
-    "Ammo": ".22 cal rounds"
+    "Ammo": ".22 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_PPK22_Sighted.Pistol_PPK22_Sighted_C",
+    "DisplayName": "Micro Dot PPK"
   },
   {
     "Name": "P-07",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/P07.P07_C",
+    "DisplayName": "P-07"
   },
   {
     "Name": "P-07 Pro",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_P07_ExMagHairTrigger.Pistol_P07_ExMagHairTrigger_C",
+    "DisplayName": "P-07 Pro"
   },
   {
     "Name": "P220-45",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_P220_45.Pistol_P220_45_C",
+    "DisplayName": "P220-45"
   },
   {
     "Name": "P220-45 Elite",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_P220_45_DotSightExMagBrake.Pistol_P220_45_DotSightExMagBrake_C",
+    "DisplayName": "P220-45 Elite"
   },
   {
     "Name": "P220-9",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_P220_9.Pistol_P220_9_C",
+    "DisplayName": "P220-9"
   },
   {
     "Name": "P220-9 Elite",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_P220_9_DotSightExMagBrake.Pistol_P220_9_DotSightExMagBrake_C",
+    "DisplayName": "P220-9 Elite"
   },
   {
     "Name": "P226",
-    "Ammo": ".357 HP rounds"
+    "Ammo": ".357 HP rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_P226.Pistol_P226_C",
+    "DisplayName": "P226"
   },
   {
     "Name": "P226 Elite",
-    "Ammo": ".357 HP rounds"
+    "Ammo": ".357 HP rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_P226_DotSightExMagBrake.Pistol_P226_DotSightExMagBrake_C",
+    "DisplayName": "P226 Elite"
   },
   {
     "Name": "Police Auction Golden Vulture",
-    "Ammo": ".44 Magnum HP rounds"
+    "Ammo": ".44 Magnum HP rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Police_Auction_Golden_Eagle.Police_Auction_Golden_Eagle_C",
+    "DisplayName": "Police Auction Golden Vulture"
   },
   {
     "Name": "PPK",
-    "Ammo": ".22 cal rounds"
+    "Ammo": ".22 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_PPK22.Pistol_PPK22_C",
+    "DisplayName": "PPK"
   },
   {
     "Name": "PPQ 45",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_PPQ_45.Pistol_PPQ_45_C",
+    "DisplayName": "PPQ 45"
   },
   {
     "Name": "PPQ M2",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_PPQ_9.Pistol_PPQ_9_C",
+    "DisplayName": "PPQ M2"
   },
   {
     "Name": "Precision G17",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/G17Sighted.G17Sighted_C",
+    "DisplayName": "Precision G17"
   },
   {
     "Name": "Restored Echo-S6 Pistol",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_CU12_01_Bounty.Pistol_CU12_01_Bounty_C",
+    "DisplayName": "Restored Echo-S6 Pistol"
   },
   {
     "Name": "Sighted Mk3",
-    "Ammo": ".22 cal rounds"
+    "Ammo": ".22 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_22_45_Sighted.Pistol_22_45_Sighted_C",
+    "DisplayName": "Sighted Mk3"
   },
   {
     "Name": "Sighted P-07",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_P07_Sighted.Pistol_P07_Sighted_C",
+    "DisplayName": "Sighted P-07"
   },
   {
     "Name": "SP5K Civilian",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_MP5K_Semi.Pistol_MP5K_Semi_C",
+    "DisplayName": "SP5K Civilian"
   },
   {
     "Name": "SP5K Custom",
-    "Ammo": "9mm rounds"
+    "Ammo": "9mm rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_MP5K_Semi_Custom.Pistol_MP5K_Semi_Custom_C",
+    "DisplayName": "SP5K Custom"
   },
   {
     "Name": "Surplus 1911",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/M1911.M1911_C",
+    "DisplayName": "1911"
   },
   {
     "Name": "Target Mk3",
-    "Ammo": ".22 cal rounds"
+    "Ammo": ".22 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_22_45.Pistol_22_45_C",
+    "DisplayName": "Target Mk3"
   },
   {
     "Name": "Vulture .44",
-    "Ammo": ".44 Magnum HP rounds"
+    "Ammo": ".44 Magnum HP rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_Deagle.Pistol_Deagle_C",
+    "DisplayName": "Vulture .44"
   },
   {
     "Name": "Vulture .44-Ex",
-    "Ammo": ".44 Magnum HP rounds"
+    "Ammo": ".44 Magnum HP rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_Deagle_ExMag.Pistol_Deagle_ExMag_C",
+    "DisplayName": "Vulture .44-Ex"
   },
   {
     "Name": "WWII Commander's 1911",
-    "Ammo": ".45 cal rounds"
+    "Ammo": ".45 cal rounds",
+    "ClassString": "/Game/Items/RangedWeapons/Pistol_M1911_Heirloom01.Pistol_M1911_Heirloom01_C",
+    "DisplayName": "WWII Commander's 1911"
   }
 ]

@@ -2,306 +2,428 @@
   {
     "Name": "AK-47",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/AK47.AK47_C",
+    "DisplayName": "AK-47"
   },
   {
     "Name": "AKS-74U",
     "Ammo": "5.56mm rounds",
-    "": "p"
+    "": "p",
+    "ClassString": "/Game/Items/RangedWeapons/AKs74u_Classic.AKs74u_Classic_C",
+    "DisplayName": "AKS-74U"
   },
   {
     "Name": "AKS-74U Valentine",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/AKs74uValentine.AKs74uValentine_C",
+    "DisplayName": "AKS-74U Valentine"
   },
   {
     "Name": "APC9 RT",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/SMG_APC9_Pro.SMG_APC9_Pro_C",
+    "DisplayName": "APC9 RT"
   },
   {
     "Name": "Barrow Style BAR",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_BAR_WW2_CutDown.Assault_BAR_WW2_CutDown_C",
+    "DisplayName": "Barrow Style BAR"
   },
   {
     "Name": "Ceremonial M1A1 Thompson",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_M1A1Thompson_Ceremonial.Assault_M1A1Thompson_Ceremonial_C",
+    "DisplayName": "Ceremonial M1A1 Thompson"
   },
   {
     "Name": "Classic AK-47",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_AK47_Classic.Assault_AK47_Classic_C",
+    "DisplayName": "Classic AK-47"
   },
   {
     "Name": "CLEO SMG",
     "Ammo": "CLEO Ammo Packs",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_DLC2_CLEOAssault_01.Assault_DLC2_CLEOAssault_01_C",
+    "DisplayName": "CLEO SMG"
   },
   {
     "Name": "Custom AK-47",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_AK47HoloDoubleStack.Assault_AK47HoloDoubleStack_C",
+    "DisplayName": "Custom AK-47"
   },
   {
     "Name": "Danger Dog PPSh-41",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_PPSh41_Prepper.Assault_PPSh41_Prepper_C",
+    "DisplayName": "Danger Dog PPSh-41"
   },
   {
     "Name": "Echo-S4 SMG*(Heartland)*",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_DLC4_MP5_Integral_Suppressed.Assault_DLC4_MP5_Integral_Suppressed_C",
+    "DisplayName": "Echo-S4 SMG"
   },
   {
     "Name": "Echo-S7 Assault Rifle*(Heartland)*",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_DLC4_M4A1_Integral_Suppressed.Assault_DLC4_M4A1_Integral_Suppressed_C",
+    "DisplayName": "Echo-S7 Assault Rifle"
   },
   {
     "Name": "Eternal Guard's Infinite Rage",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_AK47NKSpecial.Assault_AK47NKSpecial_C",
+    "DisplayName": "Eternal Guard's Infinite Rage"
   },
   {
     "Name": "EVO 3*(Doomsday Pack)*",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_EVO3.Assault_EVO3_C",
+    "DisplayName": "EVO 3"
   },
   {
     "Name": "FAL",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_FAL.Assault_FAL_C",
+    "DisplayName": "FAL"
   },
   {
     "Name": "FBI Fighting Rifle",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_BAR_WW2_Rosie.Assault_BAR_WW2_Rosie_C",
+    "DisplayName": "FBI Fighting Rifle"
   },
   {
     "Name": "Gangland Strad",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_M1A1Thompson_WW2_DrumSuppressor.Assault_M1A1Thompson_WW2_DrumSuppressor_C",
+    "DisplayName": "Gangland Strad"
   },
   {
     "Name": "Golden Honcho",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/AK47_Gold.AK47_Gold_C",
+    "DisplayName": "Golden Honcho"
   },
   {
     "Name": "Graveyard Shift",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_SMG_M3_WW2_Integral_Suppressed.Assault_SMG_M3_WW2_Integral_Suppressed_C",
+    "DisplayName": "Graveyard Shift"
   },
   {
     "Name": "HB PDW",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_Pack12_PDW_Short.Assault_Pack12_PDW_Short_C",
+    "DisplayName": "HB PDW"
   },
   {
     "Name": "HB SD Blackout",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_Pack12_PDW_SD.Assault_Pack12_PDW_SD_C",
+    "DisplayName": "HB SD Blackout "
   },
   {
     "Name": "HB Snow Fox",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_Pack12_PDW_Special_01.Assault_Pack12_PDW_Special_01_C",
+    "DisplayName": "HB Snow Fox"
   },
   {
     "Name": "M1918 BAR",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_BAR_WW2.Assault_BAR_WW2_C",
+    "DisplayName": "M1918 BAR"
   },
   {
     "Name": "M1A1 Thompson",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_M1A1Thompson_WW2.Assault_M1A1Thompson_WW2_C",
+    "DisplayName": "M1A1 Thompson"
   },
   {
     "Name": "M3 Grease Gun",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_SMG_M3_WW2.Assault_SMG_M3_WW2_C",
+    "DisplayName": "M3 Grease Gun"
   },
   {
     "Name": "M4 CQBR Mob Stopper",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/M4_CQBR_Custom.M4_CQBR_Custom_C",
+    "DisplayName": "M4 CQBR Mob Stopper"
   },
   {
     "Name": "M4A1",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/M4A1.M4A1_C",
+    "DisplayName": "M4A1"
   },
   {
     "Name": "M4X1 DMR Heavy",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/M4A1AcogDrumSuppressor.M4A1AcogDrumSuppressor_C",
+    "DisplayName": "M4X1 DMR Heavy"
   },
   {
     "Name": "M4X2 Lite SSW",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/M4A1SightedBetaMagBrake.M4A1SightedBetaMagBrake_C",
+    "DisplayName": "M4X2 Lite SSW"
   },
   {
     "Name": "MAC-V",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/MAC10Assault.MAC10Assault_C",
+    "DisplayName": "MAC-V"
   },
   {
     "Name": "Masterwork Assault Rifle",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_DLC_Heartland_Crafted_02.Assault_DLC_Heartland_Crafted_02_C",
+    "DisplayName": "Masterwork Assault Rifle "
   },
   {
     "Name": "MCX Osprey RT",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_MCX_RT.Assault_MCX_RT_C",
+    "DisplayName": "MCX Osprey RT"
   },
   {
     "Name": "MP40 Submachine Gun",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_SMG_MP40_WW2.Assault_SMG_MP40_WW2_C",
+    "DisplayName": "MP40 Submachine Gun"
   },
   {
     "Name": "MP5A2",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/MP5.MP5_C",
+    "DisplayName": "MP5A2"
   },
   {
     "Name": "MP5A2 Spec Ops",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_MP5_SpecOps.Assault_MP5_SpecOps_C",
+    "DisplayName": "MP5A2 Spec Ops"
   },
   {
     "Name": "MP5SD",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_MP5SD.Assault_MP5SD_C",
+    "DisplayName": "MP5SD"
   },
   {
     "Name": "MPX Competition",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/SMG_MPX_Competition.SMG_MPX_Competition_C",
+    "DisplayName": "MPX Competition"
   },
   {
     "Name": "MPX Submachine Gun",
     "Ammo": ".357 HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_MPX.Assault_MPX_C",
+    "DisplayName": "MPX Submachine Gun"
   },
   {
     "Name": "Network DIY Assault Rifle",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_DLC_Heartland_Crafted_01.Assault_DLC_Heartland_Crafted_01_C",
+    "DisplayName": "Network DIY Assault Rifle"
   },
   {
     "Name": "Non-Compliant SKS",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_SKS.Assault_SKS_C",
+    "DisplayName": "Non-Compliant SKS"
   },
   {
     "Name": "Operator's M4A1",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/M4A1HoloDrumAdvSuppressor.M4A1HoloDrumAdvSuppressor_C",
+    "DisplayName": "Operator's M4A1"
   },
   {
     "Name": "Prepper's AK-47",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_AK47Prepper.Assault_AK47Prepper_C",
+    "DisplayName": "Prepper's AK-47"
   },
   {
     "Name": "Raider's AK-47",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_AK47_Raider.Assault_AK47_Raider_C",
+    "DisplayName": "Raider's AK-47"
   },
   {
     "Name": "Raider's AR-15",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_AR15_Raider.Assault_AR15_Raider_C",
+    "DisplayName": "Raider's AR-15"
   },
   {
     "Name": "Restored Echo-S4 SMG",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_CU12_MP5_Integral_Suppressed_Bounty.Assault_CU12_MP5_Integral_Suppressed_Bounty_C",
+    "DisplayName": "Restored Echo-S4 SMG"
   },
   {
     "Name": "Restored Echo-S7 Assault Rifle",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_CU12_M4A1_Integral_Suppressed_Bounty.Assault_CU12_M4A1_Integral_Suppressed_Bounty_C",
+    "DisplayName": "Restored Echo-S7 Assault Rifle"
   },
   {
     "Name": "RTX Hordebreaker",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_M14_SOCOM2_Drum_Auto_RedTalon.Rifle_M14_SOCOM2_Drum_Auto_RedTalon_C",
+    "DisplayName": "RTX Hordebreaker"
   },
   {
     "Name": "RTX Stormbringer",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_SCARH_SightDrum_RedTalon.Assault_SCARH_SightDrum_RedTalon_C",
+    "DisplayName": "RTX Stormbringer"
   },
   {
     "Name": "Samurai SMG",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/SMG_Samurai.SMG_Samurai_C",
+    "DisplayName": "Samurai SMG"
   },
   {
     "Name": "SCAR-H",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_SCARH.Assault_SCARH_C",
+    "DisplayName": "SCAR-H"
   },
   {
     "Name": "Sighted AK-47",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/AK47Sighted.AK47Sighted_C",
+    "DisplayName": "Sighted AK-47"
   },
   {
     "Name": "Sighted M4A1",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/M4A1Sighted.M4A1Sighted_C",
+    "DisplayName": "Sighted M4A1"
   },
   {
     "Name": "Sighted SCAR-H",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_SCARH_Sighted.Assault_SCARH_Sighted_C",
+    "DisplayName": "Sighted SCAR-H"
   },
   {
     "Name": "Soviet PPSh-41",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_PPSh41.Assault_PPSh41_C",
+    "DisplayName": "Soviet PPSh-41"
   },
   {
     "Name": "Spec Ops Vector SMG",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_VectorSMG_SpecOps.Assault_VectorSMG_SpecOps_C",
+    "DisplayName": "Spec Ops Vector SMG"
   },
   {
     "Name": "SWAT 416",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_M416.Assault_M416_C",
+    "DisplayName": "SWAT 416"
   },
   {
     "Name": "Τ4/Μ2 Carbine",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_M2_Carbine_WW2.Assault_M2_Carbine_WW2_C",
+    "DisplayName": "T4/M2 Carbine"
   },
   {
     "Name": "UMP SMG",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_UMP.Assault_UMP_C",
+    "DisplayName": "UMP SMG"
   },
   {
     "Name": "Uzi 9mm",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/UZI.UZI_C",
+    "DisplayName": "Uzi 9mm"
   },
   {
     "Name": "Vector SMG",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_VectorSMG.Assault_VectorSMG_C",
+    "DisplayName": "Vector SMG"
   },
   {
     "Name": "X-36C*(Doomsday Pack)*",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_X36C.Assault_X36C_C",
+    "DisplayName": "X-36C"
   }
 ]

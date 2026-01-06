@@ -2,236 +2,330 @@
   {
     "Name": "10/22 Carbine",
     "Ammo": ".22 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_10_22.Rifle_10_22_C",
+    "DisplayName": "10/22 Carbine"
   },
   {
     "Name": "AR-15",
     "Ammo": "5.56mm rounds",
-    "": "p"
+    "": "p",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_AR15.Assault_AR15_C",
+    "DisplayName": "AR-15"
   },
   {
     "Name": "Arctic Warrior",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/ArcticWarfare.ArcticWarfare_C",
+    "DisplayName": "Arctic Warrior"
   },
   {
     "Name": "Big Hank Rifle",
     "Ammo": ".357 HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_Pack10_Lever_Bighank.Rifle_Pack10_Lever_Bighank_C",
+    "DisplayName": "Big Hank Rifle"
   },
   {
     "Name": "Bolt Scout",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/ScoutBoltRifle.ScoutBoltRifle_C",
+    "DisplayName": "Bolt Scout"
   },
   {
     "Name": "Civilian Uzi 22 Carbine",
     "Ammo": ".22 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Uzi22Carbine.Uzi22Carbine_C",
+    "DisplayName": "Civilian Uzi 22 Carbine"
   },
   {
     "Name": "Civilian Vector Carbine",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_VectorCarbine.Assault_VectorCarbine_C",
+    "DisplayName": "Civilian Vector Carbine"
   },
   {
     "Name": "Classic SKS Rifle",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_SKS.Rifle_SKS_C",
+    "DisplayName": "Classic SKS Rifle"
   },
   {
     "Name": "CLEO Battle Rifle",
     "Ammo": "CLEO Ammo Packs",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_DLC2_CLEOAssault_02.Assault_DLC2_CLEOAssault_02_C",
+    "DisplayName": "CLEO Battle Rifle"
   },
   {
     "Name": "CLEO Blast Rifle",
     "Ammo": "CLEO Ammo Packs",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_DLC2_CLEOSniper_01.Rifle_DLC2_CLEOSniper_01_C",
+    "DisplayName": "CLEO Blast Rifle"
   },
   {
     "Name": "CLEO Sharpshooter Rifle",
     "Ammo": "CLEO Ammo Packs",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_DLC2_CLEOAssault_03.Assault_DLC2_CLEOAssault_03_C",
+    "DisplayName": "CLEO Sharpshooter Rifle"
   },
   {
     "Name": "D-BAR",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_Pack12_DBAR_Long.Rifle_Pack12_DBAR_Long_C",
+    "DisplayName": "D-BAR"
   },
   {
     "Name": "D-Bartini",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_Pack12_DBAR_Short.Rifle_Pack12_DBAR_Short_C",
+    "DisplayName": "D-Bartini"
   },
   {
     "Name": "Doomsday Carbine",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_USC_SHTF.Rifle_USC_SHTF_C",
+    "DisplayName": "Doomsday Carbine"
   },
   {
     "Name": "Duvall Outrider",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_Pack10_Lever_MagFed_Catmar.Rifle_Pack10_Lever_MagFed_Catmar_C",
+    "DisplayName": "Duvall Outrider"
   },
   {
     "Name": "Echo-S2 Rifle *(Heartland)*",
     "Ammo": ".22 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/BoltAction_DLC4_Integral_Suppressed.BoltAction_DLC4_Integral_Suppressed_C",
+    "DisplayName": "Echo-S2 Rifle"
   },
   {
     "Name": "Exterminator's 10/22",
     "Ammo": ".22 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_10_22_Scope_ExMag.Rifle_10_22_Scope_ExMag_C",
+    "DisplayName": "Exterminator's 10/22"
   },
   {
     "Name": "Fake-A 47",
     "Ammo": ".22 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_10_22_Custom1.Rifle_10_22_Custom1_C",
+    "DisplayName": "Fake-A 47"
   },
   {
     "Name": "GSG-W",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_GSGW.Assault_GSGW_C",
+    "DisplayName": "GSG-W"
   },
   {
     "Name": "Heirloom Model 70",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_Model70_Heirloom01.Rifle_Model70_Heirloom01_C",
+    "DisplayName": "Heirloom Model 70"
   },
   {
     "Name": "Hunter SKS",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_SKS_Hunter.Rifle_SKS_Hunter_C",
+    "DisplayName": "Hunter SKS"
   },
   {
     "Name": "Hunter's Bolt Scout",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/ScoutBoltRifleScoped.ScoutBoltRifleScoped_C",
+    "DisplayName": "Hunter's Bolt Scout"
   },
   {
     "Name": "Hunter's Model 70",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Model70Scoped.Model70Scoped_C",
+    "DisplayName": "Hunter's Model 70"
   },
   {
     "Name": "JL94 Civilian",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_MP5_Civilian.Assault_MP5_Civilian_C",
+    "DisplayName": "JL94 Civilian"
   },
   {
     "Name": "JL94 Custom",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_MP5_Civilian_Custom.Assault_MP5_Civilian_Custom_C",
+    "DisplayName": "JL94 Custom"
   },
   {
     "Name": "M1 Carbine",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_M1_Carbine_WW2.Rifle_M1_Carbine_WW2_C",
+    "DisplayName": "M1 Carbine"
   },
   {
     "Name": "M1 Para Carbine",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_M1_Para_Carbine_WW2.Rifle_M1_Para_Carbine_WW2_C",
+    "DisplayName": "M1 Para Carbine"
   },
   {
     "Name": "M1-A",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_M1A.Rifle_M1A_C",
+    "DisplayName": "M1-A"
   },
   {
     "Name": "M1-A Short",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_M1A_ShortBarrel.Rifle_M1A_ShortBarrel_C",
+    "DisplayName": "M1-A Short"
   },
   {
     "Name": "M14 DMR",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_M14DMR.Rifle_M14DMR_C",
+    "DisplayName": "M14 DMR"
   },
   {
     "Name": "M1903A4 Sniper Rifle",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_M1903_WW2.Rifle_M1903_WW2_C",
+    "DisplayName": "M1903A4 Sniper Rifle"
   },
   {
     "Name": "Model 70 Classic",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Model70Basic.Model70Basic_C",
+    "DisplayName": "Model 70 Classic"
   },
   {
     "Name": "Model 92 Rifle",
     "Ammo": ".44 Magnum HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_Pack10_Lever_Model92.Rifle_Pack10_Lever_Model92_C",
+    "DisplayName": "Model 92 Rifle"
   },
   {
     "Name": "Police Sniper Rifle",
     "Ammo": "5.56mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_Police_Sniper.Rifle_Police_Sniper_C",
+    "DisplayName": "Police Sniper Rifle"
   },
   {
     "Name": "Prepper's 10/22",
     "Ammo": ".22 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_10_22_Custom2.Rifle_10_22_Custom2_C",
+    "DisplayName": "Prepper's 10/22"
   },
   {
     "Name": "RC-9 Police Carbine",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_RC9.Rifle_RC9_C",
+    "DisplayName": "RC-9 Police Carbine"
   },
   {
     "Name": "Restored Echo-S2 Rifle",
     "Ammo": ".22 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/BoltAction_CU12_Integral_Suppressed_Bounty.BoltAction_CU12_Integral_Suppressed_Bounty_C",
+    "DisplayName": "Restored Echo-S2 Rifle"
   },
   {
     "Name": "Scoped Big Hank Rifle",
     "Ammo": ".357 HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_Pack10_Lever_Bighank_Scoped.Rifle_Pack10_Lever_Bighank_Scoped_C",
+    "DisplayName": "Scoped Big Hank Rifle"
   },
   {
     "Name": "Scoped Model 92 Rifle",
     "Ammo": ".44 Magnum HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_Pack10_Lever_Model92_Scoped.Rifle_Pack10_Lever_Model92_Scoped_C",
+    "DisplayName": "Scoped Model 92 Rifle"
   },
   {
     "Name": "Seabass Model 94",
     "Ammo": ".357 HP rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_Lever_Seabass94.Rifle_Lever_Seabass94_C",
+    "DisplayName": "Seabass Model 94"
   },
   {
     "Name": "Simple S2K",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_S2K.Rifle_S2K_C",
+    "DisplayName": "Simple S2K"
   },
   {
     "Name": "SOCOM II",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_M14_SOCOM2.Rifle_M14_SOCOM2_C",
+    "DisplayName": "SOCOM II"
   },
   {
     "Name": "Spec Ops AW",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/ArcticWarfareScopeSuppressor.ArcticWarfareScopeSuppressor_C",
+    "DisplayName": "Spec Ops AW"
   },
   {
     "Name": "SVD",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Assault_Dragunov_SVD.Assault_Dragunov_SVD_C",
+    "DisplayName": "SVD"
   },
   {
     "Name": "Trail Blazer S2K",
     "Ammo": "9mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_S2K_Blaise.Rifle_S2K_Blaise_C",
+    "DisplayName": "Trail Blazer S2K"
   },
   {
     "Name": "Trumbull Gatekeeper",
     "Ammo": "7.62mm rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_CU2_Model70Network.Rifle_CU2_Model70Network_C",
+    "DisplayName": "Trumbull Gatekeeper"
   },
   {
     "Name": "USC Carbine",
     "Ammo": ".45 cal rounds",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/Rifle_USC.Rifle_USC_C",
+    "DisplayName": "USC Carbine"
   }
 ]

@@ -2,132 +2,184 @@
   {
     "All columns are the back pack name": "Small Back Packs",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "6 slots",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/Heartland_Firefighter_SmallBackpack.Heartland_Firefighter_SmallBackpack_C",
+    "DisplayName": "Vic's Small Backpack"
   },
   {
     "All columns are the back pack name": "Autumn Camo",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Black and Blue",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_49.ExtraSmallBackpack_49_C",
+    "DisplayName": "Ultralight Pack (Autumn Camo)"
   },
   {
     "All columns are the back pack name": "Black and Orange",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Blue and Orange",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_45.ExtraSmallBackpack_45_C",
+    "DisplayName": "Ultralight Pack (Black and Orange)"
   },
   {
     "All columns are the back pack name": "Bright Blue",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Bright Green",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_45.ExtraLargeBackpack_45_C",
+    "DisplayName": "Hiking Pack (Bright Blue)"
   },
   {
     "All columns are the back pack name": "Brown and White",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Brown Patterned",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/SmallBackpack_44.SmallBackpack_44_C",
+    "DisplayName": "Small Backpack (Brown and White)"
   },
   {
     "All columns are the back pack name": "Dark Pink",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Deep Blue",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/SmallBackpack_16.SmallBackpack_16_C",
+    "DisplayName": "Small Backpack (Dark Pink)"
   },
   {
     "All columns are the back pack name": "Green and Orange",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Green and Red",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_17.ExtraSmallBackpack_17_C",
+    "DisplayName": "Ultralight Pack (Green and Orange)"
   },
   {
     "All columns are the back pack name": "Jet Black",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Khaki",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/MediumBackpack_07.MediumBackpack_07_C",
+    "DisplayName": "Standard Backpack (Jet Black)"
   },
   {
     "All columns are the back pack name": "Light Grey",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Lime Green",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_20.LargeBackpack_20_C",
+    "DisplayName": "Large Backpack (Light Grey)"
   },
   {
     "All columns are the back pack name": "Mixed Blue",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Mixed Green",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/SmallBackpack_49.SmallBackpack_49_C",
+    "DisplayName": "Small Backpack (Mixed Blue)"
   },
   {
     "All columns are the back pack name": "Purple and Yellow",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Raw Sienna",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_30.ExtraLargeBackpack_30_C",
+    "DisplayName": "Hiking Pack (Purple and Yellow)"
   },
   {
     "All columns are the back pack name": "Red Plaid",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Sky Blue",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_44.ExtraSmallBackpack_44_C",
+    "DisplayName": "Ultralight Pack (Red Plaid)"
   },
   {
     "All columns are the back pack name": "Teal and White",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Violet and Sea Green",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/SmallBackpack_19.SmallBackpack_19_C",
+    "DisplayName": "Small Backpack (Teal and White)"
   },
   {
     "All columns are the back pack name": "Standard Backpack",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "7 slots",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/MediumBackpackBase.MediumBackpackBase_C",
+    "DisplayName": "Standard Backpack"
   },
   {
     "All columns are the back pack name": "Albrecht Dürer",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Artsy Brown",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_45.LargeBackpack_45_C",
+    "DisplayName": "Large Backpack (Albrecht Dürer)"
   },
   {
     "All columns are the back pack name": "Blue Crossbones",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Blue Patterned",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/MediumBackpack_43.MediumBackpack_43_C",
+    "DisplayName": "Standard Backpack (Blue Crossbones)"
   },
   {
     "All columns are the back pack name": "Brown Patterned",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Brown with Blue Straps",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_47.ExtraSmallBackpack_47_C",
+    "DisplayName": "Ultralight Pack (Brown Patterned)"
   },
   {
     "All columns are the back pack name": "Dirty Blue",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Dirty Green",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/MediumBackpack_04.MediumBackpack_04_C",
+    "DisplayName": "Standard Backpack (Dirty Blue)"
   },
   {
     "All columns are the back pack name": "Forest Green",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Green Camouflage",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_13.LargeBackpack_13_C",
+    "DisplayName": "Large Backpack (Forest Green)"
   },
   {
     "All columns are the back pack name": "Grey and Red",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Grey Python",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_23.ExtraLargeBackpack_23_C",
+    "DisplayName": "Hiking Pack (Grey and Red)"
   },
   {
     "All columns are the back pack name": "Hot Pink Leopard",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Hot Pink",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/MediumBackpack_44.MediumBackpack_44_C",
+    "DisplayName": "Standard Backpack (Hot Pink Leopard)"
   },
   {
     "All columns are the back pack name": "Jet Black",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Orange",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/MediumBackpack_07.MediumBackpack_07_C",
+    "DisplayName": "Standard Backpack (Jet Black)"
   },
   {
     "All columns are the back pack name": "Red Gingham",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Red with White Straps",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_39.LargeBackpack_39_C",
+    "DisplayName": "Large Backpack (Red Gingham)"
   },
   {
     "All columns are the back pack name": "Three Color",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Turquoise",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/MediumBackpack_05.MediumBackpack_05_C",
+    "DisplayName": "Standard Backpack (Three Color)"
   },
   {
     "All columns are the back pack name": "White Flecked Camo",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "White with Blue Straps",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_43.ExtraLargeBackpack_43_C",
+    "DisplayName": "Hiking Pack (White Flecked Camo)"
   },
   {
     "All columns are the back pack name": "Yellow Polka-Dot",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Zebra",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/MediumBackpack_39.MediumBackpack_39_C",
+    "DisplayName": "Standard Backpack (Yellow Polka-Dot)"
   },
   {
     "All columns are the back pack name": "Large Backpack 8 nslots",
@@ -137,121 +189,169 @@
   {
     "All columns are the back pack name": "Albrecht Dürer",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Black and Pink",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_45.LargeBackpack_45_C",
+    "DisplayName": "Large Backpack (Albrecht Dürer)"
   },
   {
     "All columns are the back pack name": "Blue and Gold",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Blue and Orange",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_29.LargeBackpack_29_C",
+    "DisplayName": "Large Backpack (Blue and Gold)"
   },
   {
     "All columns are the back pack name": "Blue",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Bright Blue",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_06.ExtraLargeBackpack_06_C",
+    "DisplayName": "Hiking Pack (Yellow and Blue)"
   },
   {
     "All columns are the back pack name": "Brown with Skull",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Brown",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_32.LargeBackpack_32_C",
+    "DisplayName": "Large Backpack (Brown with Skull)"
   },
   {
     "All columns are the back pack name": "Drab Blue",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Dull Yellow",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_22.LargeBackpack_22_C",
+    "DisplayName": "Large Backpack (Drab Blue)"
   },
   {
     "All columns are the back pack name": "Gold",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Golden Camo",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_04.LargeBackpack_04_C",
+    "DisplayName": "Large Backpack (Golden Camo)"
   },
   {
     "All columns are the back pack name": "Grey Plaid",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Hieronymus Bosch",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_44.LargeBackpack_44_C",
+    "DisplayName": "Large Backpack (Grey Plaid)"
   },
   {
     "All columns are the back pack name": "Light Blue",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Light Grey",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_09.LargeBackpack_09_C",
+    "DisplayName": "Large Backpack (Light Blue)"
   },
   {
     "All columns are the back pack name": "Orange",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Pink Cat",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_03.ExtraLargeBackpack_03_C",
+    "DisplayName": "Hiking Pack (Purple and Orange)"
   },
   {
     "All columns are the back pack name": "Raw Sienna",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Red and Black",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_34.LargeBackpack_34_C",
+    "DisplayName": "Large Backpack (Raw Sienna)"
   },
   {
     "All columns are the back pack name": "Violet Patterned",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Violet",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/LargeBackpack_41.LargeBackpack_41_C",
+    "DisplayName": "Large Backpack (Violet Patterned)"
   },
   {
     "All columns are the back pack name": "White",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Zebra",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_09.ExtraLargeBackpack_09_C",
+    "DisplayName": "Hiking Pack (Purple and White)"
   },
   {
     "All columns are the back pack name": "Ultra Light Back Packs",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "6 Slots",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpackBase.ExtraSmallBackpackBase_C",
+    "DisplayName": "Ultralight Pack"
   },
   {
     "All columns are the back pack name": "Army Green",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Autumn Camo",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_31.ExtraSmallBackpack_31_C",
+    "DisplayName": "Ultralight Pack (Army Green)"
   },
   {
     "All columns are the back pack name": "Black and Orange",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Black and Red",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_45.ExtraSmallBackpack_45_C",
+    "DisplayName": "Ultralight Pack (Black and Orange)"
   },
   {
     "All columns are the back pack name": "Black",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Brown and Orange",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_01.ExtraLargeBackpack_01_C",
+    "DisplayName": "Hiking Pack (Red and Black)"
   },
   {
     "All columns are the back pack name": "Brown and Orange",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Brown Patterned",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_07.ExtraSmallBackpack_07_C",
+    "DisplayName": "Ultralight Pack (Brown and Orange)"
   },
   {
     "All columns are the back pack name": "Dark Purple",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Green and Orange",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_33.ExtraLargeBackpack_33_C",
+    "DisplayName": "Hiking Pack (Dark Purple)"
   },
   {
     "All columns are the back pack name": "Grey and Blue",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Grey Star",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_10.ExtraSmallBackpack_10_C",
+    "DisplayName": "Ultralight Pack (Grey and Blue)"
   },
   {
     "All columns are the back pack name": "Light BlueFile:Ultralight Light Blue Backpack.PNG",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Orange and White",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_06.ExtraLargeBackpack_06_C",
+    "DisplayName": "Hiking Pack (Yellow and Blue)"
   },
   {
     "All columns are the back pack name": "Pink Leopard",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Purple and Orange",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_27.ExtraSmallBackpack_27_C",
+    "DisplayName": "Ultralight Pack (Pink Leopard)"
   },
   {
     "All columns are the back pack name": "Red and Tan",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Red Plaid",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_41.ExtraSmallBackpack_41_C",
+    "DisplayName": "Ultralight Pack (Red and Tan)"
   },
   {
     "All columns are the back pack name": "Sky Blue",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "Turquoise and Blue",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraLargeBackpack_19.ExtraLargeBackpack_19_C",
+    "DisplayName": "Hiking Pack (Sky Blue)"
   },
   {
     "All columns are the back pack name": "White Patterned",
     "other than the headers i.e Small Back Packs        6 slots        4lb weight": "White #1",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/BackpackItems/ExtraSmallBackpack_25.ExtraSmallBackpack_25_C",
+    "DisplayName": "Ultralight Pack (White Patterned)"
   }
 ]

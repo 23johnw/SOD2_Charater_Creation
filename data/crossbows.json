@@ -2,46 +2,64 @@
   {
     "Name": "Classic Crossbow",
     "Ammo": "Standard Bolts",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/MediumCrossbow_DLC4_01.MediumCrossbow_DLC4_01_C",
+    "DisplayName": "Classic Crossbow"
   },
   {
     "Name": "Echo-X1 Combat Crossbow",
     "Ammo": "Standard Bolts",
-    "": "p"
+    "": "p",
+    "ClassString": "/Game/Items/RangedWeapons/MediumCrossbow_DLC4_02.MediumCrossbow_DLC4_02_C",
+    "DisplayName": "Echo-X1 Combat Crossbow"
   },
   {
     "Name": "Echo-X2 Sniper Crossbow",
     "Ammo": "Standard Bolts",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/SniperCrossbow_DLC4_01.SniperCrossbow_DLC4_01_C",
+    "DisplayName": "Echo-X2 Sniper Crossbow"
   },
   {
     "Name": "Echo-X3 Repeating Crossbow",
     "Ammo": "Light Bolts",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/LightCrossbow_Repeating_DLC4_01.LightCrossbow_Repeating_DLC4_01_C",
+    "DisplayName": "Echo-X3 Repeating Crossbow"
   },
   {
     "Name": "Homemade Crossbow",
     "Ammo": "Light Bolts",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/MediumCrossbow_DLC4_Homemade.MediumCrossbow_DLC4_Homemade_C",
+    "DisplayName": "Homemade Crossbow"
   },
   {
     "Name": "Homemade Scoped Crossbow",
     "Ammo": "Standard Bolts",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/MediumCrossbow_DLC4_Homemade_Scoped.MediumCrossbow_DLC4_Homemade_Scoped_C",
+    "DisplayName": "Homemade Scoped Crossbow"
   },
   {
     "Name": "Hunting Crossbow",
     "Ammo": "Standard Bolts",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/SniperCrossbow_DLC4_02.SniperCrossbow_DLC4_02_C",
+    "DisplayName": "Hunting Crossbow"
   },
   {
     "Name": "Light Crossbow",
     "Ammo": "Light Bolts",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/LightCrossbow_DLC4_01.LightCrossbow_DLC4_01_C",
+    "DisplayName": "Light Crossbow"
   },
   {
     "Name": "Midnight Solstice",
     "Ammo": "Light Bolts",
-    "": ""
+    "": "",
+    "ClassString": "/Game/Items/RangedWeapons/LightCrossbow_Pack12_ScopedUltralightCrossbow.LightCrossbow_Pack12_ScopedUltralightCrossbow_C",
+    "DisplayName": "Midnight Solstice"
   }
 ]
