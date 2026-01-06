@@ -1,8 +1,8 @@
 {
   "total": 972,
-  "matched": 945,
-  "unmatched": 27,
-  "matchRate": "97.2%",
+  "matched": 947,
+  "unmatched": 25,
+  "matchRate": "97.4%",
   "unmatchedTraits": [
     {
       "name": "Always Vigilant",
@@ -30,19 +30,9 @@
       "providedSkill": "Firearms Maintenance"
     },
     {
-      "name": "Flatuent",
-      "description": "He who smelt it dealt it.",
-      "providedSkill": ""
-    },
-    {
       "name": "Front Line Experience \n\n*(Red Talon Contractors only)*",
       "description": "I've been on the real frontier. It's a constant siege, day in and day out.",
       "providedSkill": "Heroism"
-    },
-    {
-      "name": "Goes by Last Name",
-      "description": "My friends always called me by my last name, and it sort of stuck \nthroughout my life.",
-      "providedSkill": ""
     },
     {
       "name": "Hated Camping",

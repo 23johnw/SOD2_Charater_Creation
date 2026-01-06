@@ -84,6 +84,14 @@ if (!mappings['Messy']) {
 if (!mappings['Preschool Teacher']) {
     mappings['Preschool Teacher'] = 'Hygiene_Career_PreschoolTeacher';
 }
+// CSV has typo "Flatuent" but game has "Flatulent"
+if (!mappings['Flatulent']) {
+    mappings['Flatulent'] = 'Standing_Attribute_Flatulent';
+}
+// CSV says "Goes by Last Name" but game has "Avoids First Name" (same trait)
+if (!mappings['Avoids First Name']) {
+    mappings['Avoids First Name'] = 'Minor_Naming_Surname';
+}
 
 console.log(`Extracted ${Object.keys(mappings).length} trait mappings from UILists.cs`);
 console.log(`  - Pattern 1 (direct Add): ${count1}`);
@@ -161,6 +169,18 @@ csvTraits.forEach(csvTrait => {
     const csvName = csvTrait.Name.trim();
     if (!csvName || csvName.includes('▶') || csvName.includes('much worse') || 
         csvName.includes('something wrong') || csvName.length < 2) {
+        return;
+    }
+    
+    // Special cases: CSV typos/variations
+    if (csvName === 'Flatuent' && mappings['Flatulent']) {
+        finalMapping[csvName] = mappings['Flatulent'];
+        matched.push({ csvName, gameString: mappings['Flatulent'], matchType: 'manual_typo_fix' });
+        return;
+    }
+    if (csvName === 'Goes by Last Name' && mappings['Avoids First Name']) {
+        finalMapping[csvName] = mappings['Avoids First Name'];
+        matched.push({ csvName, gameString: mappings['Avoids First Name'], matchType: 'manual_synonym' });
         return;
     }
     
