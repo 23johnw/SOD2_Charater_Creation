@@ -30,8 +30,8 @@ class DataLoader {
             const humanDefs = await this.loadJSON('data/humanDefinitions.json');
             this.data.humanDefinitions.male = humanDefs.filter(h => h.Gender === 'Male' && h['Internal ID (For Editor)']);
             this.data.humanDefinitions.female = humanDefs.filter(h => h.Gender === 'Female' && h['Internal ID (For Editor)']);
-            // Also store full list for randomizer
-            this.data.humanDefinitions = humanDefs;
+            // Also store full list for randomizer (but keep the structure)
+            this.data.humanDefinitions.all = humanDefs;
             
             // Load skills
             this.data.coreSkills = await this.loadJSON('data/coreSkills.json');

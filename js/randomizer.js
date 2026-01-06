@@ -69,18 +69,14 @@ class Randomizer {
 
     // Random human definition (character model)
     randomHumanDefinition(gender) {
-        if (!dataLoader || !dataLoader.data) return '';
-        const allDefs = Array.isArray(dataLoader.data.humanDefinitions) 
-            ? dataLoader.data.humanDefinitions 
-            : (gender === 'Male' ? dataLoader.data.humanDefinitions.male : dataLoader.data.humanDefinitions.female) || [];
+        if (!dataLoader || !dataLoader.data || !dataLoader.data.humanDefinitions) return '';
         
-        const definitions = allDefs.filter(def => {
-            if (!def['Internal ID (For Editor)']) return false;
-            const genderField = def.Gender || '';
-            return genderField === gender;
-        });
+        // Use the gender-specific arrays
+        const definitions = gender === 'Male' 
+            ? dataLoader.data.humanDefinitions.male 
+            : dataLoader.data.humanDefinitions.female;
         
-        if (definitions.length === 0) return '';
+        if (!definitions || definitions.length === 0) return '';
         const def = definitions[Math.floor(Math.random() * definitions.length)];
         return def['Internal ID (For Editor)'] || def.Name || def.name || def || '';
     }

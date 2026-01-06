@@ -371,11 +371,21 @@ function updateHumanDefinitionOptions() {
     const humanDefSelect = document.getElementById('humanDefinition');
     const humanDefs = dataLoader.getHumanDefinitions(gender);
     
+    if (!humanDefSelect) return;
+    
     humanDefSelect.innerHTML = '<option value="">Select model...</option>';
+    
+    if (!humanDefs || !Array.isArray(humanDefs)) {
+        console.warn('Human definitions not available for gender:', gender);
+        return;
+    }
+    
     humanDefs.forEach(def => {
         const option = document.createElement('option');
-        option.value = def['Internal ID (For Editor)'];
-        option.textContent = `${def['Model Name']} (${def.Style})`;
+        option.value = def['Internal ID (For Editor)'] || '';
+        const modelName = def['Model Name'] || def.Name || 'Unknown';
+        const style = def.Style || '';
+        option.textContent = style ? `${modelName} (${style})` : modelName;
         humanDefSelect.appendChild(option);
     });
 }
