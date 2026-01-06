@@ -95,17 +95,26 @@ function showValidationFeedback(validation) {
     // Remove existing feedback
     document.querySelectorAll('.validation-error, .validation-success').forEach(el => el.remove());
     
+    // Find the export section (last form section with button-group)
+    const exportSection = document.querySelector('.form-section:last-child');
+    const buttonGroup = exportSection?.querySelector('.button-group');
+    
+    // If elements don't exist, skip validation feedback (might be called during XML generation)
+    if (!exportSection || !buttonGroup) {
+        return;
+    }
+    
     if (validation.valid) {
         const success = document.createElement('div');
         success.className = 'validation-success';
         success.textContent = '✓ Character is valid and ready to export';
-        document.querySelector('.form-section:last-child').insertBefore(success, document.querySelector('.button-group'));
+        exportSection.insertBefore(success, buttonGroup);
     } else {
         validation.errors.forEach(error => {
             const errorDiv = document.createElement('div');
             errorDiv.className = 'validation-error';
             errorDiv.textContent = `✗ ${error}`;
-            document.querySelector('.form-section:last-child').insertBefore(errorDiv, document.querySelector('.button-group'));
+            exportSection.insertBefore(errorDiv, buttonGroup);
         });
     }
     
@@ -115,7 +124,7 @@ function showValidationFeedback(validation) {
             warningDiv.className = 'validation-error';
             warningDiv.style.color = '#ff9800';
             warningDiv.textContent = `⚠ ${warning}`;
-            document.querySelector('.form-section:last-child').insertBefore(warningDiv, document.querySelector('.button-group'));
+            exportSection.insertBefore(warningDiv, buttonGroup);
         });
     }
 }

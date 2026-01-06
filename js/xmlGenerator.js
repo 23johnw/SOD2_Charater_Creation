@@ -479,19 +479,20 @@ function generateTraitsArray(index, traits) {
 }
 
 function generateTraitsSubsection(traits) {
-    // Make sure characterData is up to date before generating traits
-    if (typeof updateCharacterData === 'function') {
-        updateCharacterData();
-    }
-    
     // Rebuild required traits to ensure they're correct
-    const ageDescriptorName = characterData.ageRange === 'MiddleAged' ? 'MiddleAge' : characterData.ageRange;
+    // Get current values directly from characterData (don't call updateCharacterData to avoid DOM manipulation during XML generation)
+    const ageRange = characterData.ageRange || document.getElementById('ageRange')?.value || 'MiddleAged';
+    const pronoun = characterData.pronoun || document.getElementById('pronoun')?.value || 'She';
+    const philosophy1 = characterData.philosophy1 || document.getElementById('philosophy1')?.value || 'Prudent';
+    const philosophy2 = characterData.philosophy2 || document.getElementById('philosophy2')?.value || 'Pragmatic';
+    
+    const ageDescriptorName = ageRange === 'MiddleAged' ? 'MiddleAge' : ageRange;
     const requiredTraits = [
         { name: 'Default', traitResourceID: 'Default' },
         { name: `Descriptor_Age_${ageDescriptorName}`, traitResourceID: `Descriptor_Age_${ageDescriptorName}` },
-        { name: `Descriptor_Pronoun_${characterData.pronoun || 'She'}`, traitResourceID: `Descriptor_Pronoun_${characterData.pronoun || 'She'}` },
-        { name: `Descriptor_Philosophy_${characterData.philosophy1 || 'Prudent'}`, traitResourceID: `Descriptor_Philosophy_${characterData.philosophy1 || 'Prudent'}` },
-        { name: `Descriptor_Philosophy_${characterData.philosophy2 || 'Pragmatic'}`, traitResourceID: `Descriptor_Philosophy_${characterData.philosophy2 || 'Pragmatic'}` }
+        { name: `Descriptor_Pronoun_${pronoun}`, traitResourceID: `Descriptor_Pronoun_${pronoun}` },
+        { name: `Descriptor_Philosophy_${philosophy1}`, traitResourceID: `Descriptor_Philosophy_${philosophy1}` },
+        { name: `Descriptor_Philosophy_${philosophy2}`, traitResourceID: `Descriptor_Philosophy_${philosophy2}` }
     ];
     
     const allTraits = [...requiredTraits, ...(traits.optional || [])];
