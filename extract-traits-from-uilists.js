@@ -166,6 +166,13 @@ if (!mappings['Practices at the Range']) {
 if (!mappings['Worked as a Pioneer']) {
     mappings['Worked as a Pioneer'] = 'DLC2_RedTalon_Pioneer';
 }
+// Fix incorrect partial matches - these exist as exact traits
+if (!mappings['Disorganized']) {
+    mappings['Disorganized'] = 'Morale_Attribute_Disorganized';
+}
+if (!mappings['Erratic']) {
+    mappings['Erratic'] = 'Standing_Attribute_Erratic';
+}
 
 console.log(`Extracted ${Object.keys(mappings).length} trait mappings from UILists.cs`);
 console.log(`  - Pattern 1 (direct Add): ${count1}`);
@@ -309,11 +316,31 @@ csvTraits.forEach(csvTrait => {
     }
     
     // Try partial match (CSV name contains key words from display name or vice versa)
+    // BUT: Skip if CSV name is an exact substring match of a different trait (avoid matching opposites)
     const csvWords = csvName.toLowerCase().split(/\s+/).filter(w => w.length > 2);
     let bestMatch = null;
     let bestScore = 0;
     
+    // Check if there's an exact trait name that's very similar (to avoid matching opposites)
+    const exactSimilar = Object.keys(mappings).find(key => {
+        const keyLower = key.toLowerCase();
+        const csvLower = csvName.toLowerCase();
+        // If one is contained in the other and they're very similar, prefer exact
+        return (keyLower.includes(csvLower) || csvLower.includes(keyLower)) && 
+               Math.abs(keyLower.length - csvLower.length) <= 3;
+    });
+    
     for (const [displayName, gameString] of Object.entries(mappings)) {
+        // Skip if this is an opposite (e.g., "Disorganized" vs "Organized")
+        const displayLower = displayName.toLowerCase();
+        const csvLower = csvName.toLowerCase();
+        
+        // Avoid matching opposites
+        if ((csvLower.includes('disorgan') && displayLower.includes('organ') && !displayLower.includes('disorgan')) ||
+            (csvLower.includes('organ') && !csvLower.includes('disorgan') && displayLower.includes('disorgan'))) {
+            continue;
+        }
+        
         const displayWords = displayName.toLowerCase().split(/\s+/).filter(w => w.length > 2);
         let score = 0;
         
@@ -327,6 +354,11 @@ csvTraits.forEach(csvTrait => {
         // Also check if display name contains CSV name or vice versa
         if (displayName.toLowerCase().includes(lowerCsvName) || lowerCsvName.includes(displayName.toLowerCase())) {
             score += 10;
+        }
+        
+        // Prefer exact substring matches
+        if (exactSimilar && displayName === exactSimilar) {
+            score += 20;
         }
         
         if (score > bestScore && score >= csvName.length * 0.6) {
