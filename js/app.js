@@ -35,7 +35,8 @@ let characterData = {
     loadout: {
         preset: 'custom',
         equipment: {}
-    }
+    },
+    inventory: [] // Array of { category, itemId, displayName, classString, quantity }
 };
 
 // Initialize app when DOM is ready
@@ -88,6 +89,9 @@ function initializeForm() {
     
     // Initialize loadout UI
     initializeLoadoutUI();
+    
+    // Initialize inventory UI
+    initializeInventoryUI();
     
     // Update voice and human definition based on gender
     updateVoiceOptions();
@@ -819,6 +823,174 @@ function updateHumanDefinitionOptions() {
     });
 }
 
+function initializeInventoryUI() {
+    const categorySelect = document.getElementById('inventoryCategory');
+    const itemSelect = document.getElementById('inventoryItem');
+    
+    if (!categorySelect || !itemSelect) {
+        console.warn('Inventory UI elements not found');
+        return;
+    }
+    
+    // Populate items when category changes
+    categorySelect.addEventListener('change', () => {
+        populateInventoryItemDropdown();
+    });
+    
+    // Initial population
+    populateInventoryItemDropdown();
+    
+    // Update inventory list display
+    updateInventoryList();
+}
+
+function populateInventoryItemDropdown() {
+    // #region agent log
+    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:847',message:'populateInventoryItemDropdown called',data:{timestamp:Date.now()},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'A'})}).catch(()=>{});
+    // #endregion
+    const categorySelect = document.getElementById('inventoryCategory');
+    const itemSelect = document.getElementById('inventoryItem');
+    
+    if (!categorySelect || !itemSelect || !dataLoader || !dataLoader.data) {
+        // #region agent log
+        fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:852',message:'Early return - missing elements or dataLoader',data:{hasCategorySelect:!!categorySelect,hasItemSelect:!!itemSelect,hasDataLoader:!!dataLoader,hasData:!!(dataLoader&&dataLoader.data)},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'A'})}).catch(()=>{});
+        // #endregion
+        return;
+    }
+    
+    const category = categorySelect.value;
+    itemSelect.innerHTML = '<option value="">-- Select an item --</option>';
+    
+    let items = [];
+    const mappingKey = {
+        'consumable': 'consumableIdMapping',
+        'ammo': 'ammoIdMapping',
+        'resource': 'resourceIdMapping',
+        'miscellaneous': 'miscellaneousIdMapping'
+    }[category];
+    
+    // #region agent log
+    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:866',message:'Looking up mapping data',data:{category:category,mappingKey:mappingKey,hasMapping:!!(mappingKey&&dataLoader.data[mappingKey]),mappingType:Array.isArray(dataLoader.data[mappingKey])?'array':'other'},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'A'})}).catch(()=>{});
+    // #endregion
+    
+    if (mappingKey && dataLoader.data[mappingKey]) {
+        items = dataLoader.data[mappingKey];
+    }
+    
+    if (Array.isArray(items)) {
+        items.forEach(item => {
+            const option = document.createElement('option');
+            option.value = item.classString;
+            option.textContent = item.displayName;
+            option.dataset.displayName = item.displayName;
+            itemSelect.appendChild(option);
+        });
+    }
+    
+    // #region agent log
+    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:880',message:'Dropdown populated',data:{category:category,itemsCount:items.length,optionsCount:itemSelect.options.length-1},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'A'})}).catch(()=>{});
+    // #endregion
+    
+    console.log(`✓ Populated ${itemSelect.options.length - 1} ${category} items`);
+}
+
+function updateInventoryList() {
+    const inventoryList = document.getElementById('inventoryList');
+    if (!inventoryList) return;
+    
+    if (characterData.inventory.length === 0) {
+        inventoryList.innerHTML = '<p class="empty-message">No items in inventory. Add items above.</p>';
+        return;
+    }
+    
+    inventoryList.innerHTML = '<h3>Current Inventory</h3>';
+    const list = document.createElement('ul');
+    list.className = 'inventory-items-list';
+    
+    characterData.inventory.forEach((item, index) => {
+        const listItem = document.createElement('li');
+        listItem.className = 'inventory-item';
+        listItem.innerHTML = `
+            <span class="item-info">
+                <strong>${item.displayName}</strong> 
+                <span class="item-category">(${item.category})</span>
+                <span class="item-quantity">x${item.quantity}</span>
+            </span>
+            <button type="button" class="btn-remove-item" onclick="removeInventoryItem(${index})" title="Remove item">×</button>
+        `;
+        list.appendChild(listItem);
+    });
+    
+    inventoryList.appendChild(list);
+}
+
+function addInventoryItem() {
+    // #region agent log
+    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:913',message:'addInventoryItem called',data:{timestamp:Date.now()},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'B'})}).catch(()=>{});
+    // #endregion
+    const categorySelect = document.getElementById('inventoryCategory');
+    const itemSelect = document.getElementById('inventoryItem');
+    const quantityInput = document.getElementById('inventoryQuantity');
+    
+    if (!categorySelect || !itemSelect || !quantityInput) {
+        // #region agent log
+        fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:918',message:'Early return - missing form elements',data:{hasCategorySelect:!!categorySelect,hasItemSelect:!!itemSelect,hasQuantityInput:!!quantityInput},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'B'})}).catch(()=>{});
+        // #endregion
+        return;
+    }
+    
+    const category = categorySelect.value;
+    const classString = itemSelect.value;
+    const displayName = itemSelect.options[itemSelect.selectedIndex]?.dataset.displayName || itemSelect.options[itemSelect.selectedIndex]?.textContent || 'Unknown';
+    const quantity = parseInt(quantityInput.value) || 1;
+    
+    // #region agent log
+    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:923',message:'Item data extracted',data:{category:category,classString:classString,displayName:displayName,quantity:quantity,hasClassString:!!classString},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'B'})}).catch(()=>{});
+    // #endregion
+    
+    if (!classString || classString === '') {
+        // #region agent log
+        fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:925',message:'Validation failed - no classString',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'B'})}).catch(()=>{});
+        // #endregion
+        showNotification('Please select an item', 'warning');
+        return;
+    }
+    
+    // Add item to inventory
+    const inventoryItem = {
+        category: category,
+        classString: classString,
+        displayName: displayName,
+        quantity: quantity
+    };
+    characterData.inventory.push(inventoryItem);
+    
+    // #region agent log
+    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:931',message:'Item added to inventory',data:{inventoryItem:inventoryItem,inventoryLength:characterData.inventory.length},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'B'})}).catch(()=>{});
+    // #endregion
+    
+    // Update display
+    updateInventoryList();
+    
+    // Reset form
+    itemSelect.value = '';
+    quantityInput.value = 1;
+    
+    showNotification(`Added ${displayName} (x${quantity}) to inventory`, 'success');
+}
+
+function removeInventoryItem(index) {
+    if (index >= 0 && index < characterData.inventory.length) {
+        const item = characterData.inventory[index];
+        characterData.inventory.splice(index, 1);
+        updateInventoryList();
+        showNotification(`Removed ${item.displayName} from inventory`, 'info');
+    }
+}
+
+// Make removeInventoryItem globally available
+window.removeInventoryItem = removeInventoryItem;
+
 function setupEventListeners() {
     // Form field listeners
     document.getElementById('gender').addEventListener('change', (e) => {
@@ -921,6 +1093,12 @@ function setupEventListeners() {
     document.getElementById('exportBtn').addEventListener('click', exportCharacter);
     document.getElementById('previewBtn').addEventListener('click', previewXML);
     document.getElementById('resetBtn').addEventListener('click', resetForm);
+    
+    // Inventory button
+    const addInventoryBtn = document.getElementById('addInventoryItemBtn');
+    if (addInventoryBtn) {
+        addInventoryBtn.addEventListener('click', addInventoryItem);
+    }
     
     // Randomizer buttons
     document.getElementById('randomizeBtn').addEventListener('click', randomizeFullCharacter);

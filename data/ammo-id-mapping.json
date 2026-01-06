@@ -1,0 +1,82 @@
+[
+  {
+    "displayName": ".22 cal round",
+    "classString": "/Game/Items/Ammo/Ammo_22.Ammo_22_C"
+  },
+  {
+    "displayName": ".357 HP round",
+    "classString": "/Game/Items/Ammo/Ammo_357.Ammo_357_C"
+  },
+  {
+    "displayName": ".44 Magnum HP round",
+    "classString": "/Game/Items/Ammo/Ammo_44.Ammo_44_C"
+  },
+  {
+    "displayName": ".45 cal round",
+    "classString": "/Game/Items/Ammo/Ammo_45.Ammo_45_C"
+  },
+  {
+    "displayName": ".50 AP round",
+    "classString": "/Game/Items/Ammo/Ammo_50_Cal.Ammo_50_Cal_C"
+  },
+  {
+    "displayName": "(TEMP) Recoverable Bolt",
+    "classString": "/Game/Items/Ammo/Ammo_DLC4_Unique_RecoverableBolt_Explosive.Ammo_DLC4_Unique_RecoverableBolt_Explosive_C"
+  },
+  {
+    "displayName": "(TEMP) Recoverable Bolt",
+    "classString": "/Game/Items/Ammo/Ammo_DLC4_Unique_RecoverableBolt_Incendiary.Ammo_DLC4_Unique_RecoverableBolt_Incendiary_C"
+  },
+  {
+    "displayName": "12g shell",
+    "classString": "/Game/Items/Ammo/Ammo_Shell.Ammo_Shell_C"
+  },
+  {
+    "displayName": "40mm grenade",
+    "classString": "/Game/Items/Ammo/Ammo_40mm.Ammo_40mm_C"
+  },
+  {
+    "displayName": "5.56mm firework round",
+    "classString": "/Game/Items/Ammo/Ammo_5_56_Firework.Ammo_5_56_Firework_C"
+  },
+  {
+    "displayName": "5.56mm round",
+    "classString": "/Game/Items/Ammo/Ammo_5_56.Ammo_5_56_C"
+  },
+  {
+    "displayName": "7.62mm round",
+    "classString": "/Game/Items/Ammo/Ammo_7_62.Ammo_7_62_C"
+  },
+  {
+    "displayName": "9mm round",
+    "classString": "/Game/Items/Ammo/Ammo_9mm.Ammo_9mm_C"
+  },
+  {
+    "displayName": "CLEO Ammo Pack",
+    "classString": "/Game/Items/Ammo/Ammo_DLC2_CLEOAmmo.Ammo_DLC2_CLEOAmmo_C"
+  },
+  {
+    "displayName": "Gas Launcher 40mm Round",
+    "classString": "/Game/Items/Ammo/AmmoDLC4_40mm_TearGas.AmmoDLC4_40mm_TearGas_C"
+  },
+  {
+    "displayName": "Light Bolt",
+    "classString": "/Game/Items/Ammo/Ammo_DLC4_Unique_RecoverableBolt_Light.Ammo_DLC4_Unique_RecoverableBolt_Light_C"
+  },
+  {
+    "displayName": "Pyro Launcher Munition",
+    "classString": "/Game/Items/Ammo/Ammo_DLC1_Unique_MultiFireworkLauncher.Ammo_DLC1_Unique_MultiFireworkLauncher_C"
+  },
+  {
+    "displayName": "Standard Bolt",
+    "classString": "/Game/Items/Ammo/Ammo_DLC4_Unique_RecoverableBolt_Normal.Ammo_DLC4_Unique_RecoverableBolt_Normal_C"
+  },
+  {
+    "displayName": "Starshank Round",
+    "classString": "/Game/Items/Ammo/Ammo_DLC1_Unique_ImpalingExplodingFireworkLauncher.Ammo_DLC1_Unique_ImpalingExplodingFireworkLauncher_C"
+  },
+  {
+    "displayName": "Test Ammo",
+    "classString": "/Game/Items/Ammo/TestAmmoItem.TestAmmoItem_C"
+  }
+]

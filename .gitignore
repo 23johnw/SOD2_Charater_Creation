@@ -30,12 +30,16 @@ build-trait-matcher.js
 calculate-trait-tiers.js
 compare-xml.js
 convert-csv-to-json.js
+extract-item-ids.js
+extract-items-from-uilists.js
 extract-traits-from-uilists.js
+extract-weapons-backpacks.js
 match-traits-enhanced.js
 match-traits-old.js
 match-traits.js
 process-traits.js
 test-buff-parsing.js
+update-weapon-data.js
 verify-partial-matches.js
 verify-updated-traits.js
 

@@ -63,6 +63,38 @@ class DataLoader {
                 this.data.backpackIdMapping = {};
             }
             
+            // Load consumable ID mapping if available
+            try {
+                this.data.consumableIdMapping = await this.loadJSON('data/consumable-id-mapping.json');
+            } catch (e) {
+                console.warn('Consumable ID mapping not found');
+                this.data.consumableIdMapping = {};
+            }
+            
+            // Load ammo ID mapping if available
+            try {
+                this.data.ammoIdMapping = await this.loadJSON('data/ammo-id-mapping.json');
+            } catch (e) {
+                console.warn('Ammo ID mapping not found');
+                this.data.ammoIdMapping = {};
+            }
+            
+            // Load resource ID mapping if available
+            try {
+                this.data.resourceIdMapping = await this.loadJSON('data/resource-id-mapping.json');
+            } catch (e) {
+                console.warn('Resource ID mapping not found');
+                this.data.resourceIdMapping = {};
+            }
+            
+            // Load miscellaneous ID mapping if available
+            try {
+                this.data.miscellaneousIdMapping = await this.loadJSON('data/miscellaneous-id-mapping.json');
+            } catch (e) {
+                console.warn('Miscellaneous ID mapping not found');
+                this.data.miscellaneousIdMapping = {};
+            }
+            
             // Try to load curated traits table first (clean, pre-formatted data)
             try {
                 this.data.traits = await this.loadJSON('data/traits-curated.json');

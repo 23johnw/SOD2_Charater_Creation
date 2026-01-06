@@ -1,0 +1,298 @@
+[
+  {
+    "displayName": "Bag of Auto Parts",
+    "classString": "/Game/Items/ResourceItems/Materials/AutoPartsMaterialsResourceItem.AutoPartsMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "Bag of EMT Supplies",
+    "classString": "/Game/Items/ResourceItems/Meds/FirstAidMedsResourceItem.FirstAidMedsResourceItem_C"
+  },
+  {
+    "displayName": "Bag of Hunting Ammo",
+    "classString": "/Game/Items/ResourceItems/Ammo/HuntingAmmoResourceItem.HuntingAmmoResourceItem_C"
+  },
+  {
+    "displayName": "Bag of Medicinal Herbs",
+    "classString": "/Game/Items/ResourceItems/Meds/HerbalMedsResourceItem.HerbalMedsResourceItem_C"
+  },
+  {
+    "displayName": "Box of Auto Parts",
+    "classString": "/Game/Items/ResourceItems/Parts/PartsItemGeneric.PartsItemGeneric_C"
+  },
+  {
+    "displayName": "Bundle of Biodiesel Cans",
+    "classString": "/Game/Items/ResourceItems/Fuel/EthanolFuelResourceItem.EthanolFuelResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Carpentry Supplies",
+    "classString": "/Game/Items/ResourceItems/Materials/CarpentryMaterialsResourceItem.CarpentryMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Demolition Supplies",
+    "classString": "/Game/Items/ResourceItems/Ammo/ExplosivesAmmoResourceItem.ExplosivesAmmoResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Jerry Cans",
+    "classString": "/Game/Items/ResourceItems/Fuel/CanFuelResourceItem.CanFuelResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Juice Concentrate",
+    "classString": "/Game/Items/ResourceItems/Food/JuiceFoodResourceItem.JuiceFoodResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Military Ammo Cans",
+    "classString": "/Game/Items/ResourceItems/Ammo/MilitaryAmmoResourceItem.MilitaryAmmoResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Over-the-Counter Drugs",
+    "classString": "/Game/Items/ResourceItems/Meds/OTCMedsResourceItem.OTCMedsResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Pipes",
+    "classString": "/Game/Items/ResourceItems/Materials/PipesMaterialsResourceItem.PipesMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Premium Fuel Cans",
+    "classString": "/Game/Items/ResourceItems/Fuel/PremiumFuelResourceItem.PremiumFuelResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Pyrotechnics",
+    "classString": "/Game/Items/ResourceItems/Ammo/PyrotechnicsAmmoResourceItem.PyrotechnicsAmmoResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Siphoned Fuel",
+    "classString": "/Game/Items/ResourceItems/Fuel/SiphonedFuelResourceItem.SiphonedFuelResourceItem_C"
+  },
+  {
+    "displayName": "Bundle of Treated Fuel",
+    "classString": "/Game/Items/ResourceItems/Fuel/TreatedFuelResourceItem.TreatedFuelResourceItem_C"
+  },
+  {
+    "displayName": "Case of Canned Goods",
+    "classString": "/Game/Items/ResourceItems/Food/CannedFoodResourceItem.CannedFoodResourceItem_C"
+  },
+  {
+    "displayName": "Case of Cooking Spirits",
+    "classString": "/Game/Items/ResourceItems/Food/AlcoholFoodResourceItem.AlcoholFoodResourceItem_C"
+  },
+  {
+    "displayName": "Case of Disinfectant",
+    "classString": "/Game/Items/ResourceItems/Meds/DisinfectantMedsResourceItem.DisinfectantMedsResourceItem_C"
+  },
+  {
+    "displayName": "Case of Honey",
+    "classString": "/Game/Items/ResourceItems/Food/HoneyFoodResourceItem.HoneyFoodResourceItem_C"
+  },
+  {
+    "displayName": "Case of Medical Gear",
+    "classString": "/Game/Items/ResourceItems/Meds/MonitoringMedsResourceItem.MonitoringMedsResourceItem_C"
+  },
+  {
+    "displayName": "Case of MREs",
+    "classString": "/Game/Items/ResourceItems/Food/MREFoodResourceItem.MREFoodResourceItem_C"
+  },
+  {
+    "displayName": "Case of Packaged Dinners",
+    "classString": "/Game/Items/ResourceItems/Food/PackagedFoodResourceItem.PackagedFoodResourceItem_C"
+  },
+  {
+    "displayName": "Case of Vitamins",
+    "classString": "/Game/Items/ResourceItems/Meds/VitaminsMedsResourceItem.VitaminsMedsResourceItem_C"
+  },
+  {
+    "displayName": "Compacted Fire Hose",
+    "classString": "/Game/Items/ResourceItems/Materials/FireHoseMaterialsResourceItem.FireHoseMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "CUT--DO NOT TRANSLATE CLEO Drop",
+    "classString": "/Game/Items/DLC2_Daybreak/DLC2_CleoDropRucksack.DLC2_CleoDropRucksack_C"
+  },
+  {
+    "displayName": "CUT--DO NOT TRANSLATE CLEO Drop",
+    "classString": "/Game/Items/DLC2_Daybreak/DLC2_CleoDropRucksack_2.DLC2_CleoDropRucksack_2_C"
+  },
+  {
+    "displayName": "CUT--DO NOT TRANSLATE CLEO Drop",
+    "classString": "/Game/Items/DLC2_Daybreak/DLC2_CleoDropRucksack_3.DLC2_CleoDropRucksack_3_C"
+  },
+  {
+    "displayName": "CUT--DO NOT TRANSLATE CLEO Drop",
+    "classString": "/Game/Items/DLC2_Daybreak/DLC2_CleoDropRucksack_4.DLC2_CleoDropRucksack_4_C"
+  },
+  {
+    "displayName": "CUT--DO NOT TRANSLATE CLEO Drop",
+    "classString": "/Game/Items/DLC2_Daybreak/DLC2_CleoDropRucksack_5.DLC2_CleoDropRucksack_5_C"
+  },
+  {
+    "displayName": "CUT--DO NOT TRANSLATE CLEO Drop",
+    "classString": "/Game/Items/DLC2_Daybreak/DLC2_CleoDropRucksack_6.DLC2_CleoDropRucksack_6_C"
+  },
+  {
+    "displayName": "Fuel Tank",
+    "classString": "/Game/Items/ResourceItems/Fuel/TankFuelResourceItem.TankFuelResourceItem_C"
+  },
+  {
+    "displayName": "item_rucksack",
+    "classString": "/Game/Items/ResourceItems/ResourceItemBase.ResourceItemBase_C"
+  },
+  {
+    "displayName": "Package of Chemical Cleaners",
+    "classString": "/Game/Items/ResourceItems/Meds/CleanersMedsResourceItem.CleanersMedsResourceItem_C"
+  },
+  {
+    "displayName": "Package of Dried Meat",
+    "classString": "/Game/Items/ResourceItems/Food/CuredFoodResourceItem.CuredFoodResourceItem_C"
+  },
+  {
+    "displayName": "Package of Duct Tape",
+    "classString": "/Game/Items/ResourceItems/Materials/DuctTapeMaterialsResourceItem.DuctTapeMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "Package of Lumber",
+    "classString": "/Game/Items/ResourceItems/Materials/LumberMaterialsResourceItem.LumberMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "Package of Prescription Drugs",
+    "classString": "/Game/Items/ResourceItems/Meds/PrescriptionMedsResourceItem.PrescriptionMedsResourceItem_C"
+  },
+  {
+    "displayName": "Package of Quality Materials",
+    "classString": "/Game/Items/ResourceItems/Materials/QualityMaterialsResourceItem.QualityMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "Package of Snack Food",
+    "classString": "/Game/Items/ResourceItems/Food/JunkFoodResourceItem.JunkFoodResourceItem_C"
+  },
+  {
+    "displayName": "Package of Splints",
+    "classString": "/Game/Items/ResourceItems/Meds/SplintsMedsResourceItem.SplintsMedsResourceItem_C"
+  },
+  {
+    "displayName": "Propane Tank",
+    "classString": "/Game/Items/ResourceItems/Fuel/PropaneFuelResourceItem.PropaneFuelResourceItem_C"
+  },
+  {
+    "displayName": "Roll of Canvas",
+    "classString": "/Game/Items/ResourceItems/Materials/CanvasMaterialsResourceItem.CanvasMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "Roll of Carpeting",
+    "classString": "/Game/Items/ResourceItems/Materials/CarpetingMaterialsResourceItem.CarpetingMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "Rucksack - Ammo Resource",
+    "classString": "/Game/Items/ResourceItems/Ammo/AmmoResourceBase.AmmoResourceBase_C"
+  },
+  {
+    "displayName": "Rucksack - Food Resource",
+    "classString": "/Game/Items/ResourceItems/Food/FoodResourceBase.FoodResourceBase_C"
+  },
+  {
+    "displayName": "Rucksack - Fuel Resource",
+    "classString": "/Game/Items/ResourceItems/Fuel/FuelResourceBase.FuelResourceBase_C"
+  },
+  {
+    "displayName": "Rucksack - Materials Resource",
+    "classString": "/Game/Items/ResourceItems/Materials/MaterialsResourceBase.MaterialsResourceBase_C"
+  },
+  {
+    "displayName": "Rucksack - Meds Resource",
+    "classString": "/Game/Items/ResourceItems/Meds/MedsResourceBase.MedsResourceBase_C"
+  },
+  {
+    "displayName": "Rucksack - Parts Resource",
+    "classString": "/Game/Items/ResourceItems/Parts/PartsResourceBase.PartsResourceBase_C"
+  },
+  {
+    "displayName": "Sack of Ammunition",
+    "classString": "/Game/Items/ResourceItems/Ammo/GenericAmmoResourceItem.GenericAmmoResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Coffee Beans",
+    "classString": "/Game/Items/ResourceItems/Food/CoffeeFoodResourceItem.CoffeeFoodResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Cooking Oil",
+    "classString": "/Game/Items/ResourceItems/Fuel/CookingFuelResourceItem.CookingFuelResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Corn",
+    "classString": "/Game/Items/ResourceItems/Food/CornFoodResourceItem.CornFoodResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Fuel Cans",
+    "classString": "/Game/Items/ResourceItems/Fuel/GenericFuelResourceItem.GenericFuelResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Materials",
+    "classString": "/Game/Items/ResourceItems/Materials/GenericMaterialsResourceItem.GenericMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Medical Supplies",
+    "classString": "/Game/Items/ResourceItems/Meds/GenericMedsResourceItem.GenericMedsResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Mystery Meat",
+    "classString": "/Game/Items/ResourceItems/Food/BaitCrate_FoodResourceBase_Rucksack.BaitCrate_FoodResourceBase_Rucksack_C"
+  },
+  {
+    "displayName": "Sack of Mystery Meat",
+    "classString": "/Game/Items/ResourceItems/Food/MysteryMeatResourceItem.MysteryMeatResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Oatmeal",
+    "classString": "/Game/Items/ResourceItems/Food/OatmealFoodResourceItem.OatmealFoodResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Police Ammo ",
+    "classString": "/Game/Items/ResourceItems/Ammo/PoliceAmmoResourceItem.PoliceAmmoResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Potatoes",
+    "classString": "/Game/Items/ResourceItems/Food/PotatoesFoodResourceItem.PotatoesFoodResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Preserved Foods",
+    "classString": "/Game/Items/ResourceItems/Food/GenericFoodResourceItem.GenericFoodResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Rye",
+    "classString": "/Game/Items/ResourceItems/Food/RyeFoodResourceItem.RyeFoodResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Scavenged Magazines",
+    "classString": "/Game/Items/ResourceItems/Ammo/ScavengedAmmoResourceItem.ScavengedAmmoResourceItem_C"
+  },
+  {
+    "displayName": "Sack of Wheat",
+    "classString": "/Game/Items/ResourceItems/Food/WheatFoodResourceItem.WheatFoodResourceItem_C"
+  },
+  {
+    "displayName": "Satchel of Flour",
+    "classString": "/Game/Items/ResourceItems/Food/FlourFoodResourceItem.FlourFoodResourceItem_C"
+  },
+  {
+    "displayName": "Satchel of Rice",
+    "classString": "/Game/Items/ResourceItems/Food/RiceFoodResourceItem.RiceFoodResourceItem_C"
+  },
+  {
+    "displayName": "Set of Landscaping Supplies",
+    "classString": "/Game/Items/ResourceItems/Materials/LandscapingMaterialsResourceItem.LandscapingMaterialsResourceItem_C"
+  },
+  {
+    "displayName": "Set of Medical Tools",
+    "classString": "/Game/Items/ResourceItems/Meds/ToolsMedsResourceItem.ToolsMedsResourceItem_C"
+  },
+  {
+    "displayName": "Stash of Civilian Ammo",
+    "classString": "/Game/Items/ResourceItems/Ammo/CivilianAmmoResourceItem.CivilianAmmoResourceItem_C"
+  },
+  {
+    "displayName": "Stash of Powder and Primer",
+    "classString": "/Game/Items/ResourceItems/Ammo/ReagentsAmmoResourceItem.ReagentsAmmoResourceItem_C"
+  },
+  {
+    "displayName": "Stash of Stolen Prescription Drugs",
+    "classString": "/Game/Items/ResourceItems/Meds/IllegalMedsResourceItem.IllegalMedsResourceItem_C"
+  }
+]

@@ -241,6 +241,39 @@
                 </div>
             </section>
 
+            <!-- Section 6.5: Inventory Items -->
+            <section class="form-section">
+                <h2>Inventory Items</h2>
+                <p class="help-text">Add items to the character's inventory. These will appear in the <code>&lt;Slots&gt;</code> section of the XML.</p>
+                <div class="inventory-controls">
+                    <div class="form-group">
+                        <label for="inventoryCategory">Item Category</label>
+                        <select id="inventoryCategory">
+                            <option value="consumable">Consumable</option>
+                            <option value="ammo">Ammo</option>
+                            <option value="resource">Resource</option>
+                            <option value="miscellaneous">Miscellaneous</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inventoryItem">Item</label>
+                        <select id="inventoryItem">
+                            <option value="">-- Select an item --</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inventoryQuantity">Quantity</label>
+                        <input type="number" id="inventoryQuantity" min="1" max="999" value="1">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="addInventoryItemBtn" class="btn btn-primary">Add to Inventory</button>
+                    </div>
+                </div>
+                <div id="inventoryList" class="inventory-list">
+                    <p class="empty-message">No items in inventory. Add items above.</p>
+                </div>
+            </section>
+
             <!-- Section 7: Export -->
             <section class="form-section">
                 <h2>Export</h2>

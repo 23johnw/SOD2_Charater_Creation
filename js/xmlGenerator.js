@@ -1068,37 +1068,133 @@ ${generateEquipmentItem(rucksack, 'backpack', 'backpack')}
 }
 
 function generateSlotsSection() {
+    // #region agent log
+    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'xmlGenerator.js:1070',message:'generateSlotsSection called',data:{inventoryLength:(characterData.inventory||[]).length},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'C'})}).catch(()=>{});
+    // #endregion
     // Slots section for inventory items
-    return `
-  <Slots>
-    <ItemExport>
+    // Generate ItemExport entries for each inventory item
+    const inventory = characterData.inventory || [];
+    const maxSlots = 30; // Standard inventory size (can be adjusted)
+    
+    let slotsXML = '  <Slots>\n';
+    
+    // Generate entries for inventory items
+    inventory.forEach((item, index) => {
+        if (index >= maxSlots) return; // Don't exceed max slots
+        
+        const classString = item.classString || 'Null';
+        const quantity = item.quantity || 1;
+        const category = item.category || '';
+        
+        // #region agent log
+        fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'xmlGenerator.js:1085',message:'Processing inventory item',data:{index:index,classString:classString,quantity:quantity,category:category},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'C'})}).catch(()=>{});
+        // #endregion
+        
+        // Determine xsi:type based on category
+        let xsiType = 'ItemExport';
+        let stackDataProperty = 'ItemInstances';
+        let instanceSaveType = 'ItemInstanceSave';
+        
+        if (category === 'consumable') {
+            xsiType = 'ConsumableExport';
+            stackDataProperty = 'ConsumableItemInstances';
+            instanceSaveType = 'ConsumableItemInstanceSave';
+        } else if (category === 'ammo') {
+            xsiType = 'AmmoExport';
+            stackDataProperty = 'AmmoItemInstances';
+            instanceSaveType = 'AmmoItemInstanceSave';
+        } else if (category === 'resource') {
+            xsiType = 'ResourceExport';
+            stackDataProperty = 'ResourceItemInstances';
+            instanceSaveType = 'ResourceItemInstanceSave';
+        } else if (category === 'miscellaneous') {
+            xsiType = 'MiscellaneousExport';
+            stackDataProperty = 'MiscellaneousItemInstances';
+            instanceSaveType = 'MiscellaneousItemInstanceSave';
+        }
+        
+        // #region agent log
+        fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'xmlGenerator.js:1110',message:'Item type determined',data:{xsiType:xsiType,stackDataProperty:stackDataProperty,instanceSaveType:instanceSaveType},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'C'})}).catch(()=>{});
+        // #endregion
+        
+        // Generate StackData for non-null items
+        if (classString !== 'Null') {
+            // StackData structure for inventory items
+            // Most items use a similar structure with StackCount
+            slotsXML += `    <ItemExport xsi:type="${xsiType}">
+      <ClassString>${escapeXML(classString)}</ClassString>
+      <StackData xsi:type="StructProperty">
+        <Index>0</Index>
+        <PropertyName>${stackDataProperty}</PropertyName>
+        <PropertyType>${instanceSaveType}</PropertyType>
+        <SubStruct>${instanceSaveType}</SubStruct>
+        <TheStats>
+          <SaveObject>
+            <Index>0</Index>
+            <PropertyName>StackInfo</PropertyName>
+            <PropertyType>StructProperty</PropertyType>
+            <Value />
+            <TheType>ItemInstanceStackInfoSave</TheType>
+          </SaveObject>
+          <SaveObject xsi:type="IntProperty">
+            <Index>1</Index>
+            <PropertyName>ClassIndex</PropertyName>
+            <PropertyType>IntProperty</PropertyType>
+            <Value>${index}</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+          <SaveObject xsi:type="DoubleProperty">
+            <Index>2</Index>
+            <PropertyName>TimeAddedToInventory</PropertyName>
+            <PropertyType>DoubleProperty</PropertyType>
+            <Value>0</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+        </TheStats>
+        <TheSubs>
+          <StructObject xsi:type="StructProperty">
+            <Index>0</Index>
+            <PropertyName>StackInfo</PropertyName>
+            <PropertyType>ItemInstanceStackInfoSave</PropertyType>
+            <SubStruct>ItemInstanceStackInfoSave</SubStruct>
+            <TheStats>
+              <SaveObject xsi:type="IntProperty">
+                <Index>0</Index>
+                <PropertyName>StackCount</PropertyName>
+                <PropertyType>IntProperty</PropertyType>
+                <Value>${quantity}</Value>
+                <TheType>0</TheType>
+              </SaveObject>
+            </TheStats>
+            <TheSubs />
+            <Terminated>true</Terminated>
+          </StructObject>
+        </TheSubs>
+        <Terminated>true</Terminated>
+      </StackData>
+    </ItemExport>\n`;
+        } else {
+            // Null item
+            slotsXML += `    <ItemExport>
       <ClassString>Null</ClassString>
-    </ItemExport>
-    <ItemExport>
+    </ItemExport>\n`;
+        }
+    });
+    
+    // Fill remaining slots with Null entries
+    for (let i = inventory.length; i < maxSlots; i++) {
+        slotsXML += `    <ItemExport>
       <ClassString>Null</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>Null</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>Null</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>Null</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>Null</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>Null</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>Null</ClassString>
-    </ItemExport>
-    <ItemExport>
-      <ClassString>Null</ClassString>
-    </ItemExport>
-  </Slots>`;
+    </ItemExport>\n`;
+    }
+    
+    slotsXML += '  </Slots>';
+    
+    // #region agent log
+    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'xmlGenerator.js:1158',message:'Slots section generated',data:{inventoryLength:inventory.length,slotsGenerated:inventory.length+Math.max(0,maxSlots-inventory.length),xmlLength:slotsXML.length},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'C'})}).catch(()=>{});
+    // #endregion
+    
+    return slotsXML;
 }
 
 function escapeXML(str) {
