@@ -130,6 +130,55 @@ class DataLoader {
                 category = 'required';
             }
             
+            // Parse buffs from Positive/Negative Effects
+            const positiveEffects = trait['Positive Effect(s)'] || '';
+            const negativeEffects = trait['Negative Effect(s)'] || '';
+            const buffs = [];
+            
+            // Extract buff information from effects
+            const parseBuffs = (effects) => {
+                if (!effects || effects === 'Affects Skills') return [];
+                const buffList = [];
+                // Look for patterns like "+100%", "-20", "+10 Health", etc.
+                const buffPatterns = [
+                    /([+-]?\d+)\s*(Max\s*)?(Health|Stamina|Stamina Max|Stamina Recovery|Health Recovery)/gi,
+                    /([+-]?\d+%?)\s*(Experience Rate|Exp Rate|Experience|Exp)/gi,
+                    /([+-]?\d+)\s*(Morale|Standing|Influence)/gi,
+                    /([+-]?\d+%?)\s*(Damage|Resistance|Speed|Carry Capacity)/gi
+                ];
+                
+                buffPatterns.forEach(pattern => {
+                    let match;
+                    while ((match = pattern.exec(effects)) !== null) {
+                        const value = match[1];
+                        const stat = match[2] ? match[2].trim() + ' ' + (match[3] || match[2]).trim() : (match[3] || match[2] || '').trim();
+                        if (value && stat) {
+                            buffList.push({ value, stat: stat.replace(/\s+/g, ' ') });
+                        }
+                    }
+                });
+                
+                // Also check for simple patterns like "+10 Health" or "-5 Stamina"
+                const simplePattern = /([+-]?\d+)\s*(Health|Stamina|Morale|Standing)/gi;
+                let simpleMatch;
+                while ((simpleMatch = simplePattern.exec(effects)) !== null) {
+                    const value = simpleMatch[1];
+                    const stat = simpleMatch[2];
+                    if (!buffList.some(b => b.stat === stat && b.value === value)) {
+                        buffList.push({ value, stat });
+                    }
+                }
+                
+                return buffList;
+            };
+            
+            const positiveBuffs = parseBuffs(positiveEffects);
+            const negativeBuffs = parseBuffs(negativeEffects);
+            
+            // Combine and mark positive/negative
+            positiveBuffs.forEach(b => { b.type = 'positive'; buffs.push(b); });
+            negativeBuffs.forEach(b => { b.type = 'negative'; buffs.push(b); });
+            
             // Use Name as TraitResourceID - the game should accept the name as-is
             // If it doesn't work, we may need to convert spaces to underscores
             // but let's try the name first since some traits in the reference use spaces
@@ -210,7 +259,8 @@ class DataLoader {
                 heroBonus: trait['Provided Hero Bonus'] || '',
                 traitType: traitType,
                 category: category,
-                traitResourceID: traitResourceID
+                traitResourceID: traitResourceID,
+                buffs: buffs || [] // Add buffs array
             };
         }).filter(t => t && t.name && t.name.trim() !== '' && t.traitResourceID);
     }

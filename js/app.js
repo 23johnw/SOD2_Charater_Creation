@@ -288,10 +288,29 @@ function updateSelectedTraitsDisplay() {
     selectedTraitsList.innerHTML = '';
     
     characterData.traits.optional.forEach(trait => {
+        // Get full trait data to access buffs
+        const fullTrait = dataLoader.data.traits.find(t => t.name === trait.name) || trait;
+        const buffs = fullTrait.buffs || [];
+        
         const tag = document.createElement('div');
         tag.className = 'trait-tag';
+        
+        // Create buff indicators if trait has buffs
+        let buffIndicators = '';
+        if (buffs.length > 0) {
+            buffIndicators = '<div class="trait-buffs">' + 
+                buffs.map(buff => {
+                    const sign = buff.type === 'positive' ? '+' : '';
+                    return `<span class="trait-buff ${buff.type}" title="${sign}${buff.value} ${buff.stat}">${sign}${buff.value} ${buff.stat}</span>`;
+                }).join('') + 
+                '</div>';
+        }
+        
         tag.innerHTML = `
-            ${trait.name}
+            <div class="trait-tag-content">
+                <span class="trait-name">${trait.name}</span>
+                ${buffIndicators}
+            </div>
             <span class="remove" onclick="removeTrait('${trait.name}')">×</span>
         `;
         selectedTraitsList.appendChild(tag);
