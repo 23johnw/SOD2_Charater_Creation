@@ -147,9 +147,13 @@ class DataLoader {
             const nameLower = name.toLowerCase();
             
             // Career traits need prefix based on which skill they provide
+            // Check if it's a career trait by provided skill or common career names
             if (providedSkill || nameLower.includes('teacher') || nameLower.includes('carrier') || 
                 nameLower.includes('lumberjack') || nameLower.includes('barber') || 
-                nameLower.includes('beautician') || nameLower.includes('stylist')) {
+                nameLower.includes('beautician') || nameLower.includes('stylist') ||
+                nameLower.includes('accountant') || nameLower.includes('doctor') ||
+                nameLower.includes('nurse') || nameLower.includes('engineer') ||
+                nameLower.includes('scrum') || nameLower.includes('exercised')) {
                 if (!traitResourceID.includes('_Career_')) {
                     // Map provided skills to skill categories
                     if (providedSkill.includes('Hairdressing') || nameLower.includes('stylist') || 
@@ -158,13 +162,14 @@ class DataLoader {
                     } else if (providedSkill.includes('Backpacking') || nameLower.includes('backpack')) {
                         traitResourceID = `Cardio_Career_${traitResourceID}`;
                     } else if (providedSkill.includes('Driving') || nameLower.includes('carrier') || 
-                               nameLower.includes('driver')) {
+                               nameLower.includes('driver') || nameLower.includes('mail')) {
                         traitResourceID = `Wits_Career_${traitResourceID}`;
                     } else if (providedSkill.includes('Utilities') || nameLower.includes('lumberjack')) {
                         traitResourceID = `Wits_Career_${traitResourceID}`;
                     } else if (providedSkill.includes('Craftsmanship') || nameLower.includes('model')) {
                         traitResourceID = `Wits_Career_${traitResourceID}`;
-                    } else if (providedSkill || nameLower.includes('teacher')) {
+                    } else if (providedSkill || nameLower.includes('teacher') || 
+                               nameLower.includes('scrum') || nameLower.includes('exercised')) {
                         // Default to Wits_Career_ for other career traits
                         traitResourceID = `Wits_Career_${traitResourceID}`;
                     }
