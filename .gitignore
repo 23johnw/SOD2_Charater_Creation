@@ -27,6 +27,7 @@ analyze-unmatched-traits.js
 build-curated-traits.js
 build-curated-traits-html.js
 build-trait-matcher.js
+calculate-trait-tiers.js
 compare-xml.js
 convert-csv-to-json.js
 extract-traits-from-uilists.js
@@ -62,4 +63,5 @@ package.json
 # Backup files
 *.backup
 data/traits-curated.json.backup
+data/traits-curated.json.backup2
 

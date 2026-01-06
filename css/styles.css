@@ -395,6 +395,75 @@ header p {
     color: white;
 }
 
+/* Tier filter buttons */
+.tier-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tier-filter-btn {
+    padding: 8px 16px;
+    background: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.tier-filter-btn:hover {
+    background: #e0e0e0;
+    border-color: #667eea;
+}
+
+.tier-filter-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Tier badges on trait items */
+.trait-tier-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.7em;
+    font-weight: 600;
+    margin-left: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.trait-tier-badge.tier-top10 {
+    background-color: #4caf50; /* Green */
+    color: white;
+}
+
+.trait-tier-badge.tier-good {
+    background-color: #8bc34a; /* Light green */
+    color: white;
+}
+
+.trait-tier-badge.tier-average {
+    background-color: #ffc107; /* Amber */
+    color: #333;
+}
+
+.trait-tier-badge.tier-bad {
+    background-color: #ff9800; /* Orange */
+    color: white;
+}
+
+.trait-tier-badge.tier-worst10 {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
 .trait-item-effects {
     font-size: 0.85em;
     color: #666;

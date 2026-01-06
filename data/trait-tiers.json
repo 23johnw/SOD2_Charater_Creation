@@ -1,0 +1,8 @@
+{
+  "_comment": "Manual tier overrides. Format: \"Trait Name\": \"tier\" where tier is one of: top10, good, average, bad, worst10",
+  "_example": {
+    "Example Trait": "top10"
+  },
+  "_note": "Traits not listed here will be automatically assigned based on calculated score"
+}
+

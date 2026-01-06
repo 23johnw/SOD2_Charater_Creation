@@ -1,4 +1,6 @@
 // Main Application Logic
+let selectedTierFilter = 'all'; // Tier filter state: 'all', 'top10', 'good', 'average', 'bad', 'worst10'
+
 let characterData = {
     firstName: '',
     lastName: '',
@@ -200,8 +202,35 @@ function initializeTraitsUI() {
     
     const traitMode = document.getElementById('traitMode');
     traitMode.addEventListener('change', () => {
+        loadAvailableTraits();
         filterTraits();
         updateCharacterData();
+    });
+    
+    // Setup tier filter buttons
+    const tierFilterButtons = document.querySelectorAll('.tier-filter-btn');
+    
+    // Set initial active state for "All" button
+    const allButton = document.querySelector('.tier-filter-btn[data-tier="all"]');
+    if (allButton) {
+        allButton.classList.add('active');
+    }
+    
+    tierFilterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active state
+            tierFilterButtons.forEach(b => {
+                b.classList.remove('active');
+                b.removeAttribute('data-active');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('data-active', 'true');
+            
+            // Update filter
+            selectedTierFilter = btn.dataset.tier;
+            loadAvailableTraits();
+            filterTraits();
+        });
     });
     
     // Load available traits
@@ -219,18 +248,33 @@ function updateRequiredTraits() {
     `;
 }
 
+function filterByTier(traits) {
+    if (selectedTierFilter === 'all') {
+        return traits;
+    }
+    
+    return traits.filter(trait => {
+        const tier = trait.tier || 'average'; // Default to average if no tier assigned
+        return tier === selectedTierFilter;
+    });
+}
+
 function loadAvailableTraits() {
     const availableTraitsList = document.getElementById('availableTraitsList');
     const traitMode = document.getElementById('traitMode').value;
     
+    // Step 1: Filter by traitMode (good/bad/mixed)
     let traits = dataLoader.getTraitsByType(traitMode);
     
-    // Filter out required/descriptor traits from optional list
+    // Step 2: Filter out required/descriptor traits from optional list
     traits = traits.filter(t => 
         !t.name.includes('Descriptor_') && 
         t.name !== 'Default' && 
         t.category !== 'required'
     );
+    
+    // Step 3: Filter by tier
+    traits = filterByTier(traits);
     
     availableTraitsList.innerHTML = '';
     traits.forEach(trait => {
@@ -240,6 +284,7 @@ function loadAvailableTraits() {
         // Store trait data on the element for search functionality
         traitDiv.dataset.traitName = trait.name.toLowerCase();
         traitDiv.dataset.traitDescription = (trait.description || '').toLowerCase();
+        traitDiv.dataset.traitTier = trait.tier || 'average';
         
         // Store buff search text (include stat names for searching)
         let buffSearchText = '';
@@ -266,9 +311,24 @@ function loadAvailableTraits() {
             buffsDisplay = `<div class="trait-item-buffs">${buffElements.join('')}</div>`;
         }
         
+        // Format tier badge
+        const tier = trait.tier || 'average';
+        const tierLabels = {
+            'top10': 'Top 10',
+            'good': 'Good',
+            'average': 'Average',
+            'bad': 'Bad',
+            'worst10': 'Worst 10'
+        };
+        const tierLabel = tierLabels[tier] || 'Average';
+        const tierBadge = `<span class="trait-tier-badge tier-${tier}">${tierLabel}</span>`;
+        
         traitDiv.innerHTML = `
             <div class="trait-item-header">
-                <div class="trait-item-name">${trait.name}</div>
+                <div class="trait-item-name">
+                    ${trait.name}
+                    ${tierBadge}
+                </div>
                 ${buffsDisplay}
             </div>
             <div class="trait-item-effects">${trait.description || 'No description'}</div>
