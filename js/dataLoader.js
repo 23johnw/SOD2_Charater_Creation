@@ -155,9 +155,17 @@ class DataLoader {
             const parseBuffs = (effects) => {
                 if (!effects || effects === 'Affects Skills') return [];
                 const buffList = [];
+                
+                // Clean the effects string to remove special characters that might interfere
+                const cleanEffects = effects.replace(/[▶✗✓⚠]/g, '').trim();
+                
                 // Look for patterns like "+100%", "-20", "+10 Health", etc.
+                // Improved pattern to handle "Max Stamina" and "Max Health" correctly
                 const buffPatterns = [
-                    /([+-]?\d+)\s*(Max\s*)?(Health|Stamina|Stamina Max|Stamina Recovery|Health Recovery)/gi,
+                    // Pattern for "Max Health" or "Max Stamina" - must match "Max" followed by stat
+                    /([+-]?\d+)\s+Max\s+(Health|Stamina|Stamina Recovery|Health Recovery)/gi,
+                    // Pattern for just "Health" or "Stamina" without "Max" (negative lookahead to avoid matching "Max Health" twice)
+                    /([+-]?\d+)\s+(Health|Stamina)(?!\s*(Max|Recovery))/gi,
                     /([+-]?\d+%?)\s*(Experience Rate|Exp Rate|Experience|Exp)/gi,
                     /([+-]?\d+)\s*(Morale|Standing|Influence)/gi,
                     /([+-]?\d+%?)\s*(Damage|Resistance|Speed|Carry Capacity)/gi
@@ -165,22 +173,40 @@ class DataLoader {
                 
                 buffPatterns.forEach(pattern => {
                     let match;
-                    while ((match = pattern.exec(effects)) !== null) {
+                    // Reset lastIndex to avoid issues with global regex
+                    pattern.lastIndex = 0;
+                    while ((match = pattern.exec(cleanEffects)) !== null) {
                         const value = match[1];
-                        const stat = match[2] ? match[2].trim() + ' ' + (match[3] || match[2]).trim() : (match[3] || match[2] || '').trim();
+                        let stat = '';
+                        
+                        // Handle "Max Health" or "Max Stamina" pattern (first pattern)
+                        if (match[2] && (match[2] === 'Health' || match[2] === 'Stamina' || match[2].includes('Recovery'))) {
+                            stat = 'Max ' + match[2];
+                        } else if (match[2]) {
+                            // Handle other stats from second pattern
+                            stat = match[2];
+                        } else if (match[3]) {
+                            stat = match[3];
+                        }
+                        
                         if (value && stat) {
-                            buffList.push({ value, stat: stat.replace(/\s+/g, ' ') });
+                            // Check if we already have this exact buff to avoid duplicates
+                            if (!buffList.some(b => b.stat === stat.trim() && b.value === value)) {
+                                buffList.push({ value, stat: stat.trim() });
+                            }
                         }
                     }
                 });
                 
-                // Also check for simple patterns like "+10 Health" or "-5 Stamina"
-                const simplePattern = /([+-]?\d+)\s*(Health|Stamina|Morale|Standing)/gi;
+                // Also check for simple patterns like "+10 Health" or "-5 Stamina" (fallback)
+                const simplePattern = /([+-]?\d+)\s+(Health|Stamina|Morale|Standing)/gi;
+                simplePattern.lastIndex = 0;
                 let simpleMatch;
-                while ((simpleMatch = simplePattern.exec(effects)) !== null) {
+                while ((simpleMatch = simplePattern.exec(cleanEffects)) !== null) {
                     const value = simpleMatch[1];
                     const stat = simpleMatch[2];
-                    if (!buffList.some(b => b.stat === stat && b.value === value)) {
+                    // Only add if not already in list and not a "Max" variant (to avoid duplicates)
+                    if (!buffList.some(b => (b.stat === stat || b.stat === 'Max ' + stat) && b.value === value)) {
                         buffList.push({ value, stat });
                     }
                 }

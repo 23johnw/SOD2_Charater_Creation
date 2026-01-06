@@ -254,7 +254,16 @@ function loadAvailableTraits() {
             </div>
             <div class="trait-item-effects">${trait.description || 'No description'}</div>
         `;
-        traitDiv.addEventListener('click', () => addTrait(trait));
+        
+        // Add click event - use event delegation to ensure it works even if innerHTML is modified
+        traitDiv.addEventListener('click', (e) => {
+            e.stopPropagation();
+            addTrait(trait);
+        });
+        
+        // Also make sure child elements don't block clicks
+        traitDiv.style.cursor = 'pointer';
+        
         availableTraitsList.appendChild(traitDiv);
     });
 }
