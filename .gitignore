@@ -22,3 +22,36 @@ desktop.ini
 *.tmp
 *.temp
 
+# Development/helper scripts (not needed for GitHub Pages)
+analyze-unmatched-traits.js
+build-trait-matcher.js
+compare-xml.js
+convert-csv-to-json.js
+extract-traits-from-uilists.js
+match-traits-enhanced.js
+match-traits-old.js
+match-traits.js
+process-traits.js
+verify-partial-matches.js
+
+# Server files (not needed for GitHub Pages)
+server.js
+start-server.bat
+start-server.ps1
+setup-github.ps1
+
+# Standalone HTML files (not needed for main app)
+trait-matcher-standalone.html
+trait-matcher.html
+
+# Development documentation
+TRAIT_MATCHER_README.md
+UNMATCHED_TRAITS_SUMMARY.md
+data/unmatched-traits-comparison.txt
+data/unmatched-traits-comparison.json
+data/unmatched-traits-analysis.json
+data/trait-id-reverse-mapping.json
+
+# Package files (not needed for GitHub Pages)
+package.json
+
