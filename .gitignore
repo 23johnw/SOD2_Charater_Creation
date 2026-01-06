@@ -24,6 +24,8 @@ desktop.ini
 
 # Development/helper scripts (not needed for GitHub Pages)
 analyze-unmatched-traits.js
+build-curated-traits.js
+build-curated-traits-html.js
 build-trait-matcher.js
 compare-xml.js
 convert-csv-to-json.js
@@ -32,7 +34,9 @@ match-traits-enhanced.js
 match-traits-old.js
 match-traits.js
 process-traits.js
+test-buff-parsing.js
 verify-partial-matches.js
+verify-updated-traits.js
 
 # Server files (not needed for GitHub Pages)
 server.js
@@ -54,4 +58,8 @@ data/trait-id-reverse-mapping.json
 
 # Package files (not needed for GitHub Pages)
 package.json
+
+# Backup files
+*.backup
+data/traits-curated.json.backup
 

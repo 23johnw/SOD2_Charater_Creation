@@ -25,7 +25,23 @@
     "traitResourceID": "Wits_Hindered_AbsentMinded",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Medicine Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Chemistry Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -115,7 +131,13 @@
     "traitResourceID": "Mechanics_Engineering_Career_AeronauticsEngineer",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+100%",
+        "stat": "Mechanics Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -155,7 +177,13 @@
     "traitResourceID": "Mechanics_Career_AircraftMechanic",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+100%",
+        "stat": "Mechanics Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -175,7 +203,13 @@
     "traitResourceID": "Stamina_Attribute_AlwaysCold",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -305,7 +339,13 @@
     "traitResourceID": "Young_Attribute_Angsty",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Journal Writing"
   },
@@ -325,7 +365,13 @@
     "traitResourceID": "Minor_Attribute_OCD",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-5",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -355,7 +401,13 @@
     "traitResourceID": "Old_Attribute_Arthritis",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-75%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -365,7 +417,13 @@
     "traitResourceID": "Consumption_Attribute_Ascetic",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -535,7 +593,13 @@
     "traitResourceID": "Weight_Attribute_BadBack",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-15",
+        "stat": "Max Carrying Capacity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Medical Inventory"
   },
@@ -545,7 +609,18 @@
     "traitResourceID": "Weight_Attribute_BadBack",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "Max Health",
+        "type": "negative"
+      },
+      {
+        "value": "-30",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "▶ -20 Max Health",
     "heroBonus": ""
   },
@@ -555,7 +630,13 @@
     "traitResourceID": "Craftsmanship_Hindered_BadCarpenter",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Craftsmanship Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -575,7 +656,13 @@
     "traitResourceID": "Shooting_Hindered_BadShot",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Shooting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -585,7 +672,18 @@
     "traitResourceID": "Fighting_Hindered_BadShoulder",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-5",
+        "stat": "Max Carrying Capacity",
+        "type": "negative"
+      },
+      {
+        "value": "-75%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -610,6 +708,11 @@
         "value": "+10",
         "stat": "Max Stamina",
         "type": "positive"
+      },
+      {
+        "value": "-5",
+        "stat": "Morale (Community)",
+        "type": "negative"
       }
     ],
     "providedSkill": "",
@@ -621,7 +724,13 @@
     "traitResourceID": "Cooking_Career_Baker",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+3",
+        "stat": "Morale (Community)",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -691,7 +800,13 @@
     "traitResourceID": "Standing_Before_BasementDweller",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -751,7 +866,13 @@
     "traitResourceID": "Music_Hobby_Beatboxer",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+5",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -771,7 +892,13 @@
     "traitResourceID": "Health_Career_Beekeeper",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+30",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -821,7 +948,18 @@
     "traitResourceID": "Frustration_Attribute_Belligerent",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-3",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      },
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -861,7 +999,13 @@
     "traitResourceID": "Minor_Attribute_Depression",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-7",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -881,7 +1025,13 @@
     "traitResourceID": "Sickness_After_BloodPlague",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-100%",
+        "stat": "Plague Infection",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -941,7 +1091,13 @@
     "traitResourceID": "Cardio_Hindered_DoubleKneeReplacement",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -961,7 +1117,18 @@
     "traitResourceID": "Standing_Attribute_Braggart",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      },
+      {
+        "value": "-3",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -991,7 +1158,18 @@
     "traitResourceID": "Health_Attribute_Brittle",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      },
+      {
+        "value": "-30",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1001,7 +1179,13 @@
     "traitResourceID": "Weight_Attribute_BroadShouldered",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+15",
+        "stat": "Max Carrying Capacity",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1091,7 +1275,13 @@
     "traitResourceID": "Craftsmanship_Hindered_WorstDeckEver",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Craftsmanship Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1111,7 +1301,13 @@
     "traitResourceID": "Chemistry_Hindered_BurnedHouseDown",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Chemistry Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1201,7 +1397,13 @@
     "traitResourceID": "Beds_Attribute_SleepsAnywhere",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-1",
+        "stat": "Beds Used",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Outdoor Living"
   },
@@ -1211,7 +1413,13 @@
     "traitResourceID": "Health_Attribute_CanTakePunch",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-40%",
+        "stat": "Injury Severity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Personal Strength"
   },
@@ -1221,7 +1429,18 @@
     "traitResourceID": "Beds_After_Cuddler",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-1",
+        "stat": "Beds Used",
+        "type": "negative"
+      },
+      {
+        "value": "-3",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1290,8 +1509,8 @@
     "buffs": [
       {
         "value": "+3",
-        "stat": "Morale",
-        "type": "negative"
+        "stat": "Morale (Community)",
+        "type": "positive"
       }
     ],
     "providedSkill": "",
@@ -1303,7 +1522,13 @@
     "traitResourceID": "Philosophy_Prudent_CarriesHandSanitizer",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50",
+        "stat": "Infection Resistance",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1363,7 +1588,13 @@
     "traitResourceID": "Business_Career_CEO",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1373,7 +1604,13 @@
     "traitResourceID": "Business_Career_CFO",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1449,7 +1686,13 @@
     "traitResourceID": "Minor_Before_CelebrityKid",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1459,7 +1702,13 @@
     "traitResourceID": "Medicine_Hindered_Chiropractor",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Medicine Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1469,7 +1718,13 @@
     "traitResourceID": "Music_Career_ChoralDirector",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1555,7 +1810,18 @@
     "traitResourceID": "Fighting_Hindered_Clumsy",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Chemistry Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1565,7 +1831,13 @@
     "traitResourceID": "Frustration_After_CoffeeConnoisseur",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1639,7 +1911,12 @@
       {
         "value": "+30",
         "stat": "Max Stamina",
-        "type": "negative"
+        "type": "positive"
+      },
+      {
+        "value": "+100%",
+        "stat": "Food Consumed Per Day",
+        "type": "positive"
       }
     ],
     "providedSkill": "",
@@ -1661,7 +1938,13 @@
     "traitResourceID": "Gardening_Attribute_CompulsiveGardener",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+25%",
+        "stat": "Gardening Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1681,7 +1964,18 @@
     "traitResourceID": "Health_Attribute_Confident",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      },
+      {
+        "value": "+20",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1691,7 +1985,13 @@
     "traitResourceID": "Wits_Hobby_ConspiracyTheorist",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1741,7 +2041,23 @@
     "traitResourceID": "Labor_Attribute_CouchPotato",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-1",
+        "stat": "Labor",
+        "type": "negative"
+      },
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1775,6 +2091,11 @@
       {
         "value": "+45",
         "stat": "Max Stamina",
+        "type": "positive"
+      },
+      {
+        "value": "-100%",
+        "stat": "Food Consumed Per Day",
         "type": "negative"
       }
     ],
@@ -1857,7 +2178,18 @@
     "traitResourceID": "Health_Attribute_Daredevil",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+30%",
+        "stat": "Injury Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+30",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1897,7 +2229,23 @@
     "traitResourceID": "Old_Attribute_Decrepit",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-75%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-75%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-45",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1937,7 +2285,18 @@
     "traitResourceID": "Standing_Attribute_GoodFriend",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+60",
+        "stat": "morale without frustration",
+        "type": "positive"
+      },
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1961,7 +2320,17 @@
       {
         "value": "+20",
         "stat": "Max Health",
-        "type": "negative"
+        "type": "positive"
+      },
+      {
+        "value": "+60",
+        "stat": "morale without frustration",
+        "type": "positive"
+      },
+      {
+        "value": "+20",
+        "stat": "Max Stamina",
+        "type": "positive"
       }
     ],
     "providedSkill": "",
@@ -1973,7 +2342,18 @@
     "traitResourceID": "Morale_Attribute_DigestiveProblems",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-7",
+        "stat": "Morale",
+        "type": "negative"
+      },
+      {
+        "value": "-10",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -1996,7 +2376,7 @@
     "buffs": [
       {
         "value": "-3",
-        "stat": "Morale",
+        "stat": "Morale (Community)",
         "type": "negative"
       }
     ],
@@ -2039,7 +2419,13 @@
     "traitResourceID": "Weight_Attribute_Squats",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Max Carrying Capacity",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2079,7 +2465,18 @@
     "traitResourceID": "Frustration_Attribute_Dolorous",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      },
+      {
+        "value": "-3",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2089,7 +2486,13 @@
     "traitResourceID": "Health_Attribute_Doomed",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-45",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2129,7 +2532,13 @@
     "traitResourceID": "Sickness_After_DrinksColdMedicine",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50",
+        "stat": "Infection Resistance",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2159,7 +2568,13 @@
     "traitResourceID": "Stamina_Attribute_EarlyRiser",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2169,7 +2584,13 @@
     "traitResourceID": "Wits_Hindered_EasilyBored",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2179,7 +2600,13 @@
     "traitResourceID": "Wits_Hindered_EasilyDistracted",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "Wits (max 6 levels)",
     "heroBonus": ""
   },
@@ -2189,7 +2616,13 @@
     "traitResourceID": "Consumption_Attribute_EatsLikeABird",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2219,7 +2652,18 @@
     "traitResourceID": "Philosophy_Compassionate_Encouraging",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+60",
+        "stat": "morale without frustration",
+        "type": "positive"
+      },
+      {
+        "value": "+3",
+        "stat": "Morale",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2239,7 +2683,13 @@
     "traitResourceID": "Stamina_Attribute_Energetic",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2279,7 +2729,13 @@
     "traitResourceID": "Business_Career_Entrepreneur",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2315,7 +2771,13 @@
     "traitResourceID": "Standing_Attribute_Erratic",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2325,7 +2787,13 @@
     "traitResourceID": "Efficiency_Attribute_BadDriver",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Fuel Efficiency",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2345,7 +2813,13 @@
     "traitResourceID": "Trivia_Hobby_GameMaster",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2355,7 +2829,18 @@
     "traitResourceID": "Standing_After_Exiled",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+60",
+        "stat": "morale without frustration",
+        "type": "positive"
+      },
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2365,7 +2850,13 @@
     "traitResourceID": "Wits_Attribute_Traveler",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Light Carrying Capacity",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2405,7 +2896,18 @@
     "traitResourceID": "Young_Attribute_Exuberant",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+40%",
+        "stat": "Fatigue Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+20",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2465,7 +2967,13 @@
     "traitResourceID": "Cooking_Career_FastFoodWorker",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+3",
+        "stat": "Morale (Community)",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2511,7 +3019,13 @@
     "traitResourceID": "Minor_Before_FieryProtester",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2521,7 +3035,18 @@
     "traitResourceID": "Health_Attribute_DefensiveFighter",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+40%",
+        "stat": "Injury Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+30",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2551,7 +3076,13 @@
     "traitResourceID": "Standing_Career_FilmDirector",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+75%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2561,7 +3092,18 @@
     "traitResourceID": "Standing_Attribute_Filthy",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25",
+        "stat": "Infection Resistance",
+        "type": "negative"
+      },
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2641,7 +3183,13 @@
     "traitResourceID": "Shooting_Hindered_LoudNoises",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Shooting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "Shooting (max 4 levels)",
     "heroBonus": ""
   },
@@ -2671,7 +3219,13 @@
     "traitResourceID": "Cooking_Attribute_FoodAllergies",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2681,7 +3235,13 @@
     "traitResourceID": "Consumption_Attribute_FoodBorrower",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2691,7 +3251,13 @@
     "traitResourceID": "Morale_Career_FoodCritic",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-5",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2711,7 +3277,13 @@
     "traitResourceID": "Consumption_Attribute_FoodSharer",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Backrubs"
   },
@@ -2721,7 +3293,13 @@
     "traitResourceID": "Cooking_Hindered_FoodTorturer",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cooking Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2741,7 +3319,13 @@
     "traitResourceID": "Weight_Attribute_FootPain",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-10",
+        "stat": "Max Carrying Capacity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2801,7 +3385,13 @@
     "traitResourceID": "Philosophy_Compassionate_Activist",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2811,7 +3401,13 @@
     "traitResourceID": "Philosophy_Compassionate_Activist",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2821,7 +3417,13 @@
     "traitResourceID": "Business_Career_Billionaire",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2951,7 +3553,13 @@
     "traitResourceID": "Standing_Career_FreelanceConsultantScrum",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2961,7 +3569,13 @@
     "traitResourceID": "Standing_Career_FreelanceConsultantScrum",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2971,7 +3585,13 @@
     "traitResourceID": "Standing_Career_FreelanceConsultantScrum",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -2991,7 +3611,13 @@
     "traitResourceID": "Minor_Attribute_Anxiety",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-5",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3001,7 +3627,13 @@
     "traitResourceID": "Young_Attribute_FreshFaced",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+4",
+        "stat": "Morale",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3011,7 +3643,18 @@
     "traitResourceID": "Standing_Attribute_Friendly",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+60",
+        "stat": "morale without frustration",
+        "type": "positive"
+      },
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3031,7 +3674,13 @@
     "traitResourceID": "Fishing_Before_Maine",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3051,7 +3700,13 @@
     "traitResourceID": "Stamina_Before_RuralArea",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+30",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3117,7 +3772,13 @@
     "traitResourceID": "Frustrated",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "-25 Morale",
     "heroBonus": ""
   },
@@ -3147,7 +3808,13 @@
     "traitResourceID": "Morale_Attribute_Funny",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+4",
+        "stat": "Morale",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3157,7 +3824,13 @@
     "traitResourceID": "Mechanics_Career_OfficeFurnitureAdjuster",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+3",
+        "stat": "Morale (Community)",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3207,7 +3880,13 @@
     "traitResourceID": "Morale_Attribute_Generous",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+25%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3257,7 +3936,13 @@
     "traitResourceID": "Efficiency_Attribute_GetsCarsick",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Fuel Efficiency",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3267,7 +3952,13 @@
     "traitResourceID": "Health_Attribute_Migraines",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-30",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "-30 Max Health",
     "heroBonus": ""
   },
@@ -3277,7 +3968,13 @@
     "traitResourceID": "Weight_Attribute_GetsRashes",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-10",
+        "stat": "Max Carrying Capacity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3287,7 +3984,13 @@
     "traitResourceID": "Consumption_Attribute_Glutton",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3337,7 +4040,13 @@
     "traitResourceID": "Sickness_After_GoodHabits",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50",
+        "stat": "Infection Resistance",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3347,7 +4056,13 @@
     "traitResourceID": "Standing_Attribute_GoodListener",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+25%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Sounding Board"
   },
@@ -3357,7 +4072,13 @@
     "traitResourceID": "Weight_Attribute_GoodPosture",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+5",
+        "stat": "Max Carrying Capacity",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Morning Yoga"
   },
@@ -3367,7 +4088,18 @@
     "traitResourceID": "Wits_After_SeenItAll",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+3",
+        "stat": "Morale (Community)",
+        "type": "positive"
+      },
+      {
+        "value": "-1",
+        "stat": "Labor",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3387,7 +4119,13 @@
     "traitResourceID": "Minor_Before_FiredaLot",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-1",
+        "stat": "Labor",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "▶ -1 Labor"
   },
@@ -3410,7 +4148,7 @@
     "buffs": [
       {
         "value": "+3",
-        "stat": "Morale",
+        "stat": "Morale (Community)",
         "type": "positive"
       }
     ],
@@ -3433,7 +4171,13 @@
     "traitResourceID": "Minor_Attribute_Greedy",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-10%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "-10% Standing Rewards",
     "heroBonus": ""
   },
@@ -3443,7 +4187,13 @@
     "traitResourceID": "Gardening_Attribute_GreenThumb",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Gardening Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3463,7 +4213,13 @@
     "traitResourceID": "Stamina_Before_SuburbanArea",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-10",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3503,7 +4259,13 @@
     "traitResourceID": "Philosophy_Compassionate_GuiltMotivated",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3673,7 +4435,13 @@
     "traitResourceID": "Cardio_Hindered_KneeReplacement",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3713,7 +4481,13 @@
     "traitResourceID": "Standing_Attribute_Halitosis",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3743,7 +4517,18 @@
     "traitResourceID": "Minor_Career_HandModel",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Shooting Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3763,7 +4548,18 @@
     "traitResourceID": "Health_Attribute_HardAsNails",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+40%",
+        "stat": "Injury Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+30",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3773,7 +4569,18 @@
     "traitResourceID": "Health_Attribute_HardtoKill",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+40%",
+        "stat": "Injury Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+45",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3793,7 +4600,18 @@
     "traitResourceID": "Health_Attribute_Hardy",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+30%",
+        "stat": "Injury Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+10",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3803,7 +4621,13 @@
     "traitResourceID": "Efficiency_Attribute_Leadfoot",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Fuel Efficiency",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3813,7 +4637,13 @@
     "traitResourceID": "Health_Attribute_PainDisorder",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-10",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3823,7 +4653,13 @@
     "traitResourceID": "Stamina_Attribute_Allergies",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3833,7 +4669,23 @@
     "traitResourceID": "Painting_Before_SignPainterHurt",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-15",
+        "stat": "Max Carrying Capacity",
+        "type": "negative"
+      },
+      {
+        "value": "-5",
+        "stat": "Light Carrying Capacity",
+        "type": "negative"
+      },
+      {
+        "value": "-20",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3843,7 +4695,13 @@
     "traitResourceID": "Shooting_Hindered_Astigmatism",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Shooting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "-66% Shooting Experience Rate",
     "heroBonus": "Shooting (max 3 levels)"
   },
@@ -3853,7 +4711,13 @@
     "traitResourceID": "Health_Attribute_ChronicPain",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3873,7 +4737,18 @@
     "traitResourceID": "Stamina_Attribute_RoughHands",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+20",
+        "stat": "Max Stamina",
+        "type": "positive"
+      },
+      {
+        "value": "+10",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3899,7 +4774,13 @@
     "traitResourceID": "Minor_Attribute_PTSD",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-7",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3935,7 +4816,13 @@
     "traitResourceID": "Frustration_Before_HatedtheBoss",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3945,7 +4832,13 @@
     "traitResourceID": "Minor_Attribute_HatesHorrorMovies",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-5",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -3995,7 +4888,13 @@
     "traitResourceID": "Cardio_Hindered_HeartProblems",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4005,7 +4904,13 @@
     "traitResourceID": "Fighting_Attribute_HeavyHitter",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+25%",
+        "stat": "Fighting Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "▶ +25% Fighting Experience Rate",
     "heroBonus": ""
   },
@@ -4059,7 +4964,7 @@
       {
         "value": "+20",
         "stat": "Max Stamina",
-        "type": "negative"
+        "type": "positive"
       }
     ],
     "providedSkill": "",
@@ -4071,7 +4976,18 @@
     "traitResourceID": "Consumption_Attribute_HighMetabolism",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+20",
+        "stat": "Max Stamina",
+        "type": "positive"
+      },
+      {
+        "value": "-50%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4086,6 +5002,11 @@
         "value": "+30",
         "stat": "Max Health",
         "type": "positive"
+      },
+      {
+        "value": "+50%",
+        "stat": "Fighting Experience Rate",
+        "type": "positive"
       }
     ],
     "providedSkill": "",
@@ -4097,7 +5018,13 @@
     "traitResourceID": "Young_Attribute_HighSchoolAthlete",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+20",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4137,7 +5064,18 @@
     "traitResourceID": "Labor_Attribute_HighlyResponsible",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+1",
+        "stat": "Labor",
+        "type": "positive"
+      },
+      {
+        "value": "+25%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4177,7 +5115,13 @@
     "traitResourceID": "Minor_After_CargoCultist",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+4",
+        "stat": "Morale",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4207,7 +5151,13 @@
     "traitResourceID": "Chemistry_Hobby_Homebrewer",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+25%",
+        "stat": "Chemistry Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4217,7 +5167,13 @@
     "traitResourceID": "Medicine_Hindered_Homeopath",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-75%",
+        "stat": "Medicine Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4237,7 +5193,13 @@
     "traitResourceID": "Morale_Attribute_Hopeful",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+6",
+        "stat": "Morale",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4317,7 +5279,23 @@
     "traitResourceID": "Morale_Attribute_GiantButthead",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      },
+      {
+        "value": "-7",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "▶ Easily Frustrated",
     "heroBonus": ""
   },
@@ -4337,7 +5315,18 @@
     "traitResourceID": "Combo_Hindered_HumanPotato",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4347,7 +5336,13 @@
     "traitResourceID": "People_Career_HumanResources",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4397,7 +5392,13 @@
     "traitResourceID": "Injury_Attribute_Hypochondriac",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Injury Severity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "I'm gonna die!",
     "heroBonus": "Morale bonus from an upgraded Infirmary"
   },
@@ -4407,7 +5408,13 @@
     "traitResourceID": "Frustration_Attribute_Idealist",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "Easily Frustrated",
     "heroBonus": ""
   },
@@ -4427,7 +5434,18 @@
     "traitResourceID": "Young_Attribute_Immature",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4437,7 +5455,18 @@
     "traitResourceID": "Health_Attribute_Immortal",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+40%",
+        "stat": "Injury Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+45",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4447,7 +5476,13 @@
     "traitResourceID": "Standing_Attribute_ImpostorSyndrome",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4457,7 +5492,13 @@
     "traitResourceID": "Minor_After_InMourning",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-7",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4497,7 +5538,13 @@
     "traitResourceID": "Cooking_Hindered_ClumsyCook",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cooking Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "Affects Skills",
     "heroBonus": "▶ Sometimes wastes food"
   },
@@ -4507,7 +5554,18 @@
     "traitResourceID": "Labor_Attribute_Incompetent",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-1",
+        "stat": "Labor",
+        "type": "negative"
+      },
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4517,7 +5575,13 @@
     "traitResourceID": "Sickness_Attribute_ImmuneSystem",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+100",
+        "stat": "Infection Resistance",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4527,7 +5591,18 @@
     "traitResourceID": "Stamina_Attribute_Indefatigable",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+40%",
+        "stat": "Fatigue Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+30",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4551,6 +5626,11 @@
       {
         "value": "-20",
         "stat": "Max Stamina",
+        "type": "negative"
+      },
+      {
+        "value": "-33%",
+        "stat": "Fatigue Severity",
         "type": "negative"
       }
     ],
@@ -4673,7 +5753,13 @@
     "traitResourceID": "Standing_Attribute_Irresponsible",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4683,7 +5769,18 @@
     "traitResourceID": "Morale_Attribute_Irritable",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-3",
+        "stat": "Morale",
+        "type": "negative"
+      },
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4703,7 +5800,13 @@
     "traitResourceID": "Shooting_Hindered_ItchyTrigger",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Shooting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4743,7 +5846,23 @@
     "traitResourceID": "Combo_Hobby_Juggler",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+25%",
+        "stat": "Fighting Experience Rate",
+        "type": "positive"
+      },
+      {
+        "value": "+25%",
+        "stat": "Shooting Experience Rate",
+        "type": "positive"
+      },
+      {
+        "value": "+25%",
+        "stat": "Cardio Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4773,7 +5892,18 @@
     "traitResourceID": "Stamina_Attribute_JustKeepsGoing",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+40%",
+        "stat": "Fatigue Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+45",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4793,7 +5923,23 @@
     "traitResourceID": "Weight_After_HiddenPouches",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Light Carrying Capacity",
+        "type": "positive"
+      },
+      {
+        "value": "+10",
+        "stat": "Max Carrying Capacity",
+        "type": "positive"
+      },
+      {
+        "value": "+1",
+        "stat": "Max Item Stack",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4813,7 +5959,13 @@
     "traitResourceID": "Standing_Attribute_KindEyes",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+25%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Sounding Board"
   },
@@ -4823,7 +5975,13 @@
     "traitResourceID": "Wits_Hindered_Idiot",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4833,7 +5991,13 @@
     "traitResourceID": "Morale_Attribute_Kleptomaniac",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-7",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4873,7 +6037,18 @@
     "traitResourceID": "Morale_Attribute_NoBoundaries",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-5",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      },
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -4939,7 +6114,23 @@
     "traitResourceID": "Labor_Attribute_Lazy",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-1",
+        "stat": "Labor",
+        "type": "negative"
+      },
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "▶ Morale bonus from luxury bed facilities",
     "heroBonus": ""
   },
@@ -4949,7 +6140,13 @@
     "traitResourceID": "Philosophy_Prudent_LeadsFromBehind",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5151,9 +6348,19 @@
     "category": "other",
     "buffs": [
       {
+        "value": "+30",
+        "stat": "Max Health",
+        "type": "positive"
+      },
+      {
         "value": "+10",
         "stat": "Max Stamina",
         "type": "positive"
+      },
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
       }
     ],
     "providedSkill": "",
@@ -5175,7 +6382,13 @@
     "traitResourceID": "Noise_Career_Librarian",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-1",
+        "stat": "Noise",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5205,7 +6418,13 @@
     "traitResourceID": "Old_Attribute_LiesAboutAge",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+25%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5215,7 +6434,13 @@
     "traitResourceID": "Old_Attribute_LiesAboutAge",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+25%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5235,7 +6460,13 @@
     "traitResourceID": "Fighting_Attribute_LikesToFight",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Fighting Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5311,7 +6542,13 @@
     "traitResourceID": "Minor_After_SqualorBad",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25",
+        "stat": "Infection Resistance",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5321,7 +6558,13 @@
     "traitResourceID": "Minor_After_SqualorBad",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50",
+        "stat": "Infection Resistance",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5331,7 +6574,13 @@
     "traitResourceID": "Consumption_After_AteSpoiledFood",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5341,7 +6590,13 @@
     "traitResourceID": "Stamina_Before_Bayou",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5371,7 +6626,13 @@
     "traitResourceID": "Consumption_Attribute_LivesOnPasta",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5401,7 +6662,13 @@
     "traitResourceID": "Minor_Before_LostBrother",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-3",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "-3 Morale",
     "heroBonus": ""
   },
@@ -5411,7 +6678,13 @@
     "traitResourceID": "Minor_Before_LostFather",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-3",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "-3 Morale",
     "heroBonus": ""
   },
@@ -5421,7 +6694,18 @@
     "traitResourceID": "Stamina_After_LostBlanket",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      },
+      {
+        "value": "-20",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5557,7 +6841,13 @@
     "traitResourceID": "Minor_Hobby_LovesBaking",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+100%",
+        "stat": "Cooking Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5567,7 +6857,13 @@
     "traitResourceID": "Cooking_Hobby_LovesCanning",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Cooking Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5597,7 +6893,13 @@
     "traitResourceID": "Cooking_Hindered_LovesSpicyFood",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5663,7 +6965,13 @@
     "traitResourceID": "XP_Attribute_Mentor",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+33%",
+        "stat": "Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5673,7 +6981,13 @@
     "traitResourceID": "Music_Hobby_LovesToSing",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+5",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "▶ +5 Max Stamina",
     "heroBonus": ""
   },
@@ -5683,7 +6997,18 @@
     "traitResourceID": "Consumption_Attribute_LowMetabolism",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      },
+      {
+        "value": "-20",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5703,7 +7028,18 @@
     "traitResourceID": "Cardio_Hindered_LungCancerSurvivor",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-75%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-45",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5873,7 +7209,13 @@
     "traitResourceID": "Medicine_Hindered_MedicineMerchant",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Medicine Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5883,7 +7225,13 @@
     "traitResourceID": "Wits_Respec",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5896,7 +7244,7 @@
     "buffs": [
       {
         "value": "-5",
-        "stat": "Morale",
+        "stat": "Morale (Community)",
         "type": "negative"
       }
     ],
@@ -5919,7 +7267,13 @@
     "traitResourceID": "Business_Career_MiddleManagement",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -5959,7 +7313,13 @@
     "traitResourceID": "Minor_Career_Miner",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+20",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6079,7 +7439,13 @@
     "traitResourceID": "Philosophy_Daring_WillEatAnything",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+3",
+        "stat": "Morale (Community)",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6089,7 +7455,13 @@
     "traitResourceID": "Morale_Attribute_NeedsAloneTime",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6099,7 +7471,13 @@
     "traitResourceID": "Morale_Attribute_NeedsQuietTime",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Easily Frustrated"
   },
@@ -6123,7 +7501,12 @@
       {
         "value": "+30",
         "stat": "Max Health",
-        "type": "negative"
+        "type": "positive"
+      },
+      {
+        "value": "+66%",
+        "stat": "Injury Severity",
+        "type": "positive"
       }
     ],
     "providedSkill": "+66% Injury Severity",
@@ -6135,7 +7518,13 @@
     "traitResourceID": "Sickness_Before_NeverSick",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+100",
+        "stat": "Infection Resistance",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6145,7 +7534,18 @@
     "traitResourceID": "Health_Attribute_NeverCries",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+30%",
+        "stat": "Injury Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+10",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6155,7 +7555,13 @@
     "traitResourceID": "Stamina_Before_NeverExercised",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6175,7 +7581,13 @@
     "traitResourceID": "Efficiency_Attribute_NeverSignals",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Fuel Efficiency",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6185,7 +7597,18 @@
     "traitResourceID": "Stamina_Attribute_NightTerrors",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "Max Stamina",
+        "type": "negative"
+      },
+      {
+        "value": "-33%",
+        "stat": "Fatigue Severity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6205,7 +7628,18 @@
     "traitResourceID": "Morale_Attribute_Nihilist",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+60",
+        "stat": "morale without frustration",
+        "type": "positive"
+      },
+      {
+        "value": "-3",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6235,7 +7669,13 @@
     "traitResourceID": "Wits_Hindered_NoCommonSense",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6245,7 +7685,13 @@
     "traitResourceID": "Standing_Attribute_NoFilter",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6255,7 +7701,18 @@
     "traitResourceID": "Noise_Attribute_Noisy",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      },
+      {
+        "value": "-1",
+        "stat": "Noise",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6265,7 +7722,13 @@
     "traitResourceID": "Beds_After_NomadicSleeper",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-1",
+        "stat": "Beds Used",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6285,7 +7748,13 @@
     "traitResourceID": "Wits_Attribute_Nosy",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-3",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6305,7 +7774,13 @@
     "traitResourceID": "Frustration_Attribute_Nudist",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6325,7 +7800,13 @@
     "traitResourceID": "Morale_Attribute_Nurturing",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+3",
+        "stat": "Morale (Community)",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6345,7 +7826,13 @@
     "traitResourceID": "Stamina_Attribute_Narcolepsy",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Fatigue Severity",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6365,7 +7852,23 @@
     "traitResourceID": "Old_Attribute_OldTired",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-20",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6411,7 +7914,18 @@
     "traitResourceID": "Frustration_Attribute_Optimist",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+60",
+        "stat": "morale without frustration",
+        "type": "positive"
+      },
+      {
+        "value": "+4",
+        "stat": "Morale",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6431,7 +7945,13 @@
     "traitResourceID": "Wits_Attribute_Organized",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+5",
+        "stat": "Light Carrying Capacity",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6441,7 +7961,13 @@
     "traitResourceID": "Wits_Attribute_Overachiever",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+1",
+        "stat": "Labor",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6471,7 +7997,13 @@
     "traitResourceID": "Minor_Attribute_Overplanner",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-3",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6481,7 +8013,18 @@
     "traitResourceID": "Labor_Attribute_Overworked",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+1",
+        "stat": "Labor",
+        "type": "positive"
+      },
+      {
+        "value": "-20",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "-20 Max Stamina",
     "heroBonus": ""
   },
@@ -6491,7 +8034,13 @@
     "traitResourceID": "Beds_Attribute_PackRat",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+1",
+        "stat": "Beds Used",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6541,7 +8090,13 @@
     "traitResourceID": "Minor_Attribute_Paronomasiac",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "▶ Annoys irritable community members",
     "heroBonus": ""
   },
@@ -6571,7 +8126,13 @@
     "traitResourceID": "Morale_Attribute_PassiveAggressive",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-10%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "alone. Probably getting eaten. Don't",
     "heroBonus": ""
   },
@@ -6595,6 +8156,11 @@
       {
         "value": "-45",
         "stat": "Max Health",
+        "type": "negative"
+      },
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
         "type": "negative"
       }
     ],
@@ -6637,7 +8203,13 @@
     "traitResourceID": "Minor_Attribute_Pedantic",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-10%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "▶ Irritable towards other people"
   },
@@ -6657,7 +8229,13 @@
     "traitResourceID": "Frustration_Attribute_Pessimist",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-5",
+        "stat": "Morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "▶ Easiliy Frustrated",
     "heroBonus": ""
   },
@@ -6707,7 +8285,13 @@
     "traitResourceID": "Cardio_Respec",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6727,7 +8311,13 @@
     "traitResourceID": "Consumption_Attribute_PickyEater",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6933,7 +8523,18 @@
     "traitResourceID": "Morale_Attribute_PoorBedsideManner",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-5",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Medicine Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6943,7 +8544,13 @@
     "traitResourceID": "Minor_Attribute_PoorTypist",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Computers Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -6999,7 +8606,13 @@
     "traitResourceID": "Philosophy_Prudent_PrefersSidelines",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7069,7 +8682,13 @@
     "traitResourceID": "Music_Career_ProfessionalSinger",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7099,7 +8718,13 @@
     "traitResourceID": "Stamina_Before_Allnighters",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-30%",
+        "stat": "Fatigue Severity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7119,7 +8744,18 @@
     "traitResourceID": "Health_Attribute_PunchesWalls",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Max Health",
+        "type": "positive"
+      },
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7163,7 +8799,7 @@
       {
         "value": "+200%",
         "stat": "Experience Rate",
-        "type": "negative"
+        "type": "positive"
       }
     ],
     "providedSkill": "",
@@ -7175,7 +8811,23 @@
     "traitResourceID": "Frustration_Attribute_Despairing",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      },
+      {
+        "value": "-5",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      },
+      {
+        "value": "-30",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "▶ Easily Frustrated",
     "heroBonus": ""
   },
@@ -7245,7 +8897,13 @@
     "traitResourceID": "Standing_Career_RanNeighborhood",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+75%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Tough Negotiations"
   },
@@ -7275,7 +8933,13 @@
     "traitResourceID": "Minor_Hobby_Reader",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+100%",
+        "stat": "Wits Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7405,7 +9069,23 @@
     "traitResourceID": "Health_Attribute_Resilient",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+40%",
+        "stat": "Injury Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+60",
+        "stat": "morale without frustration",
+        "type": "positive"
+      },
+      {
+        "value": "+20",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7415,7 +9095,18 @@
     "traitResourceID": "Philosophy_Pragmatic_RespectsAuthority",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+60",
+        "stat": "morale without frustration",
+        "type": "positive"
+      },
+      {
+        "value": "-25%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7455,7 +9146,13 @@
     "traitResourceID": "Fighting_Hindered_RiskAverse",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7571,7 +9268,13 @@
     "traitResourceID": "Music_Career_Saxophonist",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+20",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7581,7 +9284,13 @@
     "traitResourceID": "Computers_Hindered_OutsourcedJob",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Computer Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "Computers",
     "heroBonus": ""
   },
@@ -7671,7 +9380,13 @@
     "traitResourceID": "Health_Attribute_FaintsBlood",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-10",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7691,7 +9406,13 @@
     "traitResourceID": "Standing_Attribute_SelfConscious",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7701,7 +9422,13 @@
     "traitResourceID": "Injury_Attribute_SelfDestructive",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Injury Severity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7711,7 +9438,18 @@
     "traitResourceID": "Morale_Attribute_SelfEffacing",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+60",
+        "stat": "morale without frustration",
+        "type": "positive"
+      },
+      {
+        "value": "-25%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Sincere Praise"
   },
@@ -7725,6 +9463,11 @@
       {
         "value": "-30",
         "stat": "Max Health",
+        "type": "negative"
+      },
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
         "type": "negative"
       }
     ],
@@ -7747,7 +9490,18 @@
     "traitResourceID": "Stamina_Attribute_SelfSabotaging",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      },
+      {
+        "value": "-20",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7767,7 +9521,13 @@
     "traitResourceID": "Gardening_Hindered_PlantMurderer",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-75%",
+        "stat": "Gardening Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7787,7 +9547,13 @@
     "traitResourceID": "Standing_After_SewerDweller",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Standing Reward",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7797,7 +9563,13 @@
     "traitResourceID": "Mechanics_Hindered_CrookedMechanic",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Mechanics Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7827,7 +9599,13 @@
     "traitResourceID": "Health_After_Sheltered",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7847,7 +9625,23 @@
     "traitResourceID": "Combo_Hindered_ShoddyWorkmanship",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Craftsmanship Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Utilities Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Mechanics Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7867,7 +9661,13 @@
     "traitResourceID": "Shopping_Before_ShopOnTV",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -7931,7 +9731,7 @@
       {
         "value": "+4",
         "stat": "Morale",
-        "type": "negative"
+        "type": "positive"
       }
     ],
     "providedSkill": "Annoys irritable community members",
@@ -7963,7 +9763,13 @@
     "traitResourceID": "Fighting_Hindered_Skittish",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8003,7 +9809,13 @@
     "traitResourceID": "Beds_After_GroundSleeper",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+1",
+        "stat": "Beds used",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8013,7 +9825,18 @@
     "traitResourceID": "Stamina_Attribute_Dakimakura",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+20",
+        "stat": "Max Stamina",
+        "type": "positive"
+      },
+      {
+        "value": "-25%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8033,7 +9856,18 @@
     "traitResourceID": "Health_Attribute_Stocky",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+20",
+        "stat": "Max Health",
+        "type": "positive"
+      },
+      {
+        "value": "-10",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8043,7 +9877,13 @@
     "traitResourceID": "Weight_Attribute_Slouchy",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-10",
+        "stat": "Max Carrying Capacity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8053,7 +9893,13 @@
     "traitResourceID": "Sickness_After_Slovenly",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25",
+        "stat": "Infection Resistance",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "▶ Annoys irritable community members",
     "heroBonus": ""
   },
@@ -8063,7 +9909,13 @@
     "traitResourceID": "Mechanics_Hindered_SadMechanic",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-75%",
+        "stat": "Mechanics Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "Mechanics (max 4 levels)",
     "heroBonus": ""
   },
@@ -8073,7 +9925,13 @@
     "traitResourceID": "Weight_Attribute_SlumpShouldered",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-5",
+        "stat": "Max Carrying Capacity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Chillness"
   },
@@ -8093,7 +9951,13 @@
     "traitResourceID": "Standing_Attribute_SmoothTalker",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Friendly Outreach"
   },
@@ -8103,7 +9967,18 @@
     "traitResourceID": "Weight_Career_Smuggler",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Max Carrying Capacity",
+        "type": "positive"
+      },
+      {
+        "value": "+10",
+        "stat": "Light Carrying Capacity",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8113,7 +9988,18 @@
     "traitResourceID": "Morale_Attribute_Snarky",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      },
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8123,7 +10009,18 @@
     "traitResourceID": "Morale_Attribute_Snores",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-3",
+        "stat": "Morale (Community)",
+        "type": "negative"
+      },
+      {
+        "value": "-10",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8143,7 +10040,13 @@
     "traitResourceID": "Minor_Before_SocialButterfly",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8233,7 +10136,13 @@
     "traitResourceID": "Mechanics_Hindered_SoldUsedCars",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Mechanics Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "Mechanics (max 3 levels)",
     "heroBonus": ""
   },
@@ -8243,7 +10152,13 @@
     "traitResourceID": "Weight_Attribute_SoreNeck",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-5",
+        "stat": "Max Carrying Capacity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "-5 Max Carry Capacity",
     "heroBonus": ""
   },
@@ -8439,7 +10354,23 @@
     "traitResourceID": "Labor_Attribute_Stoner",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-1",
+        "stat": "Labor",
+        "type": "negative"
+      },
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8479,7 +10410,13 @@
     "traitResourceID": "Consumption_Attribute_StressEater",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-100%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8499,7 +10436,13 @@
     "traitResourceID": "Frustration_Attribute_Stubborn",
     "traitType": "bad",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8559,7 +10502,13 @@
     "traitResourceID": "Standing_Attribute_SurvivorGuilt",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "-50% Standing Rewards",
     "heroBonus": ""
   },
@@ -8589,7 +10538,13 @@
     "traitResourceID": "Standing_Attribute_Sweaty",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8619,7 +10574,13 @@
     "traitResourceID": "PoliSci_Career_TalkRadioHost",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-20",
+        "stat": "morale",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "Political Science",
     "heroBonus": "Friendly Outreach"
   },
@@ -8629,7 +10590,18 @@
     "traitResourceID": "Noise_Attribute_TalksLoudly",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      },
+      {
+        "value": "-1",
+        "stat": "Noise",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8732,7 +10704,7 @@
     "buffs": [
       {
         "value": "+3",
-        "stat": "Morale",
+        "stat": "Morale (Community)",
         "type": "positive"
       }
     ],
@@ -8748,7 +10720,7 @@
     "buffs": [
       {
         "value": "-3",
-        "stat": "Morale",
+        "stat": "Morale (Community)",
         "type": "negative"
       }
     ],
@@ -8761,7 +10733,13 @@
     "traitResourceID": "Minor_After_TallTales",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+3",
+        "stat": "Morale (Community)",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8821,7 +10799,13 @@
     "traitResourceID": "Utilities_Hindered_Tinkerer",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Utilities Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8831,7 +10815,18 @@
     "traitResourceID": "Stamina_Attribute_TiresQuickly",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Fatigue Severity",
+        "type": "negative"
+      },
+      {
+        "value": "-20",
+        "stat": "Max Stamina",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8851,7 +10846,18 @@
     "traitResourceID": "Health_Before_TookDares",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+40%",
+        "stat": "Injury Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+30",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8881,7 +10887,13 @@
     "traitResourceID": "HealthConsumable_Lightweight",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+100%",
+        "stat": "Healing Item Efficacy",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": "Dosage Control"
   },
@@ -8891,7 +10903,18 @@
     "traitResourceID": "Health_Attribute_Tough",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+30%",
+        "stat": "Injury Severity",
+        "type": "positive"
+      },
+      {
+        "value": "+10",
+        "stat": "Max Health",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8941,7 +10964,13 @@
     "traitResourceID": "Fighting_Respec",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8951,7 +10980,13 @@
     "traitResourceID": "Shooting_Respec",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Shooting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -8991,7 +11026,13 @@
     "traitResourceID": "Wits_Discipline_Career_Trucker",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-40%",
+        "stat": "Fatigue Severity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9001,7 +11042,23 @@
     "traitResourceID": "Minor_Before_TrustFund",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Shooting Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-5",
+        "stat": "Morale",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9041,7 +11098,13 @@
     "traitResourceID": "Cardio_Hindered_Unathletic",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Cardio Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "-66% Cardio Experience Rate",
     "heroBonus": "Cardio (max 5 levels)"
   },
@@ -9051,7 +11114,18 @@
     "traitResourceID": "Injury_Attribute_Unbreakable",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+45",
+        "stat": "Max Health",
+        "type": "positive"
+      },
+      {
+        "value": "-100%",
+        "stat": "Injury Chance",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9061,7 +11135,13 @@
     "traitResourceID": "Minor_Attribute_SocialAnxiety",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-10%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9081,7 +11161,18 @@
     "traitResourceID": "Labor_Attribute_Unmotivated",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-1",
+        "stat": "Labor",
+        "type": "negative"
+      },
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9091,7 +11182,13 @@
     "traitResourceID": "Wits_Hindered_Unobservant",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Wits Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "▶ Sometimes wastes materials",
     "heroBonus": ""
   },
@@ -9101,7 +11198,18 @@
     "traitResourceID": "Young_Attribute_Mature",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+50%",
+        "stat": "Wits Experience Rate",
+        "type": "positive"
+      },
+      {
+        "value": "+25%",
+        "stat": "Standing Rewards",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9161,7 +11269,13 @@
     "traitResourceID": "Stamina_Before_HumidClimate",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+10",
+        "stat": "Max Stamina",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9197,7 +11311,18 @@
     "traitResourceID": "Labor_Attribute_Useless",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-1",
+        "stat": "Labor",
+        "type": "negative"
+      },
+      {
+        "value": "-50%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9237,7 +11362,13 @@
     "traitResourceID": "Consumption_Attribute_Vegan",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-25%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9327,7 +11458,13 @@
     "traitResourceID": "Gardening_Career_VolunteerCoordinator",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+4",
+        "stat": "Morale (Community)",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9477,7 +11614,18 @@
     "traitResourceID": "Combo_Hindered_WeakStomach",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      },
+      {
+        "value": "-66%",
+        "stat": "Shooting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9487,7 +11635,13 @@
     "traitResourceID": "Fighting_Hindered_WeakSwing",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-66%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9507,7 +11661,13 @@
     "traitResourceID": "Standing_Attribute_Weirdo",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-33%",
+        "stat": "Standing Rewards",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "▶ Annoys irritable community members",
     "heroBonus": ""
   },
@@ -9527,7 +11687,13 @@
     "traitResourceID": "Stamina_Before_NightSchool",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-30%",
+        "stat": "Fatigue Severity",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9557,7 +11723,13 @@
     "traitResourceID": "Philosophy_Daring_WillEatAnything",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-50%",
+        "stat": "Food Consumed Per Day",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9567,7 +11739,18 @@
     "traitResourceID": "Stamina_Attribute_Willowy",
     "traitType": "neutral",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+20",
+        "stat": "Max Stamina",
+        "type": "positive"
+      },
+      {
+        "value": "-10",
+        "stat": "Max Health",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9587,7 +11770,13 @@
     "traitResourceID": "Old_Attribute_Wise",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+100%",
+        "stat": "Wits Experience Rate",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9607,7 +11796,13 @@
     "traitResourceID": "Labor_Attribute_Workaholic",
     "traitType": "good",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "+1",
+        "stat": "Labor",
+        "type": "positive"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
@@ -9667,7 +11862,13 @@
     "traitResourceID": "Fighting_Hindered_WorstFighter",
     "traitType": "mixed",
     "category": "other",
-    "buffs": [],
+    "buffs": [
+      {
+        "value": "-75%",
+        "stat": "Fighting Experience Rate",
+        "type": "negative"
+      }
+    ],
     "providedSkill": "",
     "heroBonus": ""
   },
