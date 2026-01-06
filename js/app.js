@@ -53,8 +53,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     initializeForm();
     setupEventListeners();
     
-    // Make characterData globally available for randomizer
+    // Make characterData globally available for randomizer and loadouts
     window.characterData = characterData;
+    
+    // Setup loadout preset after characterData is available
+    if (typeof setupLoadoutPreset === 'function') {
+        setupLoadoutPreset();
+    }
     
     console.log('✓ Application initialized');
 });

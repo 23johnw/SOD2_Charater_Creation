@@ -83,14 +83,51 @@ class LoadoutManager {
 
 const loadoutManager = new LoadoutManager();
 
-// Setup loadout preset selector
-document.addEventListener('DOMContentLoaded', () => {
+// Setup loadout preset selector - called from app.js after initialization
+function setupLoadoutPreset() {
     const loadoutPreset = document.getElementById('loadoutPreset');
-    if (loadoutPreset) {
-        loadoutPreset.addEventListener('change', (e) => {
-            loadoutManager.applyPreset(e.target.value);
-            characterData.loadout.preset = e.target.value;
-        });
+    if (!loadoutPreset) {
+        console.warn('Loadout preset select not found');
+        return;
     }
-});
+    
+    // Ensure options are present - check if options exist or if they're empty
+    const hasOptions = loadoutPreset.options && loadoutPreset.options.length > 0;
+    const firstOptionHasValue = hasOptions && loadoutPreset.options[0].value !== '';
+    
+    if (!hasOptions || !firstOptionHasValue) {
+        // Re-populate options if they're missing
+        loadoutPreset.innerHTML = `
+            <option value="custom">Custom</option>
+            <option value="heavy">Heavy Loadout</option>
+            <option value="middle">Middle Loadout</option>
+            <option value="light">Light Loadout</option>
+        `;
+        console.log('✓ Loadout preset options populated');
+    }
+    
+    // Set default value
+    if (window.characterData && window.characterData.loadout) {
+        loadoutPreset.value = window.characterData.loadout.preset || 'custom';
+    } else {
+        loadoutPreset.value = 'custom';
+    }
+    
+    // Remove any existing listeners to avoid duplicates
+    const newLoadoutPreset = loadoutPreset.cloneNode(true);
+    loadoutPreset.parentNode.replaceChild(newLoadoutPreset, loadoutPreset);
+    
+    // Add event listener to the new element
+    const updatedLoadoutPreset = document.getElementById('loadoutPreset');
+    updatedLoadoutPreset.addEventListener('change', (e) => {
+        const presetValue = e.target.value;
+        console.log('Loadout preset changed to:', presetValue);
+        loadoutManager.applyPreset(presetValue);
+        if (window.characterData && window.characterData.loadout) {
+            window.characterData.loadout.preset = presetValue;
+        }
+    });
+    
+    console.log('✓ Loadout preset selector initialized');
+}
 
