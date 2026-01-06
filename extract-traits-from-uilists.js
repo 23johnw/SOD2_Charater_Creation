@@ -92,11 +92,86 @@ if (!mappings['Flatulent']) {
 if (!mappings['Avoids First Name']) {
     mappings['Avoids First Name'] = 'Minor_Naming_Surname';
 }
+// These should be extracted but adding manually to ensure they're found
+if (!mappings['Learned Computing']) {
+    mappings['Learned Computing'] = 'Computers_FromConsumable';
+}
+if (!mappings['Learned Medicine']) {
+    mappings['Learned Medicine'] = 'Medicine_FromConsumable';
+}
+if (!mappings['Learned to Cook']) {
+    mappings['Learned to Cook'] = 'Cooking_FromConsumable';
+}
+if (!mappings['Learned to Garden']) {
+    mappings['Learned to Garden'] = 'Gardening_FromConsumable';
+}
+if (!mappings['Learned Utilities']) {
+    mappings['Learned Utilities'] = 'Utilities_FromConsumable';
+}
+if (!mappings['Mentally Trained']) {
+    mappings['Mentally Trained'] = 'Wits_Respec';
+}
+if (!mappings['Physically Trained']) {
+    mappings['Physically Trained'] = 'Cardio_Respec';
+}
+if (!mappings['Trained at Fighting']) {
+    mappings['Trained at Fighting'] = 'Fighting_Respec';
+}
+if (!mappings['Trained at Shooting']) {
+    mappings['Trained at Shooting'] = 'Shooting_Respec';
+}
+if (!mappings['Always Vigilant']) {
+    mappings['Always Vigilant'] = 'Philosophy_Prudent_AlwaysVigilant';
+}
+if (!mappings['Filthy']) {
+    mappings['Filthy'] = 'Standing_Attribute_Filthy';
+}
+if (!mappings['Hated Camping']) {
+    mappings['Hated Camping'] = 'Minor_Before_HatedCamping';
+}
+if (!mappings['Lacks Boundaries']) {
+    mappings['Lacks Boundaries'] = 'Morale_Attribute_NoBoundaries';
+}
+if (!mappings['Left for Dead']) {
+    mappings['Left for Dead'] = 'Frustration_After_LeftForDead';
+}
+if (!mappings['No Filter']) {
+    mappings['No Filter'] = 'Standing_Attribute_NoFilter';
+}
+if (!mappings['Noisy']) {
+    mappings['Noisy'] = 'Noise_Attribute_Noisy';
+}
+if (!mappings['Talks Loudly']) {
+    mappings['Talks Loudly'] = 'Noise_Attribute_TalksLoudly';
+}
+if (!mappings['Taxidermist']) {
+    mappings['Taxidermist'] = 'Fighting_Career_Taxidermist';
+}
+// Red Talon traits (CSV has suffix but game doesn't)
+if (!mappings['Cooked for the Squad']) {
+    mappings['Cooked for the Squad'] = 'DLC2_RedTalon_SquadCook';
+}
+if (!mappings['Facilities Engineer']) {
+    mappings['Facilities Engineer'] = 'DLC2_RedTalon_Infrastructure';
+}
+if (!mappings['Firearms Enthusiast']) {
+    mappings['Firearms Enthusiast'] = 'DLC2_RedTalon_Enthusiast';
+}
+if (!mappings['Front Line Experience']) {
+    mappings['Front Line Experience'] = 'DLC2_RedTalon_Heroism_2';
+}
+if (!mappings['Practices at the Range']) {
+    mappings['Practices at the Range'] = 'DLC2_RedTalon_Warfighting_1';
+}
+if (!mappings['Worked as a Pioneer']) {
+    mappings['Worked as a Pioneer'] = 'DLC2_RedTalon_Pioneer';
+}
 
 console.log(`Extracted ${Object.keys(mappings).length} trait mappings from UILists.cs`);
 console.log(`  - Pattern 1 (direct Add): ${count1}`);
 console.log(`  - Pattern 2 (traitObject + Add): ${count2}`);
-console.log(`  - Manually added: 3\n`);
+const manualCount = Object.keys(mappings).length - count1 - count2;
+console.log(`  - Manually added: ${manualCount}\n`);
 
 // Now match with CSV traits
 console.log('Matching with CSV traits...\n');
@@ -166,10 +241,17 @@ const matched = [];
 const unmatched = [];
 
 csvTraits.forEach(csvTrait => {
-    const csvName = csvTrait.Name.trim();
+    let csvName = csvTrait.Name.trim();
     if (!csvName || csvName.includes('▶') || csvName.includes('much worse') || 
         csvName.includes('something wrong') || csvName.length < 2) {
         return;
+    }
+    
+    // Strip Red Talon suffix from CSV name for matching
+    const redTalonSuffix = '\n\n*(Red Talon Contractors only)*';
+    let baseName = csvName;
+    if (csvName.includes(redTalonSuffix)) {
+        baseName = csvName.replace(redTalonSuffix, '').trim();
     }
     
     // Special cases: CSV typos/variations
@@ -184,10 +266,24 @@ csvTraits.forEach(csvTrait => {
         return;
     }
     
-    // Try exact match first
+    // Try matching with base name (for Red Talon traits)
+    if (baseName !== csvName && mappings[baseName]) {
+        finalMapping[csvName] = mappings[baseName];
+        matched.push({ csvName, gameString: mappings[baseName], matchType: 'red_talon_suffix_stripped' });
+        return;
+    }
+    
+    // Try exact match first (with original name)
     if (mappings[csvName]) {
         finalMapping[csvName] = mappings[csvName];
         matched.push({ csvName, gameString: mappings[csvName], matchType: 'exact' });
+        return;
+    }
+    
+    // Try exact match with base name (if different)
+    if (baseName !== csvName && mappings[baseName]) {
+        finalMapping[csvName] = mappings[baseName];
+        matched.push({ csvName, gameString: mappings[baseName], matchType: 'exact_base_name' });
         return;
     }
     
