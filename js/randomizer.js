@@ -64,7 +64,9 @@ class Randomizer {
         if (!voices || voices.length === 0) return 'Kee_Low';
         const voice = voices[Math.floor(Math.random() * voices.length)];
         // Return the Voice ID which is what the form uses
-        const voiceID = voice['Voice ID'] || voice.Name || voice.name || voice || 'Kee';
+        let voiceID = voice['Voice ID'] || voice.Name || voice.name || voice || 'Kee';
+        // Ensure it's a string
+        voiceID = String(voiceID);
         // Ensure it has _Low suffix if it doesn't already
         return voiceID.includes('_') ? voiceID : `${voiceID}_Low`;
     }

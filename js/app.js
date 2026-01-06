@@ -351,8 +351,8 @@ function updateSelectedTraitsDisplay() {
 }
 
 function updateStatDisplays(healthBuff, staminaBuff) {
-    const baseHealth = parseInt(document.getElementById('currentHealth').value) || 100;
-    const baseStamina = parseInt(document.getElementById('currentStamina').value) || 100;
+    const baseHealth = parseInt(document.getElementById('currentHealth')?.value) || 100;
+    const baseStamina = parseInt(document.getElementById('currentStamina')?.value) || 100;
     
     // Update health display
     const healthBaseEl = document.querySelector('#healthDisplay .stat-base');
@@ -361,16 +361,18 @@ function updateStatDisplays(healthBuff, staminaBuff) {
     
     if (healthBaseEl) healthBaseEl.textContent = baseHealth;
     
-    if (healthBuff !== 0) {
-        const sign = healthBuff > 0 ? '+' : '';
-        healthBuffEl.textContent = ` ${sign}${healthBuff}`;
-        healthBuffEl.className = `stat-buff ${healthBuff > 0 ? 'positive' : 'negative'}`;
-        healthBuffEl.style.display = 'inline';
-        const total = baseHealth + healthBuff;
-        healthTotalEl.textContent = `= ${total}`;
-    } else {
-        healthBuffEl.style.display = 'none';
-        healthTotalEl.textContent = `= ${baseHealth}`;
+    if (healthBuffEl && healthTotalEl) {
+        if (healthBuff !== 0) {
+            const sign = healthBuff > 0 ? '+' : '';
+            healthBuffEl.textContent = ` ${sign}${healthBuff}`;
+            healthBuffEl.className = `stat-buff ${healthBuff > 0 ? 'positive' : 'negative'}`;
+            healthBuffEl.style.display = 'inline';
+            const total = baseHealth + healthBuff;
+            healthTotalEl.textContent = `= ${total}`;
+        } else {
+            healthBuffEl.style.display = 'none';
+            healthTotalEl.textContent = `= ${baseHealth}`;
+        }
     }
     
     // Update stamina display
@@ -380,16 +382,18 @@ function updateStatDisplays(healthBuff, staminaBuff) {
     
     if (staminaBaseEl) staminaBaseEl.textContent = baseStamina;
     
-    if (staminaBuff !== 0) {
-        const sign = staminaBuff > 0 ? '+' : '';
-        staminaBuffEl.textContent = ` ${sign}${staminaBuff}`;
-        staminaBuffEl.className = `stat-buff ${staminaBuff > 0 ? 'positive' : 'negative'}`;
-        staminaBuffEl.style.display = 'inline';
-        const total = baseStamina + staminaBuff;
-        staminaTotalEl.textContent = `= ${total}`;
-    } else {
-        staminaBuffEl.style.display = 'none';
-        staminaTotalEl.textContent = `= ${baseStamina}`;
+    if (staminaBuffEl && staminaTotalEl) {
+        if (staminaBuff !== 0) {
+            const sign = staminaBuff > 0 ? '+' : '';
+            staminaBuffEl.textContent = ` ${sign}${staminaBuff}`;
+            staminaBuffEl.className = `stat-buff ${staminaBuff > 0 ? 'positive' : 'negative'}`;
+            staminaBuffEl.style.display = 'inline';
+            const total = baseStamina + staminaBuff;
+            staminaTotalEl.textContent = `= ${total}`;
+        } else {
+            staminaBuffEl.style.display = 'none';
+            staminaTotalEl.textContent = `= ${baseStamina}`;
+        }
     }
 }
 
