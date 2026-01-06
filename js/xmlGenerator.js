@@ -532,8 +532,27 @@ function generateTraitsSubsection(traits) {
         <TheSubs>`;
     
     validTraits.forEach((trait, idx) => {
-        // Use traitResourceID if available, otherwise use name
+        // Always use traitResourceID - check mapping if not set or if it looks like a display name
         let traitID = trait.traitResourceID || trait.name || 'Default';
+        
+        // If traitID looks like a display name (has spaces, special chars, or doesn't match ID pattern),
+        // try to look it up in the mapping
+        if (traitID && traitID !== 'Default' && 
+            (traitID.includes(' ') || traitID.includes('-') || 
+             (!traitID.includes('_') && !traitID.startsWith('Descriptor_')))) {
+            // Check if we have a mapping for this trait name
+            if (dataLoader && dataLoader.data && dataLoader.data.traitIdMapping) {
+                if (dataLoader.data.traitIdMapping[traitID]) {
+                    traitID = dataLoader.data.traitIdMapping[traitID];
+                } else if (trait.name && dataLoader.data.traitIdMapping[trait.name]) {
+                    // Try using the trait's name property
+                    traitID = dataLoader.data.traitIdMapping[trait.name];
+                } else {
+                    // Log warning for unmapped traits
+                    console.warn(`Trait "${traitID}" not found in mapping, using as-is`);
+                }
+            }
+        }
         
         xml += `
           <StructObject xsi:type="StructProperty">
