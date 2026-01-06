@@ -124,6 +124,61 @@ class DataLoader {
             // Use Name as TraitResourceID - the game should accept the name as-is
             // If it doesn't work, we may need to convert spaces to underscores
             // but let's try the name first since some traits in the reference use spaces
+            // Convert trait name to TraitResourceID format
+            // Game uses underscores instead of spaces, and may add prefixes
+            let traitResourceID = name;
+            
+            // Skip invalid trait entries (descriptions, fragments)
+            if (!name || name.length < 2 || name.includes('▶') || name.includes('much worse') || 
+                name.includes('something wrong') || name.includes('way to deal')) {
+                return null; // Will be filtered out
+            }
+            
+            // Convert spaces to underscores
+            traitResourceID = traitResourceID.replace(/\s+/g, '_');
+            
+            // Remove special characters that shouldn't be in IDs
+            traitResourceID = traitResourceID.replace(/[▶✗✓⚠]/g, '');
+            traitResourceID = traitResourceID.replace(/[.,!?;:]/g, '');
+            traitResourceID = traitResourceID.trim();
+            
+            // Add category prefixes based on trait category and provided skills
+            const providedSkill = trait['Provided Skill(s)'] || '';
+            const nameLower = name.toLowerCase();
+            
+            // Career traits need prefix based on which skill they provide
+            if (providedSkill || nameLower.includes('teacher') || nameLower.includes('carrier') || 
+                nameLower.includes('lumberjack') || nameLower.includes('barber') || 
+                nameLower.includes('beautician') || nameLower.includes('stylist')) {
+                if (!traitResourceID.includes('_Career_')) {
+                    // Map provided skills to skill categories
+                    if (providedSkill.includes('Hairdressing') || nameLower.includes('stylist') || 
+                        nameLower.includes('barber') || nameLower.includes('beautician')) {
+                        traitResourceID = `Fighting_Career_${traitResourceID}`;
+                    } else if (providedSkill.includes('Backpacking') || nameLower.includes('backpack')) {
+                        traitResourceID = `Cardio_Career_${traitResourceID}`;
+                    } else if (providedSkill.includes('Driving') || nameLower.includes('carrier') || 
+                               nameLower.includes('driver')) {
+                        traitResourceID = `Wits_Career_${traitResourceID}`;
+                    } else if (providedSkill.includes('Utilities') || nameLower.includes('lumberjack')) {
+                        traitResourceID = `Wits_Career_${traitResourceID}`;
+                    } else if (providedSkill.includes('Craftsmanship') || nameLower.includes('model')) {
+                        traitResourceID = `Wits_Career_${traitResourceID}`;
+                    } else if (providedSkill || nameLower.includes('teacher')) {
+                        // Default to Wits_Career_ for other career traits
+                        traitResourceID = `Wits_Career_${traitResourceID}`;
+                    }
+                }
+            } else if (category === 'filler' || nameLower.includes('backpacking') || 
+                      nameLower.includes('assault') || nameLower.includes('discipline')) {
+                if (!traitResourceID.startsWith('Filler_')) {
+                    traitResourceID = `Filler_${traitResourceID}`;
+                }
+            } else if (category === 'attribute' && name.includes('Nostalgic')) {
+                // Age-based attributes need age prefix - but we don't know the age at processing time
+                // This will be handled dynamically if needed
+            }
+            
             return {
                 name: name,
                 description: trait.Description || '',
@@ -133,9 +188,9 @@ class DataLoader {
                 heroBonus: trait['Provided Hero Bonus'] || '',
                 traitType: traitType,
                 category: category,
-                traitResourceID: name // Use Name field as TraitResourceID
+                traitResourceID: traitResourceID
             };
-        }).filter(t => t.name && t.name.trim() !== '');
+        }).filter(t => t && t.name && t.name.trim() !== '' && t.traitResourceID);
     }
 
     getVoices(gender) {
