@@ -1,0 +1,34 @@
+[
+  {
+    "Core Skill": "Cardio",
+    "Specialization A": "Marathon",
+    "Specialization B": "Backpacking",
+    "Specialization C": "Acrobatics",
+    "Specialization D": "Powerhouse",
+    "Max Level": "7"
+  },
+  {
+    "Core Skill": "Wits",
+    "Specialization A": "Stealth",
+    "Specialization B": "Resourcefulness",
+    "Specialization C": "Discipline",
+    "Specialization D": "Scouting",
+    "Max Level": "7"
+  },
+  {
+    "Core Skill": "Fighting",
+    "Specialization A": "Endurance",
+    "Specialization B": "Striking",
+    "Specialization C": "Swordplay",
+    "Specialization D": "Close Combat",
+    "Max Level": "7"
+  },
+  {
+    "Core Skill": "Shooting",
+    "Specialization A": "Weapons Handling",
+    "Specialization B": "Sharpshooter",
+    "Specialization C": "Assault",
+    "Specialization D": "Gunslinging",
+    "Max Level": "7"
+  }
+]

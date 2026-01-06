@@ -1,0 +1,72 @@
+[
+  {
+    "Name": "CLEO Machine Pistol",
+    "Ammo": "CLEO Ammo Packs",
+    "": ""
+  },
+  {
+    "Name": "Dillinger Pattern 1911",
+    "Ammo": ".45 cal rounds",
+    "": "p"
+  },
+  {
+    "Name": "G18 Auto",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "G18 Auto Custom",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "G45 Burst",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MAC-10",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "MAC-11 Jaw Breaker",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MP5K Navy",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MP5K Spec Ops",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Raider's Uzi 22",
+    "Ammo": ".22 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "RTX Piranha",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "RTX Rampart",
+    "Ammo": ".44 Magnum HP rounds",
+    "": ""
+  },
+  {
+    "Name": "Škorpion 61",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Sleeper Cell PPK",
+    "Ammo": ".22 cal rounds",
+    "": ""
+  }
+]

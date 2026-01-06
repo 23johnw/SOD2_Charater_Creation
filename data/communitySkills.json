@@ -1,0 +1,50 @@
+[
+  {
+    "Base Skill": "Medicine",
+    "Specialization 1": "Pathology",
+    "Specialization 2": "Surgery",
+    "Max Level": "7"
+  },
+  {
+    "Base Skill": "Chemistry",
+    "Specialization 1": "Munitions",
+    "Specialization 2": "Pharmacology",
+    "Max Level": "7"
+  },
+  {
+    "Base Skill": "Mechanics",
+    "Specialization 1": "Automechanics",
+    "Specialization 2": "Engineering",
+    "Max Level": "7"
+  },
+  {
+    "Base Skill": "Gardening",
+    "Specialization 1": "Agriculture",
+    "Specialization 2": "Herbalism",
+    "Max Level": "7"
+  },
+  {
+    "Base Skill": "Utilities",
+    "Specialization 1": "Electrical",
+    "Specialization 2": "Plumbing",
+    "Max Level": "7"
+  },
+  {
+    "Base Skill": "Computers",
+    "Specialization 1": "Electronics",
+    "Specialization 2": "Programming",
+    "Max Level": "7"
+  },
+  {
+    "Base Skill": "Cooking",
+    "Specialization 1": "Nutrition",
+    "Specialization 2": "Catering",
+    "Max Level": "7"
+  },
+  {
+    "Base Skill": "Craftsmanship",
+    "Specialization 1": "Construction",
+    "Specialization 2": "Metalwork",
+    "Max Level": "7"
+  }
+]

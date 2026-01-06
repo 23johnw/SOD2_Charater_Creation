@@ -1,0 +1,46 @@
+{
+  "presets": {
+    "heavy": {
+      "name": "Heavy Loadout",
+      "description": "Maximum firepower and protection",
+      "equipment": {
+        "backpack": "best",
+        "melee": "best",
+        "closeCombat": "none",
+        "ranged": "best",
+        "sidearm": "best",
+        "rucksack": "best"
+      }
+    },
+    "middle": {
+      "name": "Middle Loadout",
+      "description": "Balanced equipment",
+      "equipment": {
+        "backpack": "middle",
+        "melee": "middle",
+        "closeCombat": "none",
+        "ranged": "middle",
+        "sidearm": "middle",
+        "rucksack": "none"
+      }
+    },
+    "light": {
+      "name": "Light Loadout",
+      "description": "Minimal equipment for stealth",
+      "equipment": {
+        "backpack": "light",
+        "melee": "light",
+        "closeCombat": "best",
+        "ranged": "light",
+        "sidearm": "light",
+        "rucksack": "none"
+      }
+    }
+  },
+  "tiers": {
+    "best": "Highest tier equipment",
+    "middle": "Mid-tier equipment",
+    "light": "Low-tier equipment"
+  }
+}
+

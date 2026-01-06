@@ -1,0 +1,307 @@
+[
+  {
+    "Name": "AK-47",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "AKS-74U",
+    "Ammo": "5.56mm rounds",
+    "": "p"
+  },
+  {
+    "Name": "AKS-74U Valentine",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "APC9 RT",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Barrow Style BAR",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Ceremonial M1A1 Thompson",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "Classic AK-47",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "CLEO SMG",
+    "Ammo": "CLEO Ammo Packs",
+    "": ""
+  },
+  {
+    "Name": "Custom AK-47",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Danger Dog PPSh-41",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Echo-S4 SMG*(Heartland)*",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Echo-S7 Assault Rifle*(Heartland)*",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Eternal Guard's Infinite Rage",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "EVO 3*(Doomsday Pack)*",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "FAL",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "FBI Fighting Rifle",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Gangland Strad",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "Golden Honcho",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Graveyard Shift",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "HB PDW",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "HB SD Blackout",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "HB Snow Fox",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M1918 BAR",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M1A1 Thompson",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "M3 Grease Gun",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "M4 CQBR Mob Stopper",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M4A1",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M4X1 DMR Heavy",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M4X2 Lite SSW",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MAC-V",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "Masterwork Assault Rifle",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MCX Osprey RT",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MP40 Submachine Gun",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MP5A2",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MP5A2 Spec Ops",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MP5SD",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MPX Competition",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "MPX Submachine Gun",
+    "Ammo": ".357 HP rounds",
+    "": ""
+  },
+  {
+    "Name": "Network DIY Assault Rifle",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Non-Compliant SKS",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Operator's M4A1",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Prepper's AK-47",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Raider's AK-47",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Raider's AR-15",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Restored Echo-S4 SMG",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Restored Echo-S7 Assault Rifle",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "RTX Hordebreaker",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "RTX Stormbringer",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Samurai SMG",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "SCAR-H",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Sighted AK-47",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Sighted M4A1",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Sighted SCAR-H",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Soviet PPSh-41",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Spec Ops Vector SMG",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "SWAT 416",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Τ4/Μ2 Carbine",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "UMP SMG",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "Uzi 9mm",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Vector SMG",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "X-36C*(Doomsday Pack)*",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  }
+]

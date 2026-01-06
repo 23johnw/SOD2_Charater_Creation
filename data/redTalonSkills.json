@@ -1,0 +1,37 @@
+[
+  {
+    "Red Talon Skill": "Combat Medics",
+    "Equivalent To": "Medicine + Surgery",
+    "Max Level": "7"
+  },
+  {
+    "Red Talon Skill": "Demolitions",
+    "Equivalent To": "Electronics + Munitions",
+    "Max Level": "7"
+  },
+  {
+    "Red Talon Skill": "Mobile Operations",
+    "Equivalent To": "Automechanics + Driving",
+    "Max Level": "7"
+  },
+  {
+    "Red Talon Skill": "Hackology",
+    "Equivalent To": "Programming + extra Outpost slot",
+    "Max Level": "7"
+  },
+  {
+    "Red Talon Skill": "Gut Packing",
+    "Equivalent To": "Nutrition + Cooking",
+    "Max Level": "7"
+  },
+  {
+    "Red Talon Skill": "Infrastructure",
+    "Equivalent To": "Plumbing + Utilities",
+    "Max Level": "7"
+  },
+  {
+    "Red Talon Skill": "Fortifications",
+    "Equivalent To": "Construction + Materials income",
+    "Max Level": "7"
+  }
+]

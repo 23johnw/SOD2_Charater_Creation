@@ -1,0 +1,237 @@
+[
+  {
+    "Name": "10/22 Carbine",
+    "Ammo": ".22 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "AR-15",
+    "Ammo": "5.56mm rounds",
+    "": "p"
+  },
+  {
+    "Name": "Arctic Warrior",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Big Hank Rifle",
+    "Ammo": ".357 HP rounds",
+    "": ""
+  },
+  {
+    "Name": "Bolt Scout",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Civilian Uzi 22 Carbine",
+    "Ammo": ".22 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "Civilian Vector Carbine",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "Classic SKS Rifle",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "CLEO Battle Rifle",
+    "Ammo": "CLEO Ammo Packs",
+    "": ""
+  },
+  {
+    "Name": "CLEO Blast Rifle",
+    "Ammo": "CLEO Ammo Packs",
+    "": ""
+  },
+  {
+    "Name": "CLEO Sharpshooter Rifle",
+    "Ammo": "CLEO Ammo Packs",
+    "": ""
+  },
+  {
+    "Name": "D-BAR",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "D-Bartini",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Doomsday Carbine",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "Duvall Outrider",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Echo-S2 Rifle *(Heartland)*",
+    "Ammo": ".22 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "Exterminator's 10/22",
+    "Ammo": ".22 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "Fake-A 47",
+    "Ammo": ".22 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "GSG-W",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Heirloom Model 70",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Hunter SKS",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Hunter's Bolt Scout",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Hunter's Model 70",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "JL94 Civilian",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "JL94 Custom",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M1 Carbine",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M1 Para Carbine",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M1-A",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M1-A Short",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M14 DMR",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "M1903A4 Sniper Rifle",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Model 70 Classic",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Model 92 Rifle",
+    "Ammo": ".44 Magnum HP rounds",
+    "": ""
+  },
+  {
+    "Name": "Police Sniper Rifle",
+    "Ammo": "5.56mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Prepper's 10/22",
+    "Ammo": ".22 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "RC-9 Police Carbine",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Restored Echo-S2 Rifle",
+    "Ammo": ".22 cal rounds",
+    "": ""
+  },
+  {
+    "Name": "Scoped Big Hank Rifle",
+    "Ammo": ".357 HP rounds",
+    "": ""
+  },
+  {
+    "Name": "Scoped Model 92 Rifle",
+    "Ammo": ".44 Magnum HP rounds",
+    "": ""
+  },
+  {
+    "Name": "Seabass Model 94",
+    "Ammo": ".357 HP rounds",
+    "": ""
+  },
+  {
+    "Name": "Simple S2K",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "SOCOM II",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Spec Ops AW",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "SVD",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Trail Blazer S2K",
+    "Ammo": "9mm rounds",
+    "": ""
+  },
+  {
+    "Name": "Trumbull Gatekeeper",
+    "Ammo": "7.62mm rounds",
+    "": ""
+  },
+  {
+    "Name": "USC Carbine",
+    "Ammo": ".45 cal rounds",
+    "": ""
+  }
+]

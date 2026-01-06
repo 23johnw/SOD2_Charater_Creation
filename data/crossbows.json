@@ -1,0 +1,47 @@
+[
+  {
+    "Name": "Classic Crossbow",
+    "Ammo": "Standard Bolts",
+    "": ""
+  },
+  {
+    "Name": "Echo-X1 Combat Crossbow",
+    "Ammo": "Standard Bolts",
+    "": "p"
+  },
+  {
+    "Name": "Echo-X2 Sniper Crossbow",
+    "Ammo": "Standard Bolts",
+    "": ""
+  },
+  {
+    "Name": "Echo-X3 Repeating Crossbow",
+    "Ammo": "Light Bolts",
+    "": ""
+  },
+  {
+    "Name": "Homemade Crossbow",
+    "Ammo": "Light Bolts",
+    "": ""
+  },
+  {
+    "Name": "Homemade Scoped Crossbow",
+    "Ammo": "Standard Bolts",
+    "": ""
+  },
+  {
+    "Name": "Hunting Crossbow",
+    "Ammo": "Standard Bolts",
+    "": ""
+  },
+  {
+    "Name": "Light Crossbow",
+    "Ammo": "Light Bolts",
+    "": ""
+  },
+  {
+    "Name": "Midnight Solstice",
+    "Ammo": "Light Bolts",
+    "": ""
+  }
+]

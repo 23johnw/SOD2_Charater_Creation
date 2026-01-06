@@ -1,0 +1,110 @@
+[
+  {
+    "Background Name": "African American",
+    "Internal ID": "AfricanAmerican",
+    "Effect": "+10 Light Carry Capacity",
+    "Hero Bonus": "Backing Up"
+  },
+  {
+    "Background Name": "Mexican American",
+    "Internal ID": "MexicanAmerican",
+    "Effect": "+10% Influence Gained",
+    "Hero Bonus": "Friendly Outreach"
+  },
+  {
+    "Background Name": "Anglo American",
+    "Internal ID": "AngloAmerican",
+    "Effect": "+10% Standing Rewards",
+    "Hero Bonus": "Setting the Pace"
+  },
+  {
+    "Background Name": "Lebanese American",
+    "Internal ID": "LebaneseAmerican",
+    "Effect": "+10% Influence Gained",
+    "Hero Bonus": "Friendly Outreach"
+  },
+  {
+    "Background Name": "Indian American Gujarat",
+    "Internal ID": "IndianAmerican_Gujarat",
+    "Effect": "+10% Influence Gained",
+    "Hero Bonus": "Friendly Outreach"
+  },
+  {
+    "Background Name": "Asian American",
+    "Internal ID": "AsianAmerican",
+    "Effect": "+10% Influence Gained",
+    "Hero Bonus": "Friendly Outreach"
+  },
+  {
+    "Background Name": "British American",
+    "Internal ID": "BritishAmerican",
+    "Effect": "+10% Standing Rewards",
+    "Hero Bonus": "Setting the Pace"
+  },
+  {
+    "Background Name": "Central American",
+    "Internal ID": "CentralAmerican",
+    "Effect": "+10% Influence Gained",
+    "Hero Bonus": "Friendly Outreach"
+  },
+  {
+    "Background Name": "Eastern European",
+    "Internal ID": "EasternEuropean",
+    "Effect": "+10 Max Health",
+    "Hero Bonus": "Tough Love"
+  },
+  {
+    "Background Name": "French American",
+    "Internal ID": "FrenchAmerican",
+    "Effect": "+10% Standing Rewards",
+    "Hero Bonus": "Setting the Pace"
+  },
+  {
+    "Background Name": "German American",
+    "Internal ID": "GermanAmerican",
+    "Effect": "+10% Standing Rewards",
+    "Hero Bonus": "Setting the Pace"
+  },
+  {
+    "Background Name": "Irish American",
+    "Internal ID": "IrishAmerican",
+    "Effect": "+10 Max Stamina",
+    "Hero Bonus": "Breathing Exercises"
+  },
+  {
+    "Background Name": "Italian American",
+    "Internal ID": "ItalianAmerican",
+    "Effect": "+10 Max Stamina",
+    "Hero Bonus": "Breathing Exercises"
+  },
+  {
+    "Background Name": "Jewish American",
+    "Internal ID": "JewishAmerican",
+    "Effect": "+10% Influence Gained",
+    "Hero Bonus": "Friendly Outreach"
+  },
+  {
+    "Background Name": "Native American",
+    "Internal ID": "NativeAmerican",
+    "Effect": "+10 Max Health",
+    "Hero Bonus": "Tough Love"
+  },
+  {
+    "Background Name": "Pacific Islander",
+    "Internal ID": "PacificIslander",
+    "Effect": "+10 Max Health",
+    "Hero Bonus": "Tough Love"
+  },
+  {
+    "Background Name": "Scandinavian American",
+    "Internal ID": "ScandinavianAmerican",
+    "Effect": "+10% Standing Rewards",
+    "Hero Bonus": "Setting the Pace"
+  },
+  {
+    "Background Name": "South American",
+    "Internal ID": "SouthAmerican",
+    "Effect": "+10% Influence Gained",
+    "Hero Bonus": "Friendly Outreach"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "name": "sod2-character-generator",
+  "version": "1.0.0",
+  "description": "State of Decay 2 Character Generator - Web-based tool for creating custom characters compatible with Community Editor",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "state-of-decay-2",
+    "character-generator",
+    "sod2",
+    "community-editor"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}

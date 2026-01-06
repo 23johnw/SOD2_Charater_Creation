@@ -1,0 +1,42 @@
+[
+  {
+    "Quirk Skill Name": "Driving",
+    "Max Level": "1",
+    "Notable Benefit": "+100% Fuel Efficiency / +50% Vehicle Quietness"
+  },
+  {
+    "Quirk Skill Name": "Lichenology",
+    "Max Level": "1",
+    "Notable Benefit": "+2 Meds per day / Knowledge of Gardening"
+  },
+  {
+    "Quirk Skill Name": "Sewing",
+    "Max Level": "1",
+    "Notable Benefit": "+20 Max HP / +1 Max Consumable Stack"
+  },
+  {
+    "Quirk Skill Name": "Hygiene",
+    "Max Level": "1",
+    "Notable Benefit": "+100 Infection Resistance (Community)"
+  },
+  {
+    "Quirk Skill Name": "Fishing",
+    "Max Level": "1",
+    "Notable Benefit": "+2 Food per day"
+  },
+  {
+    "Quirk Skill Name": "Sleep Psychology",
+    "Max Level": "1",
+    "Notable Benefit": "+2 Beds (Community)"
+  },
+  {
+    "Quirk Skill Name": "Scrum Certification",
+    "Max Level": "1",
+    "Notable Benefit": "+50% Global Build Speed / +2 Labor"
+  },
+  {
+    "Quirk Skill Name": "Soundproofing",
+    "Max Level": "1",
+    "Notable Benefit": "-3 Zombie Threat (Silence)"
+  }
+]
