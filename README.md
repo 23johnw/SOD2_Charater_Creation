@@ -2,7 +2,7 @@
 
 A web-based character generator for State of Decay 2 that creates XML files compatible with the Community Editor.
 
-🌐 **Live Demo**: [View on GitHub Pages](https://YOUR_USERNAME.github.io/sod2-character-generator/)
+🌐 **Live Demo**: [View on GitHub Pages](https://23johnw.github.io/SOD2_Charater_Creation/)
 
 ## Features
 
@@ -129,7 +129,7 @@ Tested in Chrome, Firefox, and Edge.
    - Click **Settings** → **Pages**
    - Under **Source**, select branch `main` (or `master`)
    - Click **Save**
-   - Your site will be live at: `https://YOUR_USERNAME.github.io/sod2-character-generator/`
+   - Your site will be live at: `https://23johnw.github.io/SOD2_Charater_Creation/`
 
 4. **Update the live demo link** in this README with your actual GitHub Pages URL
 
