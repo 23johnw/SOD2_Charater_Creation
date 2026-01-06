@@ -41,6 +41,15 @@ class DataLoader {
             
             // Load traits
             const traitsRaw = await this.loadJSON('data/traits.json');
+            
+            // Load trait ID mapping if available
+            try {
+                this.data.traitIdMapping = await this.loadJSON('data/trait-id-mapping.json');
+            } catch (e) {
+                console.warn('Trait ID mapping not found, using fallback conversion');
+                this.data.traitIdMapping = {};
+            }
+            
             this.data.traits = this.processTraits(traitsRaw);
             // Also try to load processed traits if available
             try {
