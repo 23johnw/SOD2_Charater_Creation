@@ -98,38 +98,55 @@ const csvContent = fs.readFileSync(csvPath, 'utf8');
 const lines = csvContent.split('\n');
 const headers = lines[0].split(',').map(h => h.trim());
 
-// Parse CSV
+// Parse CSV - handle multi-line quoted fields
 const csvTraits = [];
+let currentLine = '';
+let inQuotes = false;
+
 for (let i = 1; i < lines.length; i++) {
-    const line = lines[i].trim();
-    if (!line) continue;
+    const line = lines[i];
     
-    // Handle CSV with quoted fields
-    const values = [];
-    let current = '';
-    let inQuotes = false;
-    
-    for (let j = 0; j < line.length; j++) {
-        const char = line[j];
-        if (char === '"') {
-            inQuotes = !inQuotes;
-        } else if (char === ',' && !inQuotes) {
-            values.push(current.trim());
-            current = '';
-        } else {
-            current += char;
-        }
+    // Check if we're continuing a multi-line field
+    if (currentLine) {
+        currentLine += '\n' + line;
+    } else {
+        currentLine = line;
     }
-    values.push(current.trim());
     
-    if (values.length >= headers.length) {
-        const trait = {};
-        headers.forEach((header, idx) => {
-            trait[header] = values[idx] || '';
-        });
-        if (trait.Name && trait.Name.trim()) {
-            csvTraits.push(trait);
+    // Count quotes to see if we're still in a quoted field
+    const quoteCount = (currentLine.match(/"/g) || []).length;
+    inQuotes = (quoteCount % 2) !== 0;
+    
+    // If we're not in quotes, we can parse this line
+    if (!inQuotes) {
+        const values = [];
+        let current = '';
+        let inFieldQuotes = false;
+        
+        for (let j = 0; j < currentLine.length; j++) {
+            const char = currentLine[j];
+            if (char === '"') {
+                inFieldQuotes = !inFieldQuotes;
+            } else if (char === ',' && !inFieldQuotes) {
+                values.push(current.trim());
+                current = '';
+            } else {
+                current += char;
+            }
         }
+        values.push(current.trim());
+        
+        if (values.length >= headers.length) {
+            const trait = {};
+            headers.forEach((header, idx) => {
+                trait[header] = values[idx] || '';
+            });
+            if (trait.Name && trait.Name.trim()) {
+                csvTraits.push(trait);
+            }
+        }
+        
+        currentLine = ''; // Reset for next line
     }
 }
 
@@ -252,6 +269,27 @@ matched.slice(0, 30).forEach(m => {
     const matchInfo = m.matchType === 'partial' ? ` (matched with "${m.matchedDisplayName}")` : '';
     console.log(`"${m.csvName}" -> "${m.gameString}" [${m.matchType}${matchInfo}]`);
 });
+
+// Check for Preschool Teacher specifically and add if missing
+const preschoolMatch = matched.find(m => m.csvName.includes('Preschool'));
+if (preschoolMatch) {
+    console.log(`\n✓ Found Preschool Teacher: "${preschoolMatch.csvName}" -> "${preschoolMatch.gameString}"`);
+} else {
+    console.log('\n⚠ Preschool Teacher not found in matched list - adding manually');
+    // Add it manually if it exists in CSV
+    const preschoolCsv = csvTraits.find(t => t.Name && t.Name.trim() === 'Preschool Teacher');
+    if (preschoolCsv) {
+        if (mappings['Preschool Teacher']) {
+            finalMapping['Preschool Teacher'] = mappings['Preschool Teacher'];
+            matched.push({ csvName: 'Preschool Teacher', gameString: mappings['Preschool Teacher'], matchType: 'manual' });
+            console.log(`  ✓ Added: "Preschool Teacher" -> "${mappings['Preschool Teacher']}"`);
+        } else {
+            console.log(`  ✗ "Preschool Teacher" not found in UILists mappings`);
+        }
+    } else {
+        console.log(`  ✗ "Preschool Teacher" not found in CSV`);
+    }
+}
 
 if (unmatched.length > 0) {
     console.log('\n=== Sample Unmatched Traits ===');

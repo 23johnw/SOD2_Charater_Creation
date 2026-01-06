@@ -1,7 +1,143 @@
 {
-  "total": 281,
-  "matched": 281,
-  "unmatched": 0,
-  "matchRate": "100.0%",
-  "unmatchedTraits": []
+  "total": 972,
+  "matched": 945,
+  "unmatched": 27,
+  "matchRate": "97.2%",
+  "unmatchedTraits": [
+    {
+      "name": "Always Vigilant",
+      "description": "You can't let anything get by you; not anymore. I'm always watching for the \nnext disaster.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Cooked for the Squad \n\n*(Red Talon Contractors only)*",
+      "description": "Red Talon doesn't have a lot of full-time cooks, but when you're good, you \nget the job.",
+      "providedSkill": "Gut Packing"
+    },
+    {
+      "name": "Facilities Engineer \n\n*(Red Talon Contractors only)*",
+      "description": "You want to live somewhere long-term, you're going to need an \ninfrastructure.",
+      "providedSkill": "Infrastructure"
+    },
+    {
+      "name": "Filthy",
+      "description": "In the nineteenth century, people only bathed like once a year. This is \nfrontier life, man.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Firearms Enthusiast \n\n*(Red Talon Contractors only)*",
+      "description": "Your weapon is the only thing between you and certain death. You have to \ntake care of it.",
+      "providedSkill": "Firearms Maintenance"
+    },
+    {
+      "name": "Flatuent",
+      "description": "He who smelt it dealt it.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Front Line Experience \n\n*(Red Talon Contractors only)*",
+      "description": "I've been on the real frontier. It's a constant siege, day in and day out.",
+      "providedSkill": "Heroism"
+    },
+    {
+      "name": "Goes by Last Name",
+      "description": "My friends always called me by my last name, and it sort of stuck \nthroughout my life.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Hated Camping",
+      "description": "My idea of camping is a hotel without room service. Sleeping on the ground \nis not an option.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Lacks Boundaries",
+      "description": "You don't want a hug, or a backrub? How am I supposed to say hi, then? A \npat on the butt?",
+      "providedSkill": ""
+    },
+    {
+      "name": "Learned Computing",
+      "description": "I don't know if we'll ever have tech industry again, but I've been reading \nup on what's left.",
+      "providedSkill": "Computers"
+    },
+    {
+      "name": "Learned Medicine",
+      "description": "Now that death is around ever corner, I've started reading up on first aid \nand CPR.",
+      "providedSkill": "Medicine"
+    },
+    {
+      "name": "Learned to Cook",
+      "description": "I've read a stack of cookbooks since the outbreak. I think I may just know \nwhat I'm doing.",
+      "providedSkill": "Cooking"
+    },
+    {
+      "name": "Learned to Garden",
+      "description": "I read everything I could about gardening after the outbreak, hoping I \ncould put it to use.",
+      "providedSkill": "Gardening"
+    },
+    {
+      "name": "Learned Utilities",
+      "description": "I've been reading books on plumbing and electrical work, in case we ever \nneed to fix something.",
+      "providedSkill": "Utilities"
+    },
+    {
+      "name": "Left for Dead",
+      "description": "*Unknown*",
+      "providedSkill": ""
+    },
+    {
+      "name": "Mentally Trained",
+      "description": "I went through a training regimen that prepared me to handle a lot of \ndifferent mental tasks.",
+      "providedSkill": ""
+    },
+    {
+      "name": "No Filter",
+      "description": "Folks think I say whatever pops into my head. Maybe I should pop something \ninto THEIR heads.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Noisy",
+      "description": "Yeah, I'm banging pots and pans. How else do you make breakfast?",
+      "providedSkill": ""
+    },
+    {
+      "name": "Physically Trained",
+      "description": "I went through a training regimen that prepared me to handle a lot of \ndifferent physical tasks.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Practices at the Range \n\n*(Red Talon Contractors only)*",
+      "description": "Being good isn't enough. You need a headshot every time.",
+      "providedSkill": "Warfighting"
+    },
+    {
+      "name": "Short Change Hero",
+      "description": "This ain't no place for no Hero. This ain't no place for no better man.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Talks Loudly",
+      "description": "My volume dial has two settings: Off and HEEEEEEY!",
+      "providedSkill": ""
+    },
+    {
+      "name": "Taxidermist",
+      "description": "I thought of putting myself forward as a sort of surgeon … then I realized \nthat was insane.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Trained at Fighting",
+      "description": "I went through a training regimen for a variety of different combat \nscenarios.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Trained at Shooting",
+      "description": "I went through a training regimen that taught me a variety of different \nshooting techniques.",
+      "providedSkill": ""
+    },
+    {
+      "name": "Worked as a Pioneer \n\n*(Red Talon Contractors only)*",
+      "description": "We were sent into newly cleared territory to build walls and prevent the \nzeds from coming back.",
+      "providedSkill": "Fortifications"
+    }
+  ]
 }
