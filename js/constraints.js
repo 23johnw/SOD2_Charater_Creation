@@ -99,8 +99,37 @@ function showValidationFeedback(validation) {
     const exportSection = document.querySelector('.form-section:last-child');
     const buttonGroup = exportSection?.querySelector('.button-group');
     
-    // If elements don't exist, skip validation feedback (might be called during XML generation)
+    // If elements don't exist, skip validation feedback (might be called during XML generation or form population)
     if (!exportSection || !buttonGroup) {
+        return;
+    }
+    
+    // Verify buttonGroup is actually a child of exportSection before using insertBefore
+    if (!exportSection.contains(buttonGroup)) {
+        // If buttonGroup is not a child, append to exportSection instead
+        if (validation.valid) {
+            const success = document.createElement('div');
+            success.className = 'validation-success';
+            success.textContent = '✓ Character is valid and ready to export';
+            exportSection.appendChild(success);
+        } else {
+            validation.errors.forEach(error => {
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'validation-error';
+                errorDiv.textContent = `✗ ${error}`;
+                exportSection.appendChild(errorDiv);
+            });
+        }
+        
+        if (validation.warnings.length > 0) {
+            validation.warnings.forEach(warning => {
+                const warningDiv = document.createElement('div');
+                warningDiv.className = 'validation-error';
+                warningDiv.style.color = '#ff9800';
+                warningDiv.textContent = `⚠ ${warning}`;
+                exportSection.appendChild(warningDiv);
+            });
+        }
         return;
     }
     

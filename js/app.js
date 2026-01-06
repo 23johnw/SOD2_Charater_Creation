@@ -714,12 +714,47 @@ function populateFormFromCharacter(char, options = {}) {
             if (staminaInput) staminaInput.value = char.stats.stamina || 100;
         }
         
-        // Update all character data
-        updateCharacterData();
+        // Update all character data (but skip validation during form population to avoid DOM errors)
+        // We'll manually update characterData without triggering validation
+        updateCharacterDataWithoutValidation();
     } catch (error) {
         console.error('Error populating form:', error);
         showNotification('Error populating form. Check console for details.', 'error');
     }
+}
+
+// Update character data without triggering validation (used during form population)
+function updateCharacterDataWithoutValidation() {
+    // Update characterData object from form
+    characterData.firstName = document.getElementById('firstName').value;
+    characterData.lastName = document.getElementById('lastName').value;
+    characterData.nickname = document.getElementById('nickname').value;
+    characterData.gender = document.getElementById('gender').value;
+    characterData.ageRange = document.getElementById('ageRange').value;
+    characterData.pronoun = document.getElementById('pronoun').value;
+    characterData.culturalBackground = document.getElementById('culturalBackground').value;
+    characterData.voiceID = document.getElementById('voiceID').value;
+    characterData.humanDefinition = document.getElementById('humanDefinition').value;
+    characterData.philosophy1 = document.getElementById('philosophy1').value;
+    characterData.philosophy2 = document.getElementById('philosophy2').value;
+    characterData.standingLevel = document.getElementById('standingLevel').value;
+    characterData.leaderType = document.getElementById('leaderType').value;
+    characterData.heroBonus = document.getElementById('heroBonus').value;
+    characterData.stats.health = parseInt(document.getElementById('currentHealth').value) || 100;
+    characterData.stats.stamina = parseInt(document.getElementById('currentStamina').value) || 100;
+    
+    // Update skills
+    ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
+        characterData.skills[skill].level = parseInt(document.getElementById(`${skill}Level`).value) || 0;
+        characterData.skills[skill].specialty = document.getElementById(`${skill}SpecialtySelect`)?.value || '';
+    });
+    
+    // Update 5th skill
+    const fifthSkillType = document.querySelector('input[name="fifthSkillType"]:checked')?.value || 'none';
+    characterData.skills.fifthSkill.type = fifthSkillType;
+    characterData.skills.fifthSkill.skill = document.getElementById('fifthSkill').value || '';
+    
+    updateDescriptorTraits();
 }
 
 function showNotification(message, type = 'info') {
