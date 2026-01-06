@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     initializeForm();
     setupEventListeners();
     
+    // Make characterData globally available for randomizer
+    window.characterData = characterData;
+    
     console.log('✓ Application initialized');
 });
 
@@ -534,17 +537,33 @@ function exportCharacter() {
 
 // Randomizer functions
 function randomizeFullCharacter() {
-    const options = {
-        gender: Math.random() > 0.5 ? 'Male' : 'Female',
-        traitMode: document.querySelector('input[name="traitMode"]:checked')?.value || 'mixed',
-        traitLimit: parseInt(document.getElementById('traitLimit')?.value || 12)
-    };
-    
-    const randomChar = randomizer.randomizeCharacter(options);
-    populateFormFromCharacter(randomChar);
-    
-    // Show notification
-    showNotification('Character randomized!', 'success');
+    try {
+        console.log('Randomizing full character...');
+        
+        if (!randomizer) {
+            console.error('Randomizer not available');
+            showNotification('Error: Randomizer not loaded', 'error');
+            return;
+        }
+        
+        const options = {
+            gender: Math.random() > 0.5 ? 'Male' : 'Female',
+            traitMode: document.querySelector('input[name="traitMode"]:checked')?.value || 'mixed',
+            traitLimit: parseInt(document.getElementById('traitLimit')?.value || 12)
+        };
+        
+        console.log('Randomizer options:', options);
+        const randomChar = randomizer.randomizeCharacter(options);
+        console.log('Randomized character:', randomChar);
+        
+        populateFormFromCharacter(randomChar);
+        
+        // Show notification
+        showNotification('Character randomized!', 'success');
+    } catch (error) {
+        console.error('Error randomizing character:', error);
+        showNotification('Error randomizing character. Check console for details.', 'error');
+    }
 }
 
 function randomizeSelected() {
@@ -576,90 +595,116 @@ function randomizeSelected() {
 }
 
 function populateFormFromCharacter(char, options = {}) {
-    // Name and age
-    if (options.name !== false) {
-        document.getElementById('firstName').value = char.firstName;
-        document.getElementById('lastName').value = char.lastName;
-        document.getElementById('nickname').value = char.nickname;
-        document.getElementById('ageRange').value = char.ageRange;
-        document.getElementById('gender').value = char.gender;
-        document.getElementById('pronoun').value = char.pronoun;
-        updateVoiceOptions();
-        updateHumanDefinitionOptions();
-    }
+    try {
+        // Name and age
+        if (options.name !== false) {
+            document.getElementById('firstName').value = char.firstName || '';
+            document.getElementById('lastName').value = char.lastName || '';
+            document.getElementById('nickname').value = char.nickname || '';
+            document.getElementById('ageRange').value = char.ageRange || 'MiddleAged';
+            document.getElementById('gender').value = char.gender || 'Female';
+            document.getElementById('pronoun').value = char.pronoun || 'She';
+            // Trigger change events to update dependent fields
+            document.getElementById('gender').dispatchEvent(new Event('change'));
+            setTimeout(() => {
+                updateVoiceOptions();
+                updateHumanDefinitionOptions();
+            }, 100);
+        }
     
-    // Attributes
-    if (options.culturalBackground !== false) {
-        document.getElementById('culturalBackground').value = char.culturalBackground;
-    }
-    if (options.voice !== false) {
-        document.getElementById('voiceID').value = char.voiceID;
-    }
-    if (options.humanDefinition !== false) {
-        document.getElementById('humanDefinition').value = char.humanDefinition;
-    }
-    
-    // Philosophies
-    document.getElementById('philosophy1').value = char.philosophy1;
-    document.getElementById('philosophy2').value = char.philosophy2;
-    
-    // Standing and leader
-    if (options.standingLevel !== false) {
-        document.getElementById('standingLevel').value = char.standingLevel;
-    }
-    if (options.leaderType !== false) {
-        document.getElementById('leaderType').value = char.leaderType;
-    }
-    
-    // Skills
-    if (options.skills !== false) {
-        ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
-            const level = char.skills[skill].level;
-            document.getElementById(`${skill}Level`).value = level;
-            document.getElementById(`${skill}LevelDisplay`).textContent = level;
-            
-            // Show/hide specialty based on level
-            const specialtyDiv = document.getElementById(`${skill}Specialty`);
-            if (level >= 5) {
-                specialtyDiv.style.display = 'block';
-                if (char.skills[skill].specialty) {
-                    document.getElementById(`${skill}SpecialtySelect`).value = char.skills[skill].specialty;
-                }
-            } else {
-                specialtyDiv.style.display = 'none';
-                document.getElementById(`${skill}SpecialtySelect`).value = '';
-            }
-        });
+        // Attributes
+        if (options.culturalBackground !== false) {
+            const bgSelect = document.getElementById('culturalBackground');
+            if (bgSelect) bgSelect.value = char.culturalBackground || '';
+        }
+        if (options.voice !== false) {
+            const voiceSelect = document.getElementById('voiceID');
+            if (voiceSelect) voiceSelect.value = char.voiceID || '';
+        }
+        if (options.humanDefinition !== false) {
+            const modelSelect = document.getElementById('humanDefinition');
+            if (modelSelect) modelSelect.value = char.humanDefinition || '';
+        }
         
-        // 5th skill
-        const fifthSkillType = char.skills.fifthSkill.type;
-        const fifthSkillRadio = document.querySelector(`input[name="fifthSkillType"][value="${fifthSkillType}"]`);
-        if (fifthSkillRadio) {
-            fifthSkillRadio.checked = true;
-            // Trigger change to populate options
-            fifthSkillRadio.dispatchEvent(new Event('change'));
-            if (fifthSkillType !== 'none' && char.skills.fifthSkill.skill) {
-                setTimeout(() => {
-                    document.getElementById('fifthSkill').value = char.skills.fifthSkill.skill;
-                }, 100);
+        // Philosophies
+        const philo1Select = document.getElementById('philosophy1');
+        const philo2Select = document.getElementById('philosophy2');
+        if (philo1Select) philo1Select.value = char.philosophy1 || 'Prudent';
+        if (philo2Select) philo2Select.value = char.philosophy2 || 'Pragmatic';
+        
+        // Standing and leader
+        if (options.standingLevel !== false) {
+            const standingSelect = document.getElementById('standingLevel');
+            if (standingSelect) standingSelect.value = char.standingLevel || 'Citizen';
+        }
+        if (options.leaderType !== false) {
+            const leaderSelect = document.getElementById('leaderType');
+            if (leaderSelect) leaderSelect.value = char.leaderType || 'None';
+        }
+        
+        // Skills
+        if (options.skills !== false && char.skills) {
+            ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
+                const level = char.skills[skill]?.level || 0;
+                const levelInput = document.getElementById(`${skill}Level`);
+                const levelDisplay = document.getElementById(`${skill}LevelDisplay`);
+                if (levelInput) levelInput.value = level;
+                if (levelDisplay) levelDisplay.textContent = level;
+                
+                // Show/hide specialty based on level
+                const specialtyDiv = document.getElementById(`${skill}Specialty`);
+                const specialtySelect = document.getElementById(`${skill}SpecialtySelect`);
+                if (level >= 5 && specialtyDiv) {
+                    specialtyDiv.style.display = 'block';
+                    if (char.skills[skill].specialty && specialtySelect) {
+                        specialtySelect.value = char.skills[skill].specialty;
+                    }
+                } else if (specialtyDiv) {
+                    specialtyDiv.style.display = 'none';
+                    if (specialtySelect) specialtySelect.value = '';
+                }
+            });
+            
+            // 5th skill
+            if (char.skills.fifthSkill) {
+                const fifthSkillType = char.skills.fifthSkill.type || 'none';
+                const fifthSkillRadio = document.querySelector(`input[name="fifthSkillType"][value="${fifthSkillType}"]`);
+                if (fifthSkillRadio) {
+                    fifthSkillRadio.checked = true;
+                    // Trigger change to populate options
+                    fifthSkillRadio.dispatchEvent(new Event('change'));
+                    if (fifthSkillType !== 'none' && char.skills.fifthSkill.skill) {
+                        setTimeout(() => {
+                            const fifthSkillSelect = document.getElementById('fifthSkill');
+                            if (fifthSkillSelect) fifthSkillSelect.value = char.skills.fifthSkill.skill;
+                        }, 100);
+                    }
+                }
             }
         }
+        
+        // Traits
+        if (options.traits !== false && char.traits) {
+            characterData.traits.optional = char.traits.optional || [];
+            if (typeof updateSelectedTraitsDisplay === 'function') {
+                updateSelectedTraitsDisplay();
+            }
+        }
+        
+        // Stats
+        if (options.stats !== false && char.stats) {
+            const healthInput = document.getElementById('currentHealth');
+            const staminaInput = document.getElementById('currentStamina');
+            if (healthInput) healthInput.value = char.stats.health || 100;
+            if (staminaInput) staminaInput.value = char.stats.stamina || 100;
+        }
+        
+        // Update all character data
+        updateCharacterData();
+    } catch (error) {
+        console.error('Error populating form:', error);
+        showNotification('Error populating form. Check console for details.', 'error');
     }
-    
-    // Traits
-    if (options.traits !== false) {
-        characterData.traits.optional = char.traits.optional || [];
-        updateSelectedTraitsDisplay();
-    }
-    
-    // Stats
-    if (options.stats !== false) {
-        document.getElementById('currentHealth').value = char.stats.health;
-        document.getElementById('currentStamina').value = char.stats.stamina;
-    }
-    
-    // Update all character data
-    updateCharacterData();
 }
 
 function showNotification(message, type = 'info') {
@@ -670,11 +715,13 @@ function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
+    
+    const bgColor = type === 'success' ? '#4caf50' : type === 'error' ? '#f44336' : '#2196f3';
     notification.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
-        background: ${type === 'success' ? '#4caf50' : '#2196f3'};
+        background: ${bgColor};
         color: white;
         padding: 15px 20px;
         border-radius: 5px;

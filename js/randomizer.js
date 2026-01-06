@@ -49,29 +49,40 @@ class Randomizer {
 
     // Random cultural background
     randomCulturalBackground() {
-        if (!dataLoader.data.culturalBackgrounds) return 'AfricanAmerican';
-        const backgrounds = dataLoader.data.culturalBackgrounds.map(bg => bg.Name || bg.name || bg);
-        return backgrounds[Math.floor(Math.random() * backgrounds.length)] || 'AfricanAmerican';
+        if (!dataLoader || !dataLoader.data || !dataLoader.data.culturalBackgrounds) return 'AfricanAmerican';
+        const backgrounds = dataLoader.data.culturalBackgrounds;
+        if (backgrounds.length === 0) return 'AfricanAmerican';
+        const bg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        // Return the Internal ID which is what the form uses
+        return bg['Internal ID'] || bg.Name || bg.name || bg || 'AfricanAmerican';
     }
 
     // Random voice
     randomVoice(gender) {
+        if (!dataLoader || !dataLoader.data) return 'Kee';
         const voices = gender === 'Male' ? dataLoader.data.maleVoices : dataLoader.data.femaleVoices;
         if (!voices || voices.length === 0) return 'Kee';
         const voice = voices[Math.floor(Math.random() * voices.length)];
-        return voice.Name || voice.name || voice || 'Kee';
+        // Return the Voice ID which is what the form uses
+        return voice['Voice ID'] || voice.Name || voice.name || voice || 'Kee';
     }
 
     // Random human definition (character model)
     randomHumanDefinition(gender) {
-        if (!dataLoader.data.humanDefinitions) return '';
-        const definitions = dataLoader.data.humanDefinitions.filter(def => {
-            const name = def.Name || def.name || def;
-            return gender === 'Male' ? name.includes('Male') : name.includes('Female');
+        if (!dataLoader || !dataLoader.data) return '';
+        const allDefs = Array.isArray(dataLoader.data.humanDefinitions) 
+            ? dataLoader.data.humanDefinitions 
+            : (gender === 'Male' ? dataLoader.data.humanDefinitions.male : dataLoader.data.humanDefinitions.female) || [];
+        
+        const definitions = allDefs.filter(def => {
+            if (!def['Internal ID (For Editor)']) return false;
+            const genderField = def.Gender || '';
+            return genderField === gender;
         });
+        
         if (definitions.length === 0) return '';
         const def = definitions[Math.floor(Math.random() * definitions.length)];
-        return def.Name || def.name || def;
+        return def['Internal ID (For Editor)'] || def.Name || def.name || def || '';
     }
 
     // Random philosophy
@@ -105,15 +116,18 @@ class Randomizer {
             skills[skill].level = Math.floor(Math.random() * 8); // 0-7
             
             // Random specialty if level >= 5
-            if (skills[skill].level >= 5 && dataLoader.data.coreSkills) {
+            if (skills[skill].level >= 5 && dataLoader && dataLoader.data && dataLoader.data.coreSkills) {
                 const skillData = dataLoader.data.coreSkills.find(s => {
-                    const name = s.Name || s.name || s;
-                    return name.toLowerCase() === skill;
+                    const skillName = s['Core Skill'] || s.Name || s.name || s;
+                    return skillName.toLowerCase() === skill;
                 });
-                if (skillData && skillData.Specializations) {
-                    const specs = Array.isArray(skillData.Specializations) 
-                        ? skillData.Specializations 
-                        : Object.values(skillData.Specializations || {});
+                if (skillData) {
+                    // Try different possible field names for specializations
+                    const specA = skillData['Specialization A'];
+                    const specB = skillData['Specialization B'];
+                    const specC = skillData['Specialization C'];
+                    const specD = skillData['Specialization D'];
+                    const specs = [specA, specB, specC, specD].filter(s => s && s.trim() !== '');
                     if (specs.length > 0) {
                         skills[skill].specialty = specs[Math.floor(Math.random() * specs.length)];
                     }
@@ -249,17 +263,23 @@ class Randomizer {
             gender: gender,
             ageRange: age,
             pronoun: pronoun,
-            culturalBackground: options.culturalBackground !== false ? this.randomCulturalBackground() : characterData.culturalBackground,
-            voiceID: options.voice !== false ? this.randomVoice(gender) : characterData.voiceID,
-            humanDefinition: options.humanDefinition !== false ? this.randomHumanDefinition(gender) : characterData.humanDefinition,
+            culturalBackground: options.culturalBackground !== false ? this.randomCulturalBackground() : (window.characterData?.culturalBackground || 'AfricanAmerican'),
+            voiceID: options.voice !== false ? this.randomVoice(gender) : (window.characterData?.voiceID || 'Kee'),
+            humanDefinition: options.humanDefinition !== false ? this.randomHumanDefinition(gender) : (window.characterData?.humanDefinition || ''),
             philosophy1: philo1,
             philosophy2: philo2,
-            standingLevel: options.standingLevel !== false ? this.randomStandingLevel() : characterData.standingLevel,
-            leaderType: options.leaderType !== false ? this.randomLeaderType() : characterData.leaderType,
-            heroBonus: options.heroBonus !== false ? '' : characterData.heroBonus,
-            skills: options.skills !== false ? this.randomSkills(options.skillOptions || {}) : characterData.skills,
-            stats: options.stats !== false ? this.randomStats() : characterData.stats,
-            loadout: characterData.loadout
+            standingLevel: options.standingLevel !== false ? this.randomStandingLevel() : (window.characterData?.standingLevel || 'Citizen'),
+            leaderType: options.leaderType !== false ? this.randomLeaderType() : (window.characterData?.leaderType || 'None'),
+            heroBonus: options.heroBonus !== false ? '' : (window.characterData?.heroBonus || ''),
+            skills: options.skills !== false ? this.randomSkills(options.skillOptions || {}) : (window.characterData?.skills || {
+                cardio: { level: 0, specialty: '' },
+                wits: { level: 0, specialty: '' },
+                fighting: { level: 0, specialty: '' },
+                shooting: { level: 0, specialty: '' },
+                fifthSkill: { type: 'none', skill: '' }
+            }),
+            stats: options.stats !== false ? this.randomStats() : (window.characterData?.stats || { health: 100, stamina: 100 }),
+            loadout: window.characterData?.loadout || { preset: 'custom', equipment: {} }
         };
 
         // Random traits
@@ -273,7 +293,7 @@ class Randomizer {
                 optional: randomTraits
             };
         } else {
-            character.traits = characterData.traits;
+            character.traits = window.characterData?.traits || { required: [], optional: [] };
         }
 
         return character;
