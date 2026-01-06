@@ -69,9 +69,7 @@ class TraitManager {
         const errors = [];
         const warnings = [];
         
-        if (totalCount > limit) {
-            errors.push(`Trait count (${totalCount}) exceeds limit (${limit})`);
-        }
+        // No limit check - users can add unlimited traits
         
         // Check for duplicates
         const allTraitNames = [...requiredTraits, ...optionalTraits].map(t => t.name);
