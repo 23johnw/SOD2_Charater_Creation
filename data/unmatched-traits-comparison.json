@@ -1,0 +1,627 @@
+{
+  "unmatchedCount": 27,
+  "unmatchedTraits": [
+    {
+      "csvName": "Always Vigilant",
+      "csvNameClean": "Always Vigilant",
+      "description": "You can't let anything get by you; not anymore. I'm always watching for the \nnext disaster.",
+      "providedSkill": "",
+      "similarTraits": [
+        {
+          "displayName": "Aspiring Vigilante",
+          "gameString": "Shooting_Gunslinging_Before_AspiringVigilante",
+          "score": 28,
+          "matchingWords": "vigilant"
+        }
+      ]
+    },
+    {
+      "csvName": "Cooked for the Squad \n\n*(Red Talon Contractors only)*",
+      "csvNameClean": "Cooked for the Squad   *(Red Talon Contractors only)*",
+      "description": "Red Talon doesn't have a lot of full-time cooks, but when you're good, you \nget the job.",
+      "providedSkill": "Gut Packing",
+      "similarTraits": [
+        {
+          "displayName": "Red Talon Contractor",
+          "gameString": "DLC2_RedTalon_Outsider",
+          "score": 95,
+          "matchingWords": "talon"
+        },
+        {
+          "displayName": "Contractor",
+          "gameString": "Craftsmanship_Construction_Career_Contractor",
+          "score": 70,
+          "matchingWords": ""
+        },
+        {
+          "displayName": "Cooked for the Squad",
+          "gameString": "DLC2_RedTalon_SquadCook_Cost",
+          "score": 67,
+          "matchingWords": "cooked, for, the, squad"
+        },
+        {
+          "displayName": "Red Talon Operative",
+          "gameString": "DLC2_RedTalon_SuperSoldier",
+          "score": 25,
+          "matchingWords": "talon"
+        },
+        {
+          "displayName": "Red Talon Support",
+          "gameString": "RedTalon_Chavez_Community",
+          "score": 25,
+          "matchingWords": "talon"
+        }
+      ]
+    },
+    {
+      "csvName": "Facilities Engineer \n\n*(Red Talon Contractors only)*",
+      "csvNameClean": "Facilities Engineer   *(Red Talon Contractors only)*",
+      "description": "You want to live somewhere long-term, you're going to need an \ninfrastructure.",
+      "providedSkill": "Infrastructure",
+      "similarTraits": [
+        {
+          "displayName": "Red Talon Contractor",
+          "gameString": "DLC2_RedTalon_Outsider",
+          "score": 95,
+          "matchingWords": "talon"
+        },
+        {
+          "displayName": "Facilities Engineer",
+          "gameString": "DLC2_RedTalon_Infrastructure_Cost",
+          "score": 88,
+          "matchingWords": "facilities, engineer"
+        },
+        {
+          "displayName": "Contractor",
+          "gameString": "Craftsmanship_Construction_Career_Contractor",
+          "score": 70,
+          "matchingWords": ""
+        },
+        {
+          "displayName": "Comms Engineer",
+          "gameString": "DLC2_RedTalon_Hacker_Cost",
+          "score": 28,
+          "matchingWords": "engineer"
+        },
+        {
+          "displayName": "Bioengineering Professor",
+          "gameString": "Couple_Isaac_Community",
+          "score": 28,
+          "matchingWords": "engineer"
+        }
+      ]
+    },
+    {
+      "csvName": "Filthy",
+      "csvNameClean": "Filthy",
+      "description": "In the nineteenth century, people only bathed like once a year. This is \nfrontier life, man.",
+      "providedSkill": "",
+      "similarTraits": []
+    },
+    {
+      "csvName": "Firearms Enthusiast \n\n*(Red Talon Contractors only)*",
+      "csvNameClean": "Firearms Enthusiast   *(Red Talon Contractors only)*",
+      "description": "Your weapon is the only thing between you and certain death. You have to \ntake care of it.",
+      "providedSkill": "Firearms Maintenance",
+      "similarTraits": [
+        {
+          "displayName": "Red Talon Contractor",
+          "gameString": "DLC2_RedTalon_Outsider",
+          "score": 95,
+          "matchingWords": "talon"
+        },
+        {
+          "displayName": "Firearms Enthusiast",
+          "gameString": "DLC2_RedTalon_Enthusiast_Cost",
+          "score": 88,
+          "matchingWords": "firearms, enthusiast"
+        },
+        {
+          "displayName": "Contractor",
+          "gameString": "Craftsmanship_Construction_Career_Contractor",
+          "score": 70,
+          "matchingWords": ""
+        },
+        {
+          "displayName": "Motorcycle Enthusiast",
+          "gameString": "Minor_Hobby_Biker",
+          "score": 30,
+          "matchingWords": "enthusiast"
+        },
+        {
+          "displayName": "Hemp Enthusiast",
+          "gameString": "Gardening_Herbalism_Hobby_HempEnthusiast",
+          "score": 30,
+          "matchingWords": "enthusiast"
+        }
+      ]
+    },
+    {
+      "csvName": "Flatuent",
+      "csvNameClean": "Flatuent",
+      "description": "He who smelt it dealt it.",
+      "providedSkill": "",
+      "similarTraits": []
+    },
+    {
+      "csvName": "Front Line Experience \n\n*(Red Talon Contractors only)*",
+      "csvNameClean": "Front Line Experience   *(Red Talon Contractors only)*",
+      "description": "I've been on the real frontier. It's a constant siege, day in and day out.",
+      "providedSkill": "Heroism",
+      "similarTraits": [
+        {
+          "displayName": "Red Talon Contractor",
+          "gameString": "DLC2_RedTalon_Outsider",
+          "score": 95,
+          "matchingWords": "talon"
+        },
+        {
+          "displayName": "Contractor",
+          "gameString": "Craftsmanship_Construction_Career_Contractor",
+          "score": 70,
+          "matchingWords": ""
+        },
+        {
+          "displayName": "Front Line Experience",
+          "gameString": "DLC2_RedTalon_Heroism_2",
+          "score": 69,
+          "matchingWords": "front, line, experience"
+        },
+        {
+          "displayName": "Red Talon Operative",
+          "gameString": "DLC2_RedTalon_SuperSoldier",
+          "score": 25,
+          "matchingWords": "talon"
+        },
+        {
+          "displayName": "Red Talon Support",
+          "gameString": "RedTalon_Chavez_Community",
+          "score": 25,
+          "matchingWords": "talon"
+        }
+      ]
+    },
+    {
+      "csvName": "Goes by Last Name",
+      "csvNameClean": "Goes by Last Name",
+      "description": "My friends always called me by my last name, and it sort of stuck \nthroughout my life.",
+      "providedSkill": "",
+      "similarTraits": []
+    },
+    {
+      "csvName": "Hated Camping",
+      "csvNameClean": "Hated Camping",
+      "description": "My idea of camping is a hotel without room service. Sleeping on the ground \nis not an option.",
+      "providedSkill": "",
+      "similarTraits": [
+        {
+          "displayName": "Went on Camping Trips",
+          "gameString": "Cardio_Backpacking_Before_CampingTrips",
+          "score": 27,
+          "matchingWords": "camping"
+        },
+        {
+          "displayName": "Loved Camping",
+          "gameString": "Cardio_Backpacking_Before_LovedCamping",
+          "score": 27,
+          "matchingWords": "camping"
+        }
+      ]
+    },
+    {
+      "csvName": "Lacks Boundaries",
+      "csvNameClean": "Lacks Boundaries",
+      "description": "You don't want a hug, or a backrub? How am I supposed to say hi, then? A \npat on the butt?",
+      "providedSkill": "",
+      "similarTraits": []
+    },
+    {
+      "csvName": "Learned Computing",
+      "csvNameClean": "Learned Computing",
+      "description": "I don't know if we'll ever have tech industry again, but I've been reading \nup on what's left.",
+      "providedSkill": "Computers",
+      "similarTraits": [
+        {
+          "displayName": "Learned Chemistry",
+          "gameString": "Chemistry_FromTheKnowledge",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned to Drive",
+          "gameString": "Driving_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned Scrum",
+          "gameString": "Scrum_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned to Fish",
+          "gameString": "Fishing_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned about Lichen",
+          "gameString": "Lichenology_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        }
+      ]
+    },
+    {
+      "csvName": "Learned Medicine",
+      "csvNameClean": "Learned Medicine",
+      "description": "Now that death is around ever corner, I've started reading up on first aid \nand CPR.",
+      "providedSkill": "Medicine",
+      "similarTraits": [
+        {
+          "displayName": "Learned Chemistry",
+          "gameString": "Chemistry_FromTheKnowledge",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned to Drive",
+          "gameString": "Driving_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned Scrum",
+          "gameString": "Scrum_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned to Fish",
+          "gameString": "Fishing_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned about Lichen",
+          "gameString": "Lichenology_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        }
+      ]
+    },
+    {
+      "csvName": "Learned to Cook",
+      "csvNameClean": "Learned to Cook",
+      "description": "I've read a stack of cookbooks since the outbreak. I think I may just know \nwhat I'm doing.",
+      "providedSkill": "Cooking",
+      "similarTraits": [
+        {
+          "displayName": "Learned Chemistry",
+          "gameString": "Chemistry_FromTheKnowledge",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned to Drive",
+          "gameString": "Driving_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned Scrum",
+          "gameString": "Scrum_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned to Fish",
+          "gameString": "Fishing_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned about Lichen",
+          "gameString": "Lichenology_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        }
+      ]
+    },
+    {
+      "csvName": "Learned to Garden",
+      "csvNameClean": "Learned to Garden",
+      "description": "I read everything I could about gardening after the outbreak, hoping I \ncould put it to use.",
+      "providedSkill": "Gardening",
+      "similarTraits": [
+        {
+          "displayName": "Learned Chemistry",
+          "gameString": "Chemistry_FromTheKnowledge",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned to Drive",
+          "gameString": "Driving_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned Scrum",
+          "gameString": "Scrum_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned to Fish",
+          "gameString": "Fishing_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned about Lichen",
+          "gameString": "Lichenology_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        }
+      ]
+    },
+    {
+      "csvName": "Learned Utilities",
+      "csvNameClean": "Learned Utilities",
+      "description": "I've been reading books on plumbing and electrical work, in case we ever \nneed to fix something.",
+      "providedSkill": "Utilities",
+      "similarTraits": [
+        {
+          "displayName": "Learned Chemistry",
+          "gameString": "Chemistry_FromTheKnowledge",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned to Drive",
+          "gameString": "Driving_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned Scrum",
+          "gameString": "Scrum_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned to Fish",
+          "gameString": "Fishing_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        },
+        {
+          "displayName": "Learned about Lichen",
+          "gameString": "Lichenology_FromConsumable",
+          "score": 27,
+          "matchingWords": "learned"
+        }
+      ]
+    },
+    {
+      "csvName": "Left for Dead",
+      "csvNameClean": "Left for Dead",
+      "description": "*Unknown*",
+      "providedSkill": "",
+      "similarTraits": []
+    },
+    {
+      "csvName": "Mentally Trained",
+      "csvNameClean": "Mentally Trained",
+      "description": "I went through a training regimen that prepared me to handle a lot of \ndifferent mental tasks.",
+      "providedSkill": "",
+      "similarTraits": [
+        {
+          "displayName": "Trained in CPR",
+          "gameString": "Medicine_Hobby_EmergencyTraining",
+          "score": 27,
+          "matchingWords": "trained"
+        },
+        {
+          "displayName": "Trained off the Grid",
+          "gameString": "DLC2_RedTalon_Warfighting_0",
+          "score": 27,
+          "matchingWords": "trained"
+        }
+      ]
+    },
+    {
+      "csvName": "No Filter",
+      "csvNameClean": "No Filter",
+      "description": "Folks think I say whatever pops into my head. Maybe I should pop something \ninto THEIR heads.",
+      "providedSkill": "",
+      "similarTraits": []
+    },
+    {
+      "csvName": "Noisy",
+      "csvNameClean": "Noisy",
+      "description": "Yeah, I'm banging pots and pans. How else do you make breakfast?",
+      "providedSkill": "",
+      "similarTraits": []
+    },
+    {
+      "csvName": "Physically Trained",
+      "csvNameClean": "Physically Trained",
+      "description": "I went through a training regimen that prepared me to handle a lot of \ndifferent physical tasks.",
+      "providedSkill": "",
+      "similarTraits": [
+        {
+          "displayName": "Trained in CPR",
+          "gameString": "Medicine_Hobby_EmergencyTraining",
+          "score": 27,
+          "matchingWords": "trained"
+        },
+        {
+          "displayName": "Trained off the Grid",
+          "gameString": "DLC2_RedTalon_Warfighting_0",
+          "score": 27,
+          "matchingWords": "trained"
+        }
+      ]
+    },
+    {
+      "csvName": "Practices at the Range \n\n*(Red Talon Contractors only)*",
+      "csvNameClean": "Practices at the Range   *(Red Talon Contractors only)*",
+      "description": "Being good isn't enough. You need a headshot every time.",
+      "providedSkill": "Warfighting",
+      "similarTraits": [
+        {
+          "displayName": "Red Talon Contractor",
+          "gameString": "DLC2_RedTalon_Outsider",
+          "score": 95,
+          "matchingWords": "talon"
+        },
+        {
+          "displayName": "Contractor",
+          "gameString": "Craftsmanship_Construction_Career_Contractor",
+          "score": 70,
+          "matchingWords": ""
+        },
+        {
+          "displayName": "Practices at the Range",
+          "gameString": "DLC2_RedTalon_Warfighting_1",
+          "score": 67,
+          "matchingWords": "practices, the, range"
+        },
+        {
+          "displayName": "Red Talon Operative",
+          "gameString": "DLC2_RedTalon_SuperSoldier",
+          "score": 25,
+          "matchingWords": "talon"
+        },
+        {
+          "displayName": "Red Talon Support",
+          "gameString": "RedTalon_Chavez_Community",
+          "score": 25,
+          "matchingWords": "talon"
+        }
+      ]
+    },
+    {
+      "csvName": "Short Change Hero",
+      "csvNameClean": "Short Change Hero",
+      "description": "This ain't no place for no Hero. This ain't no place for no better man.",
+      "providedSkill": "",
+      "similarTraits": []
+    },
+    {
+      "csvName": "Talks Loudly",
+      "csvNameClean": "Talks Loudly",
+      "description": "My volume dial has two settings: Off and HEEEEEEY!",
+      "providedSkill": "",
+      "similarTraits": [
+        {
+          "displayName": "Talks to Plants",
+          "gameString": "Gardening_Hobby_TalksToPlants",
+          "score": 25,
+          "matchingWords": "talks"
+        }
+      ]
+    },
+    {
+      "csvName": "Taxidermist",
+      "csvNameClean": "Taxidermist",
+      "description": "I thought of putting myself forward as a sort of surgeon … then I realized \nthat was insane.",
+      "providedSkill": "",
+      "similarTraits": []
+    },
+    {
+      "csvName": "Trained at Fighting",
+      "csvNameClean": "Trained at Fighting",
+      "description": "I went through a training regimen for a variety of different combat \nscenarios.",
+      "providedSkill": "",
+      "similarTraits": [
+        {
+          "displayName": "Fighting Infection",
+          "gameString": "Sickness",
+          "score": 28,
+          "matchingWords": "fighting"
+        },
+        {
+          "displayName": "Trained in CPR",
+          "gameString": "Medicine_Hobby_EmergencyTraining",
+          "score": 27,
+          "matchingWords": "trained"
+        },
+        {
+          "displayName": "Trained off the Grid",
+          "gameString": "DLC2_RedTalon_Warfighting_0",
+          "score": 27,
+          "matchingWords": "trained"
+        }
+      ]
+    },
+    {
+      "csvName": "Trained at Shooting",
+      "csvNameClean": "Trained at Shooting",
+      "description": "I went through a training regimen that taught me a variety of different \nshooting techniques.",
+      "providedSkill": "",
+      "similarTraits": [
+        {
+          "displayName": "Practices Shooting",
+          "gameString": "Morale_Facility_Lineup_Shooter",
+          "score": 28,
+          "matchingWords": "shooting"
+        },
+        {
+          "displayName": "Trained in CPR",
+          "gameString": "Medicine_Hobby_EmergencyTraining",
+          "score": 27,
+          "matchingWords": "trained"
+        },
+        {
+          "displayName": "Trained off the Grid",
+          "gameString": "DLC2_RedTalon_Warfighting_0",
+          "score": 27,
+          "matchingWords": "trained"
+        }
+      ]
+    },
+    {
+      "csvName": "Worked as a Pioneer \n\n*(Red Talon Contractors only)*",
+      "csvNameClean": "Worked as a Pioneer   *(Red Talon Contractors only)*",
+      "description": "We were sent into newly cleared territory to build walls and prevent the \nzeds from coming back.",
+      "providedSkill": "Fortifications",
+      "similarTraits": [
+        {
+          "displayName": "Red Talon Contractor",
+          "gameString": "DLC2_RedTalon_Outsider",
+          "score": 95,
+          "matchingWords": "talon"
+        },
+        {
+          "displayName": "Worked as a Pioneer",
+          "gameString": "DLC2_RedTalon_Pioneer_Cost",
+          "score": 83,
+          "matchingWords": "worked, pioneer"
+        },
+        {
+          "displayName": "Contractor",
+          "gameString": "Craftsmanship_Construction_Career_Contractor",
+          "score": 70,
+          "matchingWords": ""
+        },
+        {
+          "displayName": "Red Talon Operative",
+          "gameString": "DLC2_RedTalon_SuperSoldier",
+          "score": 25,
+          "matchingWords": "talon"
+        },
+        {
+          "displayName": "Red Talon Support",
+          "gameString": "RedTalon_Chavez_Community",
+          "score": 25,
+          "matchingWords": "talon"
+        }
+      ]
+    }
+  ],
+  "summary": "Found 27 unmatched traits out of 972 total traits (97.2% match rate)"
+}

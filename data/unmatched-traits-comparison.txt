@@ -1,0 +1,220 @@
+UNMATCHED TRAITS ANALYSIS
+========================
+
+Total unmatched: 27 out of 972 (97.2% match rate)
+
+1. "Always Vigilant"
+   Description: You can't let anything get by you; not anymore. I'm always watching for the  nex...
+   
+   Possible matches from UILists.cs:
+   1. "Aspiring Vigilante" -> "Shooting_Gunslinging_Before_AspiringVigilante" (score: 28, matches: vigilant)
+
+2. "Cooked for the Squad   *(Red Talon Contractors only)*"
+   Description: Red Talon doesn't have a lot of full-time cooks, but when you're good, you  get ...
+   Provides Skill: Gut Packing
+   
+   Possible matches from UILists.cs:
+   1. "Red Talon Contractor" -> "DLC2_RedTalon_Outsider" (score: 95, matches: talon)
+   2. "Contractor" -> "Craftsmanship_Construction_Career_Contractor" (score: 70, matches: none)
+   3. "Cooked for the Squad" -> "DLC2_RedTalon_SquadCook_Cost" (score: 67, matches: cooked, for, the, squad)
+   4. "Red Talon Operative" -> "DLC2_RedTalon_SuperSoldier" (score: 25, matches: talon)
+   5. "Red Talon Support" -> "RedTalon_Chavez_Community" (score: 25, matches: talon)
+
+3. "Facilities Engineer   *(Red Talon Contractors only)*"
+   Description: You want to live somewhere long-term, you're going to need an  infrastructure....
+   Provides Skill: Infrastructure
+   
+   Possible matches from UILists.cs:
+   1. "Red Talon Contractor" -> "DLC2_RedTalon_Outsider" (score: 95, matches: talon)
+   2. "Facilities Engineer" -> "DLC2_RedTalon_Infrastructure_Cost" (score: 88, matches: facilities, engineer)
+   3. "Contractor" -> "Craftsmanship_Construction_Career_Contractor" (score: 70, matches: none)
+   4. "Comms Engineer" -> "DLC2_RedTalon_Hacker_Cost" (score: 28, matches: engineer)
+   5. "Bioengineering Professor" -> "Couple_Isaac_Community" (score: 28, matches: engineer)
+
+4. "Filthy"
+   Description: In the nineteenth century, people only bathed like once a year. This is  frontie...
+   
+   No similar traits found in UILists.cs
+
+5. "Firearms Enthusiast   *(Red Talon Contractors only)*"
+   Description: Your weapon is the only thing between you and certain death. You have to  take c...
+   Provides Skill: Firearms Maintenance
+   
+   Possible matches from UILists.cs:
+   1. "Red Talon Contractor" -> "DLC2_RedTalon_Outsider" (score: 95, matches: talon)
+   2. "Firearms Enthusiast" -> "DLC2_RedTalon_Enthusiast_Cost" (score: 88, matches: firearms, enthusiast)
+   3. "Contractor" -> "Craftsmanship_Construction_Career_Contractor" (score: 70, matches: none)
+   4. "Motorcycle Enthusiast" -> "Minor_Hobby_Biker" (score: 30, matches: enthusiast)
+   5. "Hemp Enthusiast" -> "Gardening_Herbalism_Hobby_HempEnthusiast" (score: 30, matches: enthusiast)
+
+6. "Flatuent"
+   Description: He who smelt it dealt it....
+   
+   No similar traits found in UILists.cs
+
+7. "Front Line Experience   *(Red Talon Contractors only)*"
+   Description: I've been on the real frontier. It's a constant siege, day in and day out....
+   Provides Skill: Heroism
+   
+   Possible matches from UILists.cs:
+   1. "Red Talon Contractor" -> "DLC2_RedTalon_Outsider" (score: 95, matches: talon)
+   2. "Contractor" -> "Craftsmanship_Construction_Career_Contractor" (score: 70, matches: none)
+   3. "Front Line Experience" -> "DLC2_RedTalon_Heroism_2" (score: 69, matches: front, line, experience)
+   4. "Red Talon Operative" -> "DLC2_RedTalon_SuperSoldier" (score: 25, matches: talon)
+   5. "Red Talon Support" -> "RedTalon_Chavez_Community" (score: 25, matches: talon)
+
+8. "Goes by Last Name"
+   Description: My friends always called me by my last name, and it sort of stuck  throughout my...
+   
+   No similar traits found in UILists.cs
+
+9. "Hated Camping"
+   Description: My idea of camping is a hotel without room service. Sleeping on the ground  is n...
+   
+   Possible matches from UILists.cs:
+   1. "Went on Camping Trips" -> "Cardio_Backpacking_Before_CampingTrips" (score: 27, matches: camping)
+   2. "Loved Camping" -> "Cardio_Backpacking_Before_LovedCamping" (score: 27, matches: camping)
+
+10. "Lacks Boundaries"
+   Description: You don't want a hug, or a backrub? How am I supposed to say hi, then? A  pat on...
+   
+   No similar traits found in UILists.cs
+
+11. "Learned Computing"
+   Description: I don't know if we'll ever have tech industry again, but I've been reading  up o...
+   Provides Skill: Computers
+   
+   Possible matches from UILists.cs:
+   1. "Learned Chemistry" -> "Chemistry_FromTheKnowledge" (score: 27, matches: learned)
+   2. "Learned to Drive" -> "Driving_FromConsumable" (score: 27, matches: learned)
+   3. "Learned Scrum" -> "Scrum_FromConsumable" (score: 27, matches: learned)
+   4. "Learned to Fish" -> "Fishing_FromConsumable" (score: 27, matches: learned)
+   5. "Learned about Lichen" -> "Lichenology_FromConsumable" (score: 27, matches: learned)
+
+12. "Learned Medicine"
+   Description: Now that death is around ever corner, I've started reading up on first aid  and ...
+   Provides Skill: Medicine
+   
+   Possible matches from UILists.cs:
+   1. "Learned Chemistry" -> "Chemistry_FromTheKnowledge" (score: 27, matches: learned)
+   2. "Learned to Drive" -> "Driving_FromConsumable" (score: 27, matches: learned)
+   3. "Learned Scrum" -> "Scrum_FromConsumable" (score: 27, matches: learned)
+   4. "Learned to Fish" -> "Fishing_FromConsumable" (score: 27, matches: learned)
+   5. "Learned about Lichen" -> "Lichenology_FromConsumable" (score: 27, matches: learned)
+
+13. "Learned to Cook"
+   Description: I've read a stack of cookbooks since the outbreak. I think I may just know  what...
+   Provides Skill: Cooking
+   
+   Possible matches from UILists.cs:
+   1. "Learned Chemistry" -> "Chemistry_FromTheKnowledge" (score: 27, matches: learned)
+   2. "Learned to Drive" -> "Driving_FromConsumable" (score: 27, matches: learned)
+   3. "Learned Scrum" -> "Scrum_FromConsumable" (score: 27, matches: learned)
+   4. "Learned to Fish" -> "Fishing_FromConsumable" (score: 27, matches: learned)
+   5. "Learned about Lichen" -> "Lichenology_FromConsumable" (score: 27, matches: learned)
+
+14. "Learned to Garden"
+   Description: I read everything I could about gardening after the outbreak, hoping I  could pu...
+   Provides Skill: Gardening
+   
+   Possible matches from UILists.cs:
+   1. "Learned Chemistry" -> "Chemistry_FromTheKnowledge" (score: 27, matches: learned)
+   2. "Learned to Drive" -> "Driving_FromConsumable" (score: 27, matches: learned)
+   3. "Learned Scrum" -> "Scrum_FromConsumable" (score: 27, matches: learned)
+   4. "Learned to Fish" -> "Fishing_FromConsumable" (score: 27, matches: learned)
+   5. "Learned about Lichen" -> "Lichenology_FromConsumable" (score: 27, matches: learned)
+
+15. "Learned Utilities"
+   Description: I've been reading books on plumbing and electrical work, in case we ever  need t...
+   Provides Skill: Utilities
+   
+   Possible matches from UILists.cs:
+   1. "Learned Chemistry" -> "Chemistry_FromTheKnowledge" (score: 27, matches: learned)
+   2. "Learned to Drive" -> "Driving_FromConsumable" (score: 27, matches: learned)
+   3. "Learned Scrum" -> "Scrum_FromConsumable" (score: 27, matches: learned)
+   4. "Learned to Fish" -> "Fishing_FromConsumable" (score: 27, matches: learned)
+   5. "Learned about Lichen" -> "Lichenology_FromConsumable" (score: 27, matches: learned)
+
+16. "Left for Dead"
+   Description: *Unknown*...
+   
+   No similar traits found in UILists.cs
+
+17. "Mentally Trained"
+   Description: I went through a training regimen that prepared me to handle a lot of  different...
+   
+   Possible matches from UILists.cs:
+   1. "Trained in CPR" -> "Medicine_Hobby_EmergencyTraining" (score: 27, matches: trained)
+   2. "Trained off the Grid" -> "DLC2_RedTalon_Warfighting_0" (score: 27, matches: trained)
+
+18. "No Filter"
+   Description: Folks think I say whatever pops into my head. Maybe I should pop something  into...
+   
+   No similar traits found in UILists.cs
+
+19. "Noisy"
+   Description: Yeah, I'm banging pots and pans. How else do you make breakfast?...
+   
+   No similar traits found in UILists.cs
+
+20. "Physically Trained"
+   Description: I went through a training regimen that prepared me to handle a lot of  different...
+   
+   Possible matches from UILists.cs:
+   1. "Trained in CPR" -> "Medicine_Hobby_EmergencyTraining" (score: 27, matches: trained)
+   2. "Trained off the Grid" -> "DLC2_RedTalon_Warfighting_0" (score: 27, matches: trained)
+
+21. "Practices at the Range   *(Red Talon Contractors only)*"
+   Description: Being good isn't enough. You need a headshot every time....
+   Provides Skill: Warfighting
+   
+   Possible matches from UILists.cs:
+   1. "Red Talon Contractor" -> "DLC2_RedTalon_Outsider" (score: 95, matches: talon)
+   2. "Contractor" -> "Craftsmanship_Construction_Career_Contractor" (score: 70, matches: none)
+   3. "Practices at the Range" -> "DLC2_RedTalon_Warfighting_1" (score: 67, matches: practices, the, range)
+   4. "Red Talon Operative" -> "DLC2_RedTalon_SuperSoldier" (score: 25, matches: talon)
+   5. "Red Talon Support" -> "RedTalon_Chavez_Community" (score: 25, matches: talon)
+
+22. "Short Change Hero"
+   Description: This ain't no place for no Hero. This ain't no place for no better man....
+   
+   No similar traits found in UILists.cs
+
+23. "Talks Loudly"
+   Description: My volume dial has two settings: Off and HEEEEEEY!...
+   
+   Possible matches from UILists.cs:
+   1. "Talks to Plants" -> "Gardening_Hobby_TalksToPlants" (score: 25, matches: talks)
+
+24. "Taxidermist"
+   Description: I thought of putting myself forward as a sort of surgeon … then I realized  that...
+   
+   No similar traits found in UILists.cs
+
+25. "Trained at Fighting"
+   Description: I went through a training regimen for a variety of different combat  scenarios....
+   
+   Possible matches from UILists.cs:
+   1. "Fighting Infection" -> "Sickness" (score: 28, matches: fighting)
+   2. "Trained in CPR" -> "Medicine_Hobby_EmergencyTraining" (score: 27, matches: trained)
+   3. "Trained off the Grid" -> "DLC2_RedTalon_Warfighting_0" (score: 27, matches: trained)
+
+26. "Trained at Shooting"
+   Description: I went through a training regimen that taught me a variety of different  shootin...
+   
+   Possible matches from UILists.cs:
+   1. "Practices Shooting" -> "Morale_Facility_Lineup_Shooter" (score: 28, matches: shooting)
+   2. "Trained in CPR" -> "Medicine_Hobby_EmergencyTraining" (score: 27, matches: trained)
+   3. "Trained off the Grid" -> "DLC2_RedTalon_Warfighting_0" (score: 27, matches: trained)
+
+27. "Worked as a Pioneer   *(Red Talon Contractors only)*"
+   Description: We were sent into newly cleared territory to build walls and prevent the  zeds f...
+   Provides Skill: Fortifications
+   
+   Possible matches from UILists.cs:
+   1. "Red Talon Contractor" -> "DLC2_RedTalon_Outsider" (score: 95, matches: talon)
+   2. "Worked as a Pioneer" -> "DLC2_RedTalon_Pioneer_Cost" (score: 83, matches: worked, pioneer)
+   3. "Contractor" -> "Craftsmanship_Construction_Career_Contractor" (score: 70, matches: none)
+   4. "Red Talon Operative" -> "DLC2_RedTalon_SuperSoldier" (score: 25, matches: talon)
+   5. "Red Talon Support" -> "RedTalon_Chavez_Community" (score: 25, matches: talon)
+
