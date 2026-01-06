@@ -241,11 +241,15 @@ function loadAvailableTraits() {
         traitDiv.dataset.traitName = trait.name.toLowerCase();
         traitDiv.dataset.traitDescription = (trait.description || '').toLowerCase();
         
-        // Store buff search text
+        // Store buff search text (include stat names for searching)
         let buffSearchText = '';
         if (trait.buffs && trait.buffs.length > 0) {
             buffSearchText = trait.buffs.map(buff => {
-                return `${buff.value} ${buff.stat}`.toLowerCase();
+                // Include stat name in multiple formats for better search
+                const statLower = buff.stat.toLowerCase();
+                // Remove "Max " prefix for search if present, so "stamina" matches "Max Stamina"
+                const statBase = statLower.replace(/^max\s+/, '');
+                return `${buff.value} ${buff.stat} ${statLower} ${statBase}`.toLowerCase();
             }).join(' ');
             traitDiv.dataset.traitBuffs = buffSearchText;
         }
