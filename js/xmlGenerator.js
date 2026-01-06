@@ -505,7 +505,18 @@ function generateTraitsSubsection(traits) {
         <TheSubs>`;
     
     allTraits.forEach((trait, idx) => {
-        const traitID = trait.traitResourceID || trait.name || 'Default';
+        // Use traitResourceID if available, otherwise use name
+        // Make sure we have a valid trait ID
+        let traitID = trait.traitResourceID || trait.name || 'Default';
+        
+        // Clean up trait ID - remove any special characters that shouldn't be there
+        // But keep spaces as some traits use them (like "A Little Forgetful")
+        if (traitID.includes('▶') || traitID.includes('much worse')) {
+            // This is likely a description, not a trait ID - skip or use a fallback
+            console.warn('Invalid trait ID detected:', traitID);
+            traitID = 'Default';
+        }
+        
         xml += `
           <StructObject xsi:type="StructProperty">
             <Index>${idx}</Index>

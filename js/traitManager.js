@@ -6,11 +6,17 @@ class TraitManager {
     }
 
     getRequiredTraits(characterData) {
+        // Map age range to correct descriptor format
+        let ageDescriptorName = characterData.ageRange;
+        if (ageDescriptorName === 'MiddleAged') {
+            ageDescriptorName = 'MiddleAge';
+        }
+        
         return [
             { name: 'Default', traitResourceID: 'Default' },
             { 
-                name: `Descriptor_Age_${characterData.ageRange}`, 
-                traitResourceID: `Descriptor_Age_${characterData.ageRange}` 
+                name: `Descriptor_Age_${ageDescriptorName}`, 
+                traitResourceID: `Descriptor_Age_${ageDescriptorName}` 
             },
             { 
                 name: `Descriptor_Pronoun_${characterData.pronoun}`, 

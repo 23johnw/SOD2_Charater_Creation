@@ -121,6 +121,9 @@ class DataLoader {
                 category = 'required';
             }
             
+            // Use Name as TraitResourceID - the game should accept the name as-is
+            // If it doesn't work, we may need to convert spaces to underscores
+            // but let's try the name first since some traits in the reference use spaces
             return {
                 name: name,
                 description: trait.Description || '',
@@ -130,7 +133,7 @@ class DataLoader {
                 heroBonus: trait['Provided Hero Bonus'] || '',
                 traitType: traitType,
                 category: category,
-                traitResourceID: name // Will need proper mapping
+                traitResourceID: name // Use Name field as TraitResourceID
             };
         }).filter(t => t.name && t.name.trim() !== '');
     }

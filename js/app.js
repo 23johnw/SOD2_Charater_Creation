@@ -453,7 +453,12 @@ function setupEventListeners() {
 
 function updateDescriptorTraits() {
     // Update required trait descriptors based on character attributes
-    const ageDescriptor = `Descriptor_Age_${characterData.ageRange}`;
+    // Map age range to correct descriptor format
+    let ageDescriptorName = characterData.ageRange;
+    if (ageDescriptorName === 'MiddleAged') {
+        ageDescriptorName = 'MiddleAge';
+    }
+    const ageDescriptor = `Descriptor_Age_${ageDescriptorName}`;
     const pronounDescriptor = `Descriptor_Pronoun_${characterData.pronoun}`;
     const philosophy1Descriptor = `Descriptor_Philosophy_${characterData.philosophy1}`;
     const philosophy2Descriptor = `Descriptor_Philosophy_${characterData.philosophy2}`;
