@@ -1488,10 +1488,6 @@ function generateSlotsSection() {
     
     slotsXML += '  </Slots>\n';
     
-    // #region agent log
-    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'xmlGenerator.js:1158',message:'Slots section generated',data:{inventoryLength:inventory.length,slotsGenerated:inventory.length+Math.max(0,maxSlots-inventory.length),xmlLength:slotsXML.length},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'C'})}).catch(()=>{});
-    // #endregion
-    
     return slotsXML;
 }
 
