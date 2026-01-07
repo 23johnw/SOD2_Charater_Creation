@@ -1287,17 +1287,11 @@ function updateInventoryList() {
 }
 
 function addInventoryItem() {
-    // #region agent log
-    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:913',message:'addInventoryItem called',data:{timestamp:Date.now()},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'B'})}).catch(()=>{});
-    // #endregion
     const categorySelect = document.getElementById('inventoryCategory');
     const itemSelect = document.getElementById('inventoryItem');
     const quantityInput = document.getElementById('inventoryQuantity');
     
     if (!categorySelect || !itemSelect || !quantityInput) {
-        // #region agent log
-        fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:918',message:'Early return - missing form elements',data:{hasCategorySelect:!!categorySelect,hasItemSelect:!!itemSelect,hasQuantityInput:!!quantityInput},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'B'})}).catch(()=>{});
-        // #endregion
         return;
     }
     
@@ -1306,14 +1300,7 @@ function addInventoryItem() {
     const displayName = itemSelect.options[itemSelect.selectedIndex]?.dataset.displayName || itemSelect.options[itemSelect.selectedIndex]?.textContent || 'Unknown';
     const quantity = parseInt(quantityInput.value) || 1;
     
-    // #region agent log
-    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:923',message:'Item data extracted',data:{category:category,classString:classString,displayName:displayName,quantity:quantity,hasClassString:!!classString},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'B'})}).catch(()=>{});
-    // #endregion
-    
     if (!classString || classString === '') {
-        // #region agent log
-        fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:925',message:'Validation failed - no classString',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'B'})}).catch(()=>{});
-        // #endregion
         showNotification('Please select an item', 'warning');
         return;
     }
@@ -1326,10 +1313,6 @@ function addInventoryItem() {
         quantity: quantity
     };
     characterData.inventory.push(inventoryItem);
-    
-    // #region agent log
-    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:931',message:'Item added to inventory',data:{inventoryItem:inventoryItem,inventoryLength:characterData.inventory.length},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'B'})}).catch(()=>{});
-    // #endregion
     
     // Update display
     updateInventoryList();

@@ -1343,9 +1343,6 @@ ${generateEquipmentItem(rucksack, 'backpack', 'backpack')}
 }
 
 function generateSlotsSection() {
-    // #region agent log
-    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'xmlGenerator.js:1070',message:'generateSlotsSection called',data:{inventoryLength:(characterData.inventory||[]).length},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'C'})}).catch(()=>{});
-    // #endregion
     // Slots section for inventory items
     // Generate ItemExport entries for each inventory item
     const inventory = characterData.inventory || [];
@@ -1360,10 +1357,6 @@ function generateSlotsSection() {
         const classString = item.classString || 'Null';
         const quantity = item.quantity || 1;
         const category = item.category || '';
-        
-        // #region agent log
-        fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'xmlGenerator.js:1085',message:'Processing inventory item',data:{index:index,classString:classString,quantity:quantity,category:category},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'C'})}).catch(()=>{});
-        // #endregion
         
         // Determine xsi:type based on category
         let xsiType = 'ItemExport';
@@ -1391,10 +1384,6 @@ function generateSlotsSection() {
             stackDataProperty = 'BackpackItemInstances';
             instanceSaveType = 'BackpackItemInstanceSave';
         }
-        
-        // #region agent log
-        fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'xmlGenerator.js:1110',message:'Item type determined',data:{xsiType:xsiType,stackDataProperty:stackDataProperty,instanceSaveType:instanceSaveType},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'C'})}).catch(()=>{});
-        // #endregion
         
         // Generate StackData for non-null items
         if (classString !== 'Null') {
