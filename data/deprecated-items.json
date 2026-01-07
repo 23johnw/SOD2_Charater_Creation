@@ -1,0 +1,66 @@
+{
+  "consumables": {
+    "TestBuffConsumable": {
+      "displayName": "TestBuffConsumable",
+      "classString": "/Game/Items/Consumables/TestBuffConsumable.TestBuffConsumable_C",
+      "category": "consumables",
+      "isDeprecated": true,
+      "deprecationReasons": [
+        "Filename contains 'test'"
+      ]
+    },
+    "TempInjuryRepairKit": {
+      "displayName": "TempInjuryRepairKit",
+      "classString": "/Game/Items/Consumables/TempInjuryRepairKit.TempInjuryRepairKit_C",
+      "category": "consumables",
+      "isDeprecated": true,
+      "deprecationReasons": [
+        "Filename contains 'Temp' prefix, likely temporary/test item"
+      ]
+    }
+  },
+  "weapons": {
+    "Police Auction Golden Eagle": {
+      "displayName": "Police Auction Golden Eagle",
+      "classString": "/Game/Items/RangedWeapons/(TEMP)Police_Auction_Golden_Eagle.(TEMP)Police_Auction_Golden_Eagle_C",
+      "category": "weapons",
+      "isDeprecated": true,
+      "deprecationReasons": [
+        "(TEMP) prefix in filename",
+        "ObjectName contains (TEMP): (TEMP)Police_Auction_Golden_Eagle_C"
+      ]
+    }
+  },
+  "ammo": {
+    "(TEMP) Recoverable Bolt (Explosive)": {
+      "displayName": "(TEMP) Recoverable Bolt",
+      "classString": "/Game/Items/Ammo/Ammo_DLC4_Unique_RecoverableBolt_Explosive.Ammo_DLC4_Unique_RecoverableBolt_Explosive_C",
+      "category": "ammo",
+      "isDeprecated": true,
+      "deprecationReasons": [
+        "(TEMP) prefix in display name",
+        "Explosive variant"
+      ]
+    },
+    "(TEMP) Recoverable Bolt (Incendiary)": {
+      "displayName": "(TEMP) Recoverable Bolt",
+      "classString": "/Game/Items/Ammo/Ammo_DLC4_Unique_RecoverableBolt_Incendiary.Ammo_DLC4_Unique_RecoverableBolt_Incendiary_C",
+      "category": "ammo",
+      "isDeprecated": true,
+      "deprecationReasons": [
+        "(TEMP) prefix in display name",
+        "Incendiary variant"
+      ]
+    },
+    "Test Ammo": {
+      "displayName": "Test Ammo",
+      "classString": "/Game/Items/Ammo/TestAmmoItem.TestAmmoItem_C",
+      "category": "ammo",
+      "isDeprecated": true,
+      "deprecationReasons": [
+        "Filename contains 'test'",
+        "Display name contains 'Test'"
+      ]
+    }
+  }
+}

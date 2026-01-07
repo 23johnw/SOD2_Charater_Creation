@@ -32,14 +32,20 @@ compare-xml.js
 convert-csv-to-json.js
 extract-item-ids.js
 extract-items-from-uilists.js
+extract-melee-closecombat.js
+extract-melee-closecombat-weapons.js
 extract-traits-from-uilists.js
 extract-weapons-backpacks.js
+filter-all-ids-by-editor.js
+filter-ids-by-editor-v2.js
+filter-ids-by-editor.js
 match-traits-enhanced.js
 match-traits-old.js
 match-traits.js
 process-traits.js
 test-buff-parsing.js
 update-weapon-data.js
+verify-character-ids.js
 verify-partial-matches.js
 verify-updated-traits.js
 
@@ -54,6 +60,10 @@ trait-matcher-standalone.html
 trait-matcher.html
 
 # Development documentation
+CHARACTER_ID_VERIFICATION.md
+ID_FILTERING_SUMMARY.md
+ITEM_ID_COVERAGE.md
+Inventory layout.md
 TRAIT_MATCHER_README.md
 UNMATCHED_TRAITS_SUMMARY.md
 data/unmatched-traits-comparison.txt

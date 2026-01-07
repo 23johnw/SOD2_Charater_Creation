@@ -7,7 +7,7 @@ function generateCharacterXML() {
     let xml = `<?xml version="1.0"?>
 <SurvivorExport xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SurvivorData xsi:type="StructProperty">
-    <Index>2</Index>
+    <Index>0</Index>
     <PropertyName>SurvivorSaves</PropertyName>
     <PropertyType>SurvivorSave</PropertyType>
     <SubStruct>SurvivorSave</SubStruct>
@@ -22,7 +22,117 @@ function generateCharacterXML() {
     xml += generateNameProperty(5, 'VoiceID', `${characterData.voiceID || 'Kee'}_Low`);
     xml += generateNameProperty(6, 'CulturalBackgroundName', characterData.culturalBackground || 'AfricanAmerican');
     xml += generateArrayProperty(7, 'FamilyRelationships', 'StructProperty', '');
-    xml += generateNameProperty(8, 'HumanDefinition', characterData.humanDefinition || '');
+    // HumanDefinition is required - read directly from form to ensure we have the latest value
+    // Also check characterData as fallback, then use default based on gender
+    const humanDefSelect = document.getElementById('humanDefinition');
+    let humanDefValue = '';
+    
+    // First, try to get value from form dropdown (most reliable source)
+    if (humanDefSelect) {
+        humanDefValue = humanDefSelect.value || '';
+        
+        // Validate the value exists in the dropdown options
+        if (humanDefValue) {
+            const optionExists = Array.from(humanDefSelect.options).some(
+                opt => opt.value === humanDefValue && opt.value !== ''
+            );
+            if (!optionExists) {
+                console.warn('HumanDefinition value not found in dropdown options:', humanDefValue);
+                humanDefValue = ''; // Reset to force fallback
+            }
+        }
+        
+        // If dropdown value is empty but has options, try to select the first valid option
+        if (!humanDefValue && humanDefSelect.options.length > 1) {
+            // Skip the first option (usually "Select model...")
+            for (let i = 1; i < humanDefSelect.options.length; i++) {
+                const option = humanDefSelect.options[i];
+                if (option.value && option.value.trim() !== '') {
+                    humanDefValue = option.value;
+                    humanDefSelect.value = humanDefValue;
+                    // Update characterData to keep in sync
+                    characterData.humanDefinition = humanDefValue;
+                    console.log('Auto-selected first available HumanDefinition:', humanDefValue);
+                    break;
+                }
+            }
+        }
+    }
+    
+    // Fallback to characterData
+    if (!humanDefValue && characterData.humanDefinition) {
+        humanDefValue = characterData.humanDefinition;
+        console.log('Using HumanDefinition from characterData:', humanDefValue);
+        // Try to set it in dropdown if it exists
+        if (humanDefSelect) {
+            const option = Array.from(humanDefSelect.options).find(
+                opt => opt.value === humanDefValue
+            );
+            if (option) {
+                humanDefSelect.value = humanDefValue;
+            }
+        }
+    }
+    
+    // If still empty, use default based on gender
+    if (!humanDefValue || humanDefValue.trim() === '') {
+        const isMale = characterData.gender === 'Male';
+        humanDefValue = isMale 
+            ? 'HumanMaleVest_01_v_01' 
+            : 'HumanFemaleVest_01_v_01';
+        console.warn('HumanDefinition not found, using default based on gender:', humanDefValue);
+        
+        // Try to set it in the dropdown if it exists
+        if (humanDefSelect) {
+            const defaultOption = Array.from(humanDefSelect.options).find(
+                opt => opt.value === humanDefValue
+            );
+            if (defaultOption) {
+                humanDefSelect.value = humanDefValue;
+                characterData.humanDefinition = humanDefValue;
+            } else {
+                // If default not found, use first available option
+                if (humanDefSelect.options.length > 1) {
+                    for (let i = 1; i < humanDefSelect.options.length; i++) {
+                        const option = humanDefSelect.options[i];
+                        if (option.value && option.value.trim() !== '') {
+                            humanDefValue = option.value;
+                            humanDefSelect.value = humanDefValue;
+                            characterData.humanDefinition = humanDefValue;
+                            console.log('Using first available option as fallback:', humanDefValue);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    } else {
+        console.log('HumanDefinition value being used:', humanDefValue);
+        // Ensure characterData is synced
+        if (characterData.humanDefinition !== humanDefValue) {
+            characterData.humanDefinition = humanDefValue;
+        }
+    }
+    
+    // Final validation - ensure we have a valid non-empty value
+    if (!humanDefValue || humanDefValue.trim() === '') {
+        console.error('CRITICAL: HumanDefinition is empty! This will cause game crashes.');
+        const isMale = characterData.gender === 'Male';
+        humanDefValue = isMale 
+            ? 'HumanMaleVest_01_v_01' 
+            : 'HumanFemaleVest_01_v_01';
+        characterData.humanDefinition = humanDefValue;
+    }
+    
+    console.log('Final HumanDefinition for XML:', humanDefValue);
+    console.log('HumanDefinition validation:', {
+        value: humanDefValue,
+        length: humanDefValue.length,
+        inDropdown: humanDefSelect ? Array.from(humanDefSelect.options).some(opt => opt.value === humanDefValue) : 'N/A',
+        inCharacterData: characterData.humanDefinition === humanDefValue,
+        gender: characterData.gender
+    });
+    xml += generateNameProperty(8, 'HumanDefinition', humanDefValue);
     xml += generateStructProperty(9, 'outfit', 'DaytonCharacterOutfit', '');
     
     // Boolean properties
@@ -40,13 +150,38 @@ function generateCharacterXML() {
     xml += generateByteProperty(19, 'Pronoun', `EPronoun::${characterData.pronoun || 'She'}`, 'EPronoun');
     xml += generateByteProperty(20, 'Philosophy1', `ECharacterPhilosophy::${characterData.philosophy1 || 'Prudent'}`, 'ECharacterPhilosophy');
     xml += generateByteProperty(21, 'Philosophy2', `ECharacterPhilosophy::${characterData.philosophy2 || 'Pragmatic'}`, 'ECharacterPhilosophy');
-    xml += generateByteProperty(22, 'StandingLevel', `ECharacterStanding::${characterData.standingLevel || 'Citizen'}`, 'ECharacterStanding');
+    // Validate and normalize standingLevel
+    let standingLevel = characterData.standingLevel || 'Citizen';
+    // If it's an object, extract the value
+    if (typeof standingLevel === 'object' && standingLevel.value) {
+        standingLevel = standingLevel.value;
+    }
+    // Ensure it's a valid value
+    const validStandingLevels = ['Stranger', 'Recruit', 'Citizen', 'Hero', 'Leader'];
+    if (!validStandingLevels.includes(standingLevel)) {
+        console.warn('Invalid standingLevel:', standingLevel, 'defaulting to Citizen');
+        standingLevel = 'Citizen';
+    }
+    xml += generateByteProperty(22, 'StandingLevel', `ECharacterStanding::${standingLevel}`, 'ECharacterStanding');
     
     // Hero bonus and leader type
     if (characterData.heroBonus) {
         xml += generateNameProperty(23, 'HeroBonusID', characterData.heroBonus);
     }
-    xml += generateNameProperty(24, 'LeaderTypeID', characterData.leaderType || 'None');
+    
+    // Validate and normalize leaderType
+    let leaderType = characterData.leaderType || 'None';
+    // If it's an object, extract the value
+    if (typeof leaderType === 'object' && leaderType.value) {
+        leaderType = leaderType.value;
+    }
+    // Ensure it's a valid value
+    const validLeaderTypes = ['None', 'Builder', 'Warlord', 'Sheriff', 'Trader'];
+    if (!validLeaderTypes.includes(leaderType)) {
+        console.warn('Invalid leaderType:', leaderType, 'defaulting to None');
+        leaderType = 'None';
+    }
+    xml += generateNameProperty(24, 'LeaderTypeID', leaderType);
     
     // Stats
     xml += generateFloatProperty(25, 'ProgressToNextStandingLevel', 0);
@@ -69,8 +204,8 @@ function generateCharacterXML() {
     // Traits array
     xml += generateTraitsArray(39, characterData.traits);
     
-    // Equipment
-    xml += generateEquipmentStruct(40, characterData.loadout);
+    // Equipment (empty - using Inventory Items section instead)
+    xml += generateEquipmentStruct(40, {});
     
     // Active weapon slot
     xml += generateByteProperty(41, 'ActiveRangedWeaponSlot', 'EEquipmentSlot::Ranged', 'EEquipmentSlot');
@@ -102,9 +237,13 @@ function generateCharacterXML() {
     xml += generateNarrativeEntityIdSubsection(1);
     
     // TextProperty subsections for names (complex structure)
+    // Read nickname directly from form to ensure we have the latest value
+    const nicknameValue = document.getElementById('nickname')?.value || characterData.nickname || '';
+    console.log('XML Generation - nickname value:', nicknameValue);
+    
     xml += generateTextPropertySubsection(2, 'FirstName', characterData.firstName || '');
     xml += generateTextPropertySubsection(3, 'LastName', characterData.lastName || '');
-    xml += generateTextPropertySubsection(4, 'NickName', characterData.nickname || '');
+    xml += generateTextPropertySubsection(4, 'NickName', nicknameValue);
     
     // FamilyRelationships array
     xml += generateFamilyRelationshipsSubsection(7);
@@ -119,7 +258,7 @@ function generateCharacterXML() {
     xml += generateTraitsSubsection(characterData.traits);
     
     // Equipment subsection
-    xml += generateEquipmentSubsection(characterData.loadout);
+    xml += generateEquipmentSubsection({});
     
     // Inventory subsection
     xml += generateInventorySubsection(42);
@@ -135,12 +274,12 @@ function generateCharacterXML() {
   </SurvivorData>`;
     
     // Equipment section (separate from SurvivorData)
-    xml += generateEquipmentSection(characterData.loadout);
+    xml += generateEquipmentSection({});
     
     // Slots section (inventory items)
     xml += generateSlotsSection();
     
-    xml += `</SurvivorExport>`;
+    xml += `\n</SurvivorExport>`;
     
     return xml;
 }
@@ -274,8 +413,52 @@ function generateNarrativeEntityIdSubsection(index) {
 }
 
 function generateTextPropertySubsection(index, name, value) {
-    // Generate a simple TextProperty subsection (simplified version)
-    // The full version has complex nested StringProperty structures, but this should work
+    // Generate TextProperty subsection with correct ID format based on character data
+    const culturalBg = characterData.culturalBackground || 'AngloAmerican';
+    const isMale = characterData.gender === 'Male'; // Use gender field from characterData
+    const ageRange = characterData.ageRange || 'MiddleAged';
+    
+    // Map age range to ID format
+    const ageMap = {
+        'Young': 'Young',
+        'MiddleAged': 'Middle',
+        'Old': 'Old'
+    };
+    const ageSuffix = ageMap[ageRange] || 'Middle';
+    
+    // Map gender to ID format
+    const genderSuffix = isMale ? 'Male' : 'Female';
+    
+    // Generate ID based on name type
+    let nameListID;
+    if (name === 'FirstName') {
+        // FirstName format: DNL.NameList.Default__{CulturalBg}_Common_{Gender}{Age}_C.Names.0.Name
+        nameListID = `DNL.NameList.Default__${culturalBg}_Common_${genderSuffix}${ageSuffix}_C.Names.0.Name`;
+    } else if (name === 'LastName') {
+        // LastName format: DNL.NameList.Default__{CulturalBg}_Surnames_C.Names.0.Name
+        nameListID = `DNL.NameList.Default__${culturalBg}_Surnames_C.Names.0.Name`;
+    } else if (name === 'NickName') {
+        // NickName uses same format as FirstName
+        nameListID = `DNL.NameList.Default__${culturalBg}_Common_${genderSuffix}${ageSuffix}_C.Names.0.Name`;
+    } else {
+        // Fallback for other text properties
+        nameListID = `DNL.NameList.Default__${culturalBg}_Common_${genderSuffix}${ageSuffix}_C.Names.0.Name`;
+    }
+    
+    // For empty names, use empty TheStats (like the game does)
+    if (!value || value.trim() === '') {
+        return `
+      <StructObject xsi:type="TextProperty">
+        <Index>${index}</Index>
+        <PropertyName>${name}</PropertyName>
+        <SubStruct>0</SubStruct>
+        <TheStats />
+        <TheSubs />
+      </StructObject>`;
+    }
+    
+    // For all names with values (FirstName, LastName, NickName), generate full structure
+    // Custom names require ID, Type, and the name value to display correctly in-game
     return `
       <StructObject xsi:type="TextProperty">
         <Index>${index}</Index>
@@ -286,7 +469,7 @@ function generateTextPropertySubsection(index, name, value) {
             <Index>0</Index>
             <PropertyName>ID</PropertyName>
             <PropertyType>StringProperty</PropertyType>
-            <Value>DNL.NameList.Default__AngloAmerican_Common_FemaleMiddle_C.Names.0.Name</Value>
+            <Value>${escapeXML(nameListID)}</Value>
           </SaveObject>
           <SaveObject xsi:type="StringProperty">
             <Index>1</Index>
@@ -359,6 +542,18 @@ function generateSkillsArray(index, skills) {
 function generateSkillsSubsection(skills) {
     const skillList = [];
     
+    // Ensure skills object exists
+    if (!skills) {
+        console.warn('Skills object is missing in generateSkillsSubsection, using defaults');
+        skills = {
+            cardio: { level: 0, specialty: '' },
+            wits: { level: 0, specialty: '' },
+            fighting: { level: 0, specialty: '' },
+            shooting: { level: 0, specialty: '' },
+            fifthSkill: { type: 'none', skill: '' }
+        };
+    }
+    
     // Core 4 skills
     const coreSkills = [
         { name: 'Cardio', key: 'cardio' },
@@ -369,15 +564,28 @@ function generateSkillsSubsection(skills) {
     
     coreSkills.forEach((skill) => {
         const skillData = skills[skill.key];
-        if (skillData && skillData.level > 0) {
+        // Include skills even if level is 0 - the game may need the structure
+        // Only skip if skillData doesn't exist at all
+        if (skillData && typeof skillData.level === 'number') {
             skillList.push({
                 name: skill.name,
-                level: skillData.level,
+                level: skillData.level || 0,
                 specialty: skillData.specialty || '',
+                grantingTrait: 'Default'
+            });
+        } else {
+            // Skill data missing, add with default level 0
+            console.warn(`Skill data missing for ${skill.key}, adding with level 0`);
+            skillList.push({
+                name: skill.name,
+                level: 0,
+                specialty: '',
                 grantingTrait: 'Default'
             });
         }
     });
+    
+    console.log('Generating skills XML with', skillList.length, 'skills:', skillList.map(s => `${s.name}:${s.level}`).join(', '));
     
     // 5th skill
     if (skills.fifthSkill && skills.fifthSkill.type !== 'none' && skills.fifthSkill.skill) {
@@ -597,11 +805,40 @@ function generateTraitsSubsection(traits) {
     return xml;
 }
 
-function generateEquipmentStruct(index, loadout) {
+function generateEquipmentStruct(index, unused) {
     return generateStructProperty(index, 'Equipment', 'EquipmentSave', '');
 }
 
-function generateEquipmentSubsection(loadout) {
+function generateEquipmentSubsection(unused) {
+    // Equipment is now empty - using Inventory Items section instead
+    const backpack = '';
+    const melee = '';
+    const closeCombat = '';
+    const ranged = '';
+    const sidearm = '';
+    const rucksack = '';
+    
+    // Determine Index values: Equipment section items are at positions 0-5
+    // Index should be the position in Equipment section if item exists, -1 if empty
+    const getIndex = (item) => {
+        if (!item || item === '' || item === 'None') return -1;
+        // Equipment section order: Backpack(0), Melee(1), CloseCombat(2), Ranged(3), Sidearm(4), Rucksack(5)
+        return item === backpack && backpack ? 0 :
+               item === melee && melee ? 1 :
+               item === closeCombat && closeCombat ? 2 :
+               item === ranged && ranged ? 3 :
+               item === sidearm && sidearm ? 4 :
+               item === rucksack && rucksack ? 5 : -1;
+    };
+    
+    // But actually, each slot has a fixed position in Equipment section
+    const backpackIndex = backpack && backpack !== 'None' ? 0 : -1;
+    const meleeIndex = melee && melee !== 'None' ? 1 : -1;
+    const closeCombatIndex = closeCombat && closeCombat !== 'None' ? 2 : -1;
+    const rangedIndex = ranged && ranged !== 'None' ? 3 : -1;
+    const sidearmIndex = sidearm && sidearm !== 'None' ? 4 : -1;
+    const rucksackIndex = rucksack && rucksack !== 'None' ? 5 : -1;
+    
     return `
       <StructObject xsi:type="StructProperty">
         <Index>40</Index>
@@ -663,7 +900,7 @@ function generateEquipmentSubsection(loadout) {
                 <Index>0</Index>
                 <PropertyName>Index</PropertyName>
                 <PropertyType>IntProperty</PropertyType>
-                <Value>-1</Value>
+                <Value>${backpackIndex}</Value>
                 <TheType>0</TheType>
               </SaveObject>
             </TheStats>
@@ -680,7 +917,7 @@ function generateEquipmentSubsection(loadout) {
                 <Index>0</Index>
                 <PropertyName>Index</PropertyName>
                 <PropertyType>IntProperty</PropertyType>
-                <Value>-1</Value>
+                <Value>${meleeIndex}</Value>
                 <TheType>0</TheType>
               </SaveObject>
             </TheStats>
@@ -697,7 +934,7 @@ function generateEquipmentSubsection(loadout) {
                 <Index>0</Index>
                 <PropertyName>Index</PropertyName>
                 <PropertyType>IntProperty</PropertyType>
-                <Value>-1</Value>
+                <Value>${closeCombatIndex}</Value>
                 <TheType>0</TheType>
               </SaveObject>
             </TheStats>
@@ -714,7 +951,7 @@ function generateEquipmentSubsection(loadout) {
                 <Index>0</Index>
                 <PropertyName>Index</PropertyName>
                 <PropertyType>IntProperty</PropertyType>
-                <Value>-1</Value>
+                <Value>${rangedIndex}</Value>
                 <TheType>0</TheType>
               </SaveObject>
             </TheStats>
@@ -731,7 +968,7 @@ function generateEquipmentSubsection(loadout) {
                 <Index>0</Index>
                 <PropertyName>Index</PropertyName>
                 <PropertyType>IntProperty</PropertyType>
-                <Value>-1</Value>
+                <Value>${sidearmIndex}</Value>
                 <TheType>0</TheType>
               </SaveObject>
             </TheStats>
@@ -748,7 +985,7 @@ function generateEquipmentSubsection(loadout) {
                 <Index>0</Index>
                 <PropertyName>Index</PropertyName>
                 <PropertyType>IntProperty</PropertyType>
-                <Value>-1</Value>
+                <Value>${rucksackIndex}</Value>
                 <TheType>0</TheType>
               </SaveObject>
             </TheStats>
@@ -761,6 +998,47 @@ function generateEquipmentSubsection(loadout) {
 }
 
 function generateInventorySubsection(index) {
+    const inventory = characterData.inventory || [];
+    const maxSlots = 30; // Match the maxSlots in generateSlotsSection
+    const numSlots = maxSlots; // Always generate maxSlots to match the Slots section
+    
+    // Generate SaveObjects for TheStats (one per slot)
+    let statsXML = '';
+    for (let i = 0; i < numSlots; i++) {
+        statsXML += `
+              <SaveObject>
+                <Index>${i}</Index>
+                <PropertyName>Slots</PropertyName>
+                <PropertyType>StructProperty</PropertyType>
+                <Value />
+                <TheType>ItemInstanceSave</TheType>
+              </SaveObject>`;
+    }
+    
+    // Generate StructObjects for TheSubs (one per slot)
+    let subsXML = '';
+    for (let i = 0; i < numSlots; i++) {
+        const isFilled = i < inventory.length;
+        subsXML += `
+              <StructObject xsi:type="StructProperty">
+                <Index>${i}</Index>
+                <PropertyName>Slots</PropertyName>
+                <PropertyType>ItemInstanceSave</PropertyType>
+                <SubStruct>ItemInstanceSave</SubStruct>
+                <TheStats>
+                  <SaveObject xsi:type="IntProperty">
+                    <Index>0</Index>
+                    <PropertyName>Index</PropertyName>
+                    <PropertyType>IntProperty</PropertyType>
+                    <Value>${isFilled ? i : -1}</Value>
+                    <TheType>0</TheType>
+                  </SaveObject>
+                </TheStats>
+                <TheSubs />
+                <Terminated>true</Terminated>
+              </StructObject>`;
+    }
+    
     return `
       <StructObject xsi:type="StructProperty">
         <Index>${index}</Index>
@@ -782,8 +1060,10 @@ function generateInventorySubsection(index) {
             <PropertyName>Slots</PropertyName>
             <PropertyType>ItemInstanceSave</PropertyType>
             <SubStruct>StructProperty</SubStruct>
-            <TheStats />
-            <TheSubs />
+            <TheStats>${statsXML}
+            </TheStats>
+            <TheSubs>${subsXML}
+            </TheSubs>
           </StructObject>
         </TheSubs>
         <Terminated>true</Terminated>
@@ -820,7 +1100,7 @@ function generateTimedBuffSavesSubsection(index) {
       </StructObject>`;
 }
 
-function generateEquipmentSection(loadout) {
+function generateEquipmentSection(unused) {
     // Equipment section is separate from SurvivorData
     // Order: Backpack, Melee, CloseCombat, Ranged, Sidearm, Rucksack
     // Non-Null items need xsi:type and StackData structure
@@ -1041,20 +1321,14 @@ ${stackDataContent}
     </ItemExport>`;
     };
     
-    // Get equipment values from form or loadout
-    const backpackEl = document.getElementById('equipmentBackpack');
-    const meleeEl = document.getElementById('equipmentMelee');
-    const closeCombatEl = document.getElementById('equipmentCloseCombat');
-    const rangedEl = document.getElementById('equipmentRanged');
-    const sidearmEl = document.getElementById('equipmentSidearm');
-    const rucksackEl = document.getElementById('equipmentRucksack');
-    
-    const backpack = backpackEl ? backpackEl.value : (loadout?.backpack || '');
-    const melee = meleeEl ? meleeEl.value : (loadout?.melee || '');
-    const closeCombat = closeCombatEl ? closeCombatEl.value : (loadout?.closeCombat || '');
-    const ranged = rangedEl ? rangedEl.value : (loadout?.ranged || '');
-    const sidearm = sidearmEl ? sidearmEl.value : (loadout?.sidearm || '');
-    const rucksack = rucksackEl ? rucksackEl.value : (loadout?.rucksack || '');
+    // Equipment is now empty - using Inventory Items section instead
+    // Equipment is now empty - using Inventory Items section instead
+    const backpack = '';
+    const melee = '';
+    const closeCombat = '';
+    const ranged = '';
+    const sidearm = '';
+    const rucksack = '';
     
     return `
   <Equipment>
@@ -1064,7 +1338,8 @@ ${generateEquipmentItem(closeCombat, 'weapon', 'closeCombat')}
 ${generateEquipmentItem(ranged, 'weapon', 'ranged')}
 ${generateEquipmentItem(sidearm, 'weapon', 'sidearm')}
 ${generateEquipmentItem(rucksack, 'backpack', 'backpack')}
-  </Equipment>`;
+  </Equipment>
+`;
 }
 
 function generateSlotsSection() {
@@ -1111,6 +1386,10 @@ function generateSlotsSection() {
             xsiType = 'MiscellaneousExport';
             stackDataProperty = 'MiscellaneousItemInstances';
             instanceSaveType = 'MiscellaneousItemInstanceSave';
+        } else if (category === 'backpack') {
+            xsiType = 'BackpackExport';
+            stackDataProperty = 'BackpackItemInstances';
+            instanceSaveType = 'BackpackItemInstanceSave';
         }
         
         // #region agent log
@@ -1119,9 +1398,38 @@ function generateSlotsSection() {
         
         // Generate StackData for non-null items
         if (classString !== 'Null') {
-            // StackData structure for inventory items
-            // Most items use a similar structure with StackCount
-            slotsXML += `    <ItemExport xsi:type="${xsiType}">
+            // Backpacks use a simpler StackData structure (no StackInfo)
+            if (category === 'backpack') {
+                slotsXML += `    <ItemExport xsi:type="${xsiType}">
+      <ClassString>${escapeXML(classString)}</ClassString>
+      <StackData xsi:type="StructProperty">
+        <Index>0</Index>
+        <PropertyName>${stackDataProperty}</PropertyName>
+        <PropertyType>${instanceSaveType}</PropertyType>
+        <SubStruct>${instanceSaveType}</SubStruct>
+        <TheStats>
+          <SaveObject xsi:type="IntProperty">
+            <Index>0</Index>
+            <PropertyName>ClassIndex</PropertyName>
+            <PropertyType>IntProperty</PropertyType>
+            <Value>${index}</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+          <SaveObject xsi:type="DoubleProperty">
+            <Index>1</Index>
+            <PropertyName>TimeAddedToInventory</PropertyName>
+            <PropertyType>DoubleProperty</PropertyType>
+            <Value>0</Value>
+            <TheType>0</TheType>
+          </SaveObject>
+        </TheStats>
+        <TheSubs />
+        <Terminated>true</Terminated>
+      </StackData>
+    </ItemExport>\n`;
+            } else {
+                // Other items use StackData with StackInfo and StackCount
+                slotsXML += `    <ItemExport xsi:type="${xsiType}">
       <ClassString>${escapeXML(classString)}</ClassString>
       <StackData xsi:type="StructProperty">
         <Index>0</Index>
@@ -1173,6 +1481,7 @@ function generateSlotsSection() {
         <Terminated>true</Terminated>
       </StackData>
     </ItemExport>\n`;
+            }
         } else {
             // Null item
             slotsXML += `    <ItemExport>
@@ -1188,7 +1497,7 @@ function generateSlotsSection() {
     </ItemExport>\n`;
     }
     
-    slotsXML += '  </Slots>';
+    slotsXML += '  </Slots>\n';
     
     // #region agent log
     fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'xmlGenerator.js:1158',message:'Slots section generated',data:{inventoryLength:inventory.length,slotsGenerated:inventory.length+Math.max(0,maxSlots-inventory.length),xmlLength:slotsXML.length},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'C'})}).catch(()=>{});

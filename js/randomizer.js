@@ -250,16 +250,54 @@ class Randomizer {
             return 'Citizen';
         }
         const levels = dataLoader.data.enums.standingLevels;
-        return levels[Math.floor(Math.random() * levels.length)];
+        const selected = levels[Math.floor(Math.random() * levels.length)];
+        // Return the value property, not the whole object
+        return selected?.value || selected || 'Citizen';
     }
 
     // Random leader type
     randomLeaderType() {
-        if (!dataLoader.data.enums || !dataLoader.data.enums.leaderTypes) {
-            return 'None';
+        // Always return 'None' as requested - leader type should always be None
+        return 'None';
+        
+        // Original random logic (commented out per user request)
+        // if (!dataLoader.data.enums || !dataLoader.data.enums.leaderTypes) {
+        //     return 'None';
+        // }
+        // const types = dataLoader.data.enums.leaderTypes;
+        // const selected = types[Math.floor(Math.random() * types.length)];
+        // // Return the value property, not the whole object
+        // return selected?.value || selected || 'None';
+    }
+    
+    // Get valid standing level (ensures it's a string value, not an object)
+    getValidStandingLevel(value) {
+        if (!value) return 'Citizen';
+        // If it's an object, extract the value
+        if (typeof value === 'object' && value.value) {
+            return value.value;
         }
-        const types = dataLoader.data.enums.leaderTypes;
-        return types[Math.floor(Math.random() * types.length)];
+        // If it's already a valid string, return it
+        if (typeof value === 'string') {
+            const validLevels = ['Stranger', 'Recruit', 'Citizen', 'Hero'];
+            return validLevels.includes(value) ? value : 'Citizen';
+        }
+        return 'Citizen';
+    }
+    
+    // Get valid leader type (ensures it's a string value, not an object)
+    getValidLeaderType(value) {
+        if (!value) return 'None';
+        // If it's an object, extract the value
+        if (typeof value === 'object' && value.value) {
+            return value.value;
+        }
+        // If it's already a valid string, return it
+        if (typeof value === 'string') {
+            const validTypes = ['None', 'Builder', 'Warlord', 'Sheriff', 'Trader'];
+            return validTypes.includes(value) ? value : 'None';
+        }
+        return 'None';
     }
 
     // Random stats
@@ -290,8 +328,8 @@ class Randomizer {
             humanDefinition: options.humanDefinition !== false ? this.randomHumanDefinition(gender) : (window.characterData?.humanDefinition || ''),
             philosophy1: philo1,
             philosophy2: philo2,
-            standingLevel: options.standingLevel !== false ? this.randomStandingLevel() : (window.characterData?.standingLevel || 'Citizen'),
-            leaderType: options.leaderType !== false ? this.randomLeaderType() : (window.characterData?.leaderType || 'None'),
+            standingLevel: options.standingLevel !== false ? this.randomStandingLevel() : (this.getValidStandingLevel(window.characterData?.standingLevel)),
+            leaderType: options.leaderType !== false ? this.randomLeaderType() : (this.getValidLeaderType(window.characterData?.leaderType)),
             heroBonus: options.heroBonus !== false ? '' : (window.characterData?.heroBonus || ''),
             skills: options.skills !== false ? this.randomSkills(options.skillOptions || {}) : (window.characterData?.skills || {
                 cardio: { level: 0, specialty: '' },
@@ -301,7 +339,7 @@ class Randomizer {
                 fifthSkill: { type: 'none', skill: '' }
             }),
             stats: options.stats !== false ? this.randomStats() : (window.characterData?.stats || { health: 100, stamina: 100 }),
-            loadout: window.characterData?.loadout || { preset: 'custom', equipment: {} }
+            inventory: window.characterData?.inventory || []
         };
 
         // Random traits

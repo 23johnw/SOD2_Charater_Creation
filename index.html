@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>State of Decay 2 Character Generator</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎲</text></svg>">
     <link rel="stylesheet" href="css/styles.css">
@@ -202,46 +205,29 @@
                 <h2>Stats (Optional)</h2>
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="currentHealth">Base Health (XML Value)</label>
+                        <label for="currentHealth">Player Health (XML Value)</label>
                         <input type="number" id="currentHealth" name="currentHealth" value="100" min="0" max="150">
                         <div id="healthDisplay" class="stat-display">
                             <span class="stat-base">100</span>
                             <span class="stat-buff" id="healthBuff" style="display: none;"></span>
                             <span class="stat-total" id="healthTotal">= 100</span>
                         </div>
-                        <small><strong>Base</strong> = The value written to XML (what the game starts with). <strong>Yellow/Red</strong> = Trait buffs (added by game). <strong>Total</strong> = What the character will have in-game.</small>
+                        <small><strong>Player</strong> = The value written to XML (what the game starts with). <strong>Yellow/Red</strong> = Trait buffs (added by game). <strong>Total</strong> = What the character will have in-game.</small>
                     </div>
                     <div class="form-group">
-                        <label for="currentStamina">Base Stamina (XML Value)</label>
+                        <label for="currentStamina">Player Stamina (XML Value)</label>
                         <input type="number" id="currentStamina" name="currentStamina" value="100" min="0" max="150">
                         <div id="staminaDisplay" class="stat-display">
                             <span class="stat-base">100</span>
                             <span class="stat-buff" id="staminaBuff" style="display: none;"></span>
                             <span class="stat-total" id="staminaTotal">= 100</span>
                         </div>
-                        <small><strong>Base</strong> = The value written to XML (what the game starts with). <strong>Yellow/Red</strong> = Trait buffs (added by game). <strong>Total</strong> = What the character will have in-game.</small>
+                        <small><strong>Player</strong> = The value written to XML (what the game starts with). <strong>Yellow/Red</strong> = Trait buffs (added by game). <strong>Total</strong> = What the character will have in-game.</small>
                     </div>
                 </div>
             </section>
 
-            <!-- Section 6: Loadout (Optional) -->
-            <section class="form-section">
-                <h2>Loadout (Optional)</h2>
-                <div class="form-group">
-                    <label for="loadoutPreset">Loadout Preset</label>
-                    <select id="loadoutPreset" name="loadoutPreset">
-                        <option value="custom">Custom</option>
-                        <option value="heavy">Heavy Loadout</option>
-                        <option value="middle">Middle Loadout</option>
-                        <option value="light">Light Loadout</option>
-                    </select>
-                </div>
-                <div id="equipmentSlots" class="equipment-section">
-                    <!-- Equipment slots populated by JavaScript -->
-                </div>
-            </section>
-
-            <!-- Section 6.5: Inventory Items -->
+            <!-- Section 6: Inventory Items -->
             <section class="form-section">
                 <h2>Inventory Items</h2>
                 <p class="help-text">Add items to the character's inventory. These will appear in the <code>&lt;Slots&gt;</code> section of the XML.</p>
@@ -249,10 +235,20 @@
                     <div class="form-group">
                         <label for="inventoryCategory">Item Category</label>
                         <select id="inventoryCategory">
-                            <option value="consumable">Consumable</option>
-                            <option value="ammo">Ammo</option>
-                            <option value="resource">Resource</option>
-                            <option value="miscellaneous">Miscellaneous</option>
+                            <optgroup label="== Weapons ==">
+                                <option value="melee">Melee Weapon</option>
+                                <option value="closeCombat">Close Combat Weapon</option>
+                                <option value="ranged">Ranged Weapon</option>
+                                <option value="sidearm">Sidearm</option>
+                                <option value="ammo">Ammo</option>
+                            </optgroup>
+                            <optgroup label="== Items ==">
+                                <option value="consumable">Consumable</option>
+                                <option value="resource">Resource</option>
+                                <option value="miscellaneous">Miscellaneous</option>
+                                <option value="backpack">Backpack</option>
+                                <option value="skillBooks">Skill Books & Manuals</option>
+                            </optgroup>
                         </select>
                     </div>
                     <div class="form-group">
@@ -294,7 +290,6 @@
     <script src="js/randomizer.js"></script>
     <script src="js/app.js"></script>
     <script src="js/traitManager.js"></script>
-    <script src="js/loadouts.js"></script>
     <script src="js/constraints.js"></script>
     <script src="js/xmlGenerator.js"></script>
 </body>

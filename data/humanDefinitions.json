@@ -6,22 +6,10 @@
     "Style": "Tactical"
   },
   {
-    "Model Name": "Female Hoodie 01",
-    "Internal ID (For Editor)": "HumanFemaleHoodie_01_v_02",
-    "Gender": "Female",
-    "Style": "Casual"
-  },
-  {
     "Model Name": "Female Tshirt 01",
     "Internal ID (For Editor)": "HumanFemaleTshirt_01_v_03",
     "Gender": "Female",
     "Style": "Civilian"
-  },
-  {
-    "Model Name": "Female Work 01",
-    "Internal ID (For Editor)": "HumanFemaleWorkShirt_01_v_04",
-    "Gender": "Female",
-    "Style": "Professional"
   },
   {
     "Model Name": "Female Flannel 01",
@@ -36,57 +24,15 @@
     "Style": "Tactical"
   },
   {
-    "Model Name": "Male Hoodie 01",
-    "Internal ID (For Editor)": "HumanMaleHoodie_01_v_02",
-    "Gender": "Male",
-    "Style": "Casual"
-  },
-  {
     "Model Name": "Male Tshirt 01",
     "Internal ID (For Editor)": "HumanMaleTshirt_01_v_03",
     "Gender": "Male",
     "Style": "Civilian"
   },
   {
-    "Model Name": "Male Work 01",
-    "Internal ID (For Editor)": "HumanMaleWorkShirt_01_v_04",
-    "Gender": "Male",
-    "Style": "Professional"
-  },
-  {
     "Model Name": "Male Flannel 01",
     "Internal ID (For Editor)": "HumanMaleFlannel_01_v_05",
     "Gender": "Male",
     "Style": "Rural"
-  },
-  {
-    "Model Name": "Red Talon Female",
-    "Internal ID (For Editor)": "HumanFemaleRedTalon_01",
-    "Gender": "Female",
-    "Style": "Elite Soldier"
-  },
-  {
-    "Model Name": "Red Talon Male",
-    "Internal ID (For Editor)": "HumanMaleRedTalon_01",
-    "Gender": "Male",
-    "Style": "Elite Soldier"
-  },
-  {
-    "Model Name": "Unique Hero A",
-    "Internal ID (For Editor)": "HumanFemaleHero_01",
-    "Gender": "Female",
-    "Style": "Story Face"
-  },
-  {
-    "Model Name": "Unique Hero B",
-    "Internal ID (For Editor)": "HumanMaleHero_01",
-    "Gender": "Male",
-    "Style": "Story Face"
-  },
-  {
-    "Model Name": "The ID works like this: [ModelType]_v_[FaceNumber]. Standard survivors use face numbers from v_01 up to v_20.",
-    "Internal ID (For Editor)": "",
-    "Gender": "",
-    "Style": ""
   }
 ]

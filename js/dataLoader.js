@@ -57,42 +57,63 @@ class DataLoader {
             
             // Load backpack ID mapping if available
             try {
-                this.data.backpackIdMapping = await this.loadJSON('data/backpack-id-mapping.json');
+                const backpackMapping = await this.loadJSON('data/backpack-id-mapping.json');
+                // Convert object format to array format if needed
+                if (Array.isArray(backpackMapping)) {
+                    this.data.backpackIdMapping = backpackMapping;
+                } else {
+                    // Convert object to array
+                    this.data.backpackIdMapping = Object.values(backpackMapping);
+                }
+                console.log(`✓ Loaded ${this.data.backpackIdMapping.length} backpack items`);
             } catch (e) {
-                console.warn('Backpack ID mapping not found');
-                this.data.backpackIdMapping = {};
+                console.warn('Backpack ID mapping not found:', e);
+                this.data.backpackIdMapping = [];
             }
             
             // Load consumable ID mapping if available
             try {
                 this.data.consumableIdMapping = await this.loadJSON('data/consumable-id-mapping.json');
+                console.log(`✓ Loaded ${Array.isArray(this.data.consumableIdMapping) ? this.data.consumableIdMapping.length : 0} consumable items`);
             } catch (e) {
-                console.warn('Consumable ID mapping not found');
-                this.data.consumableIdMapping = {};
+                console.warn('Consumable ID mapping not found:', e);
+                this.data.consumableIdMapping = [];
             }
             
             // Load ammo ID mapping if available
             try {
                 this.data.ammoIdMapping = await this.loadJSON('data/ammo-id-mapping.json');
+                console.log(`✓ Loaded ${Array.isArray(this.data.ammoIdMapping) ? this.data.ammoIdMapping.length : 0} ammo items`);
             } catch (e) {
-                console.warn('Ammo ID mapping not found');
-                this.data.ammoIdMapping = {};
+                console.warn('Ammo ID mapping not found:', e);
+                this.data.ammoIdMapping = [];
             }
             
             // Load resource ID mapping if available
             try {
                 this.data.resourceIdMapping = await this.loadJSON('data/resource-id-mapping.json');
+                console.log(`✓ Loaded ${Array.isArray(this.data.resourceIdMapping) ? this.data.resourceIdMapping.length : 0} resource items`);
             } catch (e) {
-                console.warn('Resource ID mapping not found');
-                this.data.resourceIdMapping = {};
+                console.warn('Resource ID mapping not found:', e);
+                this.data.resourceIdMapping = [];
             }
             
             // Load miscellaneous ID mapping if available
             try {
                 this.data.miscellaneousIdMapping = await this.loadJSON('data/miscellaneous-id-mapping.json');
+                console.log(`✓ Loaded ${Array.isArray(this.data.miscellaneousIdMapping) ? this.data.miscellaneousIdMapping.length : 0} miscellaneous items`);
             } catch (e) {
-                console.warn('Miscellaneous ID mapping not found');
-                this.data.miscellaneousIdMapping = {};
+                console.warn('Miscellaneous ID mapping not found:', e);
+                this.data.miscellaneousIdMapping = [];
+            }
+            
+            // Load deprecated items if available
+            try {
+                this.data.deprecatedItems = await this.loadJSON('data/deprecated-items.json');
+                console.log('✓ Loaded deprecated items list');
+            } catch (e) {
+                console.warn('Deprecated items file not found:', e);
+                this.data.deprecatedItems = {};
             }
             
             // Try to load curated traits table first (clean, pre-formatted data)

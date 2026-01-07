@@ -48,7 +48,14 @@ class ConstraintValidator {
         if (!characterData.gender) {
             errors.push('Gender is required');
         }
-        if (!characterData.voiceID) {
+        
+        // Check voiceID - if characterData doesn't have it, check the form
+        let voiceID = characterData.voiceID;
+        if (!voiceID) {
+            const voiceSelect = document.getElementById('voiceID');
+            voiceID = voiceSelect?.value || '';
+        }
+        if (!voiceID || voiceID.trim() === '') {
             errors.push('Voice ID is required');
         }
         if (!characterData.humanDefinition) {

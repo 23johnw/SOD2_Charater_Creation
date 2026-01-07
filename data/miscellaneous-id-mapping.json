@@ -1,2782 +1,326 @@
 [
   {
-    "displayName": "(TEMP)Disassembled Weapon Parts",
-    "classString": "/Game/Items/MiscellaneousItems/DLCHeartland_MissionMiscItem_DisassembledWeaponParts.DLCHeartland_MissionMiscItem_DisassembledWeaponParts_C"
+    "displayName": "CatalogSchedule",
+    "classString": "/Game/Items/Items/CatalogSchedule.CatalogSchedule_C"
   },
   {
-    "displayName": "Abridged Copy of Moby Dick",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_41.LuxuryItem_Books_book_41_C"
+    "displayName": "CharacterAddictionSettings BP",
+    "classString": "/Game/Items/Items/CharacterAddictionSettings_BP.CharacterAddictionSettings_BP_C"
   },
   {
-    "displayName": "Addict's Journal",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_FailedCop_2.Note_Mission_FailedCop_2_C"
+    "displayName": "CharacterFatigueSettings BP",
+    "classString": "/Game/Items/Items/CharacterFatigueSettings_BP.CharacterFatigueSettings_BP_C"
   },
   {
-    "displayName": "Advanced Toolkit",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemRepairVehicleAdvanced.MiscItemRepairVehicleAdvanced_C"
+    "displayName": "CharacterFrustrationSettings BP",
+    "classString": "/Game/Items/Items/CharacterFrustrationSettings_BP.CharacterFrustrationSettings_BP_C"
   },
   {
-    "displayName": "American Flag Lapel Pin",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_flag_pin_1.LuxuryItem_Comforts_flag_pin_1_C"
+    "displayName": "CharacterInjurySettings",
+    "classString": "/Game/Items/Items/CharacterInjurySettings.CharacterInjurySettings_C"
   },
   {
-    "displayName": "Angry Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_Santos01_EnclaveLeft.Faustite_Note_Santos01_EnclaveLeft_C"
+    "displayName": "CharacterResourceDatabaseBp",
+    "classString": "/Game/Items/Items/CharacterResourceDatabaseBp.CharacterResourceDatabaseBp_C"
   },
   {
-    "displayName": "Aromatherapy Set",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/Luxury_Aromatherapy.Luxury_Aromatherapy_C"
+    "displayName": "CharacterSicknessSettings BP",
+    "classString": "/Game/Items/Items/CharacterSicknessSettings_BP.CharacterSicknessSettings_BP_C"
   },
   {
-    "displayName": "Bag of Almonds",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_nuts_6.LuxuryItem_Treats_nuts_6_C"
+    "displayName": "CharacterStandingRewardSettings BP",
+    "classString": "/Game/Items/Items/CharacterStandingRewardSettings_BP.CharacterStandingRewardSettings_BP_C"
   },
   {
-    "displayName": "Bag of BBQ Chips",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_snacks_3.LuxuryItem_Treats_snacks_3_C"
+    "displayName": "CharacterStandingSettings BP",
+    "classString": "/Game/Items/Items/CharacterStandingSettings_BP.CharacterStandingSettings_BP_C"
   },
   {
-    "displayName": "Bag of Candy Corn",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_25.LuxuryItem_Treats_candy_25_C"
+    "displayName": "dead body container bp",
+    "classString": "/Game/Items/Items/dead_body_container_bp.dead_body_container_bp_C"
   },
   {
-    "displayName": "Bag of Cheez-E-Puffs",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_snacks_5.LuxuryItem_Treats_snacks_5_C"
+    "displayName": "DLC2 Daybreak BeaconUpgradeRequirementItem",
+    "classString": "/Game/Items/MiscellaneousItems/DLC2_Daybreak_BeaconUpgradeRequirementItem.DLC2_Daybreak_BeaconUpgradeRequirementItem_C"
   },
   {
-    "displayName": "Bag of Chew",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_chew_1.LuxuryItem_Tobacco_chew_1_C"
+    "displayName": "DLC2 Daybreak MineRequirementItem",
+    "classString": "/Game/Items/MiscellaneousItems/DLC2_Daybreak_MineRequirementItem.DLC2_Daybreak_MineRequirementItem_C"
   },
   {
-    "displayName": "Bag of Chocolate Chips",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_21.LuxuryItem_Treats_candy_21_C"
+    "displayName": "DLC2 Daybreak PowerSupplyRequirementItem",
+    "classString": "/Game/Items/MiscellaneousItems/DLC2_Daybreak_PowerSupplyRequirementItem.DLC2_Daybreak_PowerSupplyRequirementItem_C"
   },
   {
-    "displayName": "Bag of Chocolate Espresso Beans",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_31.LuxuryItem_Treats_candy_31_C"
+    "displayName": "DLC2 Daybreak WallRequirementItem",
+    "classString": "/Game/Items/MiscellaneousItems/DLC2_Daybreak_WallRequirementItem.DLC2_Daybreak_WallRequirementItem_C"
   },
   {
-    "displayName": "Bag of Danish Fish",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_37.LuxuryItem_Treats_candy_37_C"
+    "displayName": "DLC2 DaybreakCharacterStandingRewardSettings BP",
+    "classString": "/Game/Items/Items/DLC2_DaybreakCharacterStandingRewardSettings_BP.DLC2_DaybreakCharacterStandingRewardSettings_BP_C"
   },
   {
-    "displayName": "Bag of Dried Apricots",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_fruit_2.LuxuryItem_Treats_fruit_2_C"
+    "displayName": "DLC3 HardMode CharacterStandingRewardSettings BP",
+    "classString": "/Game/Items/Items/DLC3_HardMode_CharacterStandingRewardSettings_BP.DLC3_HardMode_CharacterStandingRewardSettings_BP_C"
   },
   {
-    "displayName": "Bag of Fiber 'Splodes!",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_cereal_3.LuxuryItem_Treats_cereal_3_C"
+    "displayName": "DLC3 Nightmare2Mode CharacterStandingRewardSettings BP",
+    "classString": "/Game/Items/Items/DLC3_Nightmare2Mode_CharacterStandingRewardSettings_BP.DLC3_Nightmare2Mode_CharacterStandingRewardSettings_BP_C"
   },
   {
-    "displayName": "Bag of Gold Teeth",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_gold_teeth_1.LuxuryItem_FancyShit_gold_teeth_1_C"
+    "displayName": "DLC3 NightmareMode CharacterStandingRewardSettings BP",
+    "classString": "/Game/Items/Items/DLC3_NightmareMode_CharacterStandingRewardSettings_BP.DLC3_NightmareMode_CharacterStandingRewardSettings_BP_C"
   },
   {
-    "displayName": "Bag of Gourmet Coffee Beans",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_coffee_beans_1.LuxuryItem_Comforts_coffee_beans_1_C"
-  },
-  {
-    "displayName": "Bag of Gourmet Potato Chips",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_snacks_6.LuxuryItem_Treats_snacks_6_C"
-  },
-  {
-    "displayName": "Bag of Gumdrops",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_35.LuxuryItem_Treats_candy_35_C"
-  },
-  {
-    "displayName": "Bag of Gummies",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_gummies_1.LuxuryItem_Treats_gummies_1_C"
-  },
-  {
-    "displayName": "Bag of Jelly Beans",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_36.LuxuryItem_Treats_candy_36_C"
-  },
-  {
-    "displayName": "Bag of Jumbo Cotton Balls",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_cotton_balls_1.LuxuryItem_Hygiene_cotton_balls_1_C"
-  },
-  {
-    "displayName": "Bag of Jumbo Marshmallows",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_8.LuxuryItem_Treats_candy_8_C"
-  },
-  {
-    "displayName": "Bag of Marbles",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_marbles_1.LuxuryItem_Entertainment_marbles_1_C"
-  },
-  {
-    "displayName": "Bag of Microwave Popcorn",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_popcorn_1.LuxuryItem_Treats_popcorn_1_C"
-  },
-  {
-    "displayName": "Bag of Peanut Butter Chips",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/Luxury_ChocolateChips.Luxury_ChocolateChips_C"
-  },
-  {
-    "displayName": "Bag of Pistachios",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_nuts_4.LuxuryItem_Treats_nuts_4_C"
-  },
-  {
-    "displayName": "Bag of Plug Tobacco",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_tobacco_1.LuxuryItem_Tobacco_tobacco_1_C"
-  },
-  {
-    "displayName": "Bag of Potato Chips",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_snacks_2.LuxuryItem_Treats_snacks_2_C"
-  },
-  {
-    "displayName": "Bag of Pretzels",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_snacks_7.LuxuryItem_Treats_snacks_7_C"
-  },
-  {
-    "displayName": "Bag of Salt Water Taffy",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_9.LuxuryItem_Treats_candy_9_C"
-  },
-  {
-    "displayName": "Bag of Sour Candy",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_26.LuxuryItem_Treats_candy_26_C"
-  },
-  {
-    "displayName": "Bag of Sour Gummy Fish",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_27.LuxuryItem_Treats_candy_27_C"
-  },
-  {
-    "displayName": "Bag of Squizzles",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_1.LuxuryItem_Treats_candy_1_C"
-  },
-  {
-    "displayName": "Bag of Sunflower Seeds",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_nuts_5.LuxuryItem_Treats_nuts_5_C"
-  },
-  {
-    "displayName": "Bag of Toiletries",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_toiletries_1.LuxuryItem_Hygiene_toiletries_1_C"
-  },
-  {
-    "displayName": "Bag of Tortilla Chips",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_snacks_4.LuxuryItem_Treats_snacks_4_C"
-  },
-  {
-    "displayName": "Bag of Trail Mix",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_snacks_1.LuxuryItem_Treats_snacks_1_C"
-  },
-  {
-    "displayName": "Bag of Walnuts",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_nuts_7.LuxuryItem_Treats_nuts_7_C"
-  },
-  {
-    "displayName": "Bag of Wine Gums",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_34.LuxuryItem_Treats_candy_34_C"
-  },
-  {
-    "displayName": "Bar of Baking Chocolate",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_17.LuxuryItem_Treats_candy_17_C"
-  },
-  {
-    "displayName": "Bar of Dark Chocolate",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_15.LuxuryItem_Treats_candy_15_C"
-  },
-  {
-    "displayName": "Bar of Milk Chocolate",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_11.LuxuryItem_Treats_candy_11_C"
-  },
-  {
-    "displayName": "Bar of Travel-Size Soap",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_soap_2.LuxuryItem_Hygiene_soap_2_C"
-  },
-  {
-    "displayName": "Bar of White Chocolate",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_18.LuxuryItem_Treats_candy_18_C"
-  },
-  {
-    "displayName": "Bath Bomb",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_BathBomb.Luxury_BathBomb_C"
-  },
-  {
-    "displayName": "Beat-Up Bass",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Entertainment/Luxury_CustomBass.Luxury_CustomBass_C"
-  },
-  {
-    "displayName": "Beat-up Thesaurus",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_thesaurus_1.LuxuryItem_Books_thesaurus_1_C"
-  },
-  {
-    "displayName": "Bespoke Watch",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_FancyShit/Luxury_SuperExpensiveWatch.Luxury_SuperExpensiveWatch_C"
-  },
-  {
-    "displayName": "Big Chunk of Honeycomb",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_honey_2.LuxuryItem_Treats_honey_2_C"
-  },
-  {
-    "displayName": "Big Stickin' CD",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_CD_1.LuxuryItem_Entertainment_CD_1_C"
-  },
-  {
-    "displayName": "Black Plague Sample",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemBlackPlagueCureRequirement.MiscItemBlackPlagueCureRequirement_C"
-  },
-  {
-    "displayName": "Black Skies Album",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_album_1.LuxuryItem_Entertainment_album_1_C"
-  },
-  {
-    "displayName": "Blank Journal",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_15.LuxuryItem_Books_book_15_C"
-  },
-  {
-    "displayName": "Bloater Poison Gland",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItem_Heartland_BloaterGland.MiscItem_Heartland_BloaterGland_C"
-  },
-  {
-    "displayName": "Bloody Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_22.Note_22_C"
-  },
-  {
-    "displayName": "Blue Teddy Bear",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_teddy_bear_1.LuxuryItem_Entertainment_teddy_bear_1_C"
-  },
-  {
-    "displayName": "Boda Bag of Pulque",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_pulque_1.LuxuryItem_Alcohol_pulque_1_C"
-  },
-  {
-    "displayName": "Book on Edible Plants",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_2.LuxuryItem_Books_book_2_C"
-  },
-  {
-    "displayName": "Bookseller's Order List",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_FindComics_OrderList.Note_FindComics_OrderList_C"
-  },
-  {
-    "displayName": "Bottle of 12-Year Scotch",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Alcohol/Luxury_TwelveYearScotch.Luxury_TwelveYearScotch_C"
-  },
-  {
-    "displayName": "Bottle of 20-Year Scotch",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Alcohol/Luxury_TwentyYearScotch.Luxury_TwentyYearScotch_C"
-  },
-  {
-    "displayName": "Bottle of 30-Year Scotch",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Alcohol/Luxury_ThirtyYearScotch.Luxury_ThirtyYearScotch_C"
-  },
-  {
-    "displayName": "Bottle of Absinthe",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_absinthe_1.LuxuryItem_Alcohol_absinthe_1_C"
-  },
-  {
-    "displayName": "Bottle of Amaretto Liqueur",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_amaretto_1.LuxuryItem_Alcohol_amaretto_1_C"
-  },
-  {
-    "displayName": "Bottle of American Single Malt",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/Luxury_AmericanSingleMalt.Luxury_AmericanSingleMalt_C"
-  },
-  {
-    "displayName": "Bottle of Anti-Fungal Spray",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_anti-fungal_spray_1.LuxuryItem_Hygiene_anti-fungal_spray_1_C"
-  },
-  {
-    "displayName": "Bottle of Apricot Schnapps",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_10.LuxuryItem_Alcohol_booze_10_C"
-  },
-  {
-    "displayName": "Bottle of Artisan Gin",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_gin_3.LuxuryItem_Alcohol_gin_3_C"
-  },
-  {
-    "displayName": "Bottle of Artisanal Soda",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_soda_3.LuxuryItem_Treats_soda_3_C"
-  },
-  {
-    "displayName": "Bottle of Blended Scotch",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_scotch_1.LuxuryItem_Alcohol_scotch_1_C"
-  },
-  {
-    "displayName": "Bottle of Bubble Bath",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_BubbleBath.Luxury_BubbleBath_C"
-  },
-  {
-    "displayName": "Bottle of Celebrity Perfume",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_PurfumeCelebrity.Luxury_PurfumeCelebrity_C"
-  },
-  {
-    "displayName": "Bottle of Cheap Gin",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_gin_2.LuxuryItem_Alcohol_gin_2_C"
-  },
-  {
-    "displayName": "Bottle of Cheap Tequila",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_tequila_1.LuxuryItem_Alcohol_tequila_1_C"
-  },
-  {
-    "displayName": "Bottle of Cheap Vermouth",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_vermouth_1.LuxuryItem_Alcohol_vermouth_1_C"
-  },
-  {
-    "displayName": "Bottle of Cheap Vodka",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_vodka_2.LuxuryItem_Alcohol_vodka_2_C"
-  },
-  {
-    "displayName": "Bottle of Chocolate Liqueur",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_11.LuxuryItem_Alcohol_booze_11_C"
-  },
-  {
-    "displayName": "Bottle of Chocolate Syrup",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_14.LuxuryItem_Treats_candy_14_C"
-  },
-  {
-    "displayName": "Bottle of Conditioner",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_Conditioner.Luxury_Conditioner_C"
-  },
-  {
-    "displayName": "Bottle of Craft Beer",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_beer_4.LuxuryItem_Alcohol_beer_4_C"
-  },
-  {
-    "displayName": "Bottle of Crappy Rum",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_rum_1.LuxuryItem_Alcohol_rum_1_C"
-  },
-  {
-    "displayName": "Bottle of Decent Bourbon",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Alcohol/Luxury_DecentBourbon.Luxury_DecentBourbon_C"
-  },
-  {
-    "displayName": "Bottle of Decent Gin",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Alcohol/Luxury_DecentGin.Luxury_DecentGin_C"
-  },
-  {
-    "displayName": "Bottle of Decent Rye Whiskey",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Alcohol/Luxury_DecentRye.Luxury_DecentRye_C"
-  },
-  {
-    "displayName": "Bottle of Decent Tequila",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_decent_tequila_1.LuxuryItem_Alcohol_decent_tequila_1_C"
-  },
-  {
-    "displayName": "Bottle of Decent Whiskey",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_whiskey_2.LuxuryItem_Alcohol_whiskey_2_C"
-  },
-  {
-    "displayName": "Bottle of Falernum",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_1.LuxuryItem_Alcohol_booze_1_C"
-  },
-  {
-    "displayName": "Bottle of Fancy Hand Soap",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_HandSoapFancy.Luxury_HandSoapFancy_C"
-  },
-  {
-    "displayName": "Bottle of Fermented Sludge",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_6.LuxuryItem_Alcohol_booze_6_C"
-  },
-  {
-    "displayName": "Bottle of Fine Bourbon",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_bourbon_1.LuxuryItem_Alcohol_bourbon_1_C"
-  },
-  {
-    "displayName": "Bottle of Fine Italian Wine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_wine_3.LuxuryItem_Alcohol_wine_3_C"
-  },
-  {
-    "displayName": "Bottle of Fine Red Wine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_wine_9.LuxuryItem_Alcohol_wine_9_C"
-  },
-  {
-    "displayName": "Bottle of Fine Rum",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_rum_3.LuxuryItem_Alcohol_rum_3_C"
-  },
-  {
-    "displayName": "Bottle of Fine White Wine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_wine_7.LuxuryItem_Alcohol_wine_7_C"
-  },
-  {
-    "displayName": "Bottle of Flavored Rum",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_rum_2.LuxuryItem_Alcohol_rum_2_C"
-  },
-  {
-    "displayName": "Bottle of French Champagne",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_champagne_1.LuxuryItem_Alcohol_champagne_1_C"
-  },
-  {
-    "displayName": "Bottle of God-Knows-What",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_2.LuxuryItem_Alcohol_booze_2_C"
-  },
-  {
-    "displayName": "Bottle of Hair Growth Serum",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_HairGrowthSerum.Luxury_HairGrowthSerum_C"
-  },
-  {
-    "displayName": "Bottle of Hand Lotion",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_MoisturizingLotion.Luxury_MoisturizingLotion_C"
-  },
-  {
-    "displayName": "Bottle of Hand Sanitizer",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_hand_sanitizer_1.LuxuryItem_Hygiene_hand_sanitizer_1_C"
-  },
-  {
-    "displayName": "Bottle of Hotel Shampoo",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_shampoo_1.LuxuryItem_Hygiene_shampoo_1_C"
-  },
-  {
-    "displayName": "Bottle of Hydrating Moisturizer",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_moisturizer_1.LuxuryItem_Hygiene_moisturizer_1_C"
-  },
-  {
-    "displayName": "Bottle of Imported Sake",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_sake_1.LuxuryItem_Alcohol_sake_1_C"
-  },
-  {
-    "displayName": "Bottle of Imported Vodka",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_Russian_vodka_1.LuxuryItem_Alcohol_Russian_vodka_1_C"
-  },
-  {
-    "displayName": "Bottle of Irish Cream Liqueur",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_Irish_cream_1.LuxuryItem_Alcohol_Irish_cream_1_C"
-  },
-  {
-    "displayName": "Bottle of Jailhouse Toilet Wine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_wine_1.LuxuryItem_Alcohol_wine_1_C"
-  },
-  {
-    "displayName": "Bottle of Laundry Detergent",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_LaundryDetergent.Luxury_LaundryDetergent_C"
-  },
-  {
-    "displayName": "Bottle of Makeup Remover",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_makeup_remover_1.LuxuryItem_Hygiene_makeup_remover_1_C"
-  },
-  {
-    "displayName": "Bottle of Mouthwash",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_Mouthwash.Luxury_Mouthwash_C"
-  },
-  {
-    "displayName": "Bottle of Nail Polish",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_NailPolish.Luxury_NailPolish_C"
-  },
-  {
-    "displayName": "Bottle of Organic Hair Gel",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_HairGel.Luxury_HairGel_C"
-  },
-  {
-    "displayName": "Bottle of Organic Shampoo",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_Shampoo.Luxury_Shampoo_C"
-  },
-  {
-    "displayName": "Bottle of Perfume",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_Perfume.Luxury_Perfume_C"
-  },
-  {
-    "displayName": "Bottle of Premium Tequila",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_top_shelf_tequila_1.LuxuryItem_Alcohol_top_shelf_tequila_1_C"
-  },
-  {
-    "displayName": "Bottle of Red Table Wine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_wine_8.LuxuryItem_Alcohol_wine_8_C"
-  },
-  {
-    "displayName": "Bottle of Rotgut Whiskey",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_whiskey_1.LuxuryItem_Alcohol_whiskey_1_C"
-  },
-  {
-    "displayName": "Bottle of Salted Caramel Liqueur",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_12.LuxuryItem_Alcohol_booze_12_C"
-  },
-  {
-    "displayName": "Bottle of Sambuca Liqueur",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_13.LuxuryItem_Alcohol_booze_13_C"
-  },
-  {
-    "displayName": "Bottle of Single Malt Scotch",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_single_malt_scotch_1.LuxuryItem_Alcohol_single_malt_scotch_1_C"
-  },
-  {
-    "displayName": "Bottle of Soda",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_soda_2.LuxuryItem_Treats_soda_2_C"
-  },
-  {
-    "displayName": "Bottle of Talcum Powder",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_talcum_powder_1.LuxuryItem_Hygiene_talcum_powder_1_C"
-  },
-  {
-    "displayName": "Bottle of Terrible Vodka",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_vodka_1.LuxuryItem_Alcohol_vodka_1_C"
-  },
-  {
-    "displayName": "Bottle of Triple Sec Liqueur",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_14.LuxuryItem_Alcohol_booze_14_C"
-  },
-  {
-    "displayName": "Bottle of White Table Wine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_wine_6.LuxuryItem_Alcohol_wine_6_C"
-  },
-  {
-    "displayName": "Box of Assorted Chocolates",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_3.LuxuryItem_Treats_candy_3_C"
-  },
-  {
-    "displayName": "Box of Beard Dye",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_BeardDye.Luxury_BeardDye_C"
-  },
-  {
-    "displayName": "Box of Cheap Red Wine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_wine_4.LuxuryItem_Alcohol_wine_4_C"
-  },
-  {
-    "displayName": "Box of Cheap White Wine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_wine_5.LuxuryItem_Alcohol_wine_5_C"
-  },
-  {
-    "displayName": "Box of Chocolate Caramels",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_2.LuxuryItem_Treats_candy_2_C"
-  },
-  {
-    "displayName": "Box of Chocolate Truffles",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_20.LuxuryItem_Treats_candy_20_C"
-  },
-  {
-    "displayName": "Box of Christmas Ornaments",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_ornaments_1.LuxuryItem_Comforts_ornaments_1_C"
-  },
-  {
-    "displayName": "Box of Coconut Candy",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_6.LuxuryItem_Treats_candy_6_C"
-  },
-  {
-    "displayName": "Box of Coffee Cup Sleeves",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_coffee_cup_sleeves_1.LuxuryItem_Comforts_coffee_cup_sleeves_1_C"
-  },
-  {
-    "displayName": "Box of Dryer Sheets",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_DryerSheets.Luxury_DryerSheets_C"
-  },
-  {
-    "displayName": "Box of Flavored Condoms",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_Condoms.Luxury_Condoms_C"
-  },
-  {
-    "displayName": "Box of Gumballs",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_24.LuxuryItem_Treats_candy_24_C"
-  },
-  {
-    "displayName": "Box of Hair Dye",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_HairDye.Luxury_HairDye_C"
-  },
-  {
-    "displayName": "Box of Hand-Rolled Cigars",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_cigars_1.LuxuryItem_Tobacco_cigars_1_C"
-  },
-  {
-    "displayName": "Box of Homemade Fudge",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_10.LuxuryItem_Treats_candy_10_C"
-  },
-  {
-    "displayName": "Box of Imported Dark Chocolate",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_29.LuxuryItem_Treats_candy_29_C"
-  },
-  {
-    "displayName": "Box of Lickee-Loo Lollipops",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_4.LuxuryItem_Treats_candy_4_C"
-  },
-  {
-    "displayName": "Box of Mama Breaux King Cakes",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_pastry_1.LuxuryItem_Treats_pastry_1_C"
-  },
-  {
-    "displayName": "Box of Milkshake Mix",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_drink_mix_1.LuxuryItem_Treats_drink_mix_1_C"
-  },
-  {
-    "displayName": "Box of Mints",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_38.LuxuryItem_Treats_candy_38_C"
-  },
-  {
-    "displayName": "Box of Organic Bling Bling Puffs",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_cereal_2.LuxuryItem_Treats_cereal_2_C"
-  },
-  {
-    "displayName": "Box of Postcards",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_postcards_1.LuxuryItem_Entertainment_postcards_1_C"
-  },
-  {
-    "displayName": "Box of Raisins",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_fruit_1.LuxuryItem_Treats_fruit_1_C"
-  },
-  {
-    "displayName": "Box of Rubber Bands",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_rubber_bands_1.LuxuryItem_Comforts_rubber_bands_1_C"
-  },
-  {
-    "displayName": "Box of Sanitary Pads",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_SanitaryPads.Luxury_SanitaryPads_C"
-  },
-  {
-    "displayName": "Box of Seeds",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemSeeds.MiscItemSeeds_C"
-  },
-  {
-    "displayName": "Box of Sugar Packets",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_sugar_packets_1.LuxuryItem_Comforts_sugar_packets_1_C"
-  },
-  {
-    "displayName": "Box of Sugar-Free Chocolates",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_22.LuxuryItem_Treats_candy_22_C"
-  },
-  {
-    "displayName": "Box of Tampons",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_Tampons.Luxury_Tampons_C"
-  },
-  {
-    "displayName": "Box of Tongue Scrapers",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_tongue_scrapers_1.LuxuryItem_Hygiene_tongue_scrapers_1_C"
-  },
-  {
-    "displayName": "Box of Trade Goods",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_PostFinale_TradeGoods.Faustite_PostFinale_TradeGoods_C"
-  },
-  {
-    "displayName": "Briar Pipe",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_pipe_1.LuxuryItem_Tobacco_pipe_1_C"
-  },
-  {
-    "displayName": "Bronto Gas Mega Cup",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_cup_1.LuxuryItem_Comforts_cup_1_C"
-  },
-  {
-    "displayName": "Busted Bolex Watch",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_watch_1.LuxuryItem_FancyShit_watch_1_C"
-  },
-  {
-    "displayName": "Calabash Pipe",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_pipe_2.LuxuryItem_Tobacco_pipe_2_C"
-  },
-  {
-    "displayName": "Calling Card",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_FormerRaider_1.Note_FormerRaider_1_C"
-  },
-  {
-    "displayName": "Camp Osprey Guidelines",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_Tutorial_02.Note_Mission_Tutorial_02_C"
-  },
-  {
-    "displayName": "Can of Body Spray",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_body_spray_1.LuxuryItem_Hygiene_body_spray_1_C"
-  },
-  {
-    "displayName": "Can of Kaiju-Cola",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_soda_1.LuxuryItem_Treats_soda_1_C"
-  },
-  {
-    "displayName": "Can of Menthol Shaving Cream",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_ShavingCream.Luxury_ShavingCream_C"
-  },
-  {
-    "displayName": "Can of Shaving Cream",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_shaving_cream_1.LuxuryItem_Hygiene_shaving_cream_1_C"
-  },
-  {
-    "displayName": "Can of Spray Deodorant",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_deodorant_1.LuxuryItem_Hygiene_deodorant_1_C"
-  },
-  {
-    "displayName": "Car Repair Guide",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/Luxury_CarRepairGuide.Luxury_CarRepairGuide_C"
-  },
-  {
-    "displayName": "Carefully Folded Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_45.Note_45_C"
-  },
-  {
-    "displayName": "Case of Army Surplus Beer",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_beer_3.LuxuryItem_Alcohol_beer_3_C"
-  },
-  {
-    "displayName": "Case of Bulk Plague Cure",
-    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Crafted_BulkPlagueCure.LuxuryItem_Crafted_BulkPlagueCure_C"
-  },
-  {
-    "displayName": "Case of Chemicals",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemReagents.MiscItemReagents_C"
-  },
-  {
-    "displayName": "Case of Dark Chocolate Bars",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_16.LuxuryItem_Treats_candy_16_C"
-  },
-  {
-    "displayName": "Case of Dental Floss",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_floss_1.LuxuryItem_Hygiene_floss_1_C"
-  },
-  {
-    "displayName": "Case of Fancy Candy Bars",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Treats/Luxury_FancyCandyBarCase.Luxury_FancyCandyBarCase_C"
-  },
-  {
-    "displayName": "Case of Laser Detonators",
-    "classString": "/Game/Items/MiscellaneousItems/DLCHeartland_MissionMiscItem_BombMakingMaterials.DLCHeartland_MissionMiscItem_BombMakingMaterials_C"
-  },
-  {
-    "displayName": "Case of Lip Balm",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_lip_balm_1.LuxuryItem_Comforts_lip_balm_1_C"
-  },
-  {
-    "displayName": "Case of Milk Chocolate Bars",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_13.LuxuryItem_Treats_candy_13_C"
-  },
-  {
-    "displayName": "Case of Ouzo",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_3.LuxuryItem_Alcohol_booze_3_C"
-  },
-  {
-    "displayName": "Case of Sporks",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_sporks_1.LuxuryItem_Comforts_sporks_1_C"
-  },
-  {
-    "displayName": "Case of Tampons",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_tampons_1.LuxuryItem_Hygiene_tampons_1_C"
-  },
-  {
-    "displayName": "Case of Toilet Paper",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_toilet_paper_1.LuxuryItem_Hygiene_toilet_paper_1_C"
-  },
-  {
-    "displayName": "Case of White Chocolate Bars",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_19.LuxuryItem_Treats_candy_19_C"
-  },
-  {
-    "displayName": "Celebrity Gossip Magazine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/Luxury_Magazine_01.Luxury_Magazine_01_C"
-  },
-  {
-    "displayName": "Charcoal Sketch",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_23.Note_23_C"
-  },
-  {
-    "displayName": "Cheap Copy of Frankenstein",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_24.LuxuryItem_Books_book_24_C"
-  },
-  {
-    "displayName": "Chemical Handwarmer",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_hand_warmer_1.LuxuryItem_Comforts_hand_warmer_1_C"
-  },
-  {
-    "displayName": "Child's Drawing",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Couple_Xtra.Note_Heartland_Couple_Xtra_C"
-  },
-  {
-    "displayName": "Child's Picture Book",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_kids_book_1.LuxuryItem_Books_kids_book_1_C"
-  },
-  {
-    "displayName": "Child's Toothbrush",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_Toothbrush.Luxury_Toothbrush_C"
-  },
-  {
-    "displayName": "Chocolate Bunny",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_32.LuxuryItem_Treats_candy_32_C"
-  },
-  {
-    "displayName": "Chocolate Ration Bar",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_12.LuxuryItem_Treats_candy_12_C"
-  },
-  {
-    "displayName": "Chocolate Santa",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_33.LuxuryItem_Treats_candy_33_C"
-  },
-  {
-    "displayName": "Choo Choo Chuckie Toy",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_toy_1.LuxuryItem_Entertainment_toy_1_C"
-  },
-  {
-    "displayName": "Christmas List",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_33.Note_33_C"
-  },
-  {
-    "displayName": "Chunk of Honeycomb",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_honey_1.LuxuryItem_Treats_honey_1_C"
-  },
-  {
-    "displayName": "Classic Vinyl Record",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Entertainment/Luxury_OldRecords.Luxury_OldRecords_C"
-  },
-  {
-    "displayName": "Classy Gold Anklet",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_anklet_1.LuxuryItem_FancyShit_anklet_1_C"
-  },
-  {
-    "displayName": "Clean Pair of Boxers",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_boxers_1.LuxuryItem_Comforts_boxers_1_C"
-  },
-  {
-    "displayName": "CLEO Core",
-    "classString": "/Game/Items/MiscellaneousItems/DLC2RewardFacilityReqItems/MiscItem_DLC2_CLEOCore.MiscItem_DLC2_CLEOCore_C"
-  },
-  {
-    "displayName": "CLEO Error Log",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DanburiteCLEODropNotes/CLEO_Note_DanburiteVintageCLEODrop_01.CLEO_Note_DanburiteVintageCLEODrop_01_C"
-  },
-  {
-    "displayName": "CLEO Intuition Processor",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Hacker_CLEODrive.Note_Heartland_Hacker_CLEODrive_C"
-  },
-  {
-    "displayName": "CLEO Memory Core",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_CLEO01_MemoryCore.Faustite_CLEO01_MemoryCore_C"
-  },
-  {
-    "displayName": "Climactic Novel About Dragons",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_7.LuxuryItem_Books_book_7_C"
-  },
-  {
-    "displayName": "Coffee Table Art Book",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_10.LuxuryItem_Books_book_10_C"
-  },
-  {
-    "displayName": "Collection of Fairy Tales",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_17.LuxuryItem_Books_book_17_C"
-  },
-  {
-    "displayName": "Collection of Horror Stories",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_16.LuxuryItem_Books_book_16_C"
-  },
-  {
-    "displayName": "Colorful Fleece Blanket",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_blanket_2.LuxuryItem_Comforts_blanket_2_C"
-  },
-  {
-    "displayName": "Colorful Handknit Scarf",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_scarf_1.LuxuryItem_Comforts_scarf_1_C"
-  },
-  {
-    "displayName": "Commemorative Ashtray",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_knickknack_1.LuxuryItem_Tobacco_knickknack_1_C"
-  },
-  {
-    "displayName": "Compact Incinerator",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_RedTalonBase_OfficersQuartersUpgradeItem.Faustite_RedTalonBase_OfficersQuartersUpgradeItem_C"
-  },
-  {
-    "displayName": "Copy of David Copperfield",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_31.LuxuryItem_Books_book_31_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.1)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_2.LuxuryItem_Books_reference_book_2_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.10)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_3.LuxuryItem_Books_reference_book_3_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.11)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_11.LuxuryItem_Books_reference_book_11_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.12)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_12.LuxuryItem_Books_reference_book_12_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.13)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_22.LuxuryItem_Books_book_22_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.14)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_4.LuxuryItem_Books_reference_book_4_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.15)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_5.LuxuryItem_Books_reference_book_5_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.16)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_6.LuxuryItem_Books_reference_book_6_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.17)",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Books/Luxury_Encyclopedia.Luxury_Encyclopedia_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.18)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_7.LuxuryItem_Books_reference_book_7_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.19)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_8.LuxuryItem_Books_reference_book_8_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.2)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_1.LuxuryItem_Books_reference_book_1_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.20)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_9.LuxuryItem_Books_reference_book_9_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.3)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_10.LuxuryItem_Books_reference_book_10_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.4)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_34.LuxuryItem_Books_book_34_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.5)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_35.LuxuryItem_Books_book_35_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.6)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_36.LuxuryItem_Books_book_36_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.7)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_37.LuxuryItem_Books_book_37_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.8)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_reference_book_13.LuxuryItem_Books_reference_book_13_C"
-  },
-  {
-    "displayName": "Copy of Encyclopedia (Vol.9)",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_38.LuxuryItem_Books_book_38_C"
-  },
-  {
-    "displayName": "Copy of Gentleman Cadaver",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Books/Luxury_Comic.Luxury_Comic_C"
-  },
-  {
-    "displayName": "Copy of Learning Game Design",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_42.LuxuryItem_Books_book_42_C"
-  },
-  {
-    "displayName": "Copy of Little Women",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_39.LuxuryItem_Books_book_39_C"
-  },
-  {
-    "displayName": "Copy of Pride and Prejudice",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_32.LuxuryItem_Books_book_32_C"
-  },
-  {
-    "displayName": "Copy of The Iliad",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_30.LuxuryItem_Books_book_30_C"
-  },
-  {
-    "displayName": "Copy of The Last Man",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_25.LuxuryItem_Books_book_25_C"
-  },
-  {
-    "displayName": "Copy of The Souls of Black Folk",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Books/Luxury_FirstEdition_SoulsofBlackFolks.Luxury_FirstEdition_SoulsofBlackFolks_C"
-  },
-  {
-    "displayName": "Copy of The War of the Worlds",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_40.LuxuryItem_Books_book_40_C"
-  },
-  {
-    "displayName": "Copy of Tom Sawyer",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_33.LuxuryItem_Books_book_33_C"
-  },
-  {
-    "displayName": "Costume Jewelry Ring",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/Luxury_CostumeJewelryRing.Luxury_CostumeJewelryRing_C"
-  },
-  {
-    "displayName": "Crude Map",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Legacy_Warlord_P06_Map.Note_Legacy_Warlord_P06_Map_C"
-  },
-  {
-    "displayName": "Crumpled Flyer",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_25.RedTalon_DLC1_Note_25_C"
-  },
-  {
-    "displayName": "Curling Iron",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_CurlingIron.Luxury_CurlingIron_C"
-  },
-  {
-    "displayName": "CUT--DO NOT TRANSLATE Case of Fuel",
-    "classString": "/Game/Items/MiscellaneousItems/DLC2_DaybreakBaseDefenseItems/DLC2_Daybreak_PowerSupplyRequirementItem.DLC2_Daybreak_PowerSupplyRequirementItem_C"
-  },
-  {
-    "displayName": "CUT--DO NOT TRANSLATE CLEO Upgrade Chip",
-    "classString": "/Game/Items/MiscellaneousItems/DLC2_DaybreakBaseDefenseItems/DLC2_Daybreak_BeaconUpgradeRequirementItem.DLC2_Daybreak_BeaconUpgradeRequirementItem_C"
-  },
-  {
-    "displayName": "CUT--DO NOT TRANSLATE Crate of Mines",
-    "classString": "/Game/Items/MiscellaneousItems/DLC2_DaybreakBaseDefenseItems/DLC2_Daybreak_MineRequirementItem.DLC2_Daybreak_MineRequirementItem_C"
-  },
-  {
-    "displayName": "Decanter of Tawny Port",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_port_1.LuxuryItem_Alcohol_port_1_C"
-  },
-  {
-    "displayName": "Deck of Used Playing\\u00a0Cards",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_dards_1.LuxuryItem_Entertainment_dards_1_C"
-  },
-  {
-    "displayName": "Decorative Flower Pot",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_flower_pot_1.LuxuryItem_Comforts_flower_pot_1_C"
-  },
-  {
-    "displayName": "Defaced Geometry Textbook",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_20.LuxuryItem_Books_book_20_C"
-  },
-  {
-    "displayName": "Dented Can of Beer",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_beer_1.LuxuryItem_Alcohol_beer_1_C"
-  },
-  {
-    "displayName": "Dented Flask of Hooch",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_8.LuxuryItem_Alcohol_booze_8_C"
-  },
-  {
-    "displayName": "Deodorant Stick",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_Deodorant.Luxury_Deodorant_C"
-  },
-  {
-    "displayName": "DEPRECATED ASSET",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure.MiscItemPlagueCure_C"
-  },
-  {
-    "displayName": "DEPRECATED ASSET",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure_02.MiscItemPlagueCure_02_C"
-  },
-  {
-    "displayName": "DEPRECATED ASSET",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure_03.MiscItemPlagueCure_03_C"
-  },
-  {
-    "displayName": "DEPRECATED ASSET",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure_04.MiscItemPlagueCure_04_C"
-  },
-  {
-    "displayName": "DEPRECATED ASSET",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure_05.MiscItemPlagueCure_05_C"
-  },
-  {
-    "displayName": "DEPRECATED ASSET",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure_06.MiscItemPlagueCure_06_C"
-  },
-  {
-    "displayName": "DEPRECATED Loudspeaker",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemLoudspeaker.MiscItemLoudspeaker_C"
-  },
-  {
-    "displayName": "DEPRECATED Power Amplifier",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemPowerAmplifier.MiscItemPowerAmplifier_C"
-  },
-  {
-    "displayName": "DEPRECATED Set of Bookshelf Speakers",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemBookshelfSpeakers.MiscItemBookshelfSpeakers_C"
-  },
-  {
-    "displayName": "Design Journal",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Cosplay_Xtra.Note_Heartland_Cosplay_Xtra_C"
-  },
-  {
-    "displayName": "Diamond Earring",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_earring_1.LuxuryItem_FancyShit_earring_1_C"
-  },
-  {
-    "displayName": "Diamond Engagement Ring",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_engagement_ring_1.LuxuryItem_FancyShit_engagement_ring_1_C"
-  },
-  {
-    "displayName": "Diamond-Encrusted Pendant",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_diamond_pendant_1.LuxuryItem_FancyShit_diamond_pendant_1_C"
-  },
-  {
-    "displayName": "Disposable Razor",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_razor_1.LuxuryItem_Hygiene_razor_1_C"
-  },
-  {
-    "displayName": "DNL - not in game",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Santos_Volatile.Note_Heartland_Santos_Volatile_C"
-  },
-  {
-    "displayName": "DNL NOT USED: Rockslide Object",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Discoveries/Faustite_Discovery_Marshall_Rockslide.Faustite_Discovery_Marshall_Rockslide_C"
-  },
-  {
-    "displayName": "Dog-Eared Copy of Dracula",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_23.LuxuryItem_Books_book_23_C"
-  },
-  {
-    "displayName": "Dope-Ass Chain",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_chain_necklace_1.LuxuryItem_FancyShit_chain_necklace_1_C"
-  },
-  {
-    "displayName": "Down Comforter",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/Luxury_Down_Comforter.Luxury_Down_Comforter_C"
-  },
-  {
-    "displayName": "Dream Date Krystal Doll",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_doll_2.LuxuryItem_Entertainment_doll_2_C"
-  },
-  {
-    "displayName": "DVD of Blind Brothers of Foshan",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_movie_5.LuxuryItem_Entertainment_movie_5_C"
-  },
-  {
-    "displayName": "DVD of Bridge over the Yangtze",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_movie_7.LuxuryItem_Entertainment_movie_7_C"
-  },
-  {
-    "displayName": "DVD of Ghost Teen",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_DVD_1.LuxuryItem_Entertainment_DVD_1_C"
-  },
-  {
-    "displayName": "DVD of Heat in Red China",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_movie_1.LuxuryItem_Entertainment_movie_1_C"
-  },
-  {
-    "displayName": "DVD of Mantis vs. Crane",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_movie_6.LuxuryItem_Entertainment_movie_6_C"
-  },
-  {
-    "displayName": "DVD of Pay Now or Pay Later",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_movie_8.LuxuryItem_Entertainment_movie_8_C"
-  },
-  {
-    "displayName": "DVD of Return of the Lotus",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_movie_3.LuxuryItem_Entertainment_movie_3_C"
-  },
-  {
-    "displayName": "DVD of The Randy Protocol",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_movie_2.LuxuryItem_Entertainment_movie_2_C"
-  },
-  {
-    "displayName": "DVD of The Returning Dragon",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_movie_4.LuxuryItem_Entertainment_movie_4_C"
-  },
-  {
-    "displayName": "Electric Razor",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_ElectricRazor.Luxury_ElectricRazor_C"
-  },
-  {
-    "displayName": "Electric Toothbrush",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_ElectricToothbrush.Luxury_ElectricToothbrush_C"
-  },
-  {
-    "displayName": "Elegant Clutch Purse",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_purse_1.LuxuryItem_FancyShit_purse_1_C"
-  },
-  {
-    "displayName": "Embroidered Handkerchief",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_handkerchief_1.LuxuryItem_Comforts_handkerchief_1_C"
-  },
-  {
-    "displayName": "Embroidered Sleep Mask",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_sleep_mask_2.LuxuryItem_Comforts_sleep_mask_2_C"
-  },
-  {
-    "displayName": "Encrypted Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Standalone_MeetTheHandler_Code.Note_Heartland_Standalone_MeetTheHandler_Code_C"
-  },
-  {
-    "displayName": "Enigmatic Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_EnclaveKiller01.Note_DLC4_EnclaveKiller01_C"
-  },
-  {
-    "displayName": "Enigmatic Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_EnclaveKiller02.Note_DLC4_EnclaveKiller02_C"
-  },
-  {
-    "displayName": "Enigmatic Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_EnclaveKiller03.Note_DLC4_EnclaveKiller03_C"
-  },
-  {
-    "displayName": "Enigmatic Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_EnclaveKiller04.Note_DLC4_EnclaveKiller04_C"
-  },
-  {
-    "displayName": "Envelope Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Test/Note_Mission_Test_Finish.Note_Mission_Test_Finish_C"
-  },
-  {
-    "displayName": "Envelope Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_09.Note_09_C"
-  },
-  {
-    "displayName": "Envelope Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_Amends.Note_Mission_Amends_C"
-  },
-  {
-    "displayName": "Envelope Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_FailedCop.Note_Mission_FailedCop_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_01.Network_DLC1_Note_01_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_02.Network_DLC1_Note_02_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_03.Network_DLC1_Note_03_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_04.Network_DLC1_Note_04_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_05.Network_DLC1_Note_05_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_06.Network_DLC1_Note_06_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_07.Network_DLC1_Note_07_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_08.Network_DLC1_Note_08_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_09.Network_DLC1_Note_09_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_10.Network_DLC1_Note_10_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_11.Network_DLC1_Note_11_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_12.Network_DLC1_Note_12_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_13.Network_DLC1_Note_13_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_14.Network_DLC1_Note_14_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_15.Network_DLC1_Note_15_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_16.Network_DLC1_Note_16_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_17.Network_DLC1_Note_17_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_18.Network_DLC1_Note_18_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_26.Network_DLC1_Note_26_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_27.Network_DLC1_Note_27_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_28.Network_DLC1_Note_28_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_30.Network_DLC1_Note_30_C"
-  },
-  {
-    "displayName": "Expedition Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_31.Network_DLC1_Note_31_C"
-  },
-  {
-    "displayName": "Expensive Bottle of Tainted Wine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_wine_2.LuxuryItem_Alcohol_wine_2_C"
-  },
-  {
-    "displayName": "Expensive Watch",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_watch_3.LuxuryItem_FancyShit_watch_3_C"
-  },
-  {
-    "displayName": "Expired Prednisone",
-    "classString": "/Game/Items/MiscellaneousItems/Faustite/MiscItem_Faustite_Prednisone.MiscItem_Faustite_Prednisone_C"
-  },
-  {
-    "displayName": "Faded Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_04.Faustite_Note_04_C"
-  },
-  {
-    "displayName": "Faded Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_39.Note_39_C"
-  },
-  {
-    "displayName": "Faded Sticker",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_37.Note_37_C"
-  },
-  {
-    "displayName": "Family Photo",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_WilkersonAmends_Photo.Faustite_WilkersonAmends_Photo_C"
-  },
-  {
-    "displayName": "Fancy Chess Set",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_chess_set_1.LuxuryItem_Entertainment_chess_set_1_C"
-  },
-  {
-    "displayName": "Fantasy Role-Playing Game",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_11.LuxuryItem_Books_book_11_C"
-  },
-  {
-    "displayName": "Fire Wolves Collectible Cup",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_cup_1.LuxuryItem_Entertainment_cup_1_C"
-  },
-  {
-    "displayName": "First Baseman's Glove",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_glove_1.LuxuryItem_Entertainment_glove_1_C"
-  },
-  {
-    "displayName": "First Edition of Don Quixote",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_26.LuxuryItem_Books_book_26_C"
-  },
-  {
-    "displayName": "First Edition of Heart of Darkness",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_29.LuxuryItem_Books_book_29_C"
-  },
-  {
-    "displayName": "First Edition of Huckleberry Finn",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Books/Luxury_FirstEdition_HuckFinn.Luxury_FirstEdition_HuckFinn_C"
-  },
-  {
-    "displayName": "First Edition of Moby Dick",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Books/Luxury_FirstEdition_MobyDick.Luxury_FirstEdition_MobyDick_C"
-  },
-  {
-    "displayName": "First Edition of The Scarlet Letter",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_28.LuxuryItem_Books_book_28_C"
-  },
-  {
-    "displayName": "First Edition of Ulysses ",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_27.LuxuryItem_Books_book_27_C"
-  },
-  {
-    "displayName": "First Issue of Rise of the Moonbeasts",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_comic_1.LuxuryItem_Entertainment_comic_1_C"
-  },
-  {
-    "displayName": "Fitness Tracker Band",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_FancyShit/Luxury_FitnessTracker.Luxury_FitnessTracker_C"
-  },
-  {
-    "displayName": "Five-String Banjo ",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_banjo_1.LuxuryItem_Entertainment_banjo_1_C"
-  },
-  {
-    "displayName": "Flask of Peppermint Schnapps",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_9.LuxuryItem_Alcohol_booze_9_C"
-  },
-  {
-    "displayName": "Flavored Toothbrush",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_toothbrush_3.LuxuryItem_Hygiene_toothbrush_3_C"
-  },
-  {
-    "displayName": "Folded Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_38.Note_38_C"
-  },
-  {
-    "displayName": "Folded Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Legacy_Warlord_SA3Clue.Note_Legacy_Warlord_SA3Clue_C"
-  },
-  {
-    "displayName": "Folding State Map",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_state_map_1.LuxuryItem_Entertainment_state_map_1_C"
-  },
-  {
-    "displayName": "Form Letter",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_16.Note_16_C"
-  },
-  {
-    "displayName": "Forty-Ounce Bottle of Cheap Beer",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_beer_2.LuxuryItem_Alcohol_beer_2_C"
-  },
-  {
-    "displayName": "Frayed Sheet of Notebook Paper",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_10.Note_10_C"
-  },
-  {
-    "displayName": "Frayed Sheet of Notebook Paper",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_FormattingTester.Note_FormattingTester_C"
-  },
-  {
-    "displayName": "Frayed Sheet of Notebook Paper",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_LastRites01.Note_Mission_LastRites01_C"
-  },
-  {
-    "displayName": "Fresh Bar of Soap",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_soap_1.LuxuryItem_Hygiene_soap_1_C"
-  },
-  {
-    "displayName": "Gas Can",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemRefuelVehicle.MiscItemRefuelVehicle_C"
-  },
-  {
-    "displayName": "Giant Bottle of Cheap Mouthwash",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_mouthwash_1.LuxuryItem_Hygiene_mouthwash_1_C"
-  },
-  {
-    "displayName": "Gold Dental Grill",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_grill_1.LuxuryItem_FancyShit_grill_1_C"
-  },
-  {
-    "displayName": "Gold Locket",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_locket_1.LuxuryItem_FancyShit_locket_1_C"
-  },
-  {
-    "displayName": "Gold Pocket Watch",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_pocket_watch_1.LuxuryItem_FancyShit_pocket_watch_1_C"
-  },
-  {
-    "displayName": "Gold-Plated Kitty Bowl",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_cat_bowl_1.LuxuryItem_FancyShit_cat_bowl_1_C"
-  },
-  {
-    "displayName": "Goodtyme Boyz Poster",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_poster_1.LuxuryItem_Entertainment_poster_1_C"
-  },
-  {
-    "displayName": "Greasy Automotive Magazine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_magazine_3.LuxuryItem_Books_magazine_3_C"
-  },
-  {
-    "displayName": "Greeting Card",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_02.Note_02_C"
-  },
-  {
-    "displayName": "Growler of Barleywine",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Alcohol/Luxury_Crafted_Barleywine.Luxury_Crafted_Barleywine_C"
-  },
-  {
-    "displayName": "Guide to the Coming Apocalypse",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_1.LuxuryItem_Books_book_1_C"
-  },
-  {
-    "displayName": "Gun Collector's Magazine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_magazine_2.LuxuryItem_Books_magazine_2_C"
-  },
-  {
-    "displayName": "Hair Brush",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_HairBrush.Luxury_HairBrush_C"
-  },
-  {
-    "displayName": "Hair Dryer",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_HairDryer.Luxury_HairDryer_C"
-  },
-  {
-    "displayName": "Half-Finished Coloring Book",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_coloring_book_1.LuxuryItem_Books_coloring_book_1_C"
-  },
-  {
-    "displayName": "Half-Written Letter",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_RedTalon_Xtra.Note_Heartland_RedTalon_Xtra_C"
-  },
-  {
-    "displayName": "Hand-Rolled Cigar",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/Luxury_HandRolledCigars.Luxury_HandRolledCigars_C"
-  },
-  {
-    "displayName": "Hand-Written Instruction",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_21.Network_DLC1_Note_21_C"
-  },
-  {
-    "displayName": "Hand-Written Instruction",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_22.Network_DLC1_Note_22_C"
-  },
-  {
-    "displayName": "Hand-Written Instruction",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_23.Network_DLC1_Note_23_C"
-  },
-  {
-    "displayName": "Hand-Written Instruction",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_24.Network_DLC1_Note_24_C"
-  },
-  {
-    "displayName": "Hand-Written Letter",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_44.Note_44_C"
-  },
-  {
-    "displayName": "Hand-written Letter ",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_SniperLoot.Note_Mission_SniperLoot_C"
-  },
-  {
-    "displayName": "Hand-Written List",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_42.Note_42_C"
-  },
-  {
-    "displayName": "Handheld Gaming Console",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_gaming_console_1.LuxuryItem_Entertainment_gaming_console_1_C"
-  },
-  {
-    "displayName": "Handy Wooden Spoon",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_spoon_1.LuxuryItem_Comforts_spoon_1_C"
-  },
-  {
-    "displayName": "Hastily Scribbled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_12.Note_12_C"
-  },
-  {
-    "displayName": "Haven Capsule",
-    "classString": "/Game/Items/MiscellaneousItems/Faustite/MiscItem_Faustite_HavenCore.MiscItem_Faustite_HavenCore_C"
-  },
-  {
-    "displayName": "HD DVD Collection",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_HD_DVD_Player_1.LuxuryItem_Entertainment_HD_DVD_Player_1_C"
-  },
-  {
-    "displayName": "Heart-Shaped Box of Chocolates",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_23.LuxuryItem_Treats_candy_23_C"
-  },
-  {
-    "displayName": "Heavy Vehicle Upgrade Kit",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemHeavyArmorUpgradeKit.MiscItemHeavyArmorUpgradeKit_C"
-  },
-  {
-    "displayName": "Hefty Class Ring",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_ring_1.LuxuryItem_FancyShit_ring_1_C"
-  },
-  {
-    "displayName": "High Fashion Magazine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_magazine_1.LuxuryItem_Books_magazine_1_C"
-  },
-  {
-    "displayName": "High-End Disposable Razor",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_DisposableRazor.Luxury_DisposableRazor_C"
-  },
-  {
-    "displayName": "Historical Literary Novel",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_4.LuxuryItem_Books_book_4_C"
-  },
-  {
-    "displayName": "Horror Role-Playing Game",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_12.LuxuryItem_Books_book_12_C"
-  },
-  {
-    "displayName": "Horseshoes Game Set",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_game_1.LuxuryItem_Entertainment_game_1_C"
-  },
-  {
-    "displayName": "Hostile Instructions",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Legacy_Sheriff_3.Note_Legacy_Sheriff_3_C"
-  },
-  {
-    "displayName": "Huerta Family Photo Album",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Marshall_PhotoAlbum.Faustite_Marshall_PhotoAlbum_C"
-  },
-  {
-    "displayName": "Incomplete Journal",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_14.LuxuryItem_Books_book_14_C"
-  },
-  {
-    "displayName": "Inflatable Neck Rest",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_travel_pillow_1.LuxuryItem_Comforts_travel_pillow_1_C"
-  },
-  {
-    "displayName": "Introduction to Martial Arts Pamphlet",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_pamphlet_1.LuxuryItem_Books_pamphlet_1_C"
-  },
-  {
-    "displayName": "Iron-On Elbow Patch",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_elbow_patches_1.LuxuryItem_Comforts_elbow_patches_1_C"
-  },
-  {
-    "displayName": "Japanese Manga Graphic Novel",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_18.LuxuryItem_Books_book_18_C"
-  },
-  {
-    "displayName": "Jar of Cocoa Butter",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_cocoa_butter_1.LuxuryItem_Hygiene_cocoa_butter_1_C"
-  },
-  {
-    "displayName": "Jar of Face Cream",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_FaceCream.Luxury_FaceCream_C"
-  },
-  {
-    "displayName": "Jar of Fondant",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_fondant_1.LuxuryItem_Treats_fondant_1_C"
-  },
-  {
-    "displayName": "Jar of Fruity Gelatin",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_gelatin_1.LuxuryItem_Treats_gelatin_1_C"
-  },
-  {
-    "displayName": "Jar of Honey Roasted Peanuts",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_nuts_2.LuxuryItem_Treats_nuts_2_C"
-  },
-  {
-    "displayName": "Jar of Macadamia Nuts",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_nuts_3.LuxuryItem_Treats_nuts_3_C"
-  },
-  {
-    "displayName": "Jar of Mixed Nuts",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_nuts_8.LuxuryItem_Treats_nuts_8_C"
-  },
-  {
-    "displayName": "Jar of Mud Mask",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_MudMask.Luxury_MudMask_C"
-  },
-  {
-    "displayName": "Jar of Salted Peanuts",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_nuts_1.LuxuryItem_Treats_nuts_1_C"
-  },
-  {
-    "displayName": "Jar of Volatile Compound",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Wilkerson_Volatile.Note_Heartland_Wilkerson_Volatile_C"
-  },
-  {
-    "displayName": "Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_EchoLabBody01.Note_DLC4_EchoLabBody01_C"
-  },
-  {
-    "displayName": "Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_EchoLabBody02.Note_DLC4_EchoLabBody02_C"
-  },
-  {
-    "displayName": "Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_EchoLabBody03.Note_DLC4_EchoLabBody03_C"
-  },
-  {
-    "displayName": "Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_EchoLabBody04.Note_DLC4_EchoLabBody04_C"
-  },
-  {
-    "displayName": "Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_EchoLabBody05.Note_DLC4_EchoLabBody05_C"
-  },
-  {
-    "displayName": "Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_EchoLabBody06.Note_DLC4_EchoLabBody06_C"
-  },
-  {
-    "displayName": "Journal Fragment",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Jurassic_1.Note_Heartland_Jurassic_1_C"
-  },
-  {
-    "displayName": "Journal Fragment",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Jurassic_2.Note_Heartland_Jurassic_2_C"
-  },
-  {
-    "displayName": "Journal Fragment",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Jurassic_3.Note_Heartland_Jurassic_3_C"
-  },
-  {
-    "displayName": "Jug of Ethanol",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemAlcohol.MiscItemAlcohol_C"
-  },
-  {
-    "displayName": "Jug of Homemade Moonshine",
-    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Crafted_Moonshine.LuxuryItem_Crafted_Moonshine_C"
-  },
-  {
-    "displayName": "Jug of Homemade Whiskey",
-    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Crafted_Whiskey.LuxuryItem_Crafted_Whiskey_C"
-  },
-  {
-    "displayName": "Jumbo Box of Choco-Bangs",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_cereal_1.LuxuryItem_Treats_cereal_1_C"
-  },
-  {
-    "displayName": "Jumbo Lollipop",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_5.LuxuryItem_Treats_candy_5_C"
-  },
-  {
-    "displayName": "Kinetic Watch",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_watch_2.LuxuryItem_FancyShit_watch_2_C"
-  },
-  {
-    "displayName": "Light Vehicle Upgrade Kit",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemLightArmorUpgradeKit.MiscItemLightArmorUpgradeKit_C"
-  },
-  {
-    "displayName": "Limited Edition Bronto Gas Mug",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_mug_1.LuxuryItem_Comforts_mug_1_C"
-  },
-  {
-    "displayName": "Luxury Car Hood Ornament",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_hood_ornament_1.LuxuryItem_FancyShit_hood_ornament_1_C"
-  },
-  {
-    "displayName": "Man's Wedding Ring",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_wedding_ring_1.LuxuryItem_FancyShit_wedding_ring_1_C"
-  },
-  {
-    "displayName": "Map to Supply Stashes",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_Santos01_RayLocation.Faustite_Note_Santos01_RayLocation_C"
-  },
-  {
-    "displayName": "Medical Upgrade Blueprint",
+    "displayName": "DLCHeartland MiscItemMedical2UpgradeRequirement",
     "classString": "/Game/Items/MiscellaneousItems/DLCHeartland_MiscItemMedical2UpgradeRequirement.DLCHeartland_MiscItemMedical2UpgradeRequirement_C"
   },
   {
-    "displayName": "Medium Vehicle Upgrade Kit",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemMediumArmorUpgradeKit.MiscItemMediumArmorUpgradeKit_C"
+    "displayName": "DLCHeartland MissionMiscItem BombMakingMaterials",
+    "classString": "/Game/Items/MiscellaneousItems/DLCHeartland_MissionMiscItem_BombMakingMaterials.DLCHeartland_MissionMiscItem_BombMakingMaterials_C"
   },
   {
-    "displayName": "Message in a Bottle",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Discoveries/Faustite_Discovery_Farmlands_WaterfallEast.Faustite_Discovery_Farmlands_WaterfallEast_C"
+    "displayName": "DLCHeartland MissionMiscItem DisassembledWeaponParts",
+    "classString": "/Game/Items/MiscellaneousItems/DLCHeartland_MissionMiscItem_DisassembledWeaponParts.DLCHeartland_MissionMiscItem_DisassembledWeaponParts_C"
   },
   {
-    "displayName": "Meticulously Written Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_20.RedTalon_DLC1_Note_20_C"
+    "displayName": "GreenZone CharacterStandingRewardSettings BP",
+    "classString": "/Game/Items/Items/GreenZone_CharacterStandingRewardSettings_BP.GreenZone_CharacterStandingRewardSettings_BP_C"
   },
   {
-    "displayName": "Meticulously Written Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_21.RedTalon_DLC1_Note_21_C"
+    "displayName": "ItemCatalog CU11 CriticalResponsePack",
+    "classString": "/Game/Items/Items/ItemCatalog_CU11_CriticalResponsePack.ItemCatalog_CU11_CriticalResponsePack_C"
   },
   {
-    "displayName": "Military Journal Fragment",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_PersonalArcWilkersonDaughter_Clue.Note_Heartland_PersonalArcWilkersonDaughter_Clue_C"
+    "displayName": "ItemCatalog CU12 TrumbullPack",
+    "classString": "/Game/Items/Items/ItemCatalog_CU12_TrumbullPack.ItemCatalog_CU12_TrumbullPack_C"
   },
   {
-    "displayName": "Military Police Order ",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_Wilkerson01_MilitaryOrders.Faustite_Note_Wilkerson01_MilitaryOrders_C"
+    "displayName": "ItemCatalog CU14 BundleUpPack",
+    "classString": "/Game/Items/Items/ItemCatalog_CU14_BundleUpPack.ItemCatalog_CU14_BundleUpPack_C"
   },
   {
-    "displayName": "Mini Bottle of Airplane Booze",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_4.LuxuryItem_Alcohol_booze_4_C"
+    "displayName": "ItemCatalog CU16 PawnBroker",
+    "classString": "/Game/Items/Items/ItemCatalog_CU16_PawnBroker.ItemCatalog_CU16_PawnBroker_C"
   },
   {
-    "displayName": "Modern Literary Novel",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_3.LuxuryItem_Books_book_3_C"
+    "displayName": "ItemCatalog CU17 AnniversaryPack",
+    "classString": "/Game/Items/Items/ItemCatalog_CU17_AnniversaryPack.ItemCatalog_CU17_AnniversaryPack_C"
   },
   {
-    "displayName": "Monkey Mallory Record Player",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_record_player_1.LuxuryItem_Entertainment_record_player_1_C"
+    "displayName": "ItemCatalog CU18 PlunderPack",
+    "classString": "/Game/Items/Items/ItemCatalog_CU18_PlunderPack.ItemCatalog_CU18_PlunderPack_C"
   },
   {
-    "displayName": "Mysterious Correspondence",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Legacy_Ranger_1.Note_Legacy_Ranger_1_C"
+    "displayName": "ItemCatalog CU21 OpenRangePack",
+    "classString": "/Game/Items/Items/ItemCatalog_CU21_OpenRangePack.ItemCatalog_CU21_OpenRangePack_C"
   },
   {
-    "displayName": "Mysterious Correspondence",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Legacy_Ranger_2.Note_Legacy_Ranger_2_C"
+    "displayName": "ItemCatalog CU23 HolidayPack",
+    "classString": "/Game/Items/Items/ItemCatalog_CU23_HolidayPack.ItemCatalog_CU23_HolidayPack_C"
   },
   {
-    "displayName": "Mysterious Correspondence",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Legacy_Ranger_3.Note_Legacy_Ranger_3_C"
+    "displayName": "ItemCatalog CU8 WorldWar2Pack",
+    "classString": "/Game/Items/Items/ItemCatalog_CU8_WorldWar2Pack.ItemCatalog_CU8_WorldWar2Pack_C"
   },
   {
-    "displayName": "Mysterious Correspondence",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Legacy_Ranger_Car.Note_Legacy_Ranger_Car_C"
+    "displayName": "ItemCatalog Pack03 GoBag",
+    "classString": "/Game/Items/Items/ItemCatalog_Pack03_GoBag.ItemCatalog_Pack03_GoBag_C"
   },
   {
-    "displayName": "Nail File",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_NailFile.Luxury_NailFile_C"
+    "displayName": "ItemCatalog Pack04 HorrorMovie",
+    "classString": "/Game/Items/Items/ItemCatalog_Pack04_HorrorMovie.ItemCatalog_Pack04_HorrorMovie_C"
   },
   {
-    "displayName": "Neatly Printed Message",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_SickoDrop.Note_DLC4_SickoDrop_C"
+    "displayName": "ItemCatalog Pack12 VarietyPack",
+    "classString": "/Game/Items/Items/ItemCatalog_Pack12_VarietyPack.ItemCatalog_Pack12_VarietyPack_C"
   },
   {
-    "displayName": "Neatly Printed Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_PersonalArcSantosCop_Clue.Note_Heartland_PersonalArcSantosCop_Clue_C"
+    "displayName": "ItemCatalog Pack14 RedTalon",
+    "classString": "/Game/Items/Items/ItemCatalog_Pack14_RedTalon.ItemCatalog_Pack14_RedTalon_C"
   },
   {
-    "displayName": "Network Guide to Cohabitation",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_guidebook_4.LuxuryItem_Books_guidebook_4_C"
+    "displayName": "ItemCatalog Pack15 TheNetwork",
+    "classString": "/Game/Items/Items/ItemCatalog_Pack15_TheNetwork.ItemCatalog_Pack15_TheNetwork_C"
   },
   {
-    "displayName": "Network Guide to Eating Right",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_guidebook_5.LuxuryItem_Books_guidebook_5_C"
+    "displayName": "LootableDeadBodyComponentBP",
+    "classString": "/Game/Items/Items/LootableDeadBodyComponentBP.LootableDeadBodyComponentBP_C"
   },
   {
-    "displayName": "Network Guide to Field Medicine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_guidebook_2.LuxuryItem_Books_guidebook_2_C"
+    "displayName": "LuxuryItem Alcohol absinthe 1",
+    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Alcohol_absinthe_1.LuxuryItem_Alcohol_absinthe_1_C"
   },
   {
-    "displayName": "Network Guide to Gardening",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_guidebook_1.LuxuryItem_Books_guidebook_1_C"
+    "displayName": "LuxuryItem Alcohol amaretto 1",
+    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Alcohol_amaretto_1.LuxuryItem_Alcohol_amaretto_1_C"
   },
   {
-    "displayName": "Network Guide to Vehicle Care",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_guidebook_3.LuxuryItem_Books_guidebook_3_C"
+    "displayName": "LuxuryItem Alcohol beer 1",
+    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Alcohol_beer_1.LuxuryItem_Alcohol_beer_1_C"
   },
   {
-    "displayName": "New Toothbrush",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_toothbrush_2.LuxuryItem_Hygiene_toothbrush_2_C"
+    "displayName": "LuxuryItem Alcohol beer 2",
+    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Alcohol_beer_2.LuxuryItem_Alcohol_beer_2_C"
   },
   {
-    "displayName": "Noir DVD Collection",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_DVDs_1.LuxuryItem_Entertainment_DVDs_1_C"
+    "displayName": "LuxuryItem Alcohol beer 3",
+    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Alcohol_beer_3.LuxuryItem_Alcohol_beer_3_C"
   },
   {
-    "displayName": "Noir Mystery Novel",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_8.LuxuryItem_Books_book_8_C"
+    "displayName": "LuxuryItem Crafted BulkPlagueCure",
+    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Crafted_BulkPlagueCure.LuxuryItem_Crafted_BulkPlagueCure_C"
   },
   {
-    "displayName": "Nonstick Saucepan",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_saucepan_1.LuxuryItem_Comforts_saucepan_1_C"
+    "displayName": "LuxuryItem Crafted Moonshine",
+    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Crafted_Moonshine.LuxuryItem_Crafted_Moonshine_C"
   },
   {
-    "displayName": "Nose Hair Clipper",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_clippers_1.LuxuryItem_Hygiene_clippers_1_C"
+    "displayName": "LuxuryItem Crafted Whiskey",
+    "classString": "/Game/Items/MiscellaneousItems/LuxuryItem_Crafted_Whiskey.LuxuryItem_Crafted_Whiskey_C"
   },
   {
-    "displayName": "Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_CopBrother_FollowUpClue.Note_Mission_CopBrother_FollowUpClue_C"
+    "displayName": "MiscItem DLC2 CLEOCore",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItem_DLC2_CLEOCore.MiscItem_DLC2_CLEOCore_C"
   },
   {
-    "displayName": "Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_CopBrother_FollowUp_Hunt01.Note_Mission_CopBrother_FollowUp_Hunt01_C"
+    "displayName": "MiscItem DLC2 OfficersQuartersPrefab",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItem_DLC2_OfficersQuartersPrefab.MiscItem_DLC2_OfficersQuartersPrefab_C"
   },
   {
-    "displayName": "Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_CopBrother_FollowUp_Hunt02.Note_Mission_CopBrother_FollowUp_Hunt02_C"
+    "displayName": "MiscItem DLC2 RedTalonBunksPrefab",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItem_DLC2_RedTalonBunksPrefab.MiscItem_DLC2_RedTalonBunksPrefab_C"
   },
   {
-    "displayName": "Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_CopBrother_FollowUp_Hunt03.Note_Mission_CopBrother_FollowUp_Hunt03_C"
+    "displayName": "MiscItem DLC2 RedTalonWatchtowerPrefab",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItem_DLC2_RedTalonWatchtowerPrefab.MiscItem_DLC2_RedTalonWatchtowerPrefab_C"
   },
   {
-    "displayName": "Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_CopBrother_FollowUp_Hunt04.Note_Mission_CopBrother_FollowUp_Hunt04_C"
+    "displayName": "MiscItem DLC2 RedTalonWorkshopPrefab",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItem_DLC2_RedTalonWorkshopPrefab.MiscItem_DLC2_RedTalonWorkshopPrefab_C"
   },
   {
-    "displayName": "Note about Mace",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_13.Note_13_C"
+    "displayName": "MiscItem Faustite HavenCore",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItem_Faustite_HavenCore.MiscItem_Faustite_HavenCore_C"
   },
   {
-    "displayName": "Note Buried with Toy Watch",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_08.Faustite_Note_08_C"
+    "displayName": "MiscItem Faustite Prednisone",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItem_Faustite_Prednisone.MiscItem_Faustite_Prednisone_C"
   },
   {
-    "displayName": "Note Found at Blocked Tunnel",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Discoveries/Heartland_Discovery_EchoLab_1.Heartland_Discovery_EchoLab_1_C"
+    "displayName": "MiscItem Heartland BloaterGland",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItem_Heartland_BloaterGland.MiscItem_Heartland_BloaterGland_C"
   },
   {
-    "displayName": "Note Found at Marshall HQ",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Discoveries/Heartland_Discovery_EchoLab_4.Heartland_Discovery_EchoLab_4_C"
+    "displayName": "MiscItemAlcohol",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemAlcohol.MiscItemAlcohol_C"
   },
   {
-    "displayName": "Note Found at Old Mill",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Discoveries/Heartland_Discovery_EchoLab_2.Heartland_Discovery_EchoLab_2_C"
+    "displayName": "MiscItemBlackPlagueCureRequirement",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemBlackPlagueCureRequirement.MiscItemBlackPlagueCureRequirement_C"
   },
   {
-    "displayName": "Note Found at the Silo",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Discoveries/Heartland_Discovery_EchoLab_3.Heartland_Discovery_EchoLab_3_C"
+    "displayName": "MiscItemBloodDonationBag",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemBloodDonationBag.MiscItemBloodDonationBag_C"
   },
   {
-    "displayName": "Note Found on Dead Body",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Jurassic_4.Note_Heartland_Jurassic_4_C"
+    "displayName": "MiscItemBookshelfSpeakers",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemBookshelfSpeakers.MiscItemBookshelfSpeakers_C"
   },
   {
-    "displayName": "Note Found on Dead Scientist",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_7.Note_Heartland_EchoLab_7_C"
-  },
-  {
-    "displayName": "Note Found on Dead Scientist",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_7b.Note_Heartland_EchoLab_7b_C"
-  },
-  {
-    "displayName": "Note Found on Dead Scientist",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_7c.Note_Heartland_EchoLab_7c_C"
-  },
-  {
-    "displayName": "Note Found on Dead Scientist",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_8.Note_Heartland_EchoLab_8_C"
-  },
-  {
-    "displayName": "Note Found on Dead Scientist",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_9.Note_Heartland_EchoLab_9_C"
-  },
-  {
-    "displayName": "Note Found on Dead Soldier",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_1.Note_Heartland_EchoLab_1_C"
-  },
-  {
-    "displayName": "Note Found on Dead Soldier",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_2.Note_Heartland_EchoLab_2_C"
-  },
-  {
-    "displayName": "Note Found on Dead Soldier",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_3.Note_Heartland_EchoLab_3_C"
-  },
-  {
-    "displayName": "Note Found on Dead Soldier",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_4.Note_Heartland_EchoLab_4_C"
-  },
-  {
-    "displayName": "Note Found on Dead Soldier",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_5.Note_Heartland_EchoLab_5_C"
-  },
-  {
-    "displayName": "Note Found on Dead Soldier",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_EchoLab_6.Note_Heartland_EchoLab_6_C"
-  },
-  {
-    "displayName": "Note Found on Jenkins",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Discoveries/Heartland_Discovery_EchoLab_5.Heartland_Discovery_EchoLab_5_C"
-  },
-  {
-    "displayName": "Note Found on Last Soldier",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Discoveries/Heartland_Discovery_EchoLab_6.Heartland_Discovery_EchoLab_6_C"
-  },
-  {
-    "displayName": "Note from Searchers' Wall",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_Tutorial_01.Note_Mission_Tutorial_01_C"
-  },
-  {
-    "displayName": "Note from Water Cooler",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Badass_SantosNote.Note_Heartland_Badass_SantosNote_C"
-  },
-  {
-    "displayName": "Old Diner Menu",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Badass_Xtra.Note_Heartland_Badass_Xtra_C"
-  },
-  {
-    "displayName": "Old Family Photo",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_17.Note_17_C"
-  },
-  {
-    "displayName": "Old Picture Atlas",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_13.LuxuryItem_Books_book_13_C"
-  },
-  {
-    "displayName": "Old Prescription",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_01.Faustite_Note_01_C"
-  },
-  {
-    "displayName": "Old Record Player",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Entertainment/Luxury_OldRecordPlayer.Luxury_OldRecordPlayer_C"
-  },
-  {
-    "displayName": "Old Toothbrush",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_toothbrush_1.LuxuryItem_Hygiene_toothbrush_1_C"
-  },
-  {
-    "displayName": "Old-Timey Kazoo",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_kazoo_1.LuxuryItem_Entertainment_kazoo_1_C"
-  },
-  {
-    "displayName": "Ominous Directions",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Legacy_Sheriff_2.Note_Legacy_Sheriff_2_C"
-  },
-  {
-    "displayName": "Order Confirmation",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Winter2022/Note_ELF_Protocol.Note_ELF_Protocol_C"
-  },
-  {
-    "displayName": "Order Confirmation",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Winter2022/Note_ELF_Protocol_1.Note_ELF_Protocol_1_C"
-  },
-  {
-    "displayName": "Order Confirmation",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Winter2022/Note_ELF_Protocol_2.Note_ELF_Protocol_2_C"
-  },
-  {
-    "displayName": "Order Confirmation",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Winter2022/Note_ELF_Protocol_3.Note_ELF_Protocol_3_C"
-  },
-  {
-    "displayName": "Order Confirmation",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Winter2022/Note_ELF_Protocol_4.Note_ELF_Protocol_4_C"
-  },
-  {
-    "displayName": "Origami Fortune Teller",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_fortune_teller_1.LuxuryItem_Entertainment_fortune_teller_1_C"
-  },
-  {
-    "displayName": "Original Matisse",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_artwork_1.LuxuryItem_FancyShit_artwork_1_C"
-  },
-  {
-    "displayName": "Ornate Cigar Box",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_cigars_2.LuxuryItem_Tobacco_cigars_2_C"
-  },
-  {
-    "displayName": "Oversized Gold Watch",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_gold_watch_1.LuxuryItem_FancyShit_gold_watch_1_C"
-  },
-  {
-    "displayName": "Pack of 100 Incense Sticks",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_incense_1.LuxuryItem_Comforts_incense_1_C"
-  },
-  {
-    "displayName": "Pack of Black Licorice",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_7.LuxuryItem_Treats_candy_7_C"
-  },
-  {
-    "displayName": "Pack of Booze-Filled Chocolates",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_30.LuxuryItem_Treats_candy_30_C"
-  },
-  {
-    "displayName": "Pack of Bubble Gum",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_gum_2.LuxuryItem_Treats_gum_2_C"
-  },
-  {
-    "displayName": "Pack of Cheap Smokes",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_cigarettes_2.LuxuryItem_Tobacco_cigarettes_2_C"
-  },
-  {
-    "displayName": "Pack of Cheese Slices",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_cheese_1.LuxuryItem_Treats_cheese_1_C"
-  },
-  {
-    "displayName": "Pack of Chewing Gum",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_gum_3.LuxuryItem_Treats_gum_3_C"
-  },
-  {
-    "displayName": "Pack of Choco-nuts",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_39.LuxuryItem_Treats_candy_39_C"
-  },
-  {
-    "displayName": "Pack of Cigarette Papers",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_rolling_paper_1.LuxuryItem_Tobacco_rolling_paper_1_C"
-  },
-  {
-    "displayName": "Pack of Clean Drawers",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_underwear_2.LuxuryItem_Comforts_underwear_2_C"
-  },
-  {
-    "displayName": "Pack of Cotton Swabs",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_cotton_swabs_1.LuxuryItem_Hygiene_cotton_swabs_1_C"
-  },
-  {
-    "displayName": "Pack of Disposable Razors",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_razors_1.LuxuryItem_Hygiene_razors_1_C"
-  },
-  {
-    "displayName": "Pack of Dutchies",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_cigars_3.LuxuryItem_Tobacco_cigars_3_C"
-  },
-  {
-    "displayName": "Pack of Earplugs",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_earplugs_1.LuxuryItem_Comforts_earplugs_1_C"
-  },
-  {
-    "displayName": "Pack of Eiffel Condoms",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_condoms_1.LuxuryItem_Comforts_condoms_1_C"
-  },
-  {
-    "displayName": "Pack of Emery Boards",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_emery_boards_1.LuxuryItem_Hygiene_emery_boards_1_C"
-  },
-  {
-    "displayName": "Pack of Gleemee Gum",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_gum_1.LuxuryItem_Treats_gum_1_C"
-  },
-  {
-    "displayName": "Pack of Guitar Strings",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_guitar_strings_1.LuxuryItem_Entertainment_guitar_strings_1_C"
-  },
-  {
-    "displayName": "Pack of Hair Ties",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_HairTies.Luxury_HairTies_C"
-  },
-  {
-    "displayName": "Pack of Heavy-Duty Earplugs",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_EarPlugs.Luxury_EarPlugs_C"
-  },
-  {
-    "displayName": "Pack of Levee's Adult Diapers",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_diapers_1.LuxuryItem_Comforts_diapers_1_C"
-  },
-  {
-    "displayName": "Pack of Low-Tar Cigarettes",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_cigarettes_1.LuxuryItem_Tobacco_cigarettes_1_C"
-  },
-  {
-    "displayName": "Pack of Menthols",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Tobacco_menthols_1.LuxuryItem_Tobacco_menthols_1_C"
-  },
-  {
-    "displayName": "Pack of Moist Towelettes",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_moist_towelettes_1.LuxuryItem_Hygiene_moist_towelettes_1_C"
-  },
-  {
-    "displayName": "Pack of Safety Razors",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_razors_2.LuxuryItem_Hygiene_razors_2_C"
-  },
-  {
-    "displayName": "Pack of Tooth Whitening Strips",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_ToothWhitener.Luxury_ToothWhitener_C"
-  },
-  {
-    "displayName": "Package of Beef Jerky",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_jerky_1.LuxuryItem_Treats_jerky_1_C"
-  },
-  {
-    "displayName": "Pad of Graph Paper",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC4/Note_DLC4_Trunkload.Note_DLC4_Trunkload_C"
-  },
-  {
-    "displayName": "Page from Nat's Journal",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_Wilkerson01_Journal.Faustite_Note_Wilkerson01_Journal_C"
-  },
-  {
-    "displayName": "Pair of Boxer Briefs",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_underwear_1.LuxuryItem_Comforts_underwear_1_C"
-  },
-  {
-    "displayName": "Pair of Cat Socks",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_socks_4.LuxuryItem_Comforts_socks_4_C"
-  },
-  {
-    "displayName": "Pair of Dice",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_dice_1.LuxuryItem_Entertainment_dice_1_C"
-  },
-  {
-    "displayName": "Pair of Drumsticks",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_drum_machine_1.LuxuryItem_Entertainment_drum_machine_1_C"
-  },
-  {
-    "displayName": "Pair of Gold-Plated Chopsticks",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_chopsticks_1.LuxuryItem_FancyShit_chopsticks_1_C"
-  },
-  {
-    "displayName": "Pair of Insert Soles",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_insoles_1.LuxuryItem_Comforts_insoles_1_C"
-  },
-  {
-    "displayName": "Pair of Itchy Hiking Socks",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_socks_1.LuxuryItem_Comforts_socks_1_C"
-  },
-  {
-    "displayName": "Pair of Pearl Earrings  ",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_earrings_2.LuxuryItem_FancyShit_earrings_2_C"
-  },
-  {
-    "displayName": "Pair of Pre-Ripped Hipster Jeans",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_jeans_1.LuxuryItem_FancyShit_jeans_1_C"
-  },
-  {
-    "displayName": "Pair of Reading Glasses",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_reading_glasses_1.LuxuryItem_Comforts_reading_glasses_1_C"
-  },
-  {
-    "displayName": "Pair of Simply Radiant Earrings",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_earrings_1.LuxuryItem_FancyShit_earrings_1_C"
-  },
-  {
-    "displayName": "Pair of Thick Wool Socks",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_socks_3.LuxuryItem_Comforts_socks_3_C"
-  },
-  {
-    "displayName": "Pair of Ugly Christmas Socks",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_socks_2.LuxuryItem_Comforts_socks_2_C"
-  },
-  {
-    "displayName": "Pair of Wooly Mittens",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_mittens_1.LuxuryItem_Comforts_mittens_1_C"
-  },
-  {
-    "displayName": "Panda Bear Plushie",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_stuffed_animal_1.LuxuryItem_Comforts_stuffed_animal_1_C"
-  },
-  {
-    "displayName": "Part",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemParts.MiscItemParts_C"
-  },
-  {
-    "displayName": "Partial Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_07.Faustite_Note_07_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_01.RedTalon_DLC1_Note_01_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_02.RedTalon_DLC1_Note_02_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_03.RedTalon_DLC1_Note_03_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_04.RedTalon_DLC1_Note_04_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_05.RedTalon_DLC1_Note_05_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_06.RedTalon_DLC1_Note_06_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_07.RedTalon_DLC1_Note_07_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_08.RedTalon_DLC1_Note_08_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_09.RedTalon_DLC1_Note_09_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_10.RedTalon_DLC1_Note_10_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_11.RedTalon_DLC1_Note_11_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_12.RedTalon_DLC1_Note_12_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_13.RedTalon_DLC1_Note_13_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_14.RedTalon_DLC1_Note_14_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_15.RedTalon_DLC1_Note_15_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_16.RedTalon_DLC1_Note_16_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_26.RedTalon_DLC1_Note_26_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_27.RedTalon_DLC1_Note_27_C"
-  },
-  {
-    "displayName": "Patrol Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_30.RedTalon_DLC1_Note_30_C"
-  },
-  {
-    "displayName": "Personal Journal Entry",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_17.RedTalon_DLC1_Note_17_C"
-  },
-  {
-    "displayName": "Photo-Copied Bulletin ",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_SniperLoot2.Note_Mission_SniperLoot2_C"
-  },
-  {
-    "displayName": "Picasso Napkin",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_napkin_1.LuxuryItem_FancyShit_napkin_1_C"
-  },
-  {
-    "displayName": "Pile of Weapon Remains",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemWeaponRemains.MiscItemWeaponRemains_C"
-  },
-  {
-    "displayName": "Pine Tree Car Freshener",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_car_freshener_1.LuxuryItem_Comforts_car_freshener_1_C"
-  },
-  {
-    "displayName": "Plague Sample",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCureRequirement.MiscItemPlagueCureRequirement_C"
-  },
-  {
-    "displayName": "Pocket Pack of Tissues",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_tissues_1.LuxuryItem_Hygiene_tissues_1_C"
-  },
-  {
-    "displayName": "Pouch of Bath Salts",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_bath_salts_1.LuxuryItem_Hygiene_bath_salts_1_C"
-  },
-  {
-    "displayName": "Prefab: Officer Quarters",
-    "classString": "/Game/Items/MiscellaneousItems/DLC2RewardFacilityReqItems/MiscItem_DLC2_OfficersQuartersPrefab.MiscItem_DLC2_OfficersQuartersPrefab_C"
-  },
-  {
-    "displayName": "Prefab: Red Talon Bunkroom",
-    "classString": "/Game/Items/MiscellaneousItems/DLC2RewardFacilityReqItems/MiscItem_DLC2_RedTalonBunksPrefab.MiscItem_DLC2_RedTalonBunksPrefab_C"
-  },
-  {
-    "displayName": "Prefab: Red Talon Watchtower",
-    "classString": "/Game/Items/MiscellaneousItems/DLC2RewardFacilityReqItems/MiscItem_DLC2_RedTalonWatchtowerPrefab.MiscItem_DLC2_RedTalonWatchtowerPrefab_C"
-  },
-  {
-    "displayName": "Prefab: Red Talon Workshop",
-    "classString": "/Game/Items/MiscellaneousItems/DLC2RewardFacilityReqItems/MiscItem_DLC2_RedTalonWorkshopPrefab.MiscItem_DLC2_RedTalonWorkshopPrefab_C"
-  },
-  {
-    "displayName": "Printed Email",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_35.Note_35_C"
-  },
-  {
-    "displayName": "Propaganda Flyer",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Legacy_Warlord_P05_Coalition.Note_Legacy_Warlord_P05_Coalition_C"
-  },
-  {
-    "displayName": "Pulp Fantasy Novel",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_6.LuxuryItem_Books_book_6_C"
-  },
-  {
-    "displayName": "Pumice Stone",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_pumice_stone_1.LuxuryItem_Hygiene_pumice_stone_1_C"
-  },
-  {
-    "displayName": "Rabbit's Foot Keychain",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_keychain_1.LuxuryItem_Comforts_keychain_1_C"
-  },
-  {
-    "displayName": "Ratty Celebrity Gossip Rag",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_tabloid_1.LuxuryItem_Books_tabloid_1_C"
-  },
-  {
-    "displayName": "Ratty Comic Book",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_comic_book_2.LuxuryItem_Books_comic_book_2_C"
-  },
-  {
-    "displayName": "Recipe Card",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_34.Note_34_C"
-  },
-  {
-    "displayName": "Red Talon Code Book",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_JurassicJunction02_CodeBook.Faustite_JurassicJunction02_CodeBook_C"
-  },
-  {
-    "displayName": "Reversible Leather Belt",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_belt_1.LuxuryItem_Comforts_belt_1_C"
-  },
-  {
-    "displayName": "Roll of Cough Drops",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_cough_drops_1.LuxuryItem_Hygiene_cough_drops_1_C"
-  },
-  {
-    "displayName": "Roll of Dental Floss",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_floss_2.LuxuryItem_Hygiene_floss_2_C"
-  },
-  {
-    "displayName": "Roll of Toilet Paper",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_ToiletPaper.Luxury_ToiletPaper_C"
-  },
-  {
-    "displayName": "Rusted Harmonica",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_harmonica_1.LuxuryItem_Entertainment_harmonica_1_C"
-  },
-  {
-    "displayName": "Rusty Flask of Bathtub Gin",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_gin_1.LuxuryItem_Alcohol_gin_1_C"
-  },
-  {
-    "displayName": "RZX Ultrasonic Range Finder",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_RedTalonBase_WatchtowerUpgradeItem.Faustite_RedTalonBase_WatchtowerUpgradeItem_C"
-  },
-  {
-    "displayName": "Sailor's Compass",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_compass_1.LuxuryItem_FancyShit_compass_1_C"
-  },
-  {
-    "displayName": "San Marcos Blanket",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_blanket_1.LuxuryItem_Comforts_blanket_1_C"
-  },
-  {
-    "displayName": "Scrap of Circuitry",
+    "displayName": "MiscItemCircuitry",
     "classString": "/Game/Items/MiscellaneousItems/MiscItemCircuitry.MiscItemCircuitry_C"
   },
   {
-    "displayName": "Scratched Notepad",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_SniperLoot_StashMap.Note_SniperLoot_StashMap_C"
+    "displayName": "MiscItemHeavyArmorUpgradeKit",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemHeavyArmorUpgradeKit.MiscItemHeavyArmorUpgradeKit_C"
   },
   {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_19.Network_DLC1_Note_19_C"
+    "displayName": "MiscItemLightArmorUpgradeKit",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemLightArmorUpgradeKit.MiscItemLightArmorUpgradeKit_C"
   },
   {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_20.Network_DLC1_Note_20_C"
+    "displayName": "MiscItemLoudspeaker",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemLoudspeaker.MiscItemLoudspeaker_C"
   },
   {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_25.Network_DLC1_Note_25_C"
+    "displayName": "MiscItemMediumArmorUpgradeKit",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemMediumArmorUpgradeKit.MiscItemMediumArmorUpgradeKit_C"
   },
   {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/Network_DLC1_Note_29.Network_DLC1_Note_29_C"
-  },
-  {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_18.RedTalon_DLC1_Note_18_C"
-  },
-  {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_19.RedTalon_DLC1_Note_19_C"
-  },
-  {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_29.RedTalon_DLC1_Note_29_C"
-  },
-  {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_06.Faustite_Note_06_C"
-  },
-  {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_40.Note_40_C"
-  },
-  {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_41.Note_41_C"
-  },
-  {
-    "displayName": "Scrawled Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_43.Note_43_C"
-  },
-  {
-    "displayName": "Set of Memorabilia",
+    "displayName": "MiscItemMemorabilia",
     "classString": "/Game/Items/MiscellaneousItems/MiscItemMemorabilia.MiscItemMemorabilia_C"
   },
   {
-    "displayName": "Set of Nail Clippers",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_NailClippers.Luxury_NailClippers_C"
+    "displayName": "MiscItemMilitaryEquipment",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemMilitaryEquipment.MiscItemMilitaryEquipment_C"
   },
   {
-    "displayName": "Set of Ping-Pong Paddles",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_ping_pong_paddles_1.LuxuryItem_Entertainment_ping_pong_paddles_1_C"
+    "displayName": "MiscItemParts",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemParts.MiscItemParts_C"
   },
   {
-    "displayName": "Set of Solar Panels",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemSolarPanels.MiscItemSolarPanels_C"
+    "displayName": "MiscItemPlagueCure",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure.MiscItemPlagueCure_C"
   },
   {
-    "displayName": "SetSet{[0+]s of Hair Clippers",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_nail_clippers_1.LuxuryItem_Hygiene_nail_clippers_1_C"
+    "displayName": "MiscItemPlagueCure 02",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure_02.MiscItemPlagueCure_02_C"
   },
   {
-    "displayName": "Sheet of Notebook Paper",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_06.Note_06_C"
+    "displayName": "MiscItemPlagueCure 03",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure_03.MiscItemPlagueCure_03_C"
   },
   {
-    "displayName": "Shoebox of Photos",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_photos_1.LuxuryItem_Entertainment_photos_1_C"
+    "displayName": "MiscItemPlagueCure 04",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure_04.MiscItemPlagueCure_04_C"
   },
   {
-    "displayName": "Shot-Up Flask of Hooch",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_7.LuxuryItem_Alcohol_booze_7_C"
+    "displayName": "MiscItemPlagueCure 05",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure_05.MiscItemPlagueCure_05_C"
   },
   {
-    "displayName": "Silk Handkerchief",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_handkerchief_2.LuxuryItem_Comforts_handkerchief_2_C"
+    "displayName": "MiscItemPlagueCure 06",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCure_06.MiscItemPlagueCure_06_C"
   },
   {
-    "displayName": "Silver Necklace",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_jewelry_1.LuxuryItem_FancyShit_jewelry_1_C"
+    "displayName": "MiscItemPlagueCureRequirement",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemPlagueCureRequirement.MiscItemPlagueCureRequirement_C"
   },
   {
-    "displayName": "Simple Wedding Ring",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_FancyShit/Luxury_SimpleWeddingRing.Luxury_SimpleWeddingRing_C"
+    "displayName": "MiscItemPowerAmplifier",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemPowerAmplifier.MiscItemPowerAmplifier_C"
   },
   {
-    "displayName": "Six-Pack of Fresh Craft Beer",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Alcohol/Luxury_Crafted_SixPackCraftBeer.Luxury_Crafted_SixPackCraftBeer_C"
+    "displayName": "MiscItemReagents",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemReagents.MiscItemReagents_C"
   },
   {
-    "displayName": "Six-Pack of Light Beer",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_beer_6.LuxuryItem_Alcohol_beer_6_C"
+    "displayName": "MiscItemRefuelVehicle",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemRefuelVehicle.MiscItemRefuelVehicle_C"
   },
   {
-    "displayName": "Six-Pack of Limited-Release Beer",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_beer_5.LuxuryItem_Alcohol_beer_5_C"
-  },
-  {
-    "displayName": "Sleep Mask",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_sleep_mask_1.LuxuryItem_Comforts_sleep_mask_1_C"
-  },
-  {
-    "displayName": "Small Erasable Board",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_05.Note_05_C"
-  },
-  {
-    "displayName": "Sock Filled With Canned Heat",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Alcohol_booze_5.LuxuryItem_Alcohol_booze_5_C"
-  },
-  {
-    "displayName": "Song Lyrics on Notebook Paper",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Mission_BandReunion_01.Note_Mission_BandReunion_01_C"
-  },
-  {
-    "displayName": "Stack of Maps",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Hacker_Xtra.Note_Heartland_Hacker_Xtra_C"
-  },
-  {
-    "displayName": "Strange Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_Legacy_Sheriff_1.Note_Legacy_Sheriff_1_C"
-  },
-  {
-    "displayName": "Strange Pink Figurine",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_figurine_1.LuxuryItem_Entertainment_figurine_1_C"
-  },
-  {
-    "displayName": "Stray Tampon",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_tampon_1.LuxuryItem_Hygiene_tampon_1_C"
-  },
-  {
-    "displayName": "Sudoku Puzzle Book",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_21.LuxuryItem_Books_book_21_C"
-  },
-  {
-    "displayName": "Suggestive Lamp",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_lamp_1.LuxuryItem_Comforts_lamp_1_C"
-  },
-  {
-    "displayName": "Suicide Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_20.Note_20_C"
-  },
-  {
-    "displayName": "Sun-Faded Lawn Gnome",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_lawn_gnome_1.LuxuryItem_Comforts_lawn_gnome_1_C"
-  },
-  {
-    "displayName": "Superhero Graphic Novel",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_19.LuxuryItem_Books_book_19_C"
-  },
-  {
-    "displayName": "Tabby Taffy Block",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_candy_28.LuxuryItem_Treats_candy_28_C"
-  },
-  {
-    "displayName": "Talkin' Time Lacie Doll",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_doll_1.LuxuryItem_Entertainment_doll_1_C"
-  },
-  {
-    "displayName": "Tattered Duty Roster",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_19.Note_19_C"
-  },
-  {
-    "displayName": "Tattered Green Sticky Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_03.Note_03_C"
-  },
-  {
-    "displayName": "Tattered Map",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_31.RedTalon_DLC1_Note_31_C"
-  },
-  {
-    "displayName": "Tattered Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_02.Faustite_Note_02_C"
-  },
-  {
-    "displayName": "Tattered Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_03.Faustite_Note_03_C"
-  },
-  {
-    "displayName": "Tattered Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Note_05.Faustite_Note_05_C"
-  },
-  {
-    "displayName": "Tattered Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_24.Note_24_C"
-  },
-  {
-    "displayName": "Tattered Page",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_25.Note_25_C"
-  },
-  {
-    "displayName": "Tattered Sticky Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_08.Note_08_C"
-  },
-  {
-    "displayName": "Tattered Sticky Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_26.Note_26_C"
-  },
-  {
-    "displayName": "Tattered Sticky Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_27.Note_27_C"
-  },
-  {
-    "displayName": "Tattered Sticky Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_28.Note_28_C"
-  },
-  {
-    "displayName": "Tattered Sticky Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_29.Note_29_C"
-  },
-  {
-    "displayName": "Tattered Sticky Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_30.Note_30_C"
-  },
-  {
-    "displayName": "Tattered Sticky Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_32.Note_32_C"
-  },
-  {
-    "displayName": "Teeth Whitening Kit",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_teeth_whitener_1.LuxuryItem_Hygiene_teeth_whitener_1_C"
-  },
-  {
-    "displayName": "TEMP: Soldier's Journal",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Marshall_Journal.Faustite_Marshall_Journal_C"
-  },
-  {
-    "displayName": "TEMP: US Military Dog Tags",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Marshall_DogTags_01.Faustite_Marshall_DogTags_01_C"
-  },
-  {
-    "displayName": "TEMP: US Military Dog Tags",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Marshall_DogTags_2.Faustite_Marshall_DogTags_2_C"
-  },
-  {
-    "displayName": "TEMP: US Military Dog Tags",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Marshall_DogTags_3.Faustite_Marshall_DogTags_3_C"
-  },
-  {
-    "displayName": "TEMP: US Military Dog Tags",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Marshall_DogTags_4.Faustite_Marshall_DogTags_4_C"
-  },
-  {
-    "displayName": "Tin of Moustache Wax",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_MoustacheWax.Luxury_MoustacheWax_C"
-  },
-  {
-    "displayName": "Tin of Shortbread",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Treats_cookies_1.LuxuryItem_Treats_cookies_1_C"
-  },
-  {
-    "displayName": "To-Do List",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_31.Note_31_C"
-  },
-  {
-    "displayName": "To-Do List",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_36.Note_36_C"
-  },
-  {
-    "displayName": "Toolkit",
+    "displayName": "MiscItemRepairVehicle",
     "classString": "/Game/Items/MiscellaneousItems/MiscItemRepairVehicle.MiscItemRepairVehicle_C"
   },
   {
-    "displayName": "Toothbrush Multi-Pack",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_toothbrushes_1.LuxuryItem_Hygiene_toothbrushes_1_C"
+    "displayName": "MiscItemRepairVehicleAdvanced",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemRepairVehicleAdvanced.MiscItemRepairVehicleAdvanced_C"
   },
   {
-    "displayName": "Torn Comic Book Cover",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_11.Note_11_C"
+    "displayName": "MiscItemSeeds",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemSeeds.MiscItemSeeds_C"
   },
   {
-    "displayName": "Torn Invoice",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_14.Note_14_C"
+    "displayName": "MiscItemSolarPanels",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemSolarPanels.MiscItemSolarPanels_C"
   },
   {
-    "displayName": "Torn Journal Page",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_01.Note_01_C"
+    "displayName": "MiscItemWeaponRemains",
+    "classString": "/Game/Items/MiscellaneousItems/MiscItemWeaponRemains.MiscItemWeaponRemains_C"
   },
   {
-    "displayName": "Torn Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_21.Note_21_C"
-  },
-  {
-    "displayName": "Torn Page",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_04.Note_04_C"
-  },
-  {
-    "displayName": "Torn Sheet of Paper",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_07.Note_07_C"
-  },
-  {
-    "displayName": "Torrid Romance Novel",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_9.LuxuryItem_Books_book_9_C"
-  },
-  {
-    "displayName": "Trade Ledger",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Heartland/Note_Heartland_Badass_WilkersonNote.Note_Heartland_Badass_WilkersonNote_C"
-  },
-  {
-    "displayName": "Traveler's Sleep Mask",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_SleepMask.Luxury_SleepMask_C"
-  },
-  {
-    "displayName": "Tub of Petroleum Jelly",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_petroleum_jelly_1.LuxuryItem_Hygiene_petroleum_jelly_1_C"
-  },
-  {
-    "displayName": "Tube of Extra-Hold Hair Gel",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_hair_gel_1.LuxuryItem_Comforts_hair_gel_1_C"
-  },
-  {
-    "displayName": "Tube of Lip Balm",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_LipBalm.Luxury_LipBalm_C"
-  },
-  {
-    "displayName": "Tube of Skin Cream",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_skin_cream_1.LuxuryItem_Comforts_skin_cream_1_C"
-  },
-  {
-    "displayName": "Tube of Store-Brand Toothpaste",
-    "classString": "/Game/Items/MiscellaneousItems/Luxuries_Hygiene/Luxury_Toothpaste.Luxury_Toothpaste_C"
-  },
-  {
-    "displayName": "Tube of Sunblock",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_sunblock_1.LuxuryItem_Hygiene_sunblock_1_C"
-  },
-  {
-    "displayName": "Tube of ToofBrite Whitening Toothpaste",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_toothpaste_2.LuxuryItem_Hygiene_toothpaste_2_C"
-  },
-  {
-    "displayName": "Tube of Wintergreen Toothpaste",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Hygiene_toothpaste_1.LuxuryItem_Hygiene_toothpaste_1_C"
-  },
-  {
-    "displayName": "Twenty-Sided Die",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_die_1.LuxuryItem_Entertainment_die_1_C"
-  },
-  {
-    "displayName": "Typed Order",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_22.RedTalon_DLC1_Note_22_C"
-  },
-  {
-    "displayName": "Typed Order",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_23.RedTalon_DLC1_Note_23_C"
-  },
-  {
-    "displayName": "Typed Order",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_24.RedTalon_DLC1_Note_24_C"
-  },
-  {
-    "displayName": "Typed Order",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/DLC1/RedTalon_DLC1_Note_28.RedTalon_DLC1_Note_28_C"
-  },
-  {
-    "displayName": "Unfinished Love Letter",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Discoveries/Faustite_Discovery_Marshall_GazeboTrashBags.Faustite_Discovery_Marshall_GazeboTrashBags_C"
-  },
-  {
-    "displayName": "Utopian Science Fiction Novel",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_book_5.LuxuryItem_Books_book_5_C"
-  },
-  {
-    "displayName": "Vintage Comic Book",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Books_comic_book_1.LuxuryItem_Books_comic_book_1_C"
-  },
-  {
-    "displayName": "Volleyball",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Entertainment_volleyball_1.LuxuryItem_Entertainment_volleyball_1_C"
-  },
-  {
-    "displayName": "Wall Repair Kit",
-    "classString": "/Game/Items/MiscellaneousItems/DLC2_DaybreakBaseDefenseItems/DLC2_Daybreak_WallRequirementItem.DLC2_Daybreak_WallRequirementItem_C"
-  },
-  {
-    "displayName": "Weathered Note",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_18.Note_18_C"
-  },
-  {
-    "displayName": "Well-Loved Hippo Stuffy",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Faustite/Faustite_Fairfield_ReservoirMomento_Toy.Faustite_Fairfield_ReservoirMomento_Toy_C"
-  },
-  {
-    "displayName": "Woman's Wedding Ring",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_FancyShit_wedding_ring_2.LuxuryItem_FancyShit_wedding_ring_2_C"
-  },
-  {
-    "displayName": "Wooden Backscratcher",
-    "classString": "/Game/Items/MiscellaneousItems/Generated_LuxuryItems/LuxuryItem_Comforts_backscratcher_1.LuxuryItem_Comforts_backscratcher_1_C"
-  },
-  {
-    "displayName": "Yellowed Adoption Record",
-    "classString": "/Game/Items/MiscellaneousItems/Notes/Note_15.Note_15_C"
+    "displayName": "PlayerDialogueSettings BP",
+    "classString": "/Game/Items/Items/PlayerDialogueSettings_BP.PlayerDialogueSettings_BP_C"
   }
 ]

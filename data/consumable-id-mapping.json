@@ -1,398 +1,270 @@
 [
   {
-    "displayName": "(TEMP) Bottle of Improvised Painkillers",
-    "classString": "/Game/Items/Consumables/PharmacyOutpost_ImprovisedWeakPainkillers.PharmacyOutpost_ImprovisedWeakPainkillers_C"
-  },
-  {
-    "displayName": "Anniversary Cake",
-    "classString": "/Game/Items/Consumables/Placeables/AnniversaryUpdate/mine_pack08_cakebomb_placable.mine_pack08_cakebomb_placable_C"
-  },
-  {
-    "displayName": "Bag of Meat Snacks",
-    "classString": "/Game/Items/Consumables/MysteryMeatWeirdSnacks.MysteryMeatWeirdSnacks_C"
-  },
-  {
-    "displayName": "Bag of Snacks",
-    "classString": "/Game/Items/Consumables/Snacks.Snacks_C"
-  },
-  {
     "displayName": "Bandage",
     "classString": "/Game/Items/Consumables/Bandage.Bandage_C"
   },
   {
-    "displayName": "Bloater Cloud Grenade",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_DLC4_zedgas_throwable.grenade_DLC4_zedgas_throwable_C"
+    "displayName": "Consumable DLC4 SteroidZ",
+    "classString": "/Game/Items/Consumables/Consumable_DLC4_SteroidZ.Consumable_DLC4_SteroidZ_C"
   },
   {
-    "displayName": "Block Rocker Firework",
-    "classString": "/Game/Items/Consumables/Placeables/mine_decoy_fireworks_XL_DLC1_placable.mine_decoy_fireworks_XL_DLC1_placable_C"
-  },
-  {
-    "displayName": "Boombox",
-    "classString": "/Game/Items/Consumables/Placeables/mine_decoy_boombox_placeable.mine_decoy_boombox_placeable_C"
-  },
-  {
-    "displayName": "Bottle of Painkillers",
-    "classString": "/Game/Items/Consumables/StandardPainkillers.StandardPainkillers_C"
-  },
-  {
-    "displayName": "Bottle of ScentBlock",
+    "displayName": "Consumable DLC4 ZedPheromone",
     "classString": "/Game/Items/Consumables/Consumable_DLC4_ZedPheromone.Consumable_DLC4_ZedPheromone_C"
   },
   {
-    "displayName": "Bottle of Stimulants",
-    "classString": "/Game/Items/Consumables/PotentStims.PotentStims_C"
-  },
-  {
-    "displayName": "Bottle of Strong Painkillers",
-    "classString": "/Game/Items/Consumables/PotentPainkillers.PotentPainkillers_C"
-  },
-  {
-    "displayName": "Bottle of Weak Painkillers",
-    "classString": "/Game/Items/Consumables/MildPainkillers.MildPainkillers_C"
-  },
-  {
-    "displayName": "Bottle of Wilkerson Special Reserve",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_wilkerson_throwable.grenade_wilkerson_throwable_C"
-  },
-  {
-    "displayName": "Bouncing Boris",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_DLC1_firework_m80brick_throwable.grenade_DLC1_firework_m80brick_throwable_C"
-  },
-  {
-    "displayName": "Box Mine",
-    "classString": "/Game/Items/Consumables/Placeables/mine_boxmine_placable.mine_boxmine_placable_C"
-  },
-  {
-    "displayName": "Bundle of Dynamite",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_dynamite_throwable.grenade_dynamite_throwable_C"
-  },
-  {
-    "displayName": "C4 Charge",
-    "classString": "/Game/Items/Consumables/Placeables/mine_c4_placeable.mine_c4_placeable_C"
-  },
-  {
-    "displayName": "Chemistry Textbook",
-    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Chemistry.Consumable_GainSkill_Chemistry_C"
-  },
-  {
-    "displayName": "Combat Training Manual",
-    "classString": "/Game/Items/Consumables/GainSkill/Respec/Consumable_DLC4_RespecSkill_Fighting.Consumable_DLC4_RespecSkill_Fighting_C"
-  },
-  {
-    "displayName": "Computers Textbook",
-    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Computers.Consumable_GainSkill_Computers_C"
-  },
-  {
-    "displayName": "Consumable - Postpone Fatigue",
-    "classString": "/Game/Items/Consumables/MildStims.MildStims_C"
-  },
-  {
-    "displayName": "Cooking Textbook",
-    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Cooking.Consumable_GainSkill_Cooking_C"
-  },
-  {
-    "displayName": "Copy of The Knowledge, by Lewis Dartnell",
-    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Mission_TheKnowledge.Consumable_GainSkill_Mission_TheKnowledge_C"
-  },
-  {
-    "displayName": "Craftsmanship Textbook",
-    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Craftsmanship.Consumable_GainSkill_Craftsmanship_C"
-  },
-  {
-    "displayName": "Cup of Coffee",
-    "classString": "/Game/Items/Consumables/Consumable_SuspendFatigue_Base_BP.Consumable_SuspendFatigue_Base_BP_C"
-  },
-  {
-    "displayName": "Deployable Minefield",
-    "classString": "/Game/Items/Consumables/Placeables/DLC2_mine_spider_placeable.DLC2_mine_spider_placeable_C"
-  },
-  {
-    "displayName": "Deployable Pyro Minefield",
-    "classString": "/Game/Items/Consumables/Placeables/DLC2_mine_spider_fire_placeable.DLC2_mine_spider_fire_placeable_C"
-  },
-  {
-    "displayName": "DEPRECATED Military Equipment",
-    "classString": "/Game/Items/MiscellaneousItems/MiscItemMilitaryEquipment.MiscItemMilitaryEquipment_C"
-  },
-  {
-    "displayName": "DNL",
-    "classString": "/Game/Items/Consumables/StabilizingFoam_HealCurrentHP_InternalConsumable.StabilizingFoam_HealCurrentHP_InternalConsumable_C"
-  },
-  {
-    "displayName": "Dose of Pentamezin",
-    "classString": "/Game/Items/Consumables/Consumable_SwayReductionPill.Consumable_SwayReductionPill_C"
-  },
-  {
-    "displayName": "Dose of Zedeye",
+    "displayName": "Consumable DLC4 Zedrenalin",
     "classString": "/Game/Items/Consumables/Consumable_DLC4_Zedrenalin.Consumable_DLC4_Zedrenalin_C"
+  },
+  {
+    "displayName": "Consumable GainSkill Base BP",
+    "classString": "/Game/Items/Consumables/Consumable_GainSkill_Base_BP.Consumable_GainSkill_Base_BP_C"
+  },
+  {
+    "displayName": "Consumable GainSkill Chemistry",
+    "classString": "/Game/Items/Consumables/Consumable_GainSkill_Chemistry.Consumable_GainSkill_Chemistry_C"
+  },
+  {
+    "displayName": "Consumable GainSkill Computers",
+    "classString": "/Game/Items/Consumables/Consumable_GainSkill_Computers.Consumable_GainSkill_Computers_C"
+  },
+  {
+    "displayName": "Consumable GainSkill Cooking",
+    "classString": "/Game/Items/Consumables/Consumable_GainSkill_Cooking.Consumable_GainSkill_Cooking_C"
+  },
+  {
+    "displayName": "Consumable GainSkill Craftsmanship",
+    "classString": "/Game/Items/Consumables/Consumable_GainSkill_Craftsmanship.Consumable_GainSkill_Craftsmanship_C"
+  },
+  {
+    "displayName": "Consumable GainSkill Gardening",
+    "classString": "/Game/Items/Consumables/Consumable_GainSkill_Gardening.Consumable_GainSkill_Gardening_C"
+  },
+  {
+    "displayName": "Consumable GainSkill Mechanics",
+    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Mechanics.Consumable_GainSkill_Mechanics_C"
+  },
+  {
+    "displayName": "Consumable GainSkill Medicine",
+    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Medicine.Consumable_GainSkill_Medicine_C"
+  },
+  {
+    "displayName": "Consumable GainSkill Utilities",
+    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Utilities.Consumable_GainSkill_Utilities_C"
   },
   {
     "displayName": "Driving Textbook",
     "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_CU2_GainSkill_Quirk_Driving.Consumable_CU2_GainSkill_Quirk_Driving_C"
   },
   {
-    "displayName": "Energy Drink",
-    "classString": "/Game/Items/Consumables/StandardStims.StandardStims_C"
-  },
-  {
-    "displayName": "Explosive Fuel Trap",
-    "classString": "/Game/Items/Consumables/Placeables/dlc2_mine_military_gas_placeable.dlc2_mine_military_gas_placeable_C"
-  },
-  {
-    "displayName": "Fire Bomb",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_DLC2_firebomb_rt_throwable.grenade_DLC2_firebomb_rt_throwable_C"
-  },
-  {
-    "displayName": "Firearms Training Manual",
-    "classString": "/Game/Items/Consumables/GainSkill/Respec/Consumable_DLC4_RespecSkill_Shooting.Consumable_DLC4_RespecSkill_Shooting_C"
-  },
-  {
-    "displayName": "First Aid Kit",
-    "classString": "/Game/Items/Consumables/FirstAidKit.FirstAidKit_C"
-  },
-  {
     "displayName": "Fishing Textbook",
     "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_CU2_GainSkill_Quirk_Fishing.Consumable_CU2_GainSkill_Quirk_Fishing_C"
-  },
-  {
-    "displayName": "Flashbang Grenade",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_flashbang_throwable.grenade_flashbang_throwable_C"
-  },
-  {
-    "displayName": "Frag Grenade",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_m67_throwable.grenade_m67_throwable_C"
-  },
-  {
-    "displayName": "Fuel Bomb",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_FuelBomb_throwable.grenade_FuelBomb_throwable_C"
-  },
-  {
-    "displayName": "Gardening Textbook",
-    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Gardening.Consumable_GainSkill_Gardening_C"
-  },
-  {
-    "displayName": "Gardening Textbook",
-    "classString": "/Game/Items/Consumables/Consumable_GainSkill_Base_BP.Consumable_GainSkill_Base_BP_C"
-  },
-  {
-    "displayName": "Gardening Textbook",
-    "classString": "/Game/Items/Consumables/Consumable_SkillRespec_Base_BP.Consumable_SkillRespec_Base_BP_C"
-  },
-  {
-    "displayName": "Hygiene Guide",
-    "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_DLC4_GainSkill_Quirk_Hygiene.Consumable_DLC4_GainSkill_Quirk_Hygiene_C"
-  },
-  {
-    "displayName": "Injury Kit",
-    "classString": "/Game/Items/Consumables/TempInjuryRepairKit.TempInjuryRepairKit_C"
-  },
-  {
-    "displayName": "Jar of Zombait",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_DLC4_decoy_bait_throwable.grenade_DLC4_decoy_bait_throwable_C"
   },
   {
     "displayName": "Lichenology Textbook",
     "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_CU2_GainSkill_Quirk_Lichenology.Consumable_CU2_GainSkill_Quirk_Lichenology_C"
   },
   {
-    "displayName": "Mechanics Textbook",
-    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Mechanics.Consumable_GainSkill_Mechanics_C"
-  },
-  {
-    "displayName": "Medicated Bandage",
-    "classString": "/Game/Items/Consumables/EnhancedBandage.EnhancedBandage_C"
-  },
-  {
-    "displayName": "Medicine Textbook",
-    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Medicine.Consumable_GainSkill_Medicine_C"
-  },
-  {
-    "displayName": "Mental Training Manual",
-    "classString": "/Game/Items/Consumables/GainSkill/Respec/Consumable_DLC4_RespecSkill_Wits.Consumable_DLC4_RespecSkill_Wits_C"
-  },
-  {
-    "displayName": "Military Land Mine",
-    "classString": "/Game/Items/Consumables/Placeables/mine_landmine_placeable.mine_landmine_placeable_C"
-  },
-  {
-    "displayName": "Molotov",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_molotov_throwable.grenade_molotov_throwable_C"
-  },
-  {
-    "displayName": "Napalm Grenade",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_Napalm_throwable.grenade_Napalm_throwable_C"
-  },
-  {
-    "displayName": "NOT USED",
-    "classString": "/Game/Items/Consumables/FieldHospital_ImmunTherapy_InternalConsumable.FieldHospital_ImmunTherapy_InternalConsumable_C"
-  },
-  {
-    "displayName": "NOT USED",
-    "classString": "/Game/Items/Consumables/FieldHospital_PhysTherapy_InternalConsumable.FieldHospital_PhysTherapy_InternalConsumable_C"
-  },
-  {
-    "displayName": "NOT USED",
-    "classString": "/Game/Items/Consumables/Infirmary_HealActiveCharacter_InternalConsumable.Infirmary_HealActiveCharacter_InternalConsumable_C"
-  },
-  {
-    "displayName": "NOT USED",
-    "classString": "/Game/Items/Consumables/Infirmary_TreatSickActiveChar_InternalConsumable.Infirmary_TreatSickActiveChar_InternalConsumable_C"
-  },
-  {
-    "displayName": "Odd Little CLEO Machine",
-    "classString": "/Game/Items/Consumables/Placeables/mine_DLC2_decoy_ping_placeable.mine_DLC2_decoy_ping_placeable_C"
-  },
-  {
-    "displayName": "Pack of Nutritious Snacks",
-    "classString": "/Game/Items/Consumables/NutritiousSnacks.NutritiousSnacks_C"
-  },
-  {
-    "displayName": "Physical Training Manual",
-    "classString": "/Game/Items/Consumables/GainSkill/Respec/Consumable_DLC4_RespecSkill_Cardio.Consumable_DLC4_RespecSkill_Cardio_C"
-  },
-  {
-    "displayName": "Pipe Bomb",
-    "classString": "/Game/Items/Consumables/Throwables/pipe_bomb_throwable.pipe_bomb_throwable_C"
-  },
-  {
-    "displayName": "Plague Buster",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_heartland_bloatergas_throwable.grenade_heartland_bloatergas_throwable_C"
-  },
-  {
-    "displayName": "Pursuit Mine",
-    "classString": "/Game/Items/Consumables/Placeables/mine_pursuitmine_placable.mine_pursuitmine_placable_C"
-  },
-  {
-    "displayName": "Recycling Guide",
-    "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_DLC4_GainSkill_Quirk_Recycling.Consumable_DLC4_GainSkill_Quirk_Recycling_C"
-  },
-  {
-    "displayName": "Reign o' Fire",
-    "classString": "/Game/Items/Consumables/Placeables/mine_fireworks_spinner_DLC1_placable.mine_fireworks_spinner_DLC1_placable_C"
-  },
-  {
-    "displayName": "Remote Box Mine",
-    "classString": "/Game/Items/Consumables/Placeables/mine_remoteboxmine_placeable.mine_remoteboxmine_placeable_C"
-  },
-  {
-    "displayName": "Remote Grenade",
-    "classString": "/Game/Items/Consumables/Throwables/DLC2_grenade_remote_throwable.DLC2_grenade_remote_throwable_C"
-  },
-  {
-    "displayName": "Remote Rocket Pod",
-    "classString": "/Game/Items/Consumables/Placeables/DLC2_mine_cluster_placeable.DLC2_mine_cluster_placeable_C"
-  },
-  {
-    "displayName": "Road Flare",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_decoy_roadflare_throwable.grenade_decoy_roadflare_throwable_C"
-  },
-  {
-    "displayName": "Roll of Firecrackers",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_decoy_firecrackers_throwable.grenade_decoy_firecrackers_throwable_C"
-  },
-  {
     "displayName": "Scrum Textbook",
     "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_CU2_GainSkill_Quirk_Scrum.Consumable_CU2_GainSkill_Quirk_Scrum_C"
-  },
-  {
-    "displayName": "Secret Shopper's Guidebook",
-    "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_DLC4_GainSkill_Quirk_Shopping.Consumable_DLC4_GainSkill_Quirk_Shopping_C"
-  },
-  {
-    "displayName": "Sewing Guide",
-    "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_DLC4_GainSkill_Quirk_Sewing.Consumable_DLC4_GainSkill_Quirk_Sewing_C"
-  },
-  {
-    "displayName": "Shot of Espresso",
-    "classString": "/Game/Items/Consumables/Consumable_Stamina_Espresso.Consumable_Stamina_Espresso_C"
-  },
-  {
-    "displayName": "SHOULD NEVER BE SEEN",
-    "classString": "/Game/Items/Consumables/Throwables/Decoy_Dinnerbell_Internal_Throwable.Decoy_Dinnerbell_Internal_Throwable_C"
   },
   {
     "displayName": "Sleep Psychology Textbook",
     "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_DLC4_GainSkill_Quirk_SleepPsych.Consumable_DLC4_GainSkill_Quirk_SleepPsych_C"
   },
   {
-    "displayName": "Smoke Grenade",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_decoy_smokebomb_throwable.grenade_decoy_smokebomb_throwable_C"
+    "displayName": "Hygiene Guide",
+    "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_DLC4_GainSkill_Quirk_Hygiene.Consumable_DLC4_GainSkill_Quirk_Hygiene_C"
   },
   {
-    "displayName": "Soda Can Bomb",
-    "classString": "/Game/Items/Consumables/Throwables/soda_can_bomb_throwable.soda_can_bomb_throwable_C"
+    "displayName": "Recycling Guide",
+    "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_DLC4_GainSkill_Quirk_Recycling.Consumable_DLC4_GainSkill_Quirk_Recycling_C"
+  },
+  {
+    "displayName": "Sewing Guide",
+    "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_DLC4_GainSkill_Quirk_Sewing.Consumable_DLC4_GainSkill_Quirk_Sewing_C"
   },
   {
     "displayName": "Soundproofing Guide",
     "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_DLC4_GainSkill_Quirk_Soundproof.Consumable_DLC4_GainSkill_Quirk_Soundproof_C"
   },
   {
-    "displayName": "Sticky Grenade",
-    "classString": "/Game/Items/Consumables/Throwables/DLC2_grenade_spiked_throwable.DLC2_grenade_spiked_throwable_C"
+    "displayName": "Secret Shopper's Guidebook",
+    "classString": "/Game/Items/Consumables/GainSkill/Quirks/Consumable_DLC4_GainSkill_Quirk_Shopping.Consumable_DLC4_GainSkill_Quirk_Shopping_C"
   },
   {
-    "displayName": "Test Stat Buff Consumable",
-    "classString": "/Game/Items/Consumables/TestBuffConsumable.TestBuffConsumable_C"
+    "displayName": "Physical Training Manual",
+    "classString": "/Game/Items/Consumables/GainSkill/Respec/Consumable_DLC4_RespecSkill_Cardio.Consumable_DLC4_RespecSkill_Cardio_C"
   },
   {
-    "displayName": "Thermite Grenade",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_thermite_throwable.grenade_thermite_throwable_C"
+    "displayName": "Combat Training Manual",
+    "classString": "/Game/Items/Consumables/GainSkill/Respec/Consumable_DLC4_RespecSkill_Fighting.Consumable_DLC4_RespecSkill_Fighting_C"
   },
   {
-    "displayName": "Tube of Fireworks",
-    "classString": "/Game/Items/Consumables/Placeables/mine_decoy_fireworks_placable.mine_decoy_fireworks_placable_C"
+    "displayName": "Firearms Training Manual",
+    "classString": "/Game/Items/Consumables/GainSkill/Respec/Consumable_DLC4_RespecSkill_Shooting.Consumable_DLC4_RespecSkill_Shooting_C"
   },
   {
-    "displayName": "Utilities Textbook",
-    "classString": "/Game/Items/Consumables/GainSkill/Consumable_GainSkill_Utilities.Consumable_GainSkill_Utilities_C"
+    "displayName": "Mental Training Manual",
+    "classString": "/Game/Items/Consumables/GainSkill/Respec/Consumable_DLC4_RespecSkill_Wits.Consumable_DLC4_RespecSkill_Wits_C"
   },
   {
-    "displayName": "Vial of Enhanced Cure",
+    "displayName": "Consumable SkillRespec Base BP",
+    "classString": "/Game/Items/Consumables/Consumable_SkillRespec_Base_BP.Consumable_SkillRespec_Base_BP_C"
+  },
+  {
+    "displayName": "Consumable Stamina Espresso",
+    "classString": "/Game/Items/Consumables/Consumable_Stamina_Espresso.Consumable_Stamina_Espresso_C"
+  },
+  {
+    "displayName": "Consumable SuspendFatigue Base BP",
+    "classString": "/Game/Items/Consumables/Consumable_SuspendFatigue_Base_BP.Consumable_SuspendFatigue_Base_BP_C"
+  },
+  {
+    "displayName": "Consumable SwayReductionPill",
+    "classString": "/Game/Items/Consumables/Consumable_SwayReductionPill.Consumable_SwayReductionPill_C"
+  },
+  {
+    "displayName": "Consumable TimedStatBuff Base BP",
+    "classString": "/Game/Items/Consumables/Consumable_TimedStatBuff_Base_BP.Consumable_TimedStatBuff_Base_BP_C"
+  },
+  {
+    "displayName": "ConsumableBase BP",
+    "classString": "/Game/Items/Consumables/ConsumableBase_BP.ConsumableBase_BP_C"
+  },
+  {
+    "displayName": "ConsumableMedsBase BP",
+    "classString": "/Game/Items/Consumables/ConsumableMedsBase_BP.ConsumableMedsBase_BP_C"
+  },
+  {
+    "displayName": "ConsumableSettings",
+    "classString": "/Game/Items/Consumables/ConsumableSettings.ConsumableSettings_C"
+  },
+  {
+    "displayName": "ConsumableStatRecoveryBase BP",
+    "classString": "/Game/Items/Consumables/ConsumableStatRecoveryBase_BP.ConsumableStatRecoveryBase_BP_C"
+  },
+  {
+    "displayName": "ConsumableStimsBase BP",
+    "classString": "/Game/Items/Consumables/ConsumableStimsBase_BP.ConsumableStimsBase_BP_C"
+  },
+  {
+    "displayName": "DLCHeartland InstantPlagueCureWithBuff",
     "classString": "/Game/Items/Consumables/DLCHeartland_InstantPlagueCureWithBuff.DLCHeartland_InstantPlagueCureWithBuff_C"
   },
   {
-    "displayName": "Vial of Plague Cure",
-    "classString": "/Game/Items/Consumables/PlagueCure_03.PlagueCure_03_C"
+    "displayName": "EnhancedBandage",
+    "classString": "/Game/Items/Consumables/EnhancedBandage.EnhancedBandage_C"
   },
   {
-    "displayName": "Vial of Plague Cure",
+    "displayName": "FieldHospital ImmunTherapy InternalConsumable",
+    "classString": "/Game/Items/Consumables/FieldHospital_ImmunTherapy_InternalConsumable.FieldHospital_ImmunTherapy_InternalConsumable_C"
+  },
+  {
+    "displayName": "FieldHospital PhysTherapy InternalConsumable",
+    "classString": "/Game/Items/Consumables/FieldHospital_PhysTherapy_InternalConsumable.FieldHospital_PhysTherapy_InternalConsumable_C"
+  },
+  {
+    "displayName": "FirstAidKit",
+    "classString": "/Game/Items/Consumables/FirstAidKit.FirstAidKit_C"
+  },
+  {
+    "displayName": "Infirmary HealActiveCharacter InternalConsumable",
+    "classString": "/Game/Items/Consumables/Infirmary_HealActiveCharacter_InternalConsumable.Infirmary_HealActiveCharacter_InternalConsumable_C"
+  },
+  {
+    "displayName": "Infirmary TreatSickActiveChar InternalConsumable",
+    "classString": "/Game/Items/Consumables/Infirmary_TreatSickActiveChar_InternalConsumable.Infirmary_TreatSickActiveChar_InternalConsumable_C"
+  },
+  {
+    "displayName": "MildPainkillers",
+    "classString": "/Game/Items/Consumables/MildPainkillers.MildPainkillers_C"
+  },
+  {
+    "displayName": "MildStims",
+    "classString": "/Game/Items/Consumables/MildStims.MildStims_C"
+  },
+  {
+    "displayName": "MysteryMeatWeirdSnacks",
+    "classString": "/Game/Items/Consumables/MysteryMeatWeirdSnacks.MysteryMeatWeirdSnacks_C"
+  },
+  {
+    "displayName": "NutritiousSnacks",
+    "classString": "/Game/Items/Consumables/NutritiousSnacks.NutritiousSnacks_C"
+  },
+  {
+    "displayName": "OpenBaseScreenConsumable BP",
+    "classString": "/Game/Items/Consumables/OpenBaseScreenConsumable_BP.OpenBaseScreenConsumable_BP_C"
+  },
+  {
+    "displayName": "OpenCommunityScreenConsumable BP",
+    "classString": "/Game/Items/Consumables/OpenCommunityScreenConsumable_BP.OpenCommunityScreenConsumable_BP_C"
+  },
+  {
+    "displayName": "Pharmacy 1 Outpost ImprovisePainkillers",
+    "classString": "/Game/Items/Consumables/Pharmacy_1_Outpost_ImprovisePainkillers.Pharmacy_1_Outpost_ImprovisePainkillers_C"
+  },
+  {
+    "displayName": "PharmacyOutpost ImprovisedWeakPainkillers",
+    "classString": "/Game/Items/Consumables/PharmacyOutpost_ImprovisedWeakPainkillers.PharmacyOutpost_ImprovisedWeakPainkillers_C"
+  },
+  {
+    "displayName": "PlagueCure",
     "classString": "/Game/Items/Consumables/PlagueCure.PlagueCure_C"
   },
   {
-    "displayName": "Vial of Plague Cure",
+    "displayName": "PlagueCure 02",
     "classString": "/Game/Items/Consumables/PlagueCure_02.PlagueCure_02_C"
   },
   {
-    "displayName": "Vial of Plague Cure",
+    "displayName": "PlagueCure 03",
+    "classString": "/Game/Items/Consumables/PlagueCure_03.PlagueCure_03_C"
+  },
+  {
+    "displayName": "PlagueCure 04",
     "classString": "/Game/Items/Consumables/PlagueCure_04.PlagueCure_04_C"
   },
   {
-    "displayName": "Vial of Plague Cure",
+    "displayName": "PlagueCure 05",
     "classString": "/Game/Items/Consumables/PlagueCure_05.PlagueCure_05_C"
   },
   {
-    "displayName": "Vial of Plague Cure",
+    "displayName": "PlagueCure 06",
     "classString": "/Game/Items/Consumables/PlagueCure_06.PlagueCure_06_C"
   },
   {
-    "displayName": "Vial of Plague Cure",
+    "displayName": "PlagueCure HomeMade",
     "classString": "/Game/Items/Consumables/PlagueCure_HomeMade.PlagueCure_HomeMade_C"
   },
   {
-    "displayName": "Whistling Box Mine",
-    "classString": "/Game/Items/Consumables/Placeables/mine_whistlingboxmine_placable.mine_whistlingboxmine_placable_C"
+    "displayName": "PotentPainkillers",
+    "classString": "/Game/Items/Consumables/PotentPainkillers.PotentPainkillers_C"
   },
   {
-    "displayName": "Willie Pete Grenade",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_williepete_throwable.grenade_williepete_throwable_C"
+    "displayName": "PotentStims",
+    "classString": "/Game/Items/Consumables/PotentStims.PotentStims_C"
   },
   {
-    "displayName": "XL Firework Shell",
-    "classString": "/Game/Items/Consumables/Throwables/grenade_DLC1_firework_mortar_throwable.grenade_DLC1_firework_mortar_throwable_C"
+    "displayName": "Snacks",
+    "classString": "/Game/Items/Consumables/Snacks.Snacks_C"
   },
   {
-    "displayName": "Zedrenaline Pill",
-    "classString": "/Game/Items/Consumables/Consumable_DLC4_SteroidZ.Consumable_DLC4_SteroidZ_C"
+    "displayName": "StabilizingFoam HealCurrentHP InternalConsumable",
+    "classString": "/Game/Items/Consumables/StabilizingFoam_HealCurrentHP_InternalConsumable.StabilizingFoam_HealCurrentHP_InternalConsumable_C"
+  },
+  {
+    "displayName": "StandardPainkillers",
+    "classString": "/Game/Items/Consumables/StandardPainkillers.StandardPainkillers_C"
+  },
+  {
+    "displayName": "StandardStims",
+    "classString": "/Game/Items/Consumables/StandardStims.StandardStims_C"
+  },
+  {
+    "displayName": "TempInjuryRepairKit",
+    "classString": "/Game/Items/Consumables/TempInjuryRepairKit.TempInjuryRepairKit_C"
+  },
+  {
+    "displayName": "TestBuffConsumable",
+    "classString": "/Game/Items/Consumables/TestBuffConsumable.TestBuffConsumable_C"
   }
 ]

@@ -11,30 +11,30 @@ let characterData = {
     culturalBackground: 'AfricanAmerican',
     voiceID: 'Kee',
     voicePitch: 'Low',
-    humanDefinition: '',
+    humanDefinition: 'HumanFemaleVest_01_v_01', // Default model for Female (validated against Community Editor)
     philosophy1: 'Prudent',
     philosophy2: 'Pragmatic',
     standingLevel: 'Citizen',
     leaderType: 'None',
     heroBonus: '',
     skills: {
+        // All core skills can be 0 - this is valid
         cardio: { level: 0, specialty: '' },
         wits: { level: 0, specialty: '' },
         fighting: { level: 0, specialty: '' },
         shooting: { level: 0, specialty: '' },
+        // 5th skill can be 'none' - this is valid
         fifthSkill: { type: 'none', skill: '' }
     },
     traits: {
+        // Required traits (including 'Default') are automatically added during XML generation
+        // Only optional traits need to be added here
         required: [],
         optional: []
     },
     stats: {
         health: 100,
         stamina: 100
-    },
-    loadout: {
-        preset: 'custom',
-        equipment: {}
     },
     inventory: [] // Array of { category, itemId, displayName, classString, quantity }
 };
@@ -54,13 +54,71 @@ document.addEventListener('DOMContentLoaded', async () => {
     initializeForm();
     setupEventListeners();
     
-    // Make characterData globally available for randomizer and loadouts
+    // Make characterData globally available for randomizer
     window.characterData = characterData;
     
-    // Setup loadout preset after characterData is available
-    if (typeof setupLoadoutPreset === 'function') {
-        setupLoadoutPreset();
-    }
+    // Generate random names on initialization
+    await generateRandomNames();
+    
+    // Auto-randomize character on page load with only Standing & Leader Type checked
+    setTimeout(() => {
+        // Set randomizer checkboxes: all unchecked except Standing & Leader Type
+        const randName = document.getElementById('randName');
+        const randAttributes = document.getElementById('randAttributes');
+        const randSkills = document.getElementById('randSkills');
+        const randTraits = document.getElementById('randTraits');
+        const randStats = document.getElementById('randStats');
+        const randStanding = document.getElementById('randStanding');
+        
+        if (randName) randName.checked = false;
+        if (randAttributes) randAttributes.checked = false;
+        if (randSkills) randSkills.checked = false;
+        if (randTraits) randTraits.checked = false;
+        if (randStats) randStats.checked = false;
+        if (randStanding) randStanding.checked = true; // Only this one checked
+        
+        // Ensure leader type is set to "None"
+        const leaderSelect = document.getElementById('leaderType');
+        if (leaderSelect) {
+            leaderSelect.value = 'None';
+        }
+        
+        // Auto-randomize the character
+        console.log('Auto-randomizing character on page load...');
+        randomizeSelected();
+    }, 600); // Wait a bit longer to ensure everything is initialized
+    
+    // Final validation: ensure humanDefinition is set after everything is initialized
+    setTimeout(() => {
+        const humanDefSelect = document.getElementById('humanDefinition');
+        if (humanDefSelect) {
+            // If dropdown is empty or has no valid selection, force a selection
+            if (!humanDefSelect.value || humanDefSelect.value.trim() === '') {
+                if (humanDefSelect.options.length > 1) {
+                    // Select first available option (skip "Select model...")
+                    for (let i = 1; i < humanDefSelect.options.length; i++) {
+                        const option = humanDefSelect.options[i];
+                        if (option.value && option.value.trim() !== '') {
+                            humanDefSelect.value = option.value;
+                            characterData.humanDefinition = option.value;
+                            console.log('Final validation: Set humanDefinition to:', option.value);
+                            break;
+                        }
+                    }
+                }
+            } else {
+                // Ensure characterData is synced with dropdown
+                characterData.humanDefinition = humanDefSelect.value;
+            }
+            
+            // Log final state for debugging
+            console.log('Final humanDefinition state:', {
+                dropdownValue: humanDefSelect.value,
+                characterDataValue: characterData.humanDefinition,
+                isValid: humanDefSelect.value && humanDefSelect.value.trim() !== ''
+            });
+        }
+    }, 500);
     
     console.log('✓ Application initialized');
 });
@@ -87,15 +145,226 @@ function initializeForm() {
     // Initialize traits UI
     initializeTraitsUI();
     
-    // Initialize loadout UI
-    initializeLoadoutUI();
-    
     // Initialize inventory UI
     initializeInventoryUI();
     
     // Update voice and human definition based on gender
     updateVoiceOptions();
     updateHumanDefinitionOptions();
+    
+    // Explicitly ensure humanDefinition is set after options are populated
+    // This mimics what randomize does - directly setting the dropdown value
+    setTimeout(() => {
+        const humanDefSelect = document.getElementById('humanDefinition');
+        if (humanDefSelect) {
+            // If no value is selected, force select the first available option
+            if (!humanDefSelect.value || humanDefSelect.value.trim() === '') {
+                if (humanDefSelect.options.length > 1) {
+                    // Find first valid option (skip "Select model...")
+                    for (let i = 1; i < humanDefSelect.options.length; i++) {
+                        const option = humanDefSelect.options[i];
+                        if (option.value && option.value.trim() !== '') {
+                            humanDefSelect.value = option.value;
+                            characterData.humanDefinition = option.value;
+                            // Dispatch change event to ensure characterData is updated
+                            humanDefSelect.dispatchEvent(new Event('change'));
+                            console.log('Initialized humanDefinition to:', option.value);
+                            break;
+                        }
+                    }
+                }
+            } else {
+                // Value exists, ensure characterData is synced
+                characterData.humanDefinition = humanDefSelect.value;
+                console.log('Synced humanDefinition from dropdown:', humanDefSelect.value);
+            }
+        }
+    }, 150);
+    
+    // Set default values in form fields to match characterData
+    setDefaultFormValues();
+}
+
+async function generateRandomNames() {
+    try {
+        // Try to fetch random names from randomuser.me API
+        const response = await fetch('https://randomuser.me/api/?nat=us,gb,ca,au');
+        const data = await response.json();
+        
+        if (data && data.results && data.results.length > 0) {
+            const user = data.results[0];
+            characterData.firstName = user.name.first;
+            characterData.lastName = user.name.last;
+            // Generate a nickname from the first name (shortened or variation)
+            characterData.nickname = generateNickname(user.name.first);
+            
+            // Update form fields
+            const firstNameInput = document.getElementById('firstName');
+            const lastNameInput = document.getElementById('lastName');
+            const nicknameInput = document.getElementById('nickname');
+            
+            if (firstNameInput) firstNameInput.value = characterData.firstName;
+            if (lastNameInput) lastNameInput.value = characterData.lastName;
+            if (nicknameInput) nicknameInput.value = characterData.nickname;
+            
+            console.log('✓ Random names generated from API');
+            return;
+        }
+    } catch (error) {
+        console.warn('Failed to fetch random names from API, using defaults:', error);
+    }
+    
+    // Fallback to default names if API fails
+    const defaultNames = {
+        firstNames: ['John', 'Jane', 'Michael', 'Sarah', 'David', 'Emily', 'James', 'Jessica', 'Robert', 'Ashley'],
+        lastNames: ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez'],
+        nicknames: ['', 'Ace', 'Bear', 'Cat', 'Dash', 'Echo', 'Fox', 'Ghost', 'Hawk', 'Ice']
+    };
+    
+    const randomFirst = defaultNames.firstNames[Math.floor(Math.random() * defaultNames.firstNames.length)];
+    const randomLast = defaultNames.lastNames[Math.floor(Math.random() * defaultNames.lastNames.length)];
+    const randomNick = Math.random() > 0.5 ? defaultNames.nicknames[Math.floor(Math.random() * defaultNames.nicknames.length)] : '';
+    
+    characterData.firstName = randomFirst;
+    characterData.lastName = randomLast;
+    characterData.nickname = randomNick;
+    
+    // Update form fields
+    const firstNameInput = document.getElementById('firstName');
+    const lastNameInput = document.getElementById('lastName');
+    const nicknameInput = document.getElementById('nickname');
+    
+    if (firstNameInput) firstNameInput.value = characterData.firstName;
+    if (lastNameInput) lastNameInput.value = characterData.lastName;
+    if (nicknameInput) nicknameInput.value = characterData.nickname;
+    
+    console.log('✓ Default random names generated');
+}
+
+function generateNickname(firstName) {
+    // Generate a nickname from the first name
+    // Sometimes return empty, sometimes return a shortened version or variation
+    if (Math.random() > 0.6) {
+        return ''; // 40% chance of no nickname
+    }
+    
+    // Common nickname patterns
+    if (firstName.length <= 3) {
+        return firstName; // Short names stay the same
+    }
+    
+    // Try common nickname patterns
+    const nicknamePatterns = [
+        firstName.substring(0, 3), // First 3 letters
+        firstName.substring(0, 4), // First 4 letters
+        firstName + 'y', // Add 'y'
+        firstName.substring(0, firstName.length - 1) + 'y' // Remove last letter, add 'y'
+    ];
+    
+    // Return a random pattern or empty
+    if (Math.random() > 0.3) {
+        return nicknamePatterns[Math.floor(Math.random() * nicknamePatterns.length)];
+    }
+    
+    return '';
+}
+
+function setDefaultFormValues() {
+    // Set all form fields to match characterData defaults
+    const formFields = {
+        'firstName': characterData.firstName,
+        'lastName': characterData.lastName,
+        'nickname': characterData.nickname,
+        'gender': characterData.gender,
+        'ageRange': characterData.ageRange,
+        'pronoun': characterData.pronoun,
+        'culturalBackground': characterData.culturalBackground,
+        'voiceID': characterData.voiceID,
+        'philosophy1': characterData.philosophy1,
+        'philosophy2': characterData.philosophy2,
+        'standingLevel': characterData.standingLevel,
+        'leaderType': characterData.leaderType,
+        'currentHealth': characterData.stats.health,
+        'currentStamina': characterData.stats.stamina
+    };
+    
+    Object.entries(formFields).forEach(([id, value]) => {
+        const element = document.getElementById(id);
+        if (element) {
+            // For name fields, set value even if empty (will be populated by generateRandomNames)
+            // For other fields, only set if value exists
+            if (id === 'firstName' || id === 'lastName' || id === 'nickname') {
+                element.value = value || '';
+            } else if (value) {
+                element.value = value;
+            }
+        }
+    });
+    
+    // Set humanDefinition after options are populated
+    // Use multiple attempts to ensure it's set properly
+    const setHumanDefinitionValue = () => {
+        const humanDefSelect = document.getElementById('humanDefinition');
+        if (!humanDefSelect) return;
+        
+        // If dropdown has no options yet, wait and try again
+        if (humanDefSelect.options.length <= 1) {
+            setTimeout(setHumanDefinitionValue, 50);
+            return;
+        }
+        
+        // Try to use characterData.humanDefinition if it exists and is valid
+        if (characterData.humanDefinition) {
+            const option = Array.from(humanDefSelect.options).find(
+                opt => opt.value === characterData.humanDefinition && opt.value !== ''
+            );
+            if (option) {
+                humanDefSelect.value = characterData.humanDefinition;
+                console.log('Set humanDefinition from characterData:', characterData.humanDefinition);
+                return;
+            }
+        }
+        
+        // If no valid value in characterData or it's not in dropdown, select first available
+        if (humanDefSelect.options.length > 1) {
+            // Skip the first option (usually "Select model...")
+            for (let i = 1; i < humanDefSelect.options.length; i++) {
+                const option = humanDefSelect.options[i];
+                if (option.value && option.value.trim() !== '') {
+                    humanDefSelect.value = option.value;
+                    characterData.humanDefinition = option.value;
+                    console.log('Set humanDefinition to first available option:', option.value);
+                    return;
+                }
+            }
+        }
+        
+        // Final fallback: use default based on gender
+        const gender = document.getElementById('gender')?.value || characterData.gender || 'Female';
+        const defaultModel = gender === 'Male' 
+            ? 'HumanMaleVest_01_v_01' 
+            : 'HumanFemaleVest_01_v_01';
+        
+        // Try to find default in dropdown
+        const defaultOption = Array.from(humanDefSelect.options).find(
+            opt => opt.value === defaultModel
+        );
+        if (defaultOption) {
+            humanDefSelect.value = defaultModel;
+            characterData.humanDefinition = defaultModel;
+            console.log('Set humanDefinition to default:', defaultModel);
+        } else if (humanDefSelect.options.length > 1) {
+            // Last resort: use first available option
+            humanDefSelect.selectedIndex = 1;
+            characterData.humanDefinition = humanDefSelect.value;
+            console.log('Set humanDefinition to first option:', humanDefSelect.value);
+        }
+    };
+    
+    // Try immediately, then with delays to ensure it's set
+    setHumanDefinitionValue();
+    setTimeout(setHumanDefinitionValue, 100);
+    setTimeout(setHumanDefinitionValue, 300);
 }
 
 function populateSelect(selectId, options) {
@@ -536,254 +805,7 @@ function updateStatDisplays(healthBuff, staminaBuff) {
     }
 }
 
-function initializeLoadoutUI() {
-    const equipmentSlots = document.getElementById('equipmentSlots');
-    equipmentSlots.innerHTML = `
-        <div class="equipment-slot">
-            <label>Backpack</label>
-            <select id="equipmentBackpack">
-                <option value="">None</option>
-            </select>
-        </div>
-        <div class="equipment-slot">
-            <label>Melee Weapon</label>
-            <select id="equipmentMelee">
-                <option value="">None</option>
-            </select>
-        </div>
-        <div class="equipment-slot">
-            <label>Close Combat Weapon</label>
-            <select id="equipmentCloseCombat">
-                <option value="">None</option>
-            </select>
-        </div>
-        <div class="equipment-slot">
-            <label>Ranged Weapon</label>
-            <select id="equipmentRanged">
-                <option value="">None</option>
-            </select>
-        </div>
-        <div class="equipment-slot">
-            <label>Sidearm</label>
-            <select id="equipmentSidearm">
-                <option value="">None</option>
-            </select>
-        </div>
-    `;
-    
-    // Populate equipment dropdowns after data is loaded
-    populateEquipmentDropdowns();
-}
-
-function populateEquipmentDropdowns() {
-    if (!dataLoader || !dataLoader.data) {
-        console.warn('Data loader not ready, retrying in 500ms...');
-        setTimeout(populateEquipmentDropdowns, 500);
-        return;
-    }
-    
-    // Helper function to get ClassString from weapon ID mapping
-    const getWeaponClassString = (displayName) => {
-        if (dataLoader.data.weaponIdMapping && dataLoader.data.weaponIdMapping[displayName]) {
-            return dataLoader.data.weaponIdMapping[displayName].classString;
-        }
-        return '';
-    };
-    
-    // Populate Backpack dropdown
-    const backpackSelect = document.getElementById('equipmentBackpack');
-    if (backpackSelect && dataLoader.data.backpacks) {
-        // Clear existing options except "None"
-        backpackSelect.innerHTML = '<option value="">None</option>';
-        
-        dataLoader.data.backpacks.forEach(backpack => {
-            const displayName = backpack.DisplayName || backpack['All columns are the back pack name'] || 'Unknown';
-            const classString = backpack.ClassString || '';
-            if (displayName && displayName !== 'Unknown' && classString) {
-                const option = document.createElement('option');
-                option.value = displayName;
-                option.textContent = displayName;
-                option.dataset.classString = classString;
-                backpackSelect.appendChild(option);
-            }
-        });
-        console.log(`✓ Populated ${backpackSelect.options.length - 1} backpack options`);
-    }
-    
-    // Populate Melee Weapon dropdown (from close combat weapons)
-    // Note: close combat weapons have a weird structure, need to extract names
-    const meleeSelect = document.getElementById('equipmentMelee');
-    if (meleeSelect && dataLoader.data.weapons && dataLoader.data.weapons.closeCombat) {
-        meleeSelect.innerHTML = '<option value="">None</option>';
-        
-        const meleeWeapons = new Set(); // Use Set to avoid duplicates
-        
-        dataLoader.data.weapons.closeCombat.forEach(weapon => {
-            // Close combat weapons have structure like {"Antler Knife": "Weapon Name"}
-            Object.keys(weapon).forEach(key => {
-                if (key && key !== '') {
-                    const weaponName = weapon[key];
-                    if (weaponName && weaponName !== 'Unknown') {
-                        meleeWeapons.add(weaponName);
-                    }
-                }
-            });
-        });
-        
-        // Also check weapon-id-mapping for melee weapons
-        if (dataLoader.data.weaponIdMapping) {
-            Object.keys(dataLoader.data.weaponIdMapping).forEach(weaponName => {
-                const weaponData = dataLoader.data.weaponIdMapping[weaponName];
-                if (weaponData.category === 'melee' || weaponData.category === 'closeCombat') {
-                    meleeWeapons.add(weaponName);
-                }
-            });
-        }
-        
-        Array.from(meleeWeapons).sort().forEach(weaponName => {
-            const option = document.createElement('option');
-            option.value = weaponName;
-            option.textContent = weaponName;
-            const classString = getWeaponClassString(weaponName);
-            if (classString) {
-                option.dataset.classString = classString;
-            }
-            meleeSelect.appendChild(option);
-        });
-        console.log(`✓ Populated ${meleeSelect.options.length - 1} melee weapon options`);
-    }
-    
-    // Populate Close Combat Weapon dropdown (same as melee)
-    const closeCombatSelect = document.getElementById('equipmentCloseCombat');
-    if (closeCombatSelect && dataLoader.data.weapons && dataLoader.data.weapons.closeCombat) {
-        closeCombatSelect.innerHTML = '<option value="">None</option>';
-        
-        const closeCombatWeapons = new Set();
-        
-        dataLoader.data.weapons.closeCombat.forEach(weapon => {
-            Object.keys(weapon).forEach(key => {
-                if (key && key !== '') {
-                    const weaponName = weapon[key];
-                    if (weaponName && weaponName !== 'Unknown') {
-                        closeCombatWeapons.add(weaponName);
-                    }
-                }
-            });
-        });
-        
-        // Also check weapon-id-mapping
-        if (dataLoader.data.weaponIdMapping) {
-            Object.keys(dataLoader.data.weaponIdMapping).forEach(weaponName => {
-                const weaponData = dataLoader.data.weaponIdMapping[weaponName];
-                if (weaponData.category === 'melee' || weaponData.category === 'closeCombat') {
-                    closeCombatWeapons.add(weaponName);
-                }
-            });
-        }
-        
-        Array.from(closeCombatWeapons).sort().forEach(weaponName => {
-            const option = document.createElement('option');
-            option.value = weaponName;
-            option.textContent = weaponName;
-            const classString = getWeaponClassString(weaponName);
-            if (classString) {
-                option.dataset.classString = classString;
-            }
-            closeCombatSelect.appendChild(option);
-        });
-        console.log(`✓ Populated ${closeCombatSelect.options.length - 1} close combat weapon options`);
-    }
-    
-    // Populate Ranged Weapon dropdown (from rifles, shotguns, assault weapons, crossbows)
-    const rangedSelect = document.getElementById('equipmentRanged');
-    if (rangedSelect && dataLoader.data.weapons) {
-        rangedSelect.innerHTML = '<option value="">None</option>';
-        
-        const rangedWeapons = new Set();
-        const rangedWeaponTypes = ['rifles', 'shotguns', 'assault', 'crossbows'];
-        
-        rangedWeaponTypes.forEach(weaponType => {
-            const weapons = dataLoader.data.weapons[weaponType];
-            if (weapons && Array.isArray(weapons)) {
-                weapons.forEach(weapon => {
-                    const displayName = weapon.DisplayName || weapon.Name || 'Unknown';
-                    const classString = weapon.ClassString || '';
-                    if (displayName && displayName !== 'Unknown') {
-                        rangedWeapons.add(displayName);
-                    }
-                });
-            }
-        });
-        
-        // Also add from weapon-id-mapping for ranged weapons
-        if (dataLoader.data.weaponIdMapping) {
-            Object.keys(dataLoader.data.weaponIdMapping).forEach(weaponName => {
-                const weaponData = dataLoader.data.weaponIdMapping[weaponName];
-                if (weaponData.category === 'rifles' || weaponData.category === 'shotguns' || 
-                    weaponData.category === 'assault' || weaponData.category === 'crossbows' ||
-                    weaponData.category === 'ranged') {
-                    rangedWeapons.add(weaponName);
-                }
-            });
-        }
-        
-        Array.from(rangedWeapons).sort().forEach(weaponName => {
-            const option = document.createElement('option');
-            option.value = weaponName;
-            option.textContent = weaponName;
-            const classString = weaponName.includes('ClassString') ? '' : (getWeaponClassString(weaponName) || '');
-            if (classString) {
-                option.dataset.classString = classString;
-            }
-            rangedSelect.appendChild(option);
-        });
-        console.log(`✓ Populated ${rangedSelect.options.length - 1} ranged weapon options`);
-    }
-    
-    // Populate Sidearm dropdown (from pistols, revolvers, assault pistols, sidearm shotguns)
-    const sidearmSelect = document.getElementById('equipmentSidearm');
-    if (sidearmSelect && dataLoader.data.weapons) {
-        sidearmSelect.innerHTML = '<option value="">None</option>';
-        
-        const sidearmWeapons = new Set();
-        const sidearmWeaponTypes = ['pistols', 'revolvers', 'assaultPistols', 'sidearmShotguns', 'sidearmAssaultShotguns'];
-        
-        sidearmWeaponTypes.forEach(weaponType => {
-            const weapons = dataLoader.data.weapons[weaponType];
-            if (weapons && Array.isArray(weapons)) {
-                weapons.forEach(weapon => {
-                    const displayName = weapon.DisplayName || weapon.Name || 'Unknown';
-                    if (displayName && displayName !== 'Unknown') {
-                        sidearmWeapons.add(displayName);
-                    }
-                });
-            }
-        });
-        
-        // Also add from weapon-id-mapping for sidearm weapons
-        if (dataLoader.data.weaponIdMapping) {
-            Object.keys(dataLoader.data.weaponIdMapping).forEach(weaponName => {
-                const weaponData = dataLoader.data.weaponIdMapping[weaponName];
-                if (weaponData.category === 'pistols' || weaponData.category === 'revolvers' ||
-                    weaponData.category === 'assaultPistols' || weaponData.category === 'sidearm') {
-                    sidearmWeapons.add(weaponName);
-                }
-            });
-        }
-        
-        Array.from(sidearmWeapons).sort().forEach(weaponName => {
-            const option = document.createElement('option');
-            option.value = weaponName;
-            option.textContent = weaponName;
-            const classString = getWeaponClassString(weaponName);
-            if (classString) {
-                option.dataset.classString = classString;
-            }
-            sidearmSelect.appendChild(option);
-        });
-        console.log(`✓ Populated ${sidearmSelect.options.length - 1} sidearm options`);
-    }
-}
+// Loadout functions removed - using Inventory Items section instead
 
 function updateVoiceOptions() {
     const gender = document.getElementById('gender').value;
@@ -810,6 +832,11 @@ function updateHumanDefinitionOptions() {
     
     if (!humanDefs || !Array.isArray(humanDefs)) {
         console.warn('Human definitions not available for gender:', gender);
+        // Set default based on gender even if data not loaded
+        const defaultModel = gender === 'Male' 
+            ? 'HumanMaleVest_01_v_01' 
+            : 'HumanFemaleVest_01_v_01';
+        characterData.humanDefinition = defaultModel;
         return;
     }
     
@@ -821,6 +848,102 @@ function updateHumanDefinitionOptions() {
         option.textContent = style ? `${modelName} (${style})` : modelName;
         humanDefSelect.appendChild(option);
     });
+    
+    // Set default model if none selected or if current selection is invalid for new gender
+    const currentValue = humanDefSelect.value;
+    const hasValidSelection = Array.from(humanDefSelect.options).some(
+        opt => opt.value === currentValue && opt.value !== ''
+    );
+    
+    if (!hasValidSelection && humanDefs.length > 0) {
+        // Try to use characterData.humanDefinition if it's valid for this gender
+        let modelToSelect = '';
+        if (characterData.humanDefinition) {
+            const isValidForGender = Array.from(humanDefSelect.options).some(
+                opt => opt.value === characterData.humanDefinition
+            );
+            if (isValidForGender) {
+                modelToSelect = characterData.humanDefinition;
+            }
+        }
+        
+        // If no valid model from characterData, select first available model as default
+        if (!modelToSelect) {
+            const firstModel = humanDefs[0]['Internal ID (For Editor)'] || '';
+            if (firstModel) {
+                modelToSelect = firstModel;
+            } else {
+                // Fallback to hardcoded default
+                modelToSelect = gender === 'Male' 
+                    ? 'HumanMaleHoodie_01_v_02' 
+                    : 'HumanFemaleHoodie_01_v_02';
+            }
+        }
+        
+        // Set the value in the dropdown
+        humanDefSelect.value = modelToSelect;
+        characterData.humanDefinition = modelToSelect;
+    } else if (currentValue) {
+        // Keep current selection if valid
+        characterData.humanDefinition = currentValue;
+    } else if (!characterData.humanDefinition) {
+        // If no value at all, set default
+        const defaultModel = gender === 'Male' 
+            ? 'HumanMaleVest_01_v_01' 
+            : 'HumanFemaleVest_01_v_01';
+        characterData.humanDefinition = defaultModel;
+        // Try to select it if it exists in the dropdown
+        const defaultOption = Array.from(humanDefSelect.options).find(
+            opt => opt.value === defaultModel
+        );
+        if (defaultOption) {
+            humanDefSelect.value = defaultModel;
+        } else if (humanDefs.length > 0) {
+            // If default not found, use first available model
+            const firstModel = humanDefs[0]['Internal ID (For Editor)'] || '';
+            if (firstModel) {
+                humanDefSelect.value = firstModel;
+                characterData.humanDefinition = firstModel;
+                console.log('Set default HumanDefinition to first available:', firstModel);
+            }
+        }
+    }
+    
+    // Final validation: ensure dropdown has a valid value selected
+    if (humanDefSelect && (!humanDefSelect.value || humanDefSelect.value.trim() === '')) {
+        if (humanDefs.length > 0) {
+            const firstModel = humanDefs[0]['Internal ID (For Editor)'] || '';
+            if (firstModel) {
+                humanDefSelect.value = firstModel;
+                characterData.humanDefinition = firstModel;
+                console.log('Forced selection of first available HumanDefinition:', firstModel);
+            }
+        }
+    }
+    
+    // Ensure characterData is updated with the final value
+    if (humanDefSelect && humanDefSelect.value) {
+        characterData.humanDefinition = humanDefSelect.value;
+    } else {
+        // If still no value, force selection of first available
+        if (humanDefs.length > 0) {
+            const firstModel = humanDefs[0]['Internal ID (For Editor)'] || '';
+            if (firstModel && humanDefSelect) {
+                humanDefSelect.value = firstModel;
+                characterData.humanDefinition = firstModel;
+                console.log('Force-set humanDefinition to first model:', firstModel);
+            }
+        }
+    }
+    
+    // Final validation: log the current state
+    if (humanDefSelect) {
+        console.log('HumanDefinition dropdown state:', {
+            selectedValue: humanDefSelect.value,
+            characterDataValue: characterData.humanDefinition,
+            optionsCount: humanDefSelect.options.length
+        });
+    }
 }
 
 function initializeInventoryUI() {
@@ -837,61 +960,295 @@ function initializeInventoryUI() {
         populateInventoryItemDropdown();
     });
     
-    // Initial population
-    populateInventoryItemDropdown();
+    // Wait for dataLoader to be ready, then populate
+    // Use a small delay to ensure dataLoader.data is fully populated
+    setTimeout(() => {
+        // Set default category if none selected
+        if (!categorySelect.value) {
+            categorySelect.value = 'consumable';
+        }
+        populateInventoryItemDropdown();
+    }, 100);
+    
+    // Also try immediately in case data is already loaded
+    if (dataLoader && dataLoader.data && dataLoader.loaded) {
+        if (!categorySelect.value) {
+            categorySelect.value = 'consumable';
+        }
+        populateInventoryItemDropdown();
+    }
     
     // Update inventory list display
     updateInventoryList();
 }
 
 function populateInventoryItemDropdown() {
-    // #region agent log
-    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:847',message:'populateInventoryItemDropdown called',data:{timestamp:Date.now()},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'A'})}).catch(()=>{});
-    // #endregion
     const categorySelect = document.getElementById('inventoryCategory');
     const itemSelect = document.getElementById('inventoryItem');
     
-    if (!categorySelect || !itemSelect || !dataLoader || !dataLoader.data) {
-        // #region agent log
-        fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:852',message:'Early return - missing elements or dataLoader',data:{hasCategorySelect:!!categorySelect,hasItemSelect:!!itemSelect,hasDataLoader:!!dataLoader,hasData:!!(dataLoader&&dataLoader.data)},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'A'})}).catch(()=>{});
-        // #endregion
+    if (!categorySelect || !itemSelect) {
+        console.warn('Inventory dropdown elements not found');
         return;
     }
     
-    const category = categorySelect.value;
+    // Check if dataLoader is ready
+    if (!dataLoader || !dataLoader.data || !dataLoader.loaded) {
+        console.warn('DataLoader not ready yet, will retry...');
+        // Retry after a short delay
+        setTimeout(() => populateInventoryItemDropdown(), 200);
+        return;
+    }
+    
+    const category = categorySelect.value || 'consumable';
     itemSelect.innerHTML = '<option value="">-- Select an item --</option>';
     
     let items = [];
-    const mappingKey = {
-        'consumable': 'consumableIdMapping',
-        'ammo': 'ammoIdMapping',
-        'resource': 'resourceIdMapping',
-        'miscellaneous': 'miscellaneousIdMapping'
-    }[category];
     
-    // #region agent log
-    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:866',message:'Looking up mapping data',data:{category:category,mappingKey:mappingKey,hasMapping:!!(mappingKey&&dataLoader.data[mappingKey]),mappingType:Array.isArray(dataLoader.data[mappingKey])?'array':'other'},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'A'})}).catch(()=>{});
-    // #endregion
-    
-    if (mappingKey && dataLoader.data[mappingKey]) {
-        items = dataLoader.data[mappingKey];
+    // Handle weapon categories differently - they use weaponIdMapping
+    if (['melee', 'closeCombat', 'ranged', 'sidearm'].includes(category)) {
+        // Get weapons from weaponIdMapping and filter by category
+        const weaponIdMapping = dataLoader.data.weaponIdMapping || {};
+        const weaponsData = dataLoader.data.weapons || {};
+        
+        // Convert weaponIdMapping object to array format
+        const allWeapons = Object.keys(weaponIdMapping).map(displayName => {
+            const weapon = weaponIdMapping[displayName];
+            return {
+                displayName: displayName,
+                classString: weapon.classString || ''
+            };
+        });
+        
+        // Filter weapons by category
+        if (category === 'melee') {
+            // Melee includes: Bladed, Blunt, Heavy, and Close Combat weapons
+            // Filter by classString path or category
+            items = allWeapons.filter(w => {
+                const classString = (w.classString || '').toLowerCase();
+                const weapon = weaponIdMapping[w.displayName];
+                const weaponCategory = weapon?.category || '';
+                
+                // Include if it's a melee weapon (Bladed, Blunt, Heavy) OR close combat
+                return classString.includes('/meleeweapons/') || 
+                       classString.includes('/closecombatitems/') ||
+                       weaponCategory === 'melee' || 
+                       weaponCategory === 'closeCombat';
+            });
+            
+            // Sort by display name
+            items.sort((a, b) => a.displayName.localeCompare(b.displayName));
+            console.log(`Found ${items.length} melee weapons (includes bladed, blunt, heavy, and close combat)`);
+        } else if (category === 'closeCombat') {
+            // Close Combat is a subcategory of Melee - only show close combat weapons
+            // Filter by classString path or category
+            items = allWeapons.filter(w => {
+                const classString = (w.classString || '').toLowerCase();
+                const weapon = weaponIdMapping[w.displayName];
+                const weaponCategory = weapon?.category || '';
+                
+                // Include only close combat weapons
+                return classString.includes('/closecombatitems/') ||
+                       weaponCategory === 'closeCombat';
+            });
+            
+            // Sort by display name
+            items.sort((a, b) => a.displayName.localeCompare(b.displayName));
+            console.log(`Found ${items.length} close combat weapons`);
+        } else if (category === 'ranged') {
+            // Ranged: assault, rifles, shotguns, crossbows
+            const rangedTypes = ['assault', 'rifles', 'shotguns', 'crossbows'];
+            const rangedNames = new Set();
+            
+            rangedTypes.forEach(type => {
+                const weapons = weaponsData[type] || [];
+                weapons.forEach(weapon => {
+                    const name = weapon.DisplayName || weapon.Name || '';
+                    if (name && name !== 'Unknown') {
+                        rangedNames.add(name);
+                    }
+                });
+            });
+            
+            // Filter weaponIdMapping by ranged names
+            items = allWeapons.filter(w => rangedNames.has(w.displayName));
+            
+            // Also add any weapons from weaponIdMapping that have category info
+            Object.keys(weaponIdMapping).forEach(displayName => {
+                const weapon = weaponIdMapping[displayName];
+                if (weapon.category === 'rifles' || weapon.category === 'shotguns' || 
+                    weapon.category === 'assault' || weapon.category === 'crossbows' ||
+                    weapon.category === 'ranged') {
+                    if (!items.find(i => i.displayName === displayName)) {
+                        items.push({
+                            displayName: displayName,
+                            classString: weapon.classString || ''
+                        });
+                    }
+                }
+            });
+        } else if (category === 'sidearm') {
+            // Sidearm: pistols, revolvers, assaultPistols, sidearmShotguns, sidearmAssaultShotguns
+            const sidearmTypes = ['pistols', 'revolvers', 'assaultPistols', 'sidearmShotguns', 'sidearmAssaultShotguns'];
+            const sidearmNames = new Set();
+            
+            sidearmTypes.forEach(type => {
+                const weapons = weaponsData[type] || [];
+                weapons.forEach(weapon => {
+                    const name = weapon.DisplayName || weapon.Name || '';
+                    if (name && name !== 'Unknown') {
+                        sidearmNames.add(name);
+                    }
+                });
+            });
+            
+            // Filter weaponIdMapping by sidearm names
+            items = allWeapons.filter(w => sidearmNames.has(w.displayName));
+            
+            // Also add any weapons from weaponIdMapping that have category info
+            Object.keys(weaponIdMapping).forEach(displayName => {
+                const weapon = weaponIdMapping[displayName];
+                if (weapon.category === 'pistols' || weapon.category === 'revolvers' ||
+                    weapon.category === 'assaultPistols' || weapon.category === 'sidearm') {
+                    if (!items.find(i => i.displayName === displayName)) {
+                        items.push({
+                            displayName: displayName,
+                            classString: weapon.classString || ''
+                        });
+                    }
+                }
+            });
+        }
+        
+        // Sort by display name
+        items.sort((a, b) => a.displayName.localeCompare(b.displayName));
+        console.log(`Found ${items.length} ${category} weapons`);
+    } else if (category === 'skillBooks') {
+        // Filter skill books from consumables
+        if (dataLoader.data.consumableIdMapping) {
+            items = dataLoader.data.consumableIdMapping.filter(item => {
+                const displayName = (item.displayName || '').toLowerCase();
+                return displayName.includes('textbook') || 
+                       displayName.includes('training manual') || 
+                       displayName.includes('guide') ||
+                       displayName.includes('gainskill') ||
+                       displayName.includes('respec');
+            });
+            // Sort by display name
+            items.sort((a, b) => a.displayName.localeCompare(b.displayName));
+            console.log(`Found ${items.length} skill books and manuals`);
+        } else {
+            console.warn('Consumable ID mapping not found for skill books');
+            items = [];
+        }
+    } else {
+        // Handle non-weapon categories (consumable, ammo, resource, miscellaneous, backpack)
+        const mappingKey = {
+            'consumable': 'consumableIdMapping',
+            'ammo': 'ammoIdMapping',
+            'resource': 'resourceIdMapping',
+            'miscellaneous': 'miscellaneousIdMapping',
+            'backpack': 'backpackIdMapping'
+        }[category];
+        
+        if (mappingKey && dataLoader.data[mappingKey]) {
+            items = dataLoader.data[mappingKey];
+            console.log(`Found ${items.length} items for category: ${category}`);
+        } else {
+            console.warn(`No mapping found for category: ${category}, mappingKey: ${mappingKey}`);
+        }
     }
     
+    // Populate dropdown
     if (Array.isArray(items)) {
         items.forEach(item => {
             const option = document.createElement('option');
             option.value = item.classString;
-            option.textContent = item.displayName;
+            
+            // Check if item is deprecated
+            const isDeprecated = checkItemDeprecation(item.displayName, item.classString, category);
+            if (isDeprecated) {
+                option.textContent = `${item.displayName} [Deprecated]`;
+                option.dataset.isDeprecated = 'true';
+            } else {
+                option.textContent = item.displayName;
+            }
+            
             option.dataset.displayName = item.displayName;
             itemSelect.appendChild(option);
         });
     }
     
-    // #region agent log
-    fetch('http://127.0.0.1:7250/ingest/13dd2c27-a79e-4847-8a99-f0332c922906',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:880',message:'Dropdown populated',data:{category:category,itemsCount:items.length,optionsCount:itemSelect.options.length-1},timestamp:Date.now(),sessionId:'debug-session',runId:'test1',hypothesisId:'A'})}).catch(()=>{});
-    // #endregion
-    
     console.log(`✓ Populated ${itemSelect.options.length - 1} ${category} items`);
+}
+
+// Helper function to check if an item is deprecated (for inventory items)
+function isItemDeprecated(item) {
+    return checkItemDeprecation(item.displayName, item.classString, item.category);
+}
+
+// Helper function to check if an item is deprecated (for dropdown items)
+function checkItemDeprecation(displayName, classString, category) {
+    if (!dataLoader || !dataLoader.data || !dataLoader.data.deprecatedItems) {
+        return false;
+    }
+    
+    const deprecatedItems = dataLoader.data.deprecatedItems;
+    
+    // Normalize category name for deprecated items lookup
+    // Deprecated items file uses plural forms: "consumables", "weapons", etc.
+    let categoryKey = category;
+    if (category === 'melee' || category === 'closeCombat' || category === 'ranged' || category === 'sidearm') {
+        categoryKey = 'weapons';
+    } else if (category === 'consumable' || category === 'skillBooks') {
+        // Skill books are also consumables for deprecation checking
+        categoryKey = 'consumables';
+    } else if (category === 'resource') {
+        categoryKey = 'resources';
+    } else if (category === 'miscellaneous') {
+        categoryKey = 'miscellaneous'; // Already plural
+    } else if (category === 'backpack') {
+        categoryKey = 'backpacks';
+    } else if (category === 'ammo') {
+        categoryKey = 'ammo'; // Keep as is (singular in deprecated items file)
+    }
+    
+    // Check if category exists in deprecated items
+    if (deprecatedItems[categoryKey]) {
+        // Check by displayName (exact match)
+        if (deprecatedItems[categoryKey][displayName]) {
+            return true;
+        }
+        
+        // Check by classString (partial match)
+        if (classString) {
+            // Extract the class name from the classString
+            const classStringParts = classString.split('.');
+            const className = classStringParts[classStringParts.length - 1]?.replace('_C', '') || '';
+            
+            for (const key in deprecatedItems[categoryKey]) {
+                const deprecatedItem = deprecatedItems[categoryKey][key];
+                if (deprecatedItem.classString) {
+                    const deprecatedClassParts = deprecatedItem.classString.split('.');
+                    const deprecatedClassName = deprecatedClassParts[deprecatedClassParts.length - 1]?.replace('_C', '') || '';
+                    
+                    // Check if class names match
+                    if (className && deprecatedClassName && className === deprecatedClassName) {
+                        return true;
+                    }
+                    // Also check if classString contains the deprecated classString
+                    if (classString.includes(deprecatedClassName)) {
+                        return true;
+                    }
+                    // Check if deprecated classString contains the current classString
+                    if (deprecatedItem.classString.includes(className)) {
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+    
+    return false;
 }
 
 function updateInventoryList() {
@@ -908,11 +1265,16 @@ function updateInventoryList() {
     list.className = 'inventory-items-list';
     
     characterData.inventory.forEach((item, index) => {
+        const isDeprecated = isItemDeprecated(item);
         const listItem = document.createElement('li');
         listItem.className = 'inventory-item';
+        if (isDeprecated) {
+            listItem.classList.add('deprecated-item');
+        }
         listItem.innerHTML = `
             <span class="item-info">
                 <strong>${item.displayName}</strong> 
+                ${isDeprecated ? '<span class="deprecated-badge">[Deprecated]</span>' : ''}
                 <span class="item-category">(${item.category})</span>
                 <span class="item-quantity">x${item.quantity}</span>
             </span>
@@ -1017,6 +1379,16 @@ function setupEventListeners() {
         updateDescriptorTraits();
         updateCharacterData();
     });
+    
+    // Ensure humanDefinition updates characterData when changed
+    const humanDefSelect = document.getElementById('humanDefinition');
+    if (humanDefSelect) {
+        humanDefSelect.addEventListener('change', (e) => {
+            characterData.humanDefinition = e.target.value;
+            console.log('HumanDefinition changed to:', e.target.value);
+            updateCharacterData();
+        });
+    }
     
     document.getElementById('philosophy2').addEventListener('change', (e) => {
         characterData.philosophy2 = e.target.value;
@@ -1158,12 +1530,44 @@ function updateCharacterData() {
     characterData.ageRange = document.getElementById('ageRange').value;
     characterData.pronoun = document.getElementById('pronoun').value;
     characterData.culturalBackground = document.getElementById('culturalBackground').value;
-    characterData.voiceID = document.getElementById('voiceID').value;
+    // Only update voiceID if form has a value, otherwise preserve existing
+    const voiceSelect = document.getElementById('voiceID');
+    const voiceValue = voiceSelect?.value || '';
+    if (voiceValue && voiceValue.trim() !== '') {
+        characterData.voiceID = voiceValue;
+    } else if (!characterData.voiceID) {
+        // Only set to empty if characterData doesn't already have a value
+        characterData.voiceID = '';
+    }
     characterData.humanDefinition = document.getElementById('humanDefinition').value;
     characterData.philosophy1 = document.getElementById('philosophy1').value;
     characterData.philosophy2 = document.getElementById('philosophy2').value;
-    characterData.standingLevel = document.getElementById('standingLevel').value;
-    characterData.leaderType = document.getElementById('leaderType').value;
+    
+    // Ensure standingLevel and leaderType are always valid
+    const standingSelect = document.getElementById('standingLevel');
+    let standingLevel = standingSelect ? standingSelect.value : '';
+    if (!standingLevel || standingLevel.trim() === '') {
+        standingLevel = 'Citizen';
+        if (standingSelect) standingSelect.value = standingLevel;
+    }
+    // If it's an object, extract the value
+    if (typeof standingLevel === 'object' && standingLevel.value) {
+        standingLevel = standingLevel.value;
+    }
+    characterData.standingLevel = standingLevel;
+    
+    const leaderSelect = document.getElementById('leaderType');
+    let leaderType = leaderSelect ? leaderSelect.value : '';
+    if (!leaderType || leaderType.trim() === '') {
+        leaderType = 'None';
+        if (leaderSelect) leaderSelect.value = leaderType;
+    }
+    // If it's an object, extract the value
+    if (typeof leaderType === 'object' && leaderType.value) {
+        leaderType = leaderType.value;
+    }
+    characterData.leaderType = leaderType;
+    
     characterData.heroBonus = document.getElementById('heroBonus').value;
     characterData.stats.health = parseInt(document.getElementById('currentHealth').value) || 100;
     characterData.stats.stamina = parseInt(document.getElementById('currentStamina').value) || 100;
@@ -1199,6 +1603,12 @@ function resetForm() {
 }
 
 function previewXML() {
+    // Ensure humanDefinition is set before generating XML
+    ensureHumanDefinitionSet();
+    // Ensure skills are initialized in form
+    ensureSkillsInitialized();
+    // Ensure form data is saved before generating XML
+    updateCharacterDataWithoutValidation();
     const xml = generateCharacterXML();
     const previewArea = document.getElementById('previewArea');
     const xmlPreview = document.getElementById('xmlPreview');
@@ -1208,21 +1618,124 @@ function previewXML() {
 }
 
 function exportCharacter() {
-    const xml = generateCharacterXML();
-    const firstName = characterData.firstName || 'Character';
-    const lastName = characterData.lastName || '';
-    const nickname = characterData.nickname || '';
-    const filename = `${firstName} ${lastName}${nickname ? ` (${nickname})` : ''}.xml`;
+    // CRITICAL: Force full initialization like randomization does
+    // This ensures all dropdowns are populated and all fields are synced
+    console.log('Exporting character - forcing full initialization...');
     
-    const blob = new Blob([xml], { type: 'application/xml' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    // Step 1: Ensure all dropdowns are populated (like initializeForm does)
+    updateVoiceOptions();
+    updateHumanDefinitionOptions();
+    
+    // Step 2: Wait for dropdowns to be ready, then sync everything
+    waitForCondition(() => {
+        const humanDefSelect = document.getElementById('humanDefinition');
+        return humanDefSelect && humanDefSelect.options.length > 1;
+    }, 2000, 50).then(() => {
+        // Step 3: Ensure humanDefinition is set (critical!)
+        ensureHumanDefinitionSet();
+        
+        // Step 3.5: Ensure voiceID is set (also required!)
+        const voiceSelect = document.getElementById('voiceID');
+        if (voiceSelect) {
+            if (!voiceSelect.value || voiceSelect.value.trim() === '') {
+                // Set default voice based on gender
+                const gender = document.getElementById('gender')?.value || characterData.gender || 'Female';
+                const voices = dataLoader.getVoices(gender);
+                if (voices && voices.length > 0) {
+                    // Use first available voice as default
+                    const defaultVoice = voices[0]['Editor ID'] || voices[0].value || 'Kee';
+                    voiceSelect.value = defaultVoice;
+                    characterData.voiceID = defaultVoice;
+                    console.log('Set default voiceID:', defaultVoice);
+                } else {
+                    // Fallback to characterData default
+                    voiceSelect.value = characterData.voiceID || 'Kee';
+                    characterData.voiceID = characterData.voiceID || 'Kee';
+                }
+            } else {
+                // Ensure characterData is synced
+                characterData.voiceID = voiceSelect.value;
+            }
+        }
+        
+        // Step 4: Trigger change events to ensure all dependent fields are updated
+        const genderSelect = document.getElementById('gender');
+        if (genderSelect) {
+            genderSelect.dispatchEvent(new Event('change'));
+        }
+        
+        // Step 5: Wait a moment for change events to process
+        setTimeout(() => {
+            // Step 6: Sync all form data to characterData
+            updateCharacterDataWithoutValidation();
+            
+            // Step 7: Run finalization with retry logic (same as randomization)
+            finalizeCharacterDataForExport();
+            
+            // Step 8: Give finalization a moment to complete any retries
+            setTimeout(() => {
+                const xml = generateCharacterXML();
+                const firstName = characterData.firstName || 'Character';
+                const lastName = characterData.lastName || '';
+                const nickname = characterData.nickname || '';
+                const filename = `${firstName} ${lastName}${nickname ? ` (${nickname})` : ''}`;
+                
+                console.log('Exporting filename:', filename);
+                
+                // Use octet-stream to prevent browser from adding any extension
+                const blob = new Blob([xml], { type: 'application/octet-stream' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                // Ensure filename has no extension - browser won't add one with octet-stream
+                a.download = filename;
+                a.setAttribute('download', filename);
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 300); // Allow finalization retries to complete
+        }, 200); // Allow change events to process
+    }).catch(() => {
+        console.warn('Timeout waiting for dropdowns, proceeding anyway');
+        // Fallback: try to export anyway
+        ensureHumanDefinitionSet();
+        
+        // Ensure voiceID is set in fallback too
+        const voiceSelect = document.getElementById('voiceID');
+        if (voiceSelect && (!voiceSelect.value || voiceSelect.value.trim() === '')) {
+            const gender = document.getElementById('gender')?.value || characterData.gender || 'Female';
+            const voices = dataLoader.getVoices(gender);
+            if (voices && voices.length > 0) {
+                voiceSelect.value = voices[0].value || 'Kee';
+                characterData.voiceID = voices[0].value || 'Kee';
+            } else {
+                voiceSelect.value = characterData.voiceID || 'Kee';
+            }
+        }
+        
+        updateCharacterDataWithoutValidation();
+        finalizeCharacterDataForExport();
+        
+        setTimeout(() => {
+            const xml = generateCharacterXML();
+            const firstName = characterData.firstName || 'Character';
+            const lastName = characterData.lastName || '';
+            const nickname = characterData.nickname || '';
+            const filename = `${firstName} ${lastName}${nickname ? ` (${nickname})` : ''}`;
+            
+            const blob = new Blob([xml], { type: 'application/octet-stream' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.setAttribute('download', filename);
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }, 300);
+    });
 }
 
 // Randomizer functions
@@ -1284,6 +1797,298 @@ function randomizeSelected() {
     showNotification('Selected options randomized!', 'success');
 }
 
+// Helper function to wait for a condition
+function waitForCondition(condition, timeout = 5000, interval = 50) {
+    return new Promise((resolve, reject) => {
+        const startTime = Date.now();
+        const check = () => {
+            if (condition()) {
+                resolve(true);
+            } else if (Date.now() - startTime > timeout) {
+                reject(new Error('Condition timeout'));
+            } else {
+                setTimeout(check, interval);
+            }
+        };
+        check();
+    });
+}
+
+// Finalize character data for export (without char parameter)
+function finalizeCharacterDataForExport() {
+    // Final validation: ensure all critical fields are set
+    ensureHumanDefinitionSet();
+    
+    // Ensure voiceID is set (required field)
+    const voiceSelect = document.getElementById('voiceID');
+    if (voiceSelect) {
+        if (!voiceSelect.value || voiceSelect.value.trim() === '') {
+            // Set default voice based on gender
+            const gender = document.getElementById('gender')?.value || characterData.gender || 'Female';
+            const voices = dataLoader.getVoices(gender);
+            if (voices && voices.length > 0) {
+                const defaultVoice = voices[0]['Editor ID'] || 'Kee';
+                voiceSelect.value = defaultVoice;
+                characterData.voiceID = defaultVoice;
+                console.log('Finalize: Set default voiceID:', defaultVoice);
+            } else {
+                // Fallback
+                voiceSelect.value = characterData.voiceID || 'Kee';
+                characterData.voiceID = characterData.voiceID || 'Kee';
+            }
+        } else {
+            // Ensure characterData is synced
+            characterData.voiceID = voiceSelect.value;
+        }
+    }
+    
+    // Ensure standingLevel and leaderType are valid
+    const standingSelect = document.getElementById('standingLevel');
+    if (standingSelect) {
+        if (!standingSelect.value || standingSelect.value.trim() === '') {
+            standingSelect.value = characterData.standingLevel || 'Citizen';
+        }
+    }
+    
+    const leaderSelect = document.getElementById('leaderType');
+    if (leaderSelect) {
+        if (!leaderSelect.value || leaderSelect.value.trim() === '') {
+            leaderSelect.value = characterData.leaderType || 'None';
+        }
+    }
+    
+    // CRITICAL: Ensure skills are always set in form, even if not randomized
+    ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
+        const levelInput = document.getElementById(`${skill}Level`);
+        if (levelInput) {
+            const currentValue = parseInt(levelInput.value);
+            if (isNaN(currentValue) || levelInput.value === '') {
+                levelInput.value = 0;
+                const levelDisplay = document.getElementById(`${skill}LevelDisplay`);
+                if (levelDisplay) levelDisplay.textContent = '0';
+            }
+        }
+    });
+    
+    // Ensure 5th skill is set
+    const fifthSkillRadio = document.querySelector(`input[name="fifthSkillType"]:checked`);
+    if (!fifthSkillRadio) {
+        const noneRadio = document.querySelector(`input[name="fifthSkillType"][value="none"]`);
+        if (noneRadio) {
+            noneRadio.checked = true;
+            noneRadio.dispatchEvent(new Event('change'));
+        }
+    }
+    
+    // Update all character data
+    updateCharacterDataWithoutValidation();
+    
+    // Final validation check - retry if critical fields are missing
+    let retries = 0;
+    const maxRetries = 3;
+    const validateAndRetry = () => {
+        const issues = [];
+        
+        if (!characterData.humanDefinition || characterData.humanDefinition.trim() === '') {
+            issues.push('humanDefinition');
+            ensureHumanDefinitionSet();
+        }
+        
+        if (!characterData.voiceID || characterData.voiceID.trim() === '') {
+            issues.push('voiceID');
+            const gender = document.getElementById('gender')?.value || characterData.gender || 'Female';
+            const voices = dataLoader.getVoices(gender);
+            if (voices && voices.length > 0) {
+                const defaultVoice = voices[0]['Editor ID'] || 'Kee';
+                if (voiceSelect) voiceSelect.value = defaultVoice;
+                characterData.voiceID = defaultVoice;
+            } else {
+                characterData.voiceID = 'Kee';
+                if (voiceSelect) voiceSelect.value = 'Kee';
+            }
+        }
+        
+        if (!characterData.standingLevel || characterData.standingLevel.trim() === '') {
+            issues.push('standingLevel');
+            if (standingSelect) standingSelect.value = 'Citizen';
+        }
+        
+        if (!characterData.leaderType || characterData.leaderType.trim() === '') {
+            issues.push('leaderType');
+            if (leaderSelect) leaderSelect.value = 'None';
+        }
+        
+        // Validate skills are properly initialized
+        if (!characterData.skills) {
+            issues.push('skills (missing object)');
+            characterData.skills = {
+                cardio: { level: 0, specialty: '' },
+                wits: { level: 0, specialty: '' },
+                fighting: { level: 0, specialty: '' },
+                shooting: { level: 0, specialty: '' },
+                fifthSkill: { type: 'none', skill: '' }
+            };
+        } else {
+            // Ensure each skill has a valid level (at least 0)
+            ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
+                if (!characterData.skills[skill] || typeof characterData.skills[skill].level !== 'number') {
+                    issues.push(`skills.${skill} (invalid)`);
+                    characterData.skills[skill] = { level: 0, specialty: '' };
+                }
+            });
+            if (!characterData.skills.fifthSkill) {
+                characterData.skills.fifthSkill = { type: 'none', skill: '' };
+            }
+        }
+        
+        if (issues.length > 0 && retries < maxRetries) {
+            retries++;
+            console.warn(`Export retry ${retries}: Missing fields: ${issues.join(', ')}`);
+            updateCharacterDataWithoutValidation();
+            setTimeout(validateAndRetry, 100);
+        } else if (issues.length > 0) {
+            console.error('CRITICAL: Some fields still missing after retries:', issues);
+        } else {
+            console.log('✓ Character data finalized for export:', {
+                humanDefinition: characterData.humanDefinition,
+                voiceID: characterData.voiceID,
+                standingLevel: characterData.standingLevel,
+                leaderType: characterData.leaderType,
+                skills: characterData.skills
+            });
+        }
+    };
+    
+    validateAndRetry();
+}
+
+// Finalize character data - ensures all fields are set correctly
+function finalizeCharacterData(char, options) {
+    // Final validation: ensure all critical fields are set
+    ensureHumanDefinitionSet();
+    
+    // Ensure standingLevel and leaderType are valid
+    const standingSelect = document.getElementById('standingLevel');
+    if (standingSelect) {
+        if (!standingSelect.value || standingSelect.value.trim() === '') {
+            standingSelect.value = char.standingLevel || 'Citizen';
+        }
+    }
+    
+    const leaderSelect = document.getElementById('leaderType');
+    if (leaderSelect) {
+        if (!leaderSelect.value || leaderSelect.value.trim() === '') {
+            leaderSelect.value = char.leaderType || 'None';
+        }
+    }
+    
+    // CRITICAL: Ensure skills are always set in form, even if not randomized
+    ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
+        const levelInput = document.getElementById(`${skill}Level`);
+        if (levelInput) {
+            const currentValue = parseInt(levelInput.value);
+            if (isNaN(currentValue) || levelInput.value === '') {
+                levelInput.value = 0;
+                const levelDisplay = document.getElementById(`${skill}LevelDisplay`);
+                if (levelDisplay) levelDisplay.textContent = '0';
+            }
+        }
+    });
+    
+    // Ensure 5th skill is set
+    const fifthSkillRadio = document.querySelector(`input[name="fifthSkillType"]:checked`);
+    if (!fifthSkillRadio) {
+        const noneRadio = document.querySelector(`input[name="fifthSkillType"][value="none"]`);
+        if (noneRadio) {
+            noneRadio.checked = true;
+            noneRadio.dispatchEvent(new Event('change'));
+        }
+    }
+    
+    // Update all character data
+    updateCharacterDataWithoutValidation();
+    
+    // Final validation check - retry if critical fields are missing
+    let retries = 0;
+    const maxRetries = 3;
+    const validateAndRetry = () => {
+        const issues = [];
+        
+        if (!characterData.humanDefinition || characterData.humanDefinition.trim() === '') {
+            issues.push('humanDefinition');
+            ensureHumanDefinitionSet();
+        }
+        
+        if (!characterData.voiceID || characterData.voiceID.trim() === '') {
+            issues.push('voiceID');
+            const gender = document.getElementById('gender')?.value || characterData.gender || 'Female';
+            const voices = dataLoader.getVoices(gender);
+            if (voices && voices.length > 0) {
+                const defaultVoice = voices[0]['Editor ID'] || 'Kee';
+                if (voiceSelect) voiceSelect.value = defaultVoice;
+                characterData.voiceID = defaultVoice;
+            } else {
+                characterData.voiceID = 'Kee';
+                if (voiceSelect) voiceSelect.value = 'Kee';
+            }
+        }
+        
+        if (!characterData.standingLevel || characterData.standingLevel.trim() === '') {
+            issues.push('standingLevel');
+            if (standingSelect) standingSelect.value = 'Citizen';
+        }
+        
+        if (!characterData.leaderType || characterData.leaderType.trim() === '') {
+            issues.push('leaderType');
+            if (leaderSelect) leaderSelect.value = 'None';
+        }
+        
+        // Validate skills are properly initialized
+        if (!characterData.skills) {
+            issues.push('skills (missing object)');
+            characterData.skills = {
+                cardio: { level: 0, specialty: '' },
+                wits: { level: 0, specialty: '' },
+                fighting: { level: 0, specialty: '' },
+                shooting: { level: 0, specialty: '' },
+                fifthSkill: { type: 'none', skill: '' }
+            };
+        } else {
+            // Ensure each skill has a valid level (at least 0)
+            ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
+                if (!characterData.skills[skill] || typeof characterData.skills[skill].level !== 'number') {
+                    issues.push(`skills.${skill} (invalid)`);
+                    characterData.skills[skill] = { level: 0, specialty: '' };
+                }
+            });
+            if (!characterData.skills.fifthSkill) {
+                characterData.skills.fifthSkill = { type: 'none', skill: '' };
+            }
+        }
+        
+        if (issues.length > 0 && retries < maxRetries) {
+            retries++;
+            console.warn(`Retry ${retries}: Missing fields: ${issues.join(', ')}`);
+            updateCharacterDataWithoutValidation();
+            setTimeout(validateAndRetry, 100);
+        } else if (issues.length > 0) {
+            console.error('CRITICAL: Some fields still missing after retries:', issues);
+        } else {
+            console.log('✓ Character data finalized successfully:', {
+                humanDefinition: characterData.humanDefinition,
+                standingLevel: characterData.standingLevel,
+                leaderType: characterData.leaderType,
+                voiceID: characterData.voiceID,
+                firstName: characterData.firstName,
+                lastName: characterData.lastName,
+                skills: characterData.skills
+            });
+        }
+    };
+    
+    validateAndRetry();
+}
+
 function populateFormFromCharacter(char, options = {}) {
     try {
         // Name and age
@@ -1296,11 +2101,36 @@ function populateFormFromCharacter(char, options = {}) {
             document.getElementById('pronoun').value = char.pronoun || 'She';
             // Trigger change events to update dependent fields
             document.getElementById('gender').dispatchEvent(new Event('change'));
+            
+            // Wait for gender change to process, then update options
             setTimeout(() => {
                 updateVoiceOptions();
                 updateHumanDefinitionOptions();
-            }, 100);
+                
+                // Wait for options to be populated before continuing
+                waitForCondition(() => {
+                    const humanDefSelect = document.getElementById('humanDefinition');
+                    return humanDefSelect && humanDefSelect.options.length > 1;
+                }, 2000, 50).then(() => {
+                    // Continue with setting values after options are ready
+                    continuePopulatingForm(char, options);
+                }).catch(() => {
+                    console.warn('Timeout waiting for options, continuing anyway');
+                    continuePopulatingForm(char, options);
+                });
+            }, 150);
+        } else {
+            // Name not randomized, but still need to ensure everything is set
+            continuePopulatingForm(char, options);
         }
+    } catch (error) {
+        console.error('Error populating form:', error);
+        showNotification('Error populating form. Check console for details.', 'error');
+    }
+}
+
+function continuePopulatingForm(char, options = {}) {
+    try {
     
         // Attributes - need to wait for gender change to populate options
         if (options.culturalBackground !== false) {
@@ -1348,25 +2178,50 @@ function populateFormFromCharacter(char, options = {}) {
                 }
             }, 300);
         }
-        if (options.humanDefinition !== false) {
-            setTimeout(() => {
+        // Always ensure humanDefinition is set - this is critical
+        if (options.humanDefinition !== false && char.humanDefinition) {
+            // Wait for updateHumanDefinitionOptions to complete, then set the value
+            waitForCondition(() => {
+                const modelSelect = document.getElementById('humanDefinition');
+                return modelSelect && modelSelect.options.length > 1;
+            }, 3000, 50).then(() => {
                 const modelSelect = document.getElementById('humanDefinition');
                 if (modelSelect && char.humanDefinition) {
-                    // Try to find matching option
                     const options = Array.from(modelSelect.options);
+                    
+                    // Try to find matching option
                     const matchingOption = options.find(opt => 
                         opt.value === char.humanDefinition ||
                         opt.value.includes(char.humanDefinition.split('_')[0]) ||
                         opt.textContent.includes(char.humanDefinition.split('_')[0])
                     );
-                    if (matchingOption) {
+                    
+                    if (matchingOption && matchingOption.value) {
                         modelSelect.value = matchingOption.value;
-                    } else if (char.humanDefinition) {
+                        characterData.humanDefinition = matchingOption.value;
+                        modelSelect.dispatchEvent(new Event('change'));
+                        console.log('✓ Set humanDefinition from randomized character:', matchingOption.value);
+                    } else if (char.humanDefinition && options.length > 1) {
+                        // Try to set it directly
                         modelSelect.value = char.humanDefinition;
+                        characterData.humanDefinition = char.humanDefinition;
+                        modelSelect.dispatchEvent(new Event('change'));
+                        console.log('✓ Set humanDefinition directly:', char.humanDefinition);
+                    } else {
+                        // Fallback
+                        console.warn('Could not set humanDefinition from randomized value, using fallback');
+                        ensureHumanDefinitionSet();
                     }
-                    modelSelect.dispatchEvent(new Event('change'));
                 }
-            }, 200);
+            }).catch(() => {
+                console.warn('Timeout waiting for humanDefinition options, using fallback');
+                ensureHumanDefinitionSet();
+            });
+        } else {
+            // Not randomized or no value, but ensure it's set
+            setTimeout(() => {
+                ensureHumanDefinitionSet();
+            }, 300);
         }
         
         // Philosophies
@@ -1376,13 +2231,34 @@ function populateFormFromCharacter(char, options = {}) {
         if (philo2Select) philo2Select.value = char.philosophy2 || 'Pragmatic';
         
         // Standing and leader
-        if (options.standingLevel !== false) {
-            const standingSelect = document.getElementById('standingLevel');
-            if (standingSelect) standingSelect.value = char.standingLevel || 'Citizen';
+        // Always ensure standingLevel and leaderType are set to valid values
+        // Even if not randomized, they need to have valid defaults
+        const standingSelect = document.getElementById('standingLevel');
+        if (standingSelect) {
+            if (options.standingLevel !== false) {
+                // Set from randomized character
+                standingSelect.value = char.standingLevel || 'Citizen';
+            } else {
+                // Not randomized, but ensure it has a valid value
+                const currentValue = standingSelect.value;
+                if (!currentValue || currentValue.trim() === '') {
+                    standingSelect.value = 'Citizen';
+                }
+            }
         }
-        if (options.leaderType !== false) {
-            const leaderSelect = document.getElementById('leaderType');
-            if (leaderSelect) leaderSelect.value = char.leaderType || 'None';
+        
+        const leaderSelect = document.getElementById('leaderType');
+        if (leaderSelect) {
+            if (options.leaderType !== false) {
+                // Set from randomized character
+                leaderSelect.value = char.leaderType || 'None';
+            } else {
+                // Not randomized, but ensure it has a valid value
+                const currentValue = leaderSelect.value;
+                if (!currentValue || currentValue.trim() === '') {
+                    leaderSelect.value = 'None';
+                }
+            }
         }
         
         // Skills
@@ -1443,6 +2319,32 @@ function populateFormFromCharacter(char, options = {}) {
                     }
                 }
             }
+        } else {
+            // Skills not randomized - ensure form has default values (0)
+            ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
+                const levelInput = document.getElementById(`${skill}Level`);
+                const levelDisplay = document.getElementById(`${skill}LevelDisplay`);
+                if (levelInput && (!levelInput.value || levelInput.value === '')) {
+                    levelInput.value = 0;
+                }
+                if (levelDisplay) levelDisplay.textContent = levelInput?.value || 0;
+                
+                // Ensure specialty is hidden if level < 5
+                const specialtyDiv = document.getElementById(`${skill}Specialty`);
+                const specialtySelect = document.getElementById(`${skill}SpecialtySelect`);
+                const level = parseInt(levelInput?.value) || 0;
+                if (level < 5 && specialtyDiv) {
+                    specialtyDiv.style.display = 'none';
+                    if (specialtySelect) specialtySelect.value = '';
+                }
+            });
+            
+            // Ensure 5th skill is set to 'none' if not set
+            const fifthSkillRadio = document.querySelector(`input[name="fifthSkillType"][value="none"]`);
+            if (fifthSkillRadio && !fifthSkillRadio.checked) {
+                fifthSkillRadio.checked = true;
+                fifthSkillRadio.dispatchEvent(new Event('change'));
+            }
         }
         
         // Traits
@@ -1461,12 +2363,135 @@ function populateFormFromCharacter(char, options = {}) {
             if (staminaInput) staminaInput.value = char.stats.stamina || 100;
         }
         
-        // Update all character data (but skip validation during form population to avoid DOM errors)
-        // We'll manually update characterData without triggering validation
-        updateCharacterDataWithoutValidation();
+        // Final validation and data sync - wait for all operations to complete
+        // Use a longer delay to ensure all setTimeout operations have finished
+        setTimeout(() => {
+            finalizeCharacterData(char, options);
+        }, 1000); // Increased delay to ensure all async operations complete
     } catch (error) {
         console.error('Error populating form:', error);
         showNotification('Error populating form. Check console for details.', 'error');
+    }
+}
+
+// Ensure skills are initialized - called before XML generation
+function ensureSkillsInitialized() {
+    // Ensure all skill inputs have valid values (at least 0)
+    ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
+        const levelInput = document.getElementById(`${skill}Level`);
+        if (levelInput) {
+            const value = levelInput.value;
+            if (!value || value === '' || isNaN(parseInt(value))) {
+                levelInput.value = 0;
+                const levelDisplay = document.getElementById(`${skill}LevelDisplay`);
+                if (levelDisplay) levelDisplay.textContent = '0';
+            }
+        }
+    });
+    
+    // Ensure 5th skill is set
+    const fifthSkillRadio = document.querySelector(`input[name="fifthSkillType"]:checked`);
+    if (!fifthSkillRadio) {
+        const noneRadio = document.querySelector(`input[name="fifthSkillType"][value="none"]`);
+        if (noneRadio) {
+            noneRadio.checked = true;
+            noneRadio.dispatchEvent(new Event('change'));
+        }
+    }
+    
+    // Ensure characterData.skills is initialized
+    if (!characterData.skills) {
+        characterData.skills = {
+            cardio: { level: 0, specialty: '' },
+            wits: { level: 0, specialty: '' },
+            fighting: { level: 0, specialty: '' },
+            shooting: { level: 0, specialty: '' },
+            fifthSkill: { type: 'none', skill: '' }
+        };
+    }
+    
+    // Sync from form to characterData
+    ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
+        const levelInput = document.getElementById(`${skill}Level`);
+        if (levelInput && characterData.skills[skill]) {
+            const level = parseInt(levelInput.value) || 0;
+            characterData.skills[skill].level = level;
+            characterData.skills[skill].specialty = document.getElementById(`${skill}SpecialtySelect`)?.value || '';
+        }
+    });
+    
+    const fifthSkillType = document.querySelector('input[name="fifthSkillType"]:checked')?.value || 'none';
+    if (characterData.skills.fifthSkill) {
+        characterData.skills.fifthSkill.type = fifthSkillType;
+        characterData.skills.fifthSkill.skill = document.getElementById('fifthSkill')?.value || '';
+    }
+    
+    console.log('Skills initialized:', characterData.skills);
+}
+
+// Ensure humanDefinition is set - called before XML generation
+function ensureHumanDefinitionSet() {
+    const humanDefSelect = document.getElementById('humanDefinition');
+    if (!humanDefSelect) {
+        console.error('humanDefinition dropdown not found!');
+        return;
+    }
+    
+    // If dropdown has no value or empty value, force set one
+    if (!humanDefSelect.value || humanDefSelect.value.trim() === '') {
+        console.warn('HumanDefinition is empty, attempting to set a value...');
+        
+        // Try to use characterData value if it exists and is valid
+        if (characterData.humanDefinition) {
+            const option = Array.from(humanDefSelect.options).find(
+                opt => opt.value === characterData.humanDefinition && opt.value !== ''
+            );
+            if (option) {
+                humanDefSelect.value = characterData.humanDefinition;
+                console.log('Set humanDefinition from characterData:', characterData.humanDefinition);
+                return;
+            }
+        }
+        
+        // If no valid value, select first available option
+        if (humanDefSelect.options.length > 1) {
+            for (let i = 1; i < humanDefSelect.options.length; i++) {
+                const option = humanDefSelect.options[i];
+                if (option.value && option.value.trim() !== '') {
+                    humanDefSelect.value = option.value;
+                    characterData.humanDefinition = option.value;
+                    console.log('Force-set humanDefinition to first available:', option.value);
+                    // Dispatch change event to ensure everything is updated
+                    humanDefSelect.dispatchEvent(new Event('change'));
+                    return;
+                }
+            }
+        }
+        
+        // Last resort: use default based on gender
+        const gender = document.getElementById('gender')?.value || characterData.gender || 'Female';
+        const defaultModel = gender === 'Male' 
+            ? 'HumanMaleVest_01_v_01' 
+            : 'HumanFemaleVest_01_v_01';
+        
+        // Try to find default in dropdown
+        const defaultOption = Array.from(humanDefSelect.options).find(
+            opt => opt.value === defaultModel
+        );
+        if (defaultOption) {
+            humanDefSelect.value = defaultModel;
+            characterData.humanDefinition = defaultModel;
+            console.log('Set humanDefinition to default:', defaultModel);
+            humanDefSelect.dispatchEvent(new Event('change'));
+        } else {
+            console.error('CRITICAL: Could not set humanDefinition! This will cause issues.');
+        }
+    } else {
+        // Value exists, ensure characterData is synced
+        if (characterData.humanDefinition !== humanDefSelect.value) {
+            characterData.humanDefinition = humanDefSelect.value;
+            console.log('Synced humanDefinition from dropdown:', humanDefSelect.value);
+        }
     }
 }
 
@@ -1480,26 +2505,81 @@ function updateCharacterDataWithoutValidation() {
     characterData.ageRange = document.getElementById('ageRange').value;
     characterData.pronoun = document.getElementById('pronoun').value;
     characterData.culturalBackground = document.getElementById('culturalBackground').value;
-    characterData.voiceID = document.getElementById('voiceID').value;
+    // Only update voiceID if form has a value, otherwise preserve existing
+    const voiceSelect = document.getElementById('voiceID');
+    const voiceValue = voiceSelect?.value || '';
+    if (voiceValue && voiceValue.trim() !== '') {
+        characterData.voiceID = voiceValue;
+    } else if (!characterData.voiceID) {
+        // Only set to empty if characterData doesn't already have a value
+        characterData.voiceID = '';
+    }
     characterData.humanDefinition = document.getElementById('humanDefinition').value;
     characterData.philosophy1 = document.getElementById('philosophy1').value;
     characterData.philosophy2 = document.getElementById('philosophy2').value;
-    characterData.standingLevel = document.getElementById('standingLevel').value;
-    characterData.leaderType = document.getElementById('leaderType').value;
+    
+    // Ensure standingLevel and leaderType are always valid
+    const standingSelect = document.getElementById('standingLevel');
+    let standingLevel = standingSelect ? standingSelect.value : '';
+    if (!standingLevel || standingLevel.trim() === '') {
+        standingLevel = 'Citizen';
+        if (standingSelect) standingSelect.value = standingLevel;
+    }
+    // If it's an object, extract the value
+    if (typeof standingLevel === 'object' && standingLevel.value) {
+        standingLevel = standingLevel.value;
+    }
+    characterData.standingLevel = standingLevel;
+    
+    const leaderSelect = document.getElementById('leaderType');
+    let leaderType = leaderSelect ? leaderSelect.value : '';
+    if (!leaderType || leaderType.trim() === '') {
+        leaderType = 'None';
+        if (leaderSelect) leaderSelect.value = leaderType;
+    }
+    // If it's an object, extract the value
+    if (typeof leaderType === 'object' && leaderType.value) {
+        leaderType = leaderType.value;
+    }
+    characterData.leaderType = leaderType;
+    
     characterData.heroBonus = document.getElementById('heroBonus').value;
     characterData.stats.health = parseInt(document.getElementById('currentHealth').value) || 100;
     characterData.stats.stamina = parseInt(document.getElementById('currentStamina').value) || 100;
     
-    // Update skills
+    // Update skills - ensure skills object exists
+    if (!characterData.skills) {
+        characterData.skills = {
+            cardio: { level: 0, specialty: '' },
+            wits: { level: 0, specialty: '' },
+            fighting: { level: 0, specialty: '' },
+            shooting: { level: 0, specialty: '' },
+            fifthSkill: { type: 'none', skill: '' }
+        };
+    }
+    
     ['cardio', 'wits', 'fighting', 'shooting'].forEach(skill => {
-        characterData.skills[skill].level = parseInt(document.getElementById(`${skill}Level`).value) || 0;
-        characterData.skills[skill].specialty = document.getElementById(`${skill}SpecialtySelect`)?.value || '';
+        const levelInput = document.getElementById(`${skill}Level`);
+        if (levelInput) {
+            const level = parseInt(levelInput.value);
+            characterData.skills[skill].level = isNaN(level) ? 0 : level;
+            characterData.skills[skill].specialty = document.getElementById(`${skill}SpecialtySelect`)?.value || '';
+        } else {
+            // Input doesn't exist, ensure default
+            characterData.skills[skill].level = 0;
+            characterData.skills[skill].specialty = '';
+        }
     });
     
     // Update 5th skill
     const fifthSkillType = document.querySelector('input[name="fifthSkillType"]:checked')?.value || 'none';
+    if (!characterData.skills.fifthSkill) {
+        characterData.skills.fifthSkill = { type: 'none', skill: '' };
+    }
     characterData.skills.fifthSkill.type = fifthSkillType;
-    characterData.skills.fifthSkill.skill = document.getElementById('fifthSkill').value || '';
+    characterData.skills.fifthSkill.skill = document.getElementById('fifthSkill')?.value || '';
+    
+    console.log('Skills updated in characterData:', characterData.skills);
     
     updateDescriptorTraits();
 }

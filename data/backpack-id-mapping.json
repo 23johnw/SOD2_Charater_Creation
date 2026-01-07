@@ -1,190 +1,346 @@
-{
-  "Small Back Packs": {
-    "displayName": "Vic's Small Backpack",
-    "classString": "/Game/Items/BackpackItems/Heartland_Firefighter_SmallBackpack.Heartland_Firefighter_SmallBackpack_C"
+[
+  {
+    "displayName": "DLC2 Daybreak Backback",
+    "classString": "/Game/Items/BackpackItems/DLC2_Daybreak_Backback.DLC2_Daybreak_Backback_C"
   },
-  "Autumn Camo": {
-    "displayName": "Ultralight Pack (Autumn Camo)",
-    "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_49.ExtraSmallBackpack_49_C"
+  {
+    "displayName": "DLC2 TinyBackpack",
+    "classString": "/Game/Items/BackpackItems/DLC2_TinyBackpack.DLC2_TinyBackpack_C"
   },
-  "Black and Orange": {
-    "displayName": "Ultralight Pack (Black and Orange)",
-    "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_45.ExtraSmallBackpack_45_C"
+  {
+    "displayName": "ExtraComfyBackpack",
+    "classString": "/Game/Items/BackpackItems/ExtraComfyBackpack.ExtraComfyBackpack_C"
   },
-  "Bright Blue": {
-    "displayName": "Hiking Pack (Bright Blue)",
-    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_45.ExtraLargeBackpack_45_C"
+  {
+    "displayName": "ExtraLargeBackpack 01",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_01.ExtraLargeBackpack_01_C"
   },
-  "Brown and White": {
-    "displayName": "Small Backpack (Brown and White)",
-    "classString": "/Game/Items/BackpackItems/SmallBackpack_44.SmallBackpack_44_C"
+  {
+    "displayName": "ExtraLargeBackpack 02",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_02.ExtraLargeBackpack_02_C"
   },
-  "Dark Pink": {
-    "displayName": "Small Backpack (Dark Pink)",
-    "classString": "/Game/Items/BackpackItems/SmallBackpack_16.SmallBackpack_16_C"
+  {
+    "displayName": "ExtraLargeBackpack 03",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_03.ExtraLargeBackpack_03_C"
   },
-  "Green and Orange": {
-    "displayName": "Ultralight Pack (Green and Orange)",
-    "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_17.ExtraSmallBackpack_17_C"
+  {
+    "displayName": "ExtraLargeBackpack 04",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_04.ExtraLargeBackpack_04_C"
   },
-  "Jet Black": {
-    "displayName": "Standard Backpack (Jet Black)",
-    "classString": "/Game/Items/BackpackItems/MediumBackpack_07.MediumBackpack_07_C"
+  {
+    "displayName": "ExtraLargeBackpack 05",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_05.ExtraLargeBackpack_05_C"
   },
-  "Light Grey": {
-    "displayName": "Large Backpack (Light Grey)",
-    "classString": "/Game/Items/BackpackItems/LargeBackpack_20.LargeBackpack_20_C"
+  {
+    "displayName": "ExtraLargeBackpack 06",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_06.ExtraLargeBackpack_06_C"
   },
-  "Mixed Blue": {
-    "displayName": "Small Backpack (Mixed Blue)",
-    "classString": "/Game/Items/BackpackItems/SmallBackpack_49.SmallBackpack_49_C"
+  {
+    "displayName": "ExtraLargeBackpack 07",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_07.ExtraLargeBackpack_07_C"
   },
-  "Purple and Yellow": {
-    "displayName": "Hiking Pack (Purple and Yellow)",
+  {
+    "displayName": "ExtraLargeBackpack 08",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_08.ExtraLargeBackpack_08_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 09",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_09.ExtraLargeBackpack_09_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 10",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_10.ExtraLargeBackpack_10_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 11",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_11.ExtraLargeBackpack_11_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 12",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_12.ExtraLargeBackpack_12_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 13",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_13.ExtraLargeBackpack_13_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 14",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_14.ExtraLargeBackpack_14_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 15",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_15.ExtraLargeBackpack_15_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 16",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_16.ExtraLargeBackpack_16_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 17",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_17.ExtraLargeBackpack_17_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 18",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_18.ExtraLargeBackpack_18_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 19",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_19.ExtraLargeBackpack_19_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 20",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_20.ExtraLargeBackpack_20_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 21",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_21.ExtraLargeBackpack_21_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 22",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_22.ExtraLargeBackpack_22_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 23",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_23.ExtraLargeBackpack_23_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 24",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_24.ExtraLargeBackpack_24_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 25",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_25.ExtraLargeBackpack_25_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 26",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_26.ExtraLargeBackpack_26_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 27",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_27.ExtraLargeBackpack_27_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 28",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_28.ExtraLargeBackpack_28_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 29",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_29.ExtraLargeBackpack_29_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 30",
     "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_30.ExtraLargeBackpack_30_C"
   },
-  "Red Plaid": {
-    "displayName": "Ultralight Pack (Red Plaid)",
-    "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_44.ExtraSmallBackpack_44_C"
+  {
+    "displayName": "ExtraLargeBackpack 31",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_31.ExtraLargeBackpack_31_C"
   },
-  "Teal and White": {
-    "displayName": "Small Backpack (Teal and White)",
-    "classString": "/Game/Items/BackpackItems/SmallBackpack_19.SmallBackpack_19_C"
+  {
+    "displayName": "ExtraLargeBackpack 32",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_32.ExtraLargeBackpack_32_C"
   },
-  "Standard Backpack": {
-    "displayName": "Standard Backpack",
-    "classString": "/Game/Items/BackpackItems/MediumBackpackBase.MediumBackpackBase_C"
+  {
+    "displayName": "ExtraLargeBackpack 33",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_33.ExtraLargeBackpack_33_C"
   },
-  "Albrecht Dürer": {
+  {
+    "displayName": "ExtraLargeBackpack 34",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_34.ExtraLargeBackpack_34_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 35",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_35.ExtraLargeBackpack_35_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 36",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_36.ExtraLargeBackpack_36_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 37",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_37.ExtraLargeBackpack_37_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 38",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_38.ExtraLargeBackpack_38_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 39",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_39.ExtraLargeBackpack_39_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 40",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_40.ExtraLargeBackpack_40_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 41",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_41.ExtraLargeBackpack_41_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 42",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_42.ExtraLargeBackpack_42_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 43",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_43.ExtraLargeBackpack_43_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 44",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_44.ExtraLargeBackpack_44_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 45",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_45.ExtraLargeBackpack_45_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpack 46",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_46.ExtraLargeBackpack_46_C"
+  },
+  {
+    "displayName": "ExtraLargeBackpackBase",
+    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpackBase.ExtraLargeBackpackBase_C"
+  },
+  {
     "displayName": "Large Backpack (Albrecht Dürer)",
     "classString": "/Game/Items/BackpackItems/LargeBackpack_45.LargeBackpack_45_C"
   },
-  "Blue Crossbones": {
-    "displayName": "Standard Backpack (Blue Crossbones)",
-    "classString": "/Game/Items/BackpackItems/MediumBackpack_43.MediumBackpack_43_C"
-  },
-  "Brown Patterned": {
-    "displayName": "Ultralight Pack (Brown Patterned)",
-    "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_47.ExtraSmallBackpack_47_C"
-  },
-  "Dirty Blue": {
-    "displayName": "Standard Backpack (Dirty Blue)",
-    "classString": "/Game/Items/BackpackItems/MediumBackpack_04.MediumBackpack_04_C"
-  },
-  "Forest Green": {
-    "displayName": "Large Backpack (Forest Green)",
-    "classString": "/Game/Items/BackpackItems/LargeBackpack_13.LargeBackpack_13_C"
-  },
-  "Grey and Red": {
-    "displayName": "Hiking Pack (Grey and Red)",
-    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_23.ExtraLargeBackpack_23_C"
-  },
-  "Hot Pink Leopard": {
-    "displayName": "Standard Backpack (Hot Pink Leopard)",
-    "classString": "/Game/Items/BackpackItems/MediumBackpack_44.MediumBackpack_44_C"
-  },
-  "Red Gingham": {
-    "displayName": "Large Backpack (Red Gingham)",
-    "classString": "/Game/Items/BackpackItems/LargeBackpack_39.LargeBackpack_39_C"
-  },
-  "Three Color": {
-    "displayName": "Standard Backpack (Three Color)",
-    "classString": "/Game/Items/BackpackItems/MediumBackpack_05.MediumBackpack_05_C"
-  },
-  "White Flecked Camo": {
-    "displayName": "Hiking Pack (White Flecked Camo)",
-    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_43.ExtraLargeBackpack_43_C"
-  },
-  "Yellow Polka-Dot": {
-    "displayName": "Standard Backpack (Yellow Polka-Dot)",
-    "classString": "/Game/Items/BackpackItems/MediumBackpack_39.MediumBackpack_39_C"
-  },
-  "Blue and Gold": {
+  {
     "displayName": "Large Backpack (Blue and Gold)",
     "classString": "/Game/Items/BackpackItems/LargeBackpack_29.LargeBackpack_29_C"
   },
-  "Blue": {
-    "displayName": "Hiking Pack (Yellow and Blue)",
-    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_06.ExtraLargeBackpack_06_C"
-  },
-  "Brown with Skull": {
+  {
     "displayName": "Large Backpack (Brown with Skull)",
     "classString": "/Game/Items/BackpackItems/LargeBackpack_32.LargeBackpack_32_C"
   },
-  "Drab Blue": {
+  {
     "displayName": "Large Backpack (Drab Blue)",
     "classString": "/Game/Items/BackpackItems/LargeBackpack_22.LargeBackpack_22_C"
   },
-  "Gold": {
+  {
+    "displayName": "Large Backpack (Forest Green)",
+    "classString": "/Game/Items/BackpackItems/LargeBackpack_13.LargeBackpack_13_C"
+  },
+  {
     "displayName": "Large Backpack (Golden Camo)",
     "classString": "/Game/Items/BackpackItems/LargeBackpack_04.LargeBackpack_04_C"
   },
-  "Grey Plaid": {
+  {
     "displayName": "Large Backpack (Grey Plaid)",
     "classString": "/Game/Items/BackpackItems/LargeBackpack_44.LargeBackpack_44_C"
   },
-  "Light Blue": {
+  {
     "displayName": "Large Backpack (Light Blue)",
     "classString": "/Game/Items/BackpackItems/LargeBackpack_09.LargeBackpack_09_C"
   },
-  "Orange": {
-    "displayName": "Hiking Pack (Purple and Orange)",
-    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_03.ExtraLargeBackpack_03_C"
+  {
+    "displayName": "Large Backpack (Light Grey)",
+    "classString": "/Game/Items/BackpackItems/LargeBackpack_20.LargeBackpack_20_C"
   },
-  "Raw Sienna": {
+  {
     "displayName": "Large Backpack (Raw Sienna)",
     "classString": "/Game/Items/BackpackItems/LargeBackpack_34.LargeBackpack_34_C"
   },
-  "Violet Patterned": {
+  {
+    "displayName": "Large Backpack (Red Gingham)",
+    "classString": "/Game/Items/BackpackItems/LargeBackpack_39.LargeBackpack_39_C"
+  },
+  {
     "displayName": "Large Backpack (Violet Patterned)",
     "classString": "/Game/Items/BackpackItems/LargeBackpack_41.LargeBackpack_41_C"
   },
-  "White": {
-    "displayName": "Hiking Pack (Purple and White)",
-    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_09.ExtraLargeBackpack_09_C"
+  {
+    "displayName": "Small Backpack (Brown and White)",
+    "classString": "/Game/Items/BackpackItems/SmallBackpack_44.SmallBackpack_44_C"
   },
-  "Ultra Light Back Packs": {
+  {
+    "displayName": "Small Backpack (Dark Pink)",
+    "classString": "/Game/Items/BackpackItems/SmallBackpack_16.SmallBackpack_16_C"
+  },
+  {
+    "displayName": "Small Backpack (Mixed Blue)",
+    "classString": "/Game/Items/BackpackItems/SmallBackpack_49.SmallBackpack_49_C"
+  },
+  {
+    "displayName": "Small Backpack (Teal and White)",
+    "classString": "/Game/Items/BackpackItems/SmallBackpack_19.SmallBackpack_19_C"
+  },
+  {
+    "displayName": "Standard Backpack",
+    "classString": "/Game/Items/BackpackItems/MediumBackpackBase.MediumBackpackBase_C"
+  },
+  {
+    "displayName": "Standard Backpack (Blue Crossbones)",
+    "classString": "/Game/Items/BackpackItems/MediumBackpack_43.MediumBackpack_43_C"
+  },
+  {
+    "displayName": "Standard Backpack (Dirty Blue)",
+    "classString": "/Game/Items/BackpackItems/MediumBackpack_04.MediumBackpack_04_C"
+  },
+  {
+    "displayName": "Standard Backpack (Hot Pink Leopard)",
+    "classString": "/Game/Items/BackpackItems/MediumBackpack_44.MediumBackpack_44_C"
+  },
+  {
+    "displayName": "Standard Backpack (Jet Black)",
+    "classString": "/Game/Items/BackpackItems/MediumBackpack_07.MediumBackpack_07_C"
+  },
+  {
+    "displayName": "Standard Backpack (Three Color)",
+    "classString": "/Game/Items/BackpackItems/MediumBackpack_05.MediumBackpack_05_C"
+  },
+  {
+    "displayName": "Standard Backpack (Yellow Polka-Dot)",
+    "classString": "/Game/Items/BackpackItems/MediumBackpack_39.MediumBackpack_39_C"
+  },
+  {
     "displayName": "Ultralight Pack",
     "classString": "/Game/Items/BackpackItems/ExtraSmallBackpackBase.ExtraSmallBackpackBase_C"
   },
-  "Army Green": {
+  {
     "displayName": "Ultralight Pack (Army Green)",
     "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_31.ExtraSmallBackpack_31_C"
   },
-  "Black": {
-    "displayName": "Hiking Pack (Red and Black)",
-    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_01.ExtraLargeBackpack_01_C"
+  {
+    "displayName": "Ultralight Pack (Autumn Camo)",
+    "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_49.ExtraSmallBackpack_49_C"
   },
-  "Brown and Orange": {
+  {
+    "displayName": "Ultralight Pack (Black and Orange)",
+    "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_45.ExtraSmallBackpack_45_C"
+  },
+  {
     "displayName": "Ultralight Pack (Brown and Orange)",
     "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_07.ExtraSmallBackpack_07_C"
   },
-  "Dark Purple": {
-    "displayName": "Hiking Pack (Dark Purple)",
-    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_33.ExtraLargeBackpack_33_C"
+  {
+    "displayName": "Ultralight Pack (Brown Patterned)",
+    "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_47.ExtraSmallBackpack_47_C"
   },
-  "Grey and Blue": {
+  {
+    "displayName": "Ultralight Pack (Green and Orange)",
+    "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_17.ExtraSmallBackpack_17_C"
+  },
+  {
     "displayName": "Ultralight Pack (Grey and Blue)",
     "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_10.ExtraSmallBackpack_10_C"
   },
-  "Light BlueFile:Ultralight Light Blue Backpack.PNG": {
-    "displayName": "Hiking Pack (Yellow and Blue)",
-    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_06.ExtraLargeBackpack_06_C"
-  },
-  "Pink Leopard": {
+  {
     "displayName": "Ultralight Pack (Pink Leopard)",
     "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_27.ExtraSmallBackpack_27_C"
   },
-  "Red and Tan": {
+  {
     "displayName": "Ultralight Pack (Red and Tan)",
     "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_41.ExtraSmallBackpack_41_C"
   },
-  "Sky Blue": {
-    "displayName": "Hiking Pack (Sky Blue)",
-    "classString": "/Game/Items/BackpackItems/ExtraLargeBackpack_19.ExtraLargeBackpack_19_C"
+  {
+    "displayName": "Ultralight Pack (Red Plaid)",
+    "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_44.ExtraSmallBackpack_44_C"
   },
-  "White Patterned": {
+  {
     "displayName": "Ultralight Pack (White Patterned)",
     "classString": "/Game/Items/BackpackItems/ExtraSmallBackpack_25.ExtraSmallBackpack_25_C"
+  },
+  {
+    "displayName": "Vic's Small Backpack",
+    "classString": "/Game/Items/BackpackItems/Heartland_Firefighter_SmallBackpack.Heartland_Firefighter_SmallBackpack_C"
   }
-}
+]

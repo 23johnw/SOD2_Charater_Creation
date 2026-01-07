@@ -1,38 +1,110 @@
 {
   "ageRanges": [
-    { "value": "Young", "label": "Young" },
-    { "value": "MiddleAged", "label": "Middle Aged" },
-    { "value": "Old", "label": "Old" }
+    {
+      "value": "Young",
+      "label": "Young"
+    },
+    {
+      "value": "MiddleAged",
+      "label": "Middle Aged"
+    },
+    {
+      "value": "Old",
+      "label": "Old"
+    }
   ],
   "pronouns": [
-    { "value": "He", "label": "He" },
-    { "value": "She", "label": "She" },
-    { "value": "They", "label": "They" }
+    {
+      "value": "He",
+      "label": "He"
+    },
+    {
+      "value": "She",
+      "label": "She"
+    },
+    {
+      "value": "They",
+      "label": "They"
+    }
   ],
   "philosophies": [
-    { "value": "Prudent", "label": "Prudent" },
-    { "value": "Pragmatic", "label": "Pragmatic" },
-    { "value": "Daring", "label": "Daring" },
-    { "value": "Compassionate", "label": "Compassionate" },
-    { "value": "Aggressive", "label": "Aggressive" }
+    {
+      "value": "Prudent",
+      "label": "Prudent"
+    },
+    {
+      "value": "Pragmatic",
+      "label": "Pragmatic"
+    },
+    {
+      "value": "Daring",
+      "label": "Daring"
+    },
+    {
+      "value": "Compassionate",
+      "label": "Compassionate"
+    },
+    {
+      "value": "Aggressive",
+      "label": "Aggressive"
+    }
   ],
   "standingLevels": [
-    { "value": "Stranger", "label": "Stranger" },
-    { "value": "Recruit", "label": "Recruit" },
-    { "value": "Citizen", "label": "Citizen" },
-    { "value": "Hero", "label": "Hero" }
+    {
+      "value": "Stranger",
+      "label": "Stranger"
+    },
+    {
+      "value": "Recruit",
+      "label": "Recruit"
+    },
+    {
+      "value": "Citizen",
+      "label": "Citizen"
+    },
+    {
+      "value": "Hero",
+      "label": "Hero"
+    },
+    {
+      "value": "Leader",
+      "label": "Leader"
+    }
   ],
   "leaderTypes": [
-    { "value": "None", "label": "None" },
-    { "value": "Builder", "label": "Builder" },
-    { "value": "Warlord", "label": "Warlord" },
-    { "value": "Sheriff", "label": "Sheriff" },
-    { "value": "Trader", "label": "Trader" }
+    {
+      "value": "None",
+      "label": "None"
+    },
+    {
+      "value": "Builder",
+      "label": "Builder"
+    },
+    {
+      "value": "Warlord",
+      "label": "Warlord"
+    },
+    {
+      "value": "Sheriff",
+      "label": "Sheriff"
+    },
+    {
+      "value": "Trader",
+      "label": "Trader"
+    }
   ],
   "voicePitches": [
-    { "value": "Low", "label": "Low" },
-    { "value": "Normal", "label": "Normal" },
-    { "value": "High", "label": "High" }
+    {
+      "value": "Low",
+      "label": "Low"
+    },
+    {
+      "value": "Normal",
+      "label": "Normal"
+    },
+    {
+      "value": "High",
+      "label": "High"
+    }
   ]
 }
-
